@@ -51,15 +51,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Coming Soon Section */}
-      <section className="py-16 px-4 flex items-center justify-center" aria-label="Portfolio coming soon">
+      {/* Projects Section */}
+      <section className="py-16 px-4 flex items-center justify-center" aria-label="Current availability">
         <div className="max-w-2xl text-center">
-          <h2 className="sr-only">Portfolio Status</h2>
-          <p className="text-jamarq-gray mb-2">
-            Portfolio launching soon.
+          <h2 className="text-jamarq-white text-2xl font-semibold mb-6">Now Accepting Projects</h2>
+          <p className="text-jamarq-gray mb-8">
+            Specializing in modern websites for small businesses and personal brands.
           </p>
-          <p className="text-jamarq-gray">
-            Full case studies and project details coming shortly.
+          <div className="text-left max-w-md mx-auto space-y-2 text-jamarq-gray">
+            <p className="text-sm">Recent projects:</p>
+            <ul className="space-y-1 text-sm">
+              <li>• Thunder Road Bar & Grill - Full-stack restaurant website</li>
+              <li>• Midway Mobile Storage - Business management system</li>
+              <li>• Multiple brand identity systems</li>
+            </ul>
+          </div>
+          <p className="text-jamarq-gray text-sm mt-6">
+            Full case studies coming soon.
           </p>
         </div>
       </section>

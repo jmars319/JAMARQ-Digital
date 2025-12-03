@@ -1,12 +1,21 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-jamarq-black text-jamarq-white">
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center px-4">
         <div className="text-center max-w-2xl">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            JAMARQ
-          </h1>
+          <div className="mb-8 flex justify-center">
+            <Image
+              src="/images/brand/jamarq-logo-primary.png"
+              alt="JAMARQ"
+              width={400}
+              height={100}
+              priority
+              className="w-auto h-16 md:h-20"
+            />
+          </div>
           
           <p className="text-xl md:text-2xl text-jamarq-gray mb-8">
             Digital + Creative Studio

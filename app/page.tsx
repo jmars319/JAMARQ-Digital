@@ -41,8 +41,8 @@ export default function Home() {
       </section>
 
       {/* Brief About Section */}
-      <section className="py-16 px-4" aria-label="About">
-        <div className="max-w-2xl mx-auto text-center">
+      <section className="py-16 px-4 flex items-center justify-center" aria-label="About">
+        <div className="max-w-2xl text-center">
           <h2 className="sr-only">About JAMARQ Digital</h2>
           <p className="text-lg text-jamarq-gray leading-relaxed">
             I help individuals and brands build clean, modern digital identities.<br />
@@ -52,8 +52,8 @@ export default function Home() {
       </section>
 
       {/* Coming Soon Section */}
-      <section className="py-16 px-4" aria-label="Portfolio coming soon">
-        <div className="max-w-2xl mx-auto text-center">
+      <section className="py-16 px-4 flex items-center justify-center" aria-label="Portfolio coming soon">
+        <div className="max-w-2xl text-center">
           <h2 className="sr-only">Portfolio Status</h2>
           <p className="text-jamarq-gray mb-2">
             Portfolio launching soon.
@@ -65,8 +65,8 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 border-t border-jamarq-slate" role="contentinfo">
-        <div className="max-w-2xl mx-auto text-center">
+      <footer className="py-8 px-4 border-t border-jamarq-slate flex items-center justify-center" role="contentinfo">
+        <div className="max-w-2xl text-center">
           <p className="text-jamarq-gray text-sm mb-2">
             <a 
               href="mailto:jason@jamarq.digital" 

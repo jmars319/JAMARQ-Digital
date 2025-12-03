@@ -46,7 +46,7 @@ export default function Home() {
           <h2 className="sr-only">About JAMARQ Digital</h2>
           <p className="text-lg text-jamarq-gray leading-relaxed">
             I help individuals and brands build clean, modern digital identities.<br />
-            Synthwave-inspired minimalism meets practical execution.
+            Strategic design meets practical execution.
           </p>
         </div>
       </section>

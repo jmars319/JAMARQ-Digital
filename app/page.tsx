@@ -31,9 +31,9 @@ export default function Home() {
           </p>
           
           <a
-            href="mailto:jason@jamarq.digital?subject=Project Inquiry"
+            href="mailto:hello@jamarq.digital?subject=Project Inquiry"
             className="inline-block bg-jamarq-cyan text-jamarq-black px-8 py-3 rounded-md font-semibold text-lg hover:bg-opacity-90 transition-all mt-8 focus:outline-none focus:ring-2 focus:ring-jamarq-cyan focus:ring-offset-2 focus:ring-offset-jamarq-black"
-            aria-label="Contact Jason via email to discuss your project"
+            aria-label="Contact JAMARQ via email to discuss your project"
           >
             Work With Me
           </a>
@@ -77,11 +77,11 @@ export default function Home() {
         <div className="max-w-2xl text-center">
           <p className="text-jamarq-gray text-sm mb-2">
             <a 
-              href="mailto:jason@jamarq.digital" 
+              href="mailto:hello@jamarq.digital" 
               className="text-jamarq-cyan hover:text-jamarq-magenta transition-colors focus:outline-none focus:ring-2 focus:ring-jamarq-cyan focus:ring-offset-2 focus:ring-offset-jamarq-black rounded"
-              aria-label="Email jason@jamarq.digital"
+              aria-label="Email hello@jamarq.digital"
             >
-              jason@jamarq.digital
+              hello@jamarq.digital
             </a>
           </p>
           <p className="text-jamarq-gray text-sm">

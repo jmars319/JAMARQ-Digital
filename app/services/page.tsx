@@ -118,7 +118,7 @@ export default function ServicesPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
             {/* Differentiator 1 */}
-            <div>
+            <div className="text-center">
               <h3 className="text-xl font-semibold mb-3">No Templates</h3>
               <p className="text-jamarq-gray text-sm leading-relaxed">
                 Every site is built from scratch. Zero WordPress. Zero Wix. Zero page builders.
@@ -126,7 +126,7 @@ export default function ServicesPage() {
             </div>
 
             {/* Differentiator 2 */}
-            <div>
+            <div className="text-center">
               <h3 className="text-xl font-semibold mb-3">No Bloat</h3>
               <p className="text-jamarq-gray text-sm leading-relaxed">
                 Clean code. Fast load times. No unnecessary plugins or features.
@@ -134,7 +134,7 @@ export default function ServicesPage() {
             </div>
 
             {/* Differentiator 3 */}
-            <div>
+            <div className="text-center">
               <h3 className="text-xl font-semibold mb-3">Built for Clarity</h3>
               <p className="text-jamarq-gray text-sm leading-relaxed">
                 Design decisions are intentional. Every component serves a purpose.
@@ -142,7 +142,7 @@ export default function ServicesPage() {
             </div>
 
             {/* Differentiator 4 */}
-            <div>
+            <div className="text-center">
               <h3 className="text-xl font-semibold mb-3">Systems-First Thinking</h3>
               <p className="text-jamarq-gray text-sm leading-relaxed">
                 Not just websites. Integrated digital workflows built to support your business.
@@ -150,7 +150,7 @@ export default function ServicesPage() {
             </div>
 
             {/* Differentiator 5 */}
-            <div>
+            <div className="text-center">
               <h3 className="text-xl font-semibold mb-3">Direct Communication</h3>
               <p className="text-jamarq-gray text-sm leading-relaxed">
                 You work directly with me. No project managers. No handoffs.
@@ -158,7 +158,7 @@ export default function ServicesPage() {
             </div>
 
             {/* Differentiator 6 */}
-            <div>
+            <div className="text-center">
               <h3 className="text-xl font-semibold mb-3">Long-Term Stability</h3>
               <p className="text-jamarq-gray text-sm leading-relaxed">
                 Built to last. Structured for maintainability. Designed for growth.

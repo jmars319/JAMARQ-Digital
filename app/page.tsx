@@ -155,15 +155,15 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
             {/* Value 1 */}
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">A Website Built for Clarity</h3>
+            <div className="text-center">
+              <h3 className="text-2xl font-semibold mb-4">Built to Last</h3>
               <p className="text-jamarq-gray leading-relaxed">
                 Focused design. Precise typography. A layout that directs attention, not distracts from it.
               </p>
             </div>
 
             {/* Value 2 */}
-            <div>
+            <div className="text-center">
               <h3 className="text-2xl font-semibold mb-4">A System You Can Rely On</h3>
               <p className="text-jamarq-gray leading-relaxed">
                 Stable infrastructure. Clean code. A foundation built for long-term use, not short-term workarounds.
@@ -171,7 +171,7 @@ export default function Home() {
             </div>
 
             {/* Value 3 */}
-            <div>
+            <div className="text-center">
               <h3 className="text-2xl font-semibold mb-4">A Process That Respects Your Time</h3>
               <p className="text-jamarq-gray leading-relaxed">
                 Clear communication. Structured milestones. No guesswork.
@@ -179,7 +179,7 @@ export default function Home() {
             </div>
 
             {/* Value 4 */}
-            <div>
+            <div className="text-center">
               <h3 className="text-2xl font-semibold mb-4">Documentation & Support</h3>
               <p className="text-jamarq-gray leading-relaxed">
                 A full handoff. Training if needed. A support window to keep everything stable after launch.

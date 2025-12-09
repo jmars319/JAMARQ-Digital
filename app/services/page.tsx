@@ -11,7 +11,7 @@ export default function ServicesPage() {
     <main id="main-content" className="min-h-screen bg-jamarq-black text-jamarq-white">
       {/* Hero Section */}
       <section 
-        className="min-h-[60vh] flex items-center justify-center px-6 md:px-12"
+        className="min-h-[60vh] flex items-center justify-center px-5 md:px-10"
         aria-label="Services hero"
       >
         <div className="text-center max-w-4xl mx-auto">
@@ -26,7 +26,7 @@ export default function ServicesPage() {
 
       {/* Core Services Section */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Core services">
-        <div className="max-w-6xl mx-auto px-6 md:px-12">
+        <div className="max-w-6xl mx-auto px-5 md:px-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 justify-items-center">
             {/* Service 1 */}
             <div className="p-8 bg-jamarq-black rounded-lg text-center">
@@ -111,7 +111,7 @@ export default function ServicesPage() {
 
       {/* What Makes JAMARQ Different Section */}
       <section className="py-24 md:py-32" aria-label="What makes us different">
-        <div className="max-w-6xl mx-auto px-6 md:px-12">
+        <div className="max-w-6xl mx-auto px-5 md:px-10">
           <h2 className="text-3xl md:text-4xl font-semibold text-center mb-16">
             What Makes JAMARQ Different
           </h2>
@@ -169,8 +169,9 @@ export default function ServicesPage() {
       </section>
 
       {/* Pricing Philosophy Section */}
-      <section className="py-24 md:py-32 px-4 bg-steel" aria-label="Pricing philosophy">
-        <div className="max-w-3xl mx-auto text-center">
+      <section className="py-24 md:py-32 bg-steel" aria-label="Pricing philosophy">
+        <div className="max-w-6xl mx-auto px-5 md:px-10">
+          <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-semibold mb-8">
             Pricing Philosophy
           </h2>
@@ -188,12 +189,13 @@ export default function ServicesPage() {
               Maintenance plans start at $150/month and scale based on site complexity and support needs.
             </p>
           </div>
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-24 md:py-32" aria-label="Contact call-to-action">
-        <div className="max-w-4xl mx-auto text-center px-6 md:px-12">
+        <div className="max-w-4xl mx-auto text-center px-5 md:px-10">
           <h2 className="text-3xl md:text-4xl font-semibold mb-6">
             Ready to start?
           </h2>

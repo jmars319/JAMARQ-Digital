@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact — JAMARQ Digital",
+  description: "Start a project with JAMARQ. Clear communication, predictable timelines, intentional design. Get a reply within one business day.",
+};
+
 export default function ContactPage() {
   return (
     <main id="main-content" className="min-h-screen bg-jamarq-black text-jamarq-white">

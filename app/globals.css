@@ -1,14 +1,85 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-jamarq-black: #0a0a0c;
-  --color-jamarq-charcoal: #1a1a20;
-  --color-jamarq-slate: #2a2e39;
+  /* Primary Colors */
+  --color-jamarq-black: #0D0D0F;
+  --color-jamarq-cyan: #09A6D6;
+  
+  /* Neutral Grays */
+  --color-steel: #1E1E22;
+  --color-slate: #2C2C30;
+  --color-mist: #E6E6E8;
+  --color-jamarq-gray: #A0A0A0;
+  --color-gray-dark: #6B7280;
+  
+  /* Legacy/accent colors */
   --color-jamarq-white: #f2f2f5;
-  --color-jamarq-gray: #9ca3af;
-  --color-jamarq-cyan: #0ce3f2;
   --color-jamarq-magenta: #ff3eb5;
   --color-jamarq-purple: #8b4df5;
+  
+  /* Semantic Colors */
+  --color-error: #DC2626;
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-info: #3B82F6;
+}
+
+:root {
+  /* Typography */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  
+  /* Font Weights */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  
+  /* Line Heights */
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 2;
+  
+  /* Spacing System (4px base) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-30: 120px;
+  
+  /* Section Padding */
+  --section-padding-desktop: var(--space-30); /* 120px */
+  --section-padding-tablet: var(--space-20); /* 80px */
+  --section-padding-mobile: var(--space-16); /* 64px */
+  
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+  
+  /* Transitions */
+  --duration-fast: 150ms;
+  --duration-base: 200ms;
+  --duration-slow: 300ms;
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Shadows */
+  --glow-cyan: 0 0 20px rgba(9, 166, 214, 0.3);
+  --glow-cyan-intense: 0 0 30px rgba(9, 166, 214, 0.5);
+  
+  /* Focus Ring */
+  --focus-ring: 0 0 0 3px rgba(9, 166, 214, 0.3);
+  --focus-ring-offset: 2px;
 }
 
 * {
@@ -18,7 +89,10 @@
 }
 
 body {
-  background: #0a0a0c;
+  background: #0D0D0F;
   color: #f2f2f5;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: var(--font-primary);
+  line-height: var(--leading-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

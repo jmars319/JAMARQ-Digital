@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Header from "@/components/Header";
 import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -67,8 +69,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased bg-jamarq-black text-jamarq-white`}>
-        {children}
+      <body className={`${inter.variable} ${inter.className} antialiased bg-jamarq-black text-jamarq-white`}>
+        <Header />
+        <div className="pt-16">
+          {children}
+        </div>
         <Analytics />
         <SpeedInsights />
       </body>

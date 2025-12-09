@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Work — JAMARQ Digital",
+  description: "A closer look at the systems behind the work. Case studies showcasing intentional design, clean architecture, and measurable results.",
+};
+
 export default function WorkPage() {
   return (
     <main id="main-content" className="min-h-screen bg-jamarq-black text-jamarq-white">

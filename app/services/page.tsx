@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Services — JAMARQ Digital",
+  description: "Custom web development, digital systems, and ongoing support. No templates. No shortcuts. Clean, intentional architecture built to last.",
+};
+
 export default function ServicesPage() {
   return (
     <main id="main-content" className="min-h-screen bg-jamarq-black text-jamarq-white">

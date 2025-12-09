@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Process — JAMARQ Digital",
+  description: "A clear, structured process for every project. Discovery, design, development, launch, and support. Predictable timelines, no surprises.",
+};
+
 export default function ProcessPage() {
   return (
     <main id="main-content" className="min-h-screen bg-jamarq-black text-jamarq-white">

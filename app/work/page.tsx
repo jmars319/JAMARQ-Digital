@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Work — JAMARQ Digital",
@@ -153,6 +154,8 @@ export default function WorkPage() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </main>
   );
 }

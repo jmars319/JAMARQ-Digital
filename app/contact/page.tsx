@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Contact — JAMARQ Digital",
@@ -91,7 +92,7 @@ export default function ContactPage() {
                   Send me an email with details about your project. Include:
                 </p>
                 
-                <ul className="space-y-3">
+                <ul className="space-y-3 pl-4">
                   <li>• What you need built</li>
                   <li>• Your timeline</li>
                   <li>• Your budget range (if known)</li>
@@ -101,7 +102,7 @@ export default function ContactPage() {
                 <div className="pt-6">
                   <a
                     href="mailto:hello@jamarq.digital?subject=Project Inquiry&body=Hi Jason,%0D%0A%0D%0AI'm interested in starting a project.%0D%0A%0D%0AProject Description:%0D%0A[Tell me about what you need built]%0D%0A%0D%0ATimeline:%0D%0A[When do you need this completed?]%0D%0A%0D%0ABudget Range:%0D%0A[If you have a budget in mind]%0D%0A%0D%0ACurrent Website (if applicable):%0D%0A[Your current site URL]"
-                    className="inline-block bg-jamarq-cyan text-jamarq-black px-8 py-3 rounded-md font-semibold text-lg hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-jamarq-cyan focus:ring-offset-2 focus:ring-offset-steel"
+                    className="inline-block bg-jamarq-cyan text-jamarq-black px-8 py-3 rounded-md font-semibold text-lg hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-jamarq-cyan focus:ring-offset-2 focus:ring-offset-steel w-full md:w-auto text-center"
                   >
                     Email Me
                   </a>
@@ -184,6 +185,8 @@ export default function ContactPage() {
           </p>
         </div>
       </section>
+
+      <Footer />
     </main>
   );
 }

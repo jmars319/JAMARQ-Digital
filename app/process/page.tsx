@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Process — JAMARQ Digital",
@@ -156,21 +157,23 @@ export default function ProcessPage() {
 
       {/* Timeline Context Section */}
       <section className="py-24 md:py-32 px-4 md:px-20" aria-label="Timeline">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-8 text-center">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-8">
             Timeline
           </h2>
           <div className="space-y-6 text-jamarq-gray leading-relaxed">
-            <p className="text-lg">
+            <p className="text-lg text-mist">
               Most projects take 4–8 weeks from kickoff to launch.
             </p>
-            <p>Timeline depends on:</p>
-            <ul className="space-y-2">
-              <li>• Scope and complexity</li>
-              <li>• Content readiness</li>
-              <li>• Response time during review phases</li>
-            </ul>
-            <p className="text-mist">
+            <div className="text-left max-w-xl mx-auto">
+              <p className="mb-3">Timeline depends on:</p>
+              <ul className="space-y-2">
+                <li>• Scope and complexity</li>
+                <li>• Content readiness</li>
+                <li>• Response time during review phases</li>
+              </ul>
+            </div>
+            <p className="text-mist pt-4">
               You&rsquo;ll receive a detailed timeline during the Discovery phase.
             </p>
           </div>
@@ -179,28 +182,28 @@ export default function ProcessPage() {
 
       {/* What This Prevents Section */}
       <section className="py-24 md:py-32 px-4 md:px-20 bg-steel" aria-label="What this prevents">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-8 text-center">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-12 text-center">
             What This Process Prevents
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-jamarq-gray">
-            <div className="p-6 bg-jamarq-black rounded-lg">
-              <p>• Scope creep</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-jamarq-gray">
+            <div className="p-6 bg-jamarq-black rounded-lg text-center">
+              <p className="font-semibold">Scope creep</p>
             </div>
-            <div className="p-6 bg-jamarq-black rounded-lg">
-              <p>• Miscommunication</p>
+            <div className="p-6 bg-jamarq-black rounded-lg text-center">
+              <p className="font-semibold">Miscommunication</p>
             </div>
-            <div className="p-6 bg-jamarq-black rounded-lg">
-              <p>• Missed deadlines</p>
+            <div className="p-6 bg-jamarq-black rounded-lg text-center">
+              <p className="font-semibold">Missed deadlines</p>
             </div>
-            <div className="p-6 bg-jamarq-black rounded-lg">
-              <p>• Surprise costs</p>
+            <div className="p-6 bg-jamarq-black rounded-lg text-center">
+              <p className="font-semibold">Surprise costs</p>
             </div>
-            <div className="p-6 bg-jamarq-black rounded-lg">
-              <p>• Unclear expectations</p>
+            <div className="p-6 bg-jamarq-black rounded-lg text-center">
+              <p className="font-semibold">Unclear expectations</p>
             </div>
-            <div className="p-6 bg-jamarq-black rounded-lg">
-              <p>• Post-launch confusion</p>
+            <div className="p-6 bg-jamarq-black rounded-lg text-center">
+              <p className="font-semibold">Post-launch confusion</p>
             </div>
           </div>
         </div>
@@ -224,6 +227,8 @@ export default function ProcessPage() {
           </a>
         </div>
       </section>
+
+      <Footer />
     </main>
   );
 }

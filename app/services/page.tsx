@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Services — JAMARQ Digital",
@@ -169,18 +170,18 @@ export default function ServicesPage() {
 
       {/* Pricing Philosophy Section */}
       <section className="py-24 md:py-32 px-4 md:px-20 bg-steel" aria-label="Pricing philosophy">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-semibold mb-8">
             Pricing Philosophy
           </h2>
-          <div className="text-left space-y-6 text-jamarq-gray leading-relaxed">
+          <div className="space-y-6 text-jamarq-gray leading-relaxed">
             <p>
               Every project is custom. Pricing depends on scope, complexity, and timeline.
             </p>
             <p>
               You&rsquo;ll receive a clear, itemized estimate before any work begins. No surprises. No scope creep without discussion.
             </p>
-            <p className="text-mist font-semibold">
+            <p className="text-xl text-mist font-semibold">
               Most website projects range from $3,000–$15,000.
             </p>
             <p>
@@ -208,6 +209,8 @@ export default function ServicesPage() {
           </a>
         </div>
       </section>
+
+      <Footer />
     </main>
   );
 }

@@ -1,0 +1,63 @@
+import Link from "next/link";
+
+export default function Footer() {
+  return (
+    <footer className="py-12 px-4 md:px-20 border-t border-slate bg-jamarq-black" role="contentinfo">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          {/* Brand */}
+          <div>
+            <h3 className="text-xl font-semibold mb-2">JAMARQ</h3>
+            <p className="text-jamarq-gray text-sm">Build with intention.</p>
+          </div>
+
+          {/* Navigation */}
+          <div>
+            <h4 className="font-semibold mb-3 text-sm">Navigation</h4>
+            <nav className="space-y-2">
+              <Link href="/" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">
+                Home
+              </Link>
+              <Link href="/services" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">
+                Services
+              </Link>
+              <Link href="/process" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">
+                Process
+              </Link>
+              <Link href="/work" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">
+                Work
+              </Link>
+              <Link href="/contact" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">
+                Contact
+              </Link>
+            </nav>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="font-semibold mb-3 text-sm">Contact</h4>
+            <a 
+              href="mailto:hello@jamarq.digital" 
+              className="text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors"
+            >
+              hello@jamarq.digital
+            </a>
+          </div>
+        </div>
+
+        {/* Legal & Copyright */}
+        <div className="border-t border-slate pt-6 flex flex-col md:flex-row justify-between items-center text-jamarq-gray text-xs space-y-4 md:space-y-0">
+          <div className="space-x-4">
+            <Link href="/privacy" className="hover:text-jamarq-cyan transition-colors">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="hover:text-jamarq-cyan transition-colors">
+              Terms of Service
+            </Link>
+          </div>
+          <p>&copy; 2025 JAMARQ Digital. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  );
+}

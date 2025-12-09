@@ -27,7 +27,7 @@ export default function ServicesPage() {
       {/* Core Services Section */}
       <section className="py-24 md:py-32 px-4 md:px-20 bg-steel" aria-label="Core services">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 justify-items-center">
             {/* Service 1 */}
             <div className="p-8 bg-jamarq-black rounded-lg text-center">
               <h2 className="text-2xl font-semibold mb-4">Custom Website Design & Development</h2>
@@ -116,7 +116,7 @@ export default function ServicesPage() {
             What Makes JAMARQ Different
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 justify-items-center">
             {/* Differentiator 1 */}
             <div className="text-center">
               <h3 className="text-xl font-semibold mb-3">No Templates</h3>

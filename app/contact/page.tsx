@@ -30,7 +30,7 @@ export default function ContactPage() {
       {/* Contact Options Section */}
       <section className="py-24 md:py-32 px-4 md:px-20 bg-steel" aria-label="Contact options">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 justify-items-center">
             {/* Left Column: Email Options */}
             <div className="text-center">
               <h2 className="text-3xl font-semibold mb-8">Email</h2>

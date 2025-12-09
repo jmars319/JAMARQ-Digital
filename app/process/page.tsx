@@ -49,7 +49,7 @@ export default function ProcessPage() {
           <div>
             <div className="text-jamarq-cyan text-5xl md:text-6xl font-semibold mb-4">02</div>
             <h2 className="text-3xl font-semibold mb-6">Architecture & Design</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
               <div className="text-center">
                 <p className="text-sm font-semibold text-mist mb-3">Architecture:</p>
                 <ul className="space-y-2 text-jamarq-gray">
@@ -186,7 +186,7 @@ export default function ProcessPage() {
           <h2 className="text-3xl md:text-4xl font-semibold mb-12 text-center">
             What This Process Prevents
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-jamarq-gray">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-jamarq-gray justify-items-center">
             <div className="p-6 bg-jamarq-black rounded-lg text-center">
               <p className="font-semibold">Scope creep</p>
             </div>

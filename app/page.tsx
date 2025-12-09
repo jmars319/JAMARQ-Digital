@@ -62,7 +62,7 @@ export default function Home() {
             What I Build
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 justify-items-center">
             {/* Service 1 */}
             <div className="text-center">
               <h3 className="text-2xl font-semibold mb-4">Custom Websites</h3>
@@ -100,13 +100,13 @@ export default function Home() {
       </section>
 
       {/* How I Work Section */}
-      <section className="py-24 md:py-32 px-4 md:px-20" aria-label="Process">
+      <section className="py-24 md:py-32 px-4 md:px-20" aria-label="Process overview">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-semibold text-center mb-16">
             How I Work
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 justify-items-center">
             {/* Step 1 */}
             <div className="text-center">
               <div className="text-jamarq-cyan text-5xl font-semibold mb-4">01</div>
@@ -264,7 +264,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-12 px-4 md:px-20 border-t border-slate" role="contentinfo">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 justify-items-center">
             {/* Brand */}
             <div className="text-center">
               <h3 className="text-xl font-semibold mb-2">JAMARQ</h3>

@@ -11,7 +11,7 @@ export default function WorkPage() {
     <main id="main-content" className="min-h-screen bg-jamarq-black text-jamarq-white">
       {/* Hero Section */}
       <section 
-        className="min-h-[60vh] flex items-center justify-center px-5 md:px-10"
+        className="min-h-[60vh] flex items-center justify-center px-6 md:px-12"
         aria-label="Work hero"
       >
         <div className="text-center max-w-4xl mx-auto">
@@ -26,7 +26,7 @@ export default function WorkPage() {
 
       {/* Coming Soon Message Section */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Case studies coming soon">
-        <div className="max-w-4xl mx-auto px-5 md:px-10">
+        <div className="max-w-4xl mx-auto px-6 md:px-12">
           <div className="text-center text-jamarq-gray leading-relaxed space-y-6">
             <p className="text-xl text-mist font-semibold">
               Selected case studies are being prepared.
@@ -61,7 +61,7 @@ export default function WorkPage() {
 
       {/* What Case Studies Will Show Section */}
       <section className="py-24 md:py-32" aria-label="What case studies will include">
-        <div className="max-w-5xl mx-auto px-5 md:px-10">
+        <div className="max-w-5xl mx-auto px-6 md:px-12">
           <h2 className="text-3xl md:text-4xl font-semibold text-center mb-16">
             What Each Case Study Will Include
           </h2>

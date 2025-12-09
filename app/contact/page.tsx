@@ -120,7 +120,7 @@ export default function ContactPage() {
             What Happens Next
           </h2>
           
-          <div className="space-y-12">
+          <div className="space-y-12 max-w-3xl mx-auto">
             {/* Step 01 */}
             <div className="flex gap-6">
               <div className="text-jamarq-cyan text-3xl font-semibold min-w-[60px]">01</div>

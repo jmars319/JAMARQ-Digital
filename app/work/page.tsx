@@ -66,7 +66,7 @@ export default function WorkPage() {
             What Each Case Study Will Include
           </h2>
           
-          <div className="space-y-10">
+          <div className="space-y-10 max-w-3xl mx-auto">
             {/* Point 01 */}
             <div className="flex gap-6">
               <div className="text-jamarq-cyan text-2xl font-semibold min-w-[60px]">01</div>

@@ -295,12 +295,8 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Legal & Copyright */}
-          <div className="border-t border-slate pt-6 flex flex-col md:flex-row justify-between items-center text-jamarq-gray text-xs space-y-4 md:space-y-0">
-            <div className="space-x-4">
-              <a href="/privacy" className="hover:text-jamarq-cyan transition-colors">Privacy Policy</a>
-              <a href="/terms" className="hover:text-jamarq-cyan transition-colors">Terms of Service</a>
-            </div>
+          {/* Copyright */}
+          <div className="border-t border-slate pt-6 text-center text-jamarq-gray text-xs">
             <p>&copy; 2025 JAMARQ Digital. All rights reserved.</p>
           </div>
         </div>

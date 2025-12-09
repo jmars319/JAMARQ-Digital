@@ -11,7 +11,7 @@ export default function ContactPage() {
     <main id="main-content" className="min-h-screen bg-jamarq-black text-jamarq-white">
       {/* Hero Section */}
       <section 
-        className="min-h-[60vh] flex items-center justify-center px-4"
+        className="min-h-[60vh] flex items-center justify-center px-5 md:px-10"
         aria-label="Contact hero"
       >
         <div className="text-center max-w-4xl">
@@ -28,7 +28,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Options Section */}
-      <section className="py-24 md:py-32 px-4 bg-steel" aria-label="Contact options">
+      <section className="py-24 md:py-32 px-5 md:px-10 bg-steel" aria-label="Contact options">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 justify-items-center">
             {/* Left Column: Email Options */}
@@ -114,7 +114,7 @@ export default function ContactPage() {
       </section>
 
       {/* What Happens Next Section */}
-      <section className="py-24 md:py-32 px-4" aria-label="What happens next">
+      <section className="py-24 md:py-32 px-5 md:px-10" aria-label="What happens next">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-semibold text-center mb-16">
             What Happens Next

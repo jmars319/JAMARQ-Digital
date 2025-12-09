@@ -5,7 +5,7 @@ export default function Home() {
     <main id="main-content" className="min-h-screen bg-jamarq-black text-jamarq-white">
       {/* Hero Section */}
       <section 
-        className="min-h-screen flex items-center justify-center px-4"
+        className="min-h-screen flex items-center justify-center px-5 md:px-10"
         aria-label="Hero section"
       >
         <div className="text-center max-w-2xl">
@@ -41,7 +41,7 @@ export default function Home() {
       </section>
 
       {/* Sub-Hero Section */}
-      <section className="py-24 md:py-32 px-4 flex items-center justify-center" aria-label="What we do">
+      <section className="py-24 md:py-32 px-5 md:px-10 flex items-center justify-center" aria-label="What we do">
         <div className="max-w-3xl text-center">
           <h2 className="text-3xl md:text-4xl font-semibold mb-6">
             Build with intention.
@@ -56,7 +56,7 @@ export default function Home() {
       </section>
 
       {/* What I Build Section */}
-      <section className="py-24 md:py-32 px-4 bg-steel" aria-label="Services">
+      <section className="py-24 md:py-32 px-5 md:px-10 bg-steel" aria-label="Services">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-semibold text-center mb-16">
             What I Build
@@ -91,7 +91,7 @@ export default function Home() {
       </section>
 
       {/* Transition 1 */}
-      <section className="py-16 px-4 flex items-center justify-center bg-steel" aria-label="Transition">
+      <section className="py-16 px-5 md:px-10 flex items-center justify-center bg-steel" aria-label="Transition">
         <div className="max-w-3xl text-center">
           <p className="text-lg text-jamarq-gray">
             Every project follows a clear, structured process.
@@ -100,7 +100,7 @@ export default function Home() {
       </section>
 
       {/* How I Work Section */}
-      <section className="py-24 md:py-32 px-4" aria-label="Process overview">
+      <section className="py-24 md:py-32 px-5 md:px-10" aria-label="Process overview">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-semibold text-center mb-16">
             How I Work
@@ -138,7 +138,7 @@ export default function Home() {
       </section>
 
       {/* Transition 2 */}
-      <section className="py-16 px-4 flex items-center justify-center" aria-label="Transition">
+      <section className="py-16 px-5 md:px-10 flex items-center justify-center" aria-label="Transition">
         <div className="max-w-3xl text-center">
           <p className="text-lg text-jamarq-gray">
             The result: a system you can rely on.
@@ -147,7 +147,7 @@ export default function Home() {
       </section>
 
       {/* What You Get Section */}
-      <section className="py-24 md:py-32 px-4 bg-steel" aria-label="Value proposition">
+      <section className="py-24 md:py-32 px-5 md:px-10 bg-steel" aria-label="Value proposition">
         <div className="max-w-6xl mx-auto">
           <p className="text-xl md:text-2xl text-center mb-16 text-mist max-w-4xl mx-auto leading-relaxed">
             You get a modern digital system that feels clean, fast, and intentional.
@@ -190,7 +190,7 @@ export default function Home() {
       </section>
 
       {/* Transition 3 */}
-      <section className="py-16 px-4 flex items-center justify-center bg-steel" aria-label="Transition">
+      <section className="py-16 px-5 md:px-10 flex items-center justify-center bg-steel" aria-label="Transition">
         <div className="max-w-3xl text-center">
           <p className="text-lg text-jamarq-gray">
             See how this approach creates real results.
@@ -199,7 +199,7 @@ export default function Home() {
       </section>
 
       {/* Work Section - Placeholder */}
-      <section className="py-24 md:py-32 px-4" aria-label="Portfolio and case studies">
+      <section className="py-24 md:py-32 px-5 md:px-10" aria-label="Portfolio and case studies">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12">
             Work
@@ -232,7 +232,7 @@ export default function Home() {
       </section>
 
       {/* Enhanced CTA Section */}
-      <section className="py-24 md:py-32 px-4 bg-steel" aria-label="Contact call-to-action">
+      <section className="py-24 md:py-32 px-5 md:px-10 bg-steel" aria-label="Contact call-to-action">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-semibold mb-6">
             Start a Conversation
@@ -262,7 +262,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-4 border-t border-slate" role="contentinfo">
+      <footer className="py-12 px-5 md:px-10 border-t border-slate" role="contentinfo">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 justify-items-center">
             {/* Brand */}

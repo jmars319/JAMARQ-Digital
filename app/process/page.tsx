@@ -11,7 +11,7 @@ export default function ProcessPage() {
     <main id="main-content" className="min-h-screen bg-jamarq-black text-jamarq-white">
       {/* Hero Section */}
       <section 
-        className="min-h-[60vh] flex items-center justify-center px-4"
+        className="min-h-[60vh] flex items-center justify-center px-5 md:px-10"
         aria-label="Process hero"
       >
         <div className="text-center max-w-4xl">
@@ -25,7 +25,7 @@ export default function ProcessPage() {
       </section>
 
       {/* Process Steps Section */}
-      <section className="py-24 md:py-32 px-4 bg-steel" aria-label="Process steps">
+      <section className="py-24 md:py-32 px-5 md:px-10 bg-steel" aria-label="Process steps">
         <div className="max-w-5xl mx-auto space-y-20">
           {/* Step 01 */}
           <div>
@@ -210,7 +210,7 @@ export default function ProcessPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 md:py-32 px-4" aria-label="Contact call-to-action">
+      <section className="py-24 md:py-32 px-5 md:px-10 bg-steel" aria-label="Contact call-to-action">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-semibold mb-6">
             Ready to start?

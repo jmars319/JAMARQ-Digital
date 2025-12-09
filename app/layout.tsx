@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     description: "Custom web development, brand identity, and consulting services. Clean, modern digital solutions.",
     images: [
       {
-        url: "/images/brand/jamarq-logo-primary.png",
+        url: "/assets/logos/wordmark-dark.png",
         width: 1200,
         height: 630,
         alt: "JAMARQ Digital",

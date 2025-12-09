@@ -62,26 +62,26 @@ export default function Home() {
             What I Build
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 justify-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
             {/* Service 1 */}
-            <div className="text-center">
-              <h3 className="text-2xl font-semibold mb-4">Custom Websites</h3>
+            <div className="max-w-sm">
+              <h3 className="text-2xl font-semibold mb-4 text-center">Custom Websites</h3>
               <p className="text-jamarq-gray leading-relaxed">
                 Hand-built, modern, and responsive. Lightweight architecture. Zero templates. Zero bloat.
               </p>
             </div>
 
             {/* Service 2 */}
-            <div className="text-center">
-              <h3 className="text-2xl font-semibold mb-4">Digital Systems</h3>
+            <div className="max-w-sm">
+              <h3 className="text-2xl font-semibold mb-4 text-center">Digital Systems</h3>
               <p className="text-jamarq-gray leading-relaxed">
                 Workflows, integrations, and infrastructure that support how your business actually works.
               </p>
             </div>
 
             {/* Service 3 */}
-            <div className="text-center">
-              <h3 className="text-2xl font-semibold mb-4">Ongoing Support</h3>
+            <div className="max-w-sm">
+              <h3 className="text-2xl font-semibold mb-4 text-center">Ongoing Support</h3>
               <p className="text-jamarq-gray leading-relaxed">
                 Maintenance plans, updates, monitoring, and performance care for long-term stability.
               </p>
@@ -106,29 +106,29 @@ export default function Home() {
             How I Work
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 justify-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
             {/* Step 1 */}
-            <div className="text-center">
-              <div className="text-jamarq-cyan text-5xl font-semibold mb-4">01</div>
-              <h3 className="text-2xl font-semibold mb-4">Discovery</h3>
+            <div className="max-w-sm">
+              <div className="text-jamarq-cyan text-5xl font-semibold mb-4 text-center">01</div>
+              <h3 className="text-2xl font-semibold mb-4 text-center">Discovery</h3>
               <p className="text-jamarq-gray leading-relaxed">
                 We define your goals, constraints, and what the system needs to accomplish. Clarity first. Design second.
               </p>
             </div>
 
             {/* Step 2 */}
-            <div className="text-center">
-              <div className="text-jamarq-cyan text-5xl font-semibold mb-4">02</div>
-              <h3 className="text-2xl font-semibold mb-4">Build</h3>
+            <div className="max-w-sm">
+              <div className="text-jamarq-cyan text-5xl font-semibold mb-4 text-center">02</div>
+              <h3 className="text-2xl font-semibold mb-4 text-center">Build</h3>
               <p className="text-jamarq-gray leading-relaxed">
                 A clean, intentional design translated into a fast, modern digital system. Every component is built from scratch.
               </p>
             </div>
 
             {/* Step 3 */}
-            <div className="text-center">
-              <div className="text-jamarq-cyan text-5xl font-semibold mb-4">03</div>
-              <h3 className="text-2xl font-semibold mb-4">Launch & Support</h3>
+            <div className="max-w-sm">
+              <div className="text-jamarq-cyan text-5xl font-semibold mb-4 text-center">03</div>
+              <h3 className="text-2xl font-semibold mb-4 text-center">Launch & Support</h3>
               <p className="text-jamarq-gray leading-relaxed">
                 A structured rollout, documentation, and a support window. Everything you need to run your site with confidence.
               </p>
@@ -153,9 +153,9 @@ export default function Home() {
             You get a modern digital system that feels clean, fast, and intentional.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 max-w-4xl mx-auto">
             {/* Value 1 */}
-            <div className="text-center">
+            <div>
               <h3 className="text-2xl font-semibold mb-4">Built to Last</h3>
               <p className="text-jamarq-gray leading-relaxed">
                 Focused design. Precise typography. A layout that directs attention, not distracts from it.
@@ -163,7 +163,7 @@ export default function Home() {
             </div>
 
             {/* Value 2 */}
-            <div className="text-center">
+            <div>
               <h3 className="text-2xl font-semibold mb-4">A System You Can Rely On</h3>
               <p className="text-jamarq-gray leading-relaxed">
                 Stable infrastructure. Clean code. A foundation built for long-term use, not short-term workarounds.
@@ -171,7 +171,7 @@ export default function Home() {
             </div>
 
             {/* Value 3 */}
-            <div className="text-center">
+            <div>
               <h3 className="text-2xl font-semibold mb-4">A Process That Respects Your Time</h3>
               <p className="text-jamarq-gray leading-relaxed">
                 Clear communication. Structured milestones. No guesswork.
@@ -179,7 +179,7 @@ export default function Home() {
             </div>
 
             {/* Value 4 */}
-            <div className="text-center">
+            <div>
               <h3 className="text-2xl font-semibold mb-4">Documentation & Support</h3>
               <p className="text-jamarq-gray leading-relaxed">
                 A full handoff. Training if needed. A support window to keep everything stable after launch.

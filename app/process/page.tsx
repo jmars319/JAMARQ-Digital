@@ -187,24 +187,42 @@ export default function ProcessPage() {
           <h2 className="text-3xl md:text-4xl font-semibold mb-12 text-center">
             What This Process Prevents
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-jamarq-gray justify-items-center">
-            <div className="p-6 bg-jamarq-black rounded-lg text-center">
-              <p className="font-semibold">Scope creep</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-jamarq-gray">
+            <div className="group relative p-6 bg-jamarq-black rounded-lg text-center cursor-pointer transition-all duration-300 hover:bg-slate hover:scale-105 hover:shadow-lg">
+              <p className="font-semibold text-mist group-hover:text-jamarq-cyan transition-colors">Scope creep</p>
+              <div className="absolute inset-0 bg-jamarq-black rounded-lg p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <p className="text-sm text-jamarq-gray leading-relaxed">Clear boundaries set upfront. No unexpected features or expanding requirements after agreement.</p>
+              </div>
             </div>
-            <div className="p-6 bg-jamarq-black rounded-lg text-center">
-              <p className="font-semibold">Miscommunication</p>
+            <div className="group relative p-6 bg-jamarq-black rounded-lg text-center cursor-pointer transition-all duration-300 hover:bg-slate hover:scale-105 hover:shadow-lg">
+              <p className="font-semibold text-mist group-hover:text-jamarq-cyan transition-colors">Miscommunication</p>
+              <div className="absolute inset-0 bg-jamarq-black rounded-lg p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <p className="text-sm text-jamarq-gray leading-relaxed">Everything documented. Every decision confirmed. No assumptions about what you want or need.</p>
+              </div>
             </div>
-            <div className="p-6 bg-jamarq-black rounded-lg text-center">
-              <p className="font-semibold">Missed deadlines</p>
+            <div className="group relative p-6 bg-jamarq-black rounded-lg text-center cursor-pointer transition-all duration-300 hover:bg-slate hover:scale-105 hover:shadow-lg">
+              <p className="font-semibold text-mist group-hover:text-jamarq-cyan transition-colors">Missed deadlines</p>
+              <div className="absolute inset-0 bg-jamarq-black rounded-lg p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <p className="text-sm text-jamarq-gray leading-relaxed">Realistic timelines with buffer built in. Milestone-based progress tracking keeps the project on schedule.</p>
+              </div>
             </div>
-            <div className="p-6 bg-jamarq-black rounded-lg text-center">
-              <p className="font-semibold">Surprise costs</p>
+            <div className="group relative p-6 bg-jamarq-black rounded-lg text-center cursor-pointer transition-all duration-300 hover:bg-slate hover:scale-105 hover:shadow-lg">
+              <p className="font-semibold text-mist group-hover:text-jamarq-cyan transition-colors">Surprise costs</p>
+              <div className="absolute inset-0 bg-jamarq-black rounded-lg p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <p className="text-sm text-jamarq-gray leading-relaxed">Fixed pricing based on defined scope. Any changes discussed and approved before adding to budget.</p>
+              </div>
             </div>
-            <div className="p-6 bg-jamarq-black rounded-lg text-center">
-              <p className="font-semibold">Unclear expectations</p>
+            <div className="group relative p-6 bg-jamarq-black rounded-lg text-center cursor-pointer transition-all duration-300 hover:bg-slate hover:scale-105 hover:shadow-lg">
+              <p className="font-semibold text-mist group-hover:text-jamarq-cyan transition-colors">Unclear expectations</p>
+              <div className="absolute inset-0 bg-jamarq-black rounded-lg p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <p className="text-sm text-jamarq-gray leading-relaxed">Detailed project brief. Defined deliverables. You know exactly what you're getting at every stage.</p>
+              </div>
             </div>
-            <div className="p-6 bg-jamarq-black rounded-lg text-center">
-              <p className="font-semibold">Post-launch confusion</p>
+            <div className="group relative p-6 bg-jamarq-black rounded-lg text-center cursor-pointer transition-all duration-300 hover:bg-slate hover:scale-105 hover:shadow-lg">
+              <p className="font-semibold text-mist group-hover:text-jamarq-cyan transition-colors">Post-launch confusion</p>
+              <div className="absolute inset-0 bg-jamarq-black rounded-lg p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <p className="text-sm text-jamarq-gray leading-relaxed">Complete documentation and training. Support window included. You'll know how to manage your site.</p>
+              </div>
             </div>
           </div>
           </div>

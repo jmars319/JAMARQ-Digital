@@ -32,7 +32,7 @@ export default function ContactPage() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Left Column: Email Options */}
-            <div>
+            <div className="text-center">
               <h2 className="text-3xl font-semibold mb-8">Email</h2>
               
               <div className="space-y-8">
@@ -84,7 +84,7 @@ export default function ContactPage() {
             </div>
 
             {/* Right Column: Quick Start */}
-            <div>
+            <div className="text-center">
               <h2 className="text-3xl font-semibold mb-8">Get Started</h2>
               
               <div className="space-y-6 text-jamarq-gray leading-relaxed">

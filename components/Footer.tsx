@@ -6,13 +6,13 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
-          <div>
+          <div className="text-center">
             <h3 className="text-xl font-semibold mb-2">JAMARQ</h3>
             <p className="text-jamarq-gray text-sm">Build with intention.</p>
           </div>
 
           {/* Navigation */}
-          <div>
+          <div className="text-center">
             <h4 className="font-semibold mb-3 text-sm">Navigation</h4>
             <nav className="space-y-2">
               <Link href="/" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">
@@ -34,7 +34,7 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div>
+          <div className="text-center">
             <h4 className="font-semibold mb-3 text-sm">Contact</h4>
             <a 
               href="mailto:hello@jamarq.digital" 

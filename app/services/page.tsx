@@ -29,7 +29,7 @@ export default function ServicesPage() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
             {/* Service 1 */}
-            <div className="p-8 bg-jamarq-black rounded-lg">
+            <div className="p-8 bg-jamarq-black rounded-lg text-center">
               <h2 className="text-2xl font-semibold mb-4">Custom Website Design & Development</h2>
               <p className="text-jamarq-gray mb-6 leading-relaxed">
                 Hand-built, fast, and stable. No templates. No page builders. A clean foundation made specifically for your business.
@@ -47,7 +47,7 @@ export default function ServicesPage() {
             </div>
 
             {/* Service 2 */}
-            <div className="p-8 bg-jamarq-black rounded-lg">
+            <div className="p-8 bg-jamarq-black rounded-lg text-center">
               <h2 className="text-2xl font-semibold mb-4">Digital System Architecture</h2>
               <p className="text-jamarq-gray mb-6 leading-relaxed">
                 Workflows, integrations, automation, and hosting structures. Your digital infrastructure — simplified, unified, intentional.
@@ -65,7 +65,7 @@ export default function ServicesPage() {
             </div>
 
             {/* Service 3 */}
-            <div className="p-8 bg-jamarq-black rounded-lg">
+            <div className="p-8 bg-jamarq-black rounded-lg text-center">
               <h2 className="text-2xl font-semibold mb-4">Maintenance & Support</h2>
               <p className="text-jamarq-gray mb-6 leading-relaxed">
                 Ongoing reliability. Backups, updates, monitoring, and priority support.
@@ -89,7 +89,7 @@ export default function ServicesPage() {
             </div>
 
             {/* Service 4 */}
-            <div className="p-8 bg-jamarq-black rounded-lg">
+            <div className="p-8 bg-jamarq-black rounded-lg text-center">
               <h2 className="text-2xl font-semibold mb-4">Content & Structure Consulting</h2>
               <p className="text-jamarq-gray mb-6 leading-relaxed">
                 Clear hierarchy, improved messaging, and intentional content layouts.

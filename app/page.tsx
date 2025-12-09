@@ -57,7 +57,7 @@ export default function Home() {
 
       {/* What I Build Section */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Services">
-        <div className="max-w-6xl mx-auto px-6 md:px-12">
+        <div className="max-w-6xl mx-auto" style={{ paddingLeft: '24px', paddingRight: '24px' }}>
           <h2 className="text-3xl md:text-4xl font-semibold text-center mb-16">
             What I Build
           </h2>

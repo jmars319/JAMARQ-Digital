@@ -25,8 +25,8 @@ export default function ProcessPage() {
       </section>
 
       {/* Process Steps Section */}
-      <section className="py-24 md:py-32 px-5 md:px-10 bg-steel" aria-label="Process steps">
-        <div className="max-w-5xl mx-auto space-y-20">
+      <section className="py-24 md:py-32 bg-steel" aria-label="Process steps">
+        <div className="max-w-5xl mx-auto space-y-20 px-5 md:px-10">
           {/* Step 01 */}
           <div>
             <div className="text-jamarq-cyan text-5xl md:text-6xl font-semibold mb-4">01</div>
@@ -156,8 +156,8 @@ export default function ProcessPage() {
       </section>
 
       {/* Timeline Context Section */}
-      <section className="py-24 md:py-32 px-4" aria-label="Timeline">
-        <div className="max-w-3xl mx-auto text-center">
+      <section className="py-24 md:py-32" aria-label="Timeline">
+        <div className="max-w-3xl mx-auto text-center px-5 md:px-10">
           <h2 className="text-3xl md:text-4xl font-semibold mb-8">
             Timeline
           </h2>
@@ -210,8 +210,8 @@ export default function ProcessPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 md:py-32 px-5 md:px-10 bg-steel" aria-label="Contact call-to-action">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-24 md:py-32 bg-steel" aria-label="Contact call-to-action">
+        <div className="max-w-4xl mx-auto text-center px-5 md:px-10">
           <h2 className="text-3xl md:text-4xl font-semibold mb-6">
             Ready to start?
           </h2>

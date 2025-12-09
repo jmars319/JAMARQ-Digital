@@ -25,8 +25,8 @@ export default function ServicesPage() {
       </section>
 
       {/* Core Services Section */}
-      <section className="py-24 md:py-32 px-5 md:px-10 bg-steel" aria-label="Core services">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-24 md:py-32 bg-steel" aria-label="Core services">
+        <div className="max-w-6xl mx-auto px-5 md:px-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 justify-items-center">
             {/* Service 1 */}
             <div className="p-8 bg-jamarq-black rounded-lg text-center">
@@ -110,8 +110,8 @@ export default function ServicesPage() {
       </section>
 
       {/* What Makes JAMARQ Different Section */}
-      <section className="py-24 md:py-32 px-5 md:px-10" aria-label="What makes us different">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-24 md:py-32" aria-label="What makes us different">
+        <div className="max-w-6xl mx-auto px-5 md:px-10">
           <h2 className="text-3xl md:text-4xl font-semibold text-center mb-16">
             What Makes JAMARQ Different
           </h2>
@@ -192,8 +192,8 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 md:py-32 px-5 md:px-10" aria-label="Contact call-to-action">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-24 md:py-32" aria-label="Contact call-to-action">
+        <div className="max-w-4xl mx-auto text-center px-5 md:px-10">
           <h2 className="text-3xl md:text-4xl font-semibold mb-6">
             Ready to start?
           </h2>

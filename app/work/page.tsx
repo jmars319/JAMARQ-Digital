@@ -25,8 +25,8 @@ export default function WorkPage() {
       </section>
 
       {/* Coming Soon Message Section */}
-      <section className="py-24 md:py-32 px-5 md:px-10 bg-steel" aria-label="Case studies coming soon">
-        <div className="max-w-4xl mx-auto">
+      <section className="py-24 md:py-32 bg-steel" aria-label="Case studies coming soon">
+        <div className="max-w-4xl mx-auto px-5 md:px-10">
           <div className="text-center text-jamarq-gray leading-relaxed space-y-6">
             <p className="text-xl text-mist font-semibold">
               Selected case studies are being prepared.
@@ -60,8 +60,8 @@ export default function WorkPage() {
       </section>
 
       {/* What Case Studies Will Show Section */}
-      <section className="py-24 md:py-32 px-5 md:px-10" aria-label="What case studies will include">
-        <div className="max-w-5xl mx-auto">
+      <section className="py-24 md:py-32" aria-label="What case studies will include">
+        <div className="max-w-5xl mx-auto px-5 md:px-10">
           <h2 className="text-3xl md:text-4xl font-semibold text-center mb-16">
             What Each Case Study Will Include
           </h2>

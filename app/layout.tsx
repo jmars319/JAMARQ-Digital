@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "JAMARQ Digital - Web Development & Creative Services",
     description: "Custom web development, brand identity, and consulting services. Clean, modern digital solutions.",
-    images: ["/images/brand/jamarq-logo-primary.png"],
+    images: ["/assets/logos/wordmark-dark.png"],
   },
   icons: {
     icon: [

@@ -92,7 +92,7 @@ export default function ContactPage() {
                   Send me an email with details about your project. Include:
                 </p>
                 
-                <ul className="space-y-3 pl-4">
+                <ul className="space-y-3 text-center">
                   <li>• What you need built</li>
                   <li>• Your timeline</li>
                   <li>• Your budget range (if known)</li>

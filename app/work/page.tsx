@@ -36,7 +36,7 @@ export default function WorkPage() {
               I&rsquo;m currently documenting recent builds so you can see:
             </p>
             
-            <ul className="text-left max-w-2xl mx-auto space-y-2">
+            <ul className="text-center max-w-2xl mx-auto space-y-2">
               <li>• The design decisions</li>
               <li>• The systems architecture</li>
               <li>• The performance improvements</li>

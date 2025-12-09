@@ -31,7 +31,7 @@ export default function ProcessPage() {
           <div>
             <div className="text-jamarq-cyan text-5xl md:text-6xl font-semibold mb-4">01</div>
             <h2 className="text-3xl font-semibold mb-6">Discovery</h2>
-            <div className="space-y-4">
+            <div className="space-y-4 text-center">
               <p className="text-sm font-semibold text-mist mb-3">What Happens:</p>
               <ul className="space-y-2 text-jamarq-gray">
                 <li>• Project goals defined</li>
@@ -50,7 +50,7 @@ export default function ProcessPage() {
             <div className="text-jamarq-cyan text-5xl md:text-6xl font-semibold mb-4">02</div>
             <h2 className="text-3xl font-semibold mb-6">Architecture & Design</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
+              <div className="text-center">
                 <p className="text-sm font-semibold text-mist mb-3">Architecture:</p>
                 <ul className="space-y-2 text-jamarq-gray">
                   <li>• Site map</li>
@@ -59,7 +59,7 @@ export default function ProcessPage() {
                   <li>• Integrations planning</li>
                 </ul>
               </div>
-              <div>
+              <div className="text-center">
                 <p className="text-sm font-semibold text-mist mb-3">Design:</p>
                 <ul className="space-y-2 text-jamarq-gray">
                   <li>• Layout direction</li>
@@ -78,7 +78,7 @@ export default function ProcessPage() {
           <div>
             <div className="text-jamarq-cyan text-5xl md:text-6xl font-semibold mb-4">03</div>
             <h2 className="text-3xl font-semibold mb-6">Development</h2>
-            <div className="space-y-4">
+            <div className="space-y-4 text-center">
               <p className="text-sm font-semibold text-mist mb-3">What Happens:</p>
               <ul className="space-y-2 text-jamarq-gray">
                 <li>• Custom build using clean, modern code</li>
@@ -96,7 +96,7 @@ export default function ProcessPage() {
           <div>
             <div className="text-jamarq-cyan text-5xl md:text-6xl font-semibold mb-4">04</div>
             <h2 className="text-3xl font-semibold mb-6">Review & Revisions</h2>
-            <div className="space-y-4">
+            <div className="space-y-4 text-center">
               <p className="text-sm font-semibold text-mist mb-3">What Happens:</p>
               <ul className="space-y-2 text-jamarq-gray">
                 <li>• You receive a working version</li>
@@ -114,7 +114,7 @@ export default function ProcessPage() {
           <div>
             <div className="text-jamarq-cyan text-5xl md:text-6xl font-semibold mb-4">05</div>
             <h2 className="text-3xl font-semibold mb-6">Launch</h2>
-            <div className="space-y-4">
+            <div className="space-y-4 text-center">
               <p className="text-sm font-semibold text-mist mb-3">What Happens:</p>
               <ul className="space-y-2 text-jamarq-gray">
                 <li>• Domain connection</li>
@@ -133,7 +133,7 @@ export default function ProcessPage() {
           <div>
             <div className="text-jamarq-cyan text-5xl md:text-6xl font-semibold mb-4">06</div>
             <h2 className="text-3xl font-semibold mb-6">Support Window</h2>
-            <div className="space-y-4">
+            <div className="space-y-4 text-center">
               <p className="text-sm font-semibold text-mist mb-3">What Happens:</p>
               <ul className="space-y-2 text-jamarq-gray">
                 <li>• Technical questions answered</li>
@@ -165,7 +165,7 @@ export default function ProcessPage() {
             <p className="text-lg text-mist">
               Most projects take 4–8 weeks from kickoff to launch.
             </p>
-            <div className="text-left max-w-xl mx-auto">
+            <div className="text-center max-w-xl mx-auto">
               <p className="mb-3">Timeline depends on:</p>
               <ul className="space-y-2">
                 <li>• Scope and complexity</li>

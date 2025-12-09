@@ -34,7 +34,7 @@ export default function ServicesPage() {
               <p className="text-jamarq-gray mb-6 leading-relaxed">
                 Hand-built, fast, and stable. No templates. No page builders. A clean foundation made specifically for your business.
               </p>
-              <div className="space-y-2">
+              <div className="space-y-2 text-center">
                 <p className="text-sm font-semibold text-mist mb-3">Included:</p>
                 <ul className="space-y-2 text-sm text-jamarq-gray">
                   <li>• Modern, responsive design</li>
@@ -52,7 +52,7 @@ export default function ServicesPage() {
               <p className="text-jamarq-gray mb-6 leading-relaxed">
                 Workflows, integrations, automation, and hosting structures. Your digital infrastructure — simplified, unified, intentional.
               </p>
-              <div className="space-y-2">
+              <div className="space-y-2 text-center">
                 <p className="text-sm font-semibold text-mist mb-3">Included:</p>
                 <ul className="space-y-2 text-sm text-jamarq-gray">
                   <li>• System planning and architecture</li>
@@ -70,7 +70,7 @@ export default function ServicesPage() {
               <p className="text-jamarq-gray mb-6 leading-relaxed">
                 Ongoing reliability. Backups, updates, monitoring, and priority support.
               </p>
-              <div className="space-y-2">
+              <div className="space-y-2 text-center">
                 <p className="text-sm font-semibold text-mist mb-3">Included:</p>
                 <ul className="space-y-2 text-sm text-jamarq-gray">
                   <li>• Regular security updates</li>
@@ -94,7 +94,7 @@ export default function ServicesPage() {
               <p className="text-jamarq-gray mb-6 leading-relaxed">
                 Clear hierarchy, improved messaging, and intentional content layouts.
               </p>
-              <div className="space-y-2">
+              <div className="space-y-2 text-center">
                 <p className="text-sm font-semibold text-mist mb-3">Included:</p>
                 <ul className="space-y-2 text-sm text-jamarq-gray">
                   <li>• Content architecture planning</li>

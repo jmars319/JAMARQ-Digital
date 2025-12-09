@@ -28,7 +28,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Options Section */}
-      <section className="py-24 md:py-32 px-4 md:px-20 bg-steel" aria-label="Contact options">
+      <section className="py-24 md:py-32 px-4 bg-steel" aria-label="Contact options">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 justify-items-center">
             {/* Left Column: Email Options */}
@@ -114,7 +114,7 @@ export default function ContactPage() {
       </section>
 
       {/* What Happens Next Section */}
-      <section className="py-24 md:py-32 px-4 md:px-20" aria-label="What happens next">
+      <section className="py-24 md:py-32 px-4" aria-label="What happens next">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-semibold text-center mb-16">
             What Happens Next
@@ -175,7 +175,7 @@ export default function ContactPage() {
       </section>
 
       {/* Availability Notice Section */}
-      <section className="py-16 px-4 md:px-20 bg-steel" aria-label="Current availability">
+      <section className="py-16 px-4 bg-steel" aria-label="Current availability">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-jamarq-gray">
             <strong className="text-mist">Current Availability:</strong> Accepting new projects

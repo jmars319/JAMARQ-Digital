@@ -25,7 +25,7 @@ export default function ProcessPage() {
       </section>
 
       {/* Process Steps Section */}
-      <section className="py-24 md:py-32 px-4 md:px-20 bg-steel" aria-label="Process steps">
+      <section className="py-24 md:py-32 px-4 bg-steel" aria-label="Process steps">
         <div className="max-w-5xl mx-auto space-y-20">
           {/* Step 01 */}
           <div>
@@ -156,7 +156,7 @@ export default function ProcessPage() {
       </section>
 
       {/* Timeline Context Section */}
-      <section className="py-24 md:py-32 px-4 md:px-20" aria-label="Timeline">
+      <section className="py-24 md:py-32 px-4" aria-label="Timeline">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-semibold mb-8">
             Timeline
@@ -181,7 +181,7 @@ export default function ProcessPage() {
       </section>
 
       {/* What This Prevents Section */}
-      <section className="py-24 md:py-32 px-4 md:px-20 bg-steel" aria-label="What this prevents">
+      <section className="py-24 md:py-32 px-4 bg-steel" aria-label="What this prevents">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-semibold mb-12 text-center">
             What This Process Prevents
@@ -210,7 +210,7 @@ export default function ProcessPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 md:py-32 px-4 md:px-20" aria-label="Contact call-to-action">
+      <section className="py-24 md:py-32 px-4" aria-label="Contact call-to-action">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-semibold mb-6">
             Ready to start?

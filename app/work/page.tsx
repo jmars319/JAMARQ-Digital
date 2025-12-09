@@ -25,7 +25,7 @@ export default function WorkPage() {
       </section>
 
       {/* Coming Soon Message Section */}
-      <section className="py-24 md:py-32 px-4 md:px-20 bg-steel" aria-label="Case studies coming soon">
+      <section className="py-24 md:py-32 px-4 bg-steel" aria-label="Case studies coming soon">
         <div className="max-w-4xl mx-auto">
           <div className="text-center text-jamarq-gray leading-relaxed space-y-6">
             <p className="text-xl text-mist font-semibold">
@@ -60,7 +60,7 @@ export default function WorkPage() {
       </section>
 
       {/* What Case Studies Will Show Section */}
-      <section className="py-24 md:py-32 px-4 md:px-20" aria-label="What case studies will include">
+      <section className="py-24 md:py-32 px-4" aria-label="What case studies will include">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-semibold text-center mb-16">
             What Each Case Study Will Include
@@ -126,7 +126,7 @@ export default function WorkPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 md:py-32 px-4 md:px-20 bg-steel" aria-label="Contact call-to-action">
+      <section className="py-24 md:py-32 px-4 bg-steel" aria-label="Contact call-to-action">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-semibold mb-6">
             Want to see current work?

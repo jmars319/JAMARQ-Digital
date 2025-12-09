@@ -46,3 +46,6 @@ next-env.d.ts
 
 # Portfolio rebuild documentation v2 (internal use only)
 docs/portfolio-instructions-v2/
+
+# Brand documentation (internal use only)
+brand-style-guide.md

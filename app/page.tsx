@@ -64,7 +64,7 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
             {/* Service 1 */}
-            <div className="text-center md:text-left">
+            <div className="text-center">
               <h3 className="text-2xl font-semibold mb-4">Custom Websites</h3>
               <p className="text-jamarq-gray leading-relaxed">
                 Hand-built, modern, and responsive. Lightweight architecture. Zero templates. Zero bloat.
@@ -72,7 +72,7 @@ export default function Home() {
             </div>
 
             {/* Service 2 */}
-            <div className="text-center md:text-left">
+            <div className="text-center">
               <h3 className="text-2xl font-semibold mb-4">Digital Systems</h3>
               <p className="text-jamarq-gray leading-relaxed">
                 Workflows, integrations, and infrastructure that support how your business actually works.
@@ -80,7 +80,7 @@ export default function Home() {
             </div>
 
             {/* Service 3 */}
-            <div className="text-center md:text-left">
+            <div className="text-center">
               <h3 className="text-2xl font-semibold mb-4">Ongoing Support</h3>
               <p className="text-jamarq-gray leading-relaxed">
                 Maintenance plans, updates, monitoring, and performance care for long-term stability.
@@ -106,9 +106,9 @@ export default function Home() {
             How I Work
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
             {/* Step 1 */}
-            <div className="text-center md:text-left">
+            <div className="text-center">
               <div className="text-jamarq-cyan text-5xl font-semibold mb-4">01</div>
               <h3 className="text-2xl font-semibold mb-4">Discovery</h3>
               <p className="text-jamarq-gray leading-relaxed">
@@ -117,7 +117,7 @@ export default function Home() {
             </div>
 
             {/* Step 2 */}
-            <div className="text-center md:text-left">
+            <div className="text-center">
               <div className="text-jamarq-cyan text-5xl font-semibold mb-4">02</div>
               <h3 className="text-2xl font-semibold mb-4">Build</h3>
               <p className="text-jamarq-gray leading-relaxed">
@@ -126,7 +126,7 @@ export default function Home() {
             </div>
 
             {/* Step 3 */}
-            <div className="text-center md:text-left">
+            <div className="text-center">
               <div className="text-jamarq-cyan text-5xl font-semibold mb-4">03</div>
               <h3 className="text-2xl font-semibold mb-4">Launch & Support</h3>
               <p className="text-jamarq-gray leading-relaxed">
@@ -153,7 +153,7 @@ export default function Home() {
             You get a modern digital system that feels clean, fast, and intentional.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
             {/* Value 1 */}
             <div>
               <h3 className="text-2xl font-semibold mb-4">A Website Built for Clarity</h3>

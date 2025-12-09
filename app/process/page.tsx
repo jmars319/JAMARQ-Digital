@@ -14,7 +14,7 @@ export default function ProcessPage() {
         className="min-h-[60vh] flex items-center justify-center px-5 md:px-10"
         aria-label="Process hero"
       >
-        <div className="text-center max-w-4xl">
+        <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-semibold mb-6">
             A clean, structured process.
           </h1>

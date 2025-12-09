@@ -8,7 +8,7 @@ export default function Home() {
         className="min-h-screen flex items-center justify-center px-5 md:px-10"
         aria-label="Hero section"
       >
-        <div className="text-center max-w-2xl">
+        <div className="text-center max-w-2xl mx-auto">
           <div className="mb-8 flex justify-center">
             <Image
               src="/assets/logos/wordmark-dark.png"
@@ -42,7 +42,7 @@ export default function Home() {
 
       {/* Sub-Hero Section */}
       <section className="py-24 md:py-32 px-5 md:px-10 flex items-center justify-center" aria-label="What we do">
-        <div className="max-w-3xl text-center">
+        <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-semibold mb-6">
             Build with intention.
           </h2>
@@ -92,7 +92,7 @@ export default function Home() {
 
       {/* Transition 1 */}
       <section className="py-16 px-5 md:px-10 flex items-center justify-center bg-steel" aria-label="Transition">
-        <div className="max-w-3xl text-center">
+        <div className="max-w-3xl mx-auto text-center">
           <p className="text-lg text-jamarq-gray">
             Every project follows a clear, structured process.
           </p>
@@ -139,7 +139,7 @@ export default function Home() {
 
       {/* Transition 2 */}
       <section className="py-16 px-5 md:px-10 flex items-center justify-center" aria-label="Transition">
-        <div className="max-w-3xl text-center">
+        <div className="max-w-3xl mx-auto text-center">
           <p className="text-lg text-jamarq-gray">
             The result: a system you can rely on.
           </p>
@@ -191,7 +191,7 @@ export default function Home() {
 
       {/* Transition 3 */}
       <section className="py-16 px-5 md:px-10 flex items-center justify-center bg-steel" aria-label="Transition">
-        <div className="max-w-3xl text-center">
+        <div className="max-w-3xl mx-auto text-center">
           <p className="text-lg text-jamarq-gray">
             See how this approach creates real results.
           </p>

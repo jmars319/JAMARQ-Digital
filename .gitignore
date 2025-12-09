@@ -42,3 +42,7 @@ next-env.d.ts
 
 # documentation
 /docs/jamarq-copilot-docs
+.github/copilot-instructions.md
+
+# Portfolio rebuild documentation v2 (internal use only)
+docs/portfolio-instructions-v2/

@@ -11,7 +11,7 @@ export default function Home() {
         <div className="text-center max-w-2xl">
           <div className="mb-8 flex justify-center">
             <Image
-              src="/images/brand/jamarq-logo-primary.png"
+              src="/assets/logos/wordmark-dark.png"
               alt="JAMARQ Digital logo"
               width={400}
               height={100}

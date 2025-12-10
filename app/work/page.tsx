@@ -170,7 +170,7 @@ export default function WorkPage() {
             <div className="flex gap-6">
               <div className="text-jamarq-cyan text-2xl font-semibold min-w-[60px]">05</div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Visual Gallery</h3>
+                <h3 className="text-xl font-semibold mb-2">Visual Gallery <span className="text-sm font-normal text-jamarq-gray">(if available)</span></h3>
                 <p className="text-jamarq-gray">
                   Screenshots, design mockups, and system architecture diagrams.
                 </p>

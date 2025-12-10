@@ -4,48 +4,40 @@ import Footer from "@/components/Footer";
 import { caseStudySummaries } from "@/lib/caseStudySummaries";
 
 export const metadata: Metadata = {
-  title: "Work — JAMARQ Digital",
-  description: "A closer look at the systems behind the work. Case studies showcasing intentional design, clean architecture, and measurable results.",
+  title: "Case Studies — JAMARQ Digital",
+  description: "In-depth case studies showcasing real projects, technical decisions, and measurable results. See how JAMARQ builds intentional digital systems.",
 };
 
-export default function WorkPage() {
+export default function CaseStudiesIndexPage() {
   return (
     <main id="main-content" className="min-h-screen bg-jamarq-black text-jamarq-white">
       {/* Hero Section */}
       <section 
         className="min-h-[60vh] flex items-center justify-center px-5 md:px-10"
-        aria-label="Work hero"
+        aria-label="Case studies hero"
       >
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-semibold mb-6">
-            Work
+            Case Studies
           </h1>
           <p className="text-xl md:text-2xl text-mist mb-6">
-            A closer look at the systems behind the work.
+            Real projects. Technical decisions. Measurable results.
           </p>
           <div className="space-x-4">
-            <a href="/" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
+            <Link href="/" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
               ← Back to Home
-            </a>
+            </Link>
             <span className="text-jamarq-gray">|</span>
-            <a href="/services" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
-              View Services
-            </a>
-            <span className="text-jamarq-gray">|</span>
-            <a href="/process" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
-              See Process
-            </a>
+            <Link href="/work" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
+              View Work Page
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Case Studies Section */}
-      <section className="py-24 md:py-32 bg-steel" aria-label="Case studies">
+      {/* Case Studies Grid */}
+      <section className="py-24 md:py-32 bg-steel" aria-label="Case studies list">
         <div className="max-w-6xl mx-auto px-5 md:px-10">
-          <h2 className="text-3xl md:text-4xl font-semibold text-center mb-16">
-            Recent Projects
-          </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 max-w-5xl mx-auto">
             {/* TRBG Case Study Card */}
             <Link 
@@ -56,9 +48,9 @@ export default function WorkPage() {
                 <p className="text-sm text-jamarq-cyan uppercase tracking-wider mb-2">
                   {caseStudySummaries.trbg.category}
                 </p>
-                <h3 className="text-2xl font-semibold mb-4 group-hover:text-jamarq-cyan transition-colors">
+                <h2 className="text-2xl font-semibold mb-4 group-hover:text-jamarq-cyan transition-colors">
                   {caseStudySummaries.trbg.title}
-                </h3>
+                </h2>
               </div>
               <p className="text-jamarq-gray leading-relaxed mb-6">
                 {caseStudySummaries.trbg.micro}
@@ -77,9 +69,9 @@ export default function WorkPage() {
                 <p className="text-sm text-jamarq-cyan uppercase tracking-wider mb-2">
                   {caseStudySummaries.mms.category}
                 </p>
-                <h3 className="text-2xl font-semibold mb-4 group-hover:text-jamarq-cyan transition-colors">
+                <h2 className="text-2xl font-semibold mb-4 group-hover:text-jamarq-cyan transition-colors">
                   {caseStudySummaries.mms.title}
-                </h3>
+                </h2>
               </div>
               <p className="text-jamarq-gray leading-relaxed mb-6">
                 {caseStudySummaries.mms.micro}
@@ -90,10 +82,13 @@ export default function WorkPage() {
             </Link>
           </div>
 
-          {/* Additional Note */}
-          <div className="text-center mt-16 text-jamarq-gray">
-            <p className="text-sm">
-              More case studies are being prepared. For private previews of current work, email{" "}
+          {/* More Coming Soon */}
+          <div className="text-center mt-16 max-w-3xl mx-auto">
+            <p className="text-lg text-jamarq-gray leading-relaxed">
+              More case studies are being prepared. Each one documents the challenge, approach, technical decisions, and measurable results.
+            </p>
+            <p className="text-sm text-jamarq-gray mt-6">
+              For private previews of current work, email{" "}
               <a 
                 href="mailto:jason@jamarq.digital" 
                 className="text-jamarq-cyan hover:text-jamarq-magenta transition-colors"
@@ -105,11 +100,11 @@ export default function WorkPage() {
         </div>
       </section>
 
-      {/* What Case Studies Will Show Section */}
-      <section className="py-24 md:py-32" aria-label="What case studies will include">
+      {/* What Each Case Study Includes */}
+      <section className="py-24 md:py-32" aria-label="What's included">
         <div className="max-w-5xl mx-auto px-5 md:px-10">
           <h2 className="text-3xl md:text-4xl font-semibold text-center mb-16">
-            What Each Case Study Will Include
+            What Each Case Study Includes
           </h2>
           
           <div className="space-y-10 max-w-3xl mx-auto">
@@ -139,7 +134,7 @@ export default function WorkPage() {
             <div className="flex gap-6">
               <div className="text-jamarq-cyan text-2xl font-semibold min-w-[60px]">03</div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">The Build</h3>
+                <h3 className="text-xl font-semibold mb-2">The Solution</h3>
                 <p className="text-jamarq-gray">
                   Technical decisions, system structure, and implementation details.
                 </p>
@@ -152,53 +147,10 @@ export default function WorkPage() {
               <div>
                 <h3 className="text-xl font-semibold mb-2">The Results</h3>
                 <p className="text-jamarq-gray">
-                  Performance metrics, before/after comparisons, and measurable improvements.
+                  Performance metrics and measurable improvements.
                 </p>
               </div>
             </div>
-
-            {/* Point 05 */}
-            <div className="flex gap-6">
-              <div className="text-jamarq-cyan text-2xl font-semibold min-w-[60px]">05</div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Visual Gallery</h3>
-                <p className="text-jamarq-gray">
-                  Screenshots, design mockups, and system architecture diagrams.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-24 md:py-32 bg-steel" aria-label="Contact call-to-action">
-        <div className="max-w-6xl mx-auto px-5 md:px-10">
-          <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6">
-            Want to see current work?
-          </h2>
-          <p className="text-lg text-jamarq-gray leading-relaxed mb-6">
-            I&rsquo;m happy to share private previews of recent projects.
-          </p>
-          <p className="text-lg mb-8">
-            <a 
-              href="mailto:jason@jamarq.digital" 
-              className="text-jamarq-cyan hover:text-jamarq-magenta transition-colors"
-            >
-              jason@jamarq.digital
-            </a>
-          </p>
-          
-          <div className="pt-6 border-t border-slate">
-            <p className="text-jamarq-gray mb-6">Or, ready to build something?</p>
-            <a
-              href="mailto:hello@jamarq.digital?subject=Project Inquiry"
-              className="inline-block bg-jamarq-cyan text-jamarq-black px-8 py-3 rounded-md font-semibold text-lg hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-jamarq-cyan focus:ring-offset-2 focus:ring-offset-steel"
-            >
-              Get in Touch
-            </a>
-          </div>
           </div>
         </div>
       </section>

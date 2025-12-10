@@ -36,6 +36,8 @@ export default function Footer() {
           {/* Contact */}
           <div className="text-center">
             <h4 className="font-semibold mb-3 text-sm">Contact</h4>
+            <p className="text-jamarq-gray text-xs mb-2">Based in Winston-Salem, North Carolina</p>
+            <p className="text-jamarq-gray text-xs mb-3">Serving businesses nationwide</p>
             <a 
               href="mailto:hello@jamarq.digital" 
               className="text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors"

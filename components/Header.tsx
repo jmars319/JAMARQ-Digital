@@ -8,16 +8,17 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-jamarq-black/95 backdrop-blur-sm border-b border-slate">
-      <nav className="max-w-6xl mx-auto px-5 md:px-10 py-5 flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-jamarq-black/95 backdrop-blur-sm border-b border-slate" role="banner">
+      <nav className="max-w-6xl mx-auto px-5 md:px-10 py-5 flex items-center justify-between" aria-label="Main navigation">
         {/* Logo */}
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="flex items-center" aria-label="JAMARQ Digital homepage">
           <Image
             src="/assets/logos/wordmark-dark.png"
-            alt="JAMARQ Digital"
+            alt="JAMARQ Digital logo"
             width={140}
             height={35}
             className="h-8 w-auto"
+            priority
           />
         </Link>
 
@@ -52,16 +53,17 @@ export default function Header() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden text-jamarq-white p-2"
-          aria-label="Toggle menu"
+          className="md:hidden text-jamarq-white p-2 focus:outline-none focus:ring-2 focus:ring-jamarq-cyan focus:ring-offset-2 focus:ring-offset-jamarq-black rounded"
+          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileMenuOpen}
+          aria-controls="mobile-menu"
         >
           {mobileMenuOpen ? (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           ) : (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           )}
@@ -83,7 +85,7 @@ export default function Header() {
 
       {/* Mobile Menu (JS) */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-slate bg-jamarq-black">
+        <div id="mobile-menu" className="md:hidden border-t border-slate bg-jamarq-black" role="navigation" aria-label="Mobile menu">
           <div className="flex flex-col space-y-4 px-4 py-6">
             <Link 
               href="/services" 

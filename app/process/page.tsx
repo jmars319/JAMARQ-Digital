@@ -4,6 +4,15 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Process — JAMARQ Digital",
   description: "A clear, structured process for every project. Discovery, design, development, launch, and support. Predictable timelines, no surprises.",
+  alternates: {
+    canonical: "https://www.jamarq.digital/process"
+  },
+  openGraph: {
+    title: "Process — JAMARQ Digital",
+    description: "A clear, structured process for every project. Discovery, design, development, launch, and support. Predictable timelines, no surprises.",
+    url: "https://www.jamarq.digital/process",
+    type: "website"
+  }
 };
 
 export default function ProcessPage() {

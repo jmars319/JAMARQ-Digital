@@ -3,7 +3,16 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Services — JAMARQ Digital",
-  description: "Custom web development, digital systems, and ongoing support. No templates. No shortcuts. Clean, intentional architecture built to last.",
+  description: "Custom web development, digital systems, and ongoing support in Winston-Salem, NC. No templates. Clean, intentional architecture built to last.",
+  alternates: {
+    canonical: "https://www.jamarq.digital/services"
+  },
+  openGraph: {
+    title: "Services — JAMARQ Digital",
+    description: "Custom web development, digital systems, and ongoing support in Winston-Salem, NC. No templates. Clean, intentional architecture built to last.",
+    url: "https://www.jamarq.digital/services",
+    type: "website"
+  }
 };
 
 export default function ServicesPage() {

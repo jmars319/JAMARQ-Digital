@@ -6,6 +6,15 @@ import { caseStudySummaries } from "@/lib/caseStudySummaries";
 export const metadata: Metadata = {
   title: "Case Studies — JAMARQ Digital",
   description: "In-depth case studies showcasing real projects, technical decisions, and measurable results. See how JAMARQ builds intentional digital systems.",
+  alternates: {
+    canonical: "https://jamarq.digital/case-studies"
+  },
+  openGraph: {
+    title: "Case Studies — JAMARQ Digital",
+    description: "In-depth case studies showcasing real projects, technical decisions, and measurable results. See how JAMARQ builds intentional digital systems.",
+    url: "https://jamarq.digital/case-studies",
+    type: "website"
+  }
 };
 
 export default function CaseStudiesIndexPage() {

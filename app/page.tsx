@@ -1,4 +1,19 @@
+import type { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "JAMARQ Digital — Modern Web Development & Digital Systems",
+  description: "Custom web development in Winston-Salem, NC. Clean, intentional digital systems built for clarity and speed. No templates. No shortcuts. Build with intention.",
+  alternates: {
+    canonical: "https://www.jamarq.digital/"
+  },
+  openGraph: {
+    title: "JAMARQ Digital — Build with intention",
+    description: "Modern digital systems designed for clarity, speed, and long-term stability.",
+    url: "https://www.jamarq.digital/",
+    type: "website"
+  }
+};
 
 export default function Home() {
   return (
@@ -12,7 +27,7 @@ export default function Home() {
           <div className="mb-8 flex justify-center">
             <Image
               src="/assets/logos/wordmark-dark.png"
-              alt="JAMARQ Digital logo"
+              alt="JAMARQ Digital - Modern Web Development"
               width={400}
               height={100}
               priority

@@ -3,7 +3,16 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Contact — JAMARQ Digital",
-  description: "Start a project with JAMARQ. Clear communication, predictable timelines, intentional design. Get a reply within one business day.",
+  description: "Start a project with JAMARQ in Winston-Salem, NC. Clear communication, predictable timelines. Get a reply within one business day.",
+  alternates: {
+    canonical: "https://www.jamarq.digital/contact"
+  },
+  openGraph: {
+    title: "Contact — JAMARQ Digital",
+    description: "Start a project with JAMARQ in Winston-Salem, NC. Clear communication, predictable timelines. Get a reply within one business day.",
+    url: "https://www.jamarq.digital/contact",
+    type: "website"
+  }
 };
 
 export default function ContactPage() {

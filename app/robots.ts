@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://jamarq.digital/sitemap.xml',
+    sitemap: 'https://www.jamarq.digital/sitemap.xml',
   }
 }

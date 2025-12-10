@@ -323,7 +323,13 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 justify-items-center">
             {/* Brand */}
             <div className="text-center">
-              <h3 className="text-xl font-semibold mb-2">JAMARQ</h3>
+              <Image
+                src="/assets/logos/wordmark-dark.png"
+                alt="JAMARQ Digital"
+                width={200}
+                height={50}
+                className="h-12 md:h-16 w-auto mx-auto mb-2"
+              />
               <p className="text-jamarq-gray text-sm">Build with intention.</p>
             </div>
 
@@ -342,6 +348,8 @@ export default function Home() {
             {/* Contact */}
             <div className="text-center">
               <h4 className="font-semibold mb-3 text-sm">Contact</h4>
+              <p className="text-jamarq-gray text-xs mb-2">Based in Winston-Salem, North Carolina</p>
+              <p className="text-jamarq-gray text-xs mb-3">Serving businesses nationwide</p>
               <a 
                 href="mailto:hello@jamarq.digital" 
                 className="text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors"

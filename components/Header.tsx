@@ -15,9 +15,9 @@ export default function Header() {
           <Image
             src="/assets/logos/icon-dark.png"
             alt="JAMARQ Digital logo"
-            width={40}
-            height={40}
-            className="h-10 w-auto"
+            width={48}
+            height={48}
+            className="h-12 w-auto"
             priority
           />
         </Link>

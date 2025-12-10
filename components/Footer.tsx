@@ -11,9 +11,9 @@ export default function Footer() {
             <Image
               src="/assets/logos/wordmark-dark.png"
               alt="JAMARQ Digital"
-              width={140}
-              height={35}
-              className="h-6 w-auto mx-auto mb-2"
+              width={200}
+              height={50}
+              className="h-12 md:h-16 w-auto mx-auto mb-2"
             />
             <p className="text-jamarq-gray text-sm">Build with intention.</p>
           </div>

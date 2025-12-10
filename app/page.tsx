@@ -206,44 +206,64 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Work Section - Placeholder */}
+      {/* Work Section - Case Studies */}
       <section className="py-24 md:py-32" aria-label="Portfolio and case studies">
-        <div className="max-w-4xl mx-auto px-5 md:px-10">
+        <div className="max-w-6xl mx-auto px-5 md:px-10">
           <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12">
             Work
           </h2>
           
-          <div className="text-center text-jamarq-gray leading-relaxed space-y-6">
-            <p className="text-lg">
-              Selected case studies are being prepared.
-            </p>
-            
-            <p>
-              I'm currently documenting recent builds so you can see:<br />
-              • The design decisions<br />
-              • The technical structure<br />
-              • The measurable outcomes
-            </p>
-            
-            <p className="text-sm pt-4">
-              In the meantime:<br />
-              If you want a private preview of current work, email me directly at{" "}
-              <a 
-                href="mailto:jason@jamarq.digital" 
-                className="text-jamarq-cyan hover:text-jamarq-magenta transition-colors"
-              >
-                jason@jamarq.digital
-              </a>.
-            </p>
-            
-            <div className="pt-6">
-              <a 
-                href="/work" 
-                className="inline-block text-jamarq-cyan hover:text-jamarq-magenta transition-colors font-semibold"
-              >
-                View Work Page →
-              </a>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 max-w-5xl mx-auto mb-12">
+            {/* TRBG Case Study Card */}
+            <a 
+              href="/case-studies/trbg"
+              className="group p-8 bg-steel rounded-lg hover:bg-slate transition-all duration-300"
+            >
+              <div className="mb-4">
+                <p className="text-sm text-jamarq-cyan uppercase tracking-wider mb-2">
+                  Web Development
+                </p>
+                <h3 className="text-2xl font-semibold mb-4 group-hover:text-jamarq-cyan transition-colors">
+                  Thunder Road Bar & Grill
+                </h3>
+              </div>
+              <p className="text-jamarq-gray leading-relaxed mb-6">
+                Custom restaurant website rebuild. Load times improved from 4–6 seconds to under 1.5 seconds. Simple admin workflow for weekly specials.
+              </p>
+              <div className="flex items-center text-jamarq-cyan group-hover:text-jamarq-magenta transition-colors font-semibold">
+                View Case Study →
+              </div>
+            </a>
+
+            {/* MMS Case Study Card */}
+            <a 
+              href="/case-studies/mms"
+              className="group p-8 bg-steel rounded-lg hover:bg-slate transition-all duration-300"
+            >
+              <div className="mb-4">
+                <p className="text-sm text-jamarq-cyan uppercase tracking-wider mb-2">
+                  Web Development
+                </p>
+                <h3 className="text-2xl font-semibold mb-4 group-hover:text-jamarq-cyan transition-colors">
+                  Midway Mobile Storage
+                </h3>
+              </div>
+              <p className="text-jamarq-gray leading-relaxed mb-6">
+                Complete digital rebuild with custom inventory system and automated quote workflow. Owner-friendly admin panel.
+              </p>
+              <div className="flex items-center text-jamarq-cyan group-hover:text-jamarq-magenta transition-colors font-semibold">
+                View Case Study →
+              </div>
+            </a>
+          </div>
+
+          <div className="text-center">
+            <a 
+              href="/case-studies" 
+              className="inline-block text-jamarq-cyan hover:text-jamarq-magenta transition-colors font-semibold text-lg"
+            >
+              View All Case Studies →
+            </a>
           </div>
         </div>
       </section>

@@ -8,8 +8,34 @@ export const metadata: Metadata = {
 };
 
 export default function TRBGCaseStudyPage() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Thunder Road Bar & Grill Case Study",
+    "description": "A complete rebuild of a neighborhood bar's digital system with improved load times and clean menu design.",
+    "author": {
+      "@type": "Person",
+      "name": "Jason Marshall",
+      "email": "jason@jamarq.digital"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "JAMARQ Digital",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://jamarq.digital/assets/logos/wordmark-dark.png"
+      }
+    },
+    "datePublished": "2025-12-09",
+    "dateModified": "2025-12-09"
+  };
+
   return (
     <main id="main-content" className="min-h-screen bg-jamarq-black text-jamarq-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       {/* Hero Section */}
       <section 
         className="min-h-[60vh] flex items-center justify-center px-5 md:px-10"

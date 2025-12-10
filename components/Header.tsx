@@ -54,6 +54,7 @@ export default function Header() {
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className="md:hidden text-jamarq-white p-2"
           aria-label="Toggle menu"
+          aria-expanded={mobileMenuOpen}
         >
           {mobileMenuOpen ? (
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -65,9 +66,22 @@ export default function Header() {
             </svg>
           )}
         </button>
+
+        {/* No-JS Mobile Navigation Fallback */}
+        <noscript>
+          <div className="md:hidden">
+            <a 
+              href="#mobile-nav" 
+              className="text-jamarq-white p-2 text-sm"
+              aria-label="Jump to navigation"
+            >
+              Menu ▼
+            </a>
+          </div>
+        </noscript>
       </nav>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu (JS) */}
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-slate bg-jamarq-black">
           <div className="flex flex-col space-y-4 px-4 py-6">
@@ -102,6 +116,38 @@ export default function Header() {
           </div>
         </div>
       )}
+
+      {/* No-JS Mobile Navigation (Always visible without JS) */}
+      <noscript>
+        <div id="mobile-nav" className="md:hidden border-t border-slate bg-jamarq-black">
+          <nav className="flex flex-col space-y-4 px-4 py-6" aria-label="Mobile navigation">
+            <a 
+              href="/services" 
+              className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
+            >
+              Services
+            </a>
+            <a 
+              href="/process" 
+              className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
+            >
+              Process
+            </a>
+            <a 
+              href="/work" 
+              className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
+            >
+              Work
+            </a>
+            <a 
+              href="/contact" 
+              className="text-sm bg-jamarq-cyan text-jamarq-black px-6 py-2 rounded font-semibold hover:bg-opacity-90 transition-all inline-block text-center"
+            >
+              Contact
+            </a>
+          </nav>
+        </div>
+      </noscript>
     </header>
   );
 }

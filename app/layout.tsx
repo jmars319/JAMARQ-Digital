@@ -75,9 +75,52 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "JAMARQ Digital",
+    "url": "https://jamarq.digital",
+    "logo": "https://jamarq.digital/assets/logos/wordmark-dark.png",
+    "description": "Custom web development, brand identity, and consulting services. Clean, modern digital solutions.",
+    "founder": {
+      "@type": "Person",
+      "name": "Jason Marshall",
+      "email": "jason@jamarq.digital"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lexington",
+      "addressRegion": "NC",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://github.com/jmars319"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "hello@jamarq.digital",
+      "contactType": "Customer Service"
+    },
+    "areaServed": {
+      "@type": "Place",
+      "name": "United States"
+    }
+  };
+
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
       <body className={`${inter.variable} ${montserrat.variable} ${inter.className} antialiased bg-jamarq-black text-jamarq-white`}>
+        <noscript>
+          <div className="bg-jamarq-cyan text-jamarq-black p-4 text-center text-sm font-semibold">
+            This site works best with JavaScript enabled, but all content is fully accessible without it.
+          </div>
+        </noscript>
         <Header />
         <div className="pt-20">
           {children}

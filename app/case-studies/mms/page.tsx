@@ -8,8 +8,34 @@ export const metadata: Metadata = {
 };
 
 export default function MMSCaseStudyPage() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Midway Mobile Storage Case Study",
+    "description": "A complete rebuild of a storage company's digital platform with custom inventory system and automated quote workflow.",
+    "author": {
+      "@type": "Person",
+      "name": "Jason Marshall",
+      "email": "jason@jamarq.digital"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "JAMARQ Digital",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://jamarq.digital/assets/logos/wordmark-dark.png"
+      }
+    },
+    "datePublished": "2025-12-09",
+    "dateModified": "2025-12-09"
+  };
+
   return (
     <main id="main-content" className="min-h-screen bg-jamarq-black text-jamarq-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       {/* Hero Section */}
       <section 
         className="min-h-[60vh] flex items-center justify-center px-5 md:px-10"

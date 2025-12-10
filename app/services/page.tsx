@@ -18,9 +18,12 @@ export default function ServicesPage() {
           <h1 className="text-4xl md:text-5xl font-semibold mb-6">
             Services built with intention.
           </h1>
-          <p className="text-xl md:text-2xl text-mist">
+          <p className="text-xl md:text-2xl text-mist mb-6">
             Clean, modern digital systems. Built to last. Designed for clarity.
           </p>
+          <a href="/" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
+            ← Back to Home
+          </a>
         </div>
       </section>
 
@@ -203,12 +206,18 @@ export default function ServicesPage() {
             Let&rsquo;s talk about your project.
           </p>
           
-          <a
-            href="mailto:hello@jamarq.digital?subject=Project Inquiry"
-            className="inline-block bg-jamarq-cyan text-jamarq-black px-8 py-3 rounded-md font-semibold text-lg hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-jamarq-cyan focus:ring-offset-2 focus:ring-offset-jamarq-black"
-          >
-            Get in Touch
-          </a>
+          <div className="space-y-4">
+            <a
+              href="mailto:hello@jamarq.digital?subject=Project Inquiry"
+              className="inline-block bg-jamarq-cyan text-jamarq-black px-8 py-3 rounded-md font-semibold text-lg hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-jamarq-cyan focus:ring-offset-2 focus:ring-offset-jamarq-black"
+            >
+              Get in Touch
+            </a>
+            
+            <p className="text-sm text-jamarq-gray">
+              Want to see how I work? <a href="/process" className="text-jamarq-cyan hover:text-jamarq-magenta transition-colors">View the full process</a>
+            </p>
+          </div>
         </div>
       </section>
 

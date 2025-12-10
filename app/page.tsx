@@ -66,9 +66,12 @@ export default function Home() {
             {/* Service 1 */}
             <div className="max-w-sm">
               <h3 className="text-2xl font-semibold mb-4 text-center">Custom Websites</h3>
-              <p className="text-jamarq-gray leading-relaxed">
+              <p className="text-jamarq-gray leading-relaxed mb-4">
                 Hand-built, modern, and responsive. Lightweight architecture. Zero templates. Zero bloat.
               </p>
+              <a href="/services" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
+                View all services →
+              </a>
             </div>
 
             {/* Service 2 */}
@@ -111,9 +114,14 @@ export default function Home() {
             <div className="max-w-sm">
               <div className="text-jamarq-cyan text-5xl font-semibold mb-4 text-center">01</div>
               <h3 className="text-2xl font-semibold mb-4 text-center">Discovery</h3>
-              <p className="text-jamarq-gray leading-relaxed">
+              <p className="text-jamarq-gray leading-relaxed mb-4">
                 We define your goals, constraints, and what the system needs to accomplish. Clarity first. Design second.
               </p>
+              <div className="text-center">
+                <a href="/process" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
+                  See the full process →
+                </a>
+              </div>
             </div>
 
             {/* Step 2 */}
@@ -156,7 +164,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 max-w-4xl mx-auto">
             {/* Value 1 */}
             <div>
-              <h3 className="text-2xl font-semibold mb-4">Built to Last</h3>
+              <h3 className="text-2xl font-semibold mb-4">A Website Built for Clarity</h3>
               <p className="text-jamarq-gray leading-relaxed">
                 Focused design. Precise typography. A layout that directs attention, not distracts from it.
               </p>
@@ -227,6 +235,15 @@ export default function Home() {
                 jason@jamarq.digital
               </a>.
             </p>
+            
+            <div className="pt-6">
+              <a 
+                href="/work" 
+                className="inline-block text-jamarq-cyan hover:text-jamarq-magenta transition-colors font-semibold"
+              >
+                View Work Page →
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -257,6 +274,10 @@ export default function Home() {
             >
               Get in Touch
             </a>
+            
+            <p className="text-sm text-jamarq-gray mt-4">
+              Or <a href="/contact" className="text-jamarq-cyan hover:text-jamarq-magenta transition-colors">view all contact options</a>
+            </p>
           </div>
         </div>
       </section>

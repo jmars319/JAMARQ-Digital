@@ -18,9 +18,22 @@ export default function WorkPage() {
           <h1 className="text-4xl md:text-5xl font-semibold mb-6">
             Work
           </h1>
-          <p className="text-xl md:text-2xl text-mist">
+          <p className="text-xl md:text-2xl text-mist mb-6">
             A closer look at the systems behind the work.
           </p>
+          <div className="space-x-4">
+            <a href="/" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
+              ← Back to Home
+            </a>
+            <span className="text-jamarq-gray">|</span>
+            <a href="/services" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
+              View Services
+            </a>
+            <span className="text-jamarq-gray">|</span>
+            <a href="/process" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
+              See Process
+            </a>
+          </div>
         </div>
       </section>
 

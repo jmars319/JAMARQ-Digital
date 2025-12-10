@@ -24,6 +24,15 @@ export default function ContactPage() {
           <p className="text-lg text-jamarq-gray mt-4">
             You&rsquo;ll get a clear reply within one business day.
           </p>
+          <div className="mt-6 space-x-4">
+            <a href="/" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
+              ← Back to Home
+            </a>
+            <span className="text-jamarq-gray">|</span>
+            <a href="/services" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
+              View Services
+            </a>
+          </div>
         </div>
       </section>
 

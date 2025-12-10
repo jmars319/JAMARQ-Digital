@@ -13,11 +13,11 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center" aria-label="JAMARQ Digital homepage">
           <Image
-            src="/assets/logos/wordmark-dark.png"
+            src="/assets/logos/icon-dark.png"
             alt="JAMARQ Digital logo"
-            width={140}
-            height={35}
-            className="h-8 w-auto"
+            width={40}
+            height={40}
+            className="h-10 w-auto"
             priority
           />
         </Link>

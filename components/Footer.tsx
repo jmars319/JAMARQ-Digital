@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -7,7 +8,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 justify-items-center">
           {/* Brand */}
           <div className="text-center">
-            <h3 className="text-xl font-semibold mb-2">JAMARQ</h3>
+            <Image
+              src="/assets/logos/wordmark-dark.png"
+              alt="JAMARQ Digital"
+              width={140}
+              height={35}
+              className="h-6 w-auto mx-auto mb-2"
+            />
             <p className="text-jamarq-gray text-sm">Build with intention.</p>
           </div>
 

@@ -29,14 +29,17 @@ export default function Home() {
       >
         <div className="text-center max-w-2xl mx-auto">
           <div className="mb-8 flex justify-center">
-            <Image
-              src="/assets/logos/wordmark-dark.png"
-              alt="JAMARQ Digital - Modern Web Development"
-              width={400}
-              height={100}
-              priority
-              className="w-auto h-16 md:h-20"
-            />
+            <div className="relative h-16 md:h-20 w-[260px] md:w-[400px]">
+              <Image
+                src="/assets/logos/wordmark-dark.png"
+                alt="JAMARQ Digital - Modern Web Development"
+                fill
+                priority
+                fetchPriority="high"
+                sizes="(min-width: 768px) 400px, 260px"
+                className="object-contain"
+              />
+            </div>
           </div>
           
           <h1 className="sr-only">JAMARQ Digital</h1>

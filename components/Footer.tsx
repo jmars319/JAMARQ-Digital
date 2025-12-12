@@ -8,13 +8,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 justify-items-center">
           {/* Brand */}
           <div className="text-center">
-            <Image
-              src="/assets/logos/wordmark-dark.png"
-              alt="JAMARQ Digital"
-              width={200}
-              height={50}
-              className="h-12 md:h-16 w-auto mx-auto mb-2"
-            />
+            <div className="relative mx-auto mb-2 h-12 md:h-16 w-[200px] md:w-[260px]">
+              <Image
+                src="/assets/logos/wordmark-dark.png"
+                alt="JAMARQ Digital"
+                fill
+                sizes="(min-width: 768px) 260px, 200px"
+                className="object-contain"
+              />
+            </div>
             <p className="text-jamarq-gray text-sm">Build with intention.</p>
           </div>
 

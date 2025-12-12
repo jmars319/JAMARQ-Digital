@@ -12,14 +12,16 @@ export default function Header() {
       <nav className="max-w-6xl mx-auto px-5 md:px-10 py-5 flex items-center justify-between" aria-label="Main navigation">
         {/* Logo */}
         <Link href="/" className="flex items-center" aria-label="JAMARQ Digital homepage">
-          <Image
-            src="/assets/logos/icon-dark.png"
-            alt="JAMARQ Digital logo"
-            width={48}
-            height={48}
-            className="h-12 w-auto"
-            priority
-          />
+          <div className="relative h-12 w-12">
+            <Image
+              src="/assets/logos/icon-dark.png"
+              alt="JAMARQ Digital logo"
+              fill
+              sizes="48px"
+              priority
+              className="object-contain"
+            />
+          </div>
         </Link>
 
         {/* Desktop Navigation */}

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
@@ -34,13 +35,13 @@ export default function ContactPage() {
             You&rsquo;ll get a clear reply within one business day.
           </p>
           <div className="mt-6 space-x-4">
-            <a href="/" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
+            <Link href="/" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
               ← Back to Home
-            </a>
+            </Link>
             <span className="text-jamarq-gray">|</span>
-            <a href="/services" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
+            <Link href="/services" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
               View Services
-            </a>
+            </Link>
           </div>
         </div>
       </section>

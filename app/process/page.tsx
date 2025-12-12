@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
@@ -30,9 +31,9 @@ export default function ProcessPage() {
           <p className="text-xl md:text-2xl text-mist mb-6">
             Clear milestones. Predictable timelines. No guesswork.
           </p>
-          <a href="/" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
+          <Link href="/" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
             ← Back to Home
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -156,12 +157,12 @@ export default function ProcessPage() {
               <p className="text-lg text-mist mt-6 italic">
                 A smooth transition to ownership.
               </p>
-              <a 
+              <Link 
                 href="/maintenance" 
                 className="inline-block mt-6 text-jamarq-cyan hover:text-jamarq-magenta transition-colors text-sm font-semibold"
               >
                 View Maintenance Plans →
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -227,13 +228,13 @@ export default function ProcessPage() {
             <div className="group relative p-6 bg-jamarq-black rounded-lg text-center cursor-pointer transition-all duration-300 hover:bg-slate hover:scale-105 hover:shadow-lg">
               <p className="font-semibold text-mist group-hover:text-jamarq-cyan transition-colors">Unclear expectations</p>
               <div className="absolute inset-0 bg-jamarq-black rounded-lg p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <p className="text-sm text-jamarq-gray leading-relaxed">Detailed project brief. Defined deliverables. You know exactly what you're getting at every stage.</p>
+                <p className="text-sm text-jamarq-gray leading-relaxed">Detailed project brief. Defined deliverables. You know exactly what you&rsquo;re getting at every stage.</p>
               </div>
             </div>
             <div className="group relative p-6 bg-jamarq-black rounded-lg text-center cursor-pointer transition-all duration-300 hover:bg-slate hover:scale-105 hover:shadow-lg">
               <p className="font-semibold text-mist group-hover:text-jamarq-cyan transition-colors">Post-launch confusion</p>
               <div className="absolute inset-0 bg-jamarq-black rounded-lg p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <p className="text-sm text-jamarq-gray leading-relaxed">Complete documentation and training. Support window included. You'll know how to manage your site.</p>
+                <p className="text-sm text-jamarq-gray leading-relaxed">Complete documentation and training. Support window included. You&rsquo;ll know how to manage your site.</p>
               </div>
             </div>
           </div>
@@ -260,7 +261,7 @@ export default function ProcessPage() {
             </a>
             
             <p className="text-sm text-jamarq-gray">
-              <a href="/services" className="text-jamarq-cyan hover:text-jamarq-magenta transition-colors">View all services</a> or <a href="/contact" className="text-jamarq-cyan hover:text-jamarq-magenta transition-colors">see more contact options</a>
+              <Link href="/services" className="text-jamarq-cyan hover:text-jamarq-magenta transition-colors">View all services</Link> or <Link href="/contact" className="text-jamarq-cyan hover:text-jamarq-magenta transition-colors">see more contact options</Link>
             </p>
           </div>
         </div>

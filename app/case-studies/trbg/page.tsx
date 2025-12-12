@@ -2,9 +2,42 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 
+const heroDescription =
+  "A complete rebuild of a neighborhood bar's digital system. Custom React website with improved load times, clean menu design, and simple admin workflow.";
+
 export const metadata: Metadata = {
   title: "Thunder Road Bar & Grill Case Study — JAMARQ Digital",
-  description: "A complete rebuild of a neighborhood bar's digital system. Custom React website with improved load times, clean menu design, and simple admin workflow.",
+  description: heroDescription,
+  alternates: {
+    canonical: "https://jamarq.digital/case-studies/trbg"
+  },
+  openGraph: {
+    title: "Thunder Road Bar & Grill Case Study — JAMARQ Digital",
+    description: heroDescription,
+    url: "https://jamarq.digital/case-studies/trbg",
+    type: "article",
+    images: [
+      {
+        url: "https://jamarq.digital/case-studies/trbg/og-thunder-road-bar-and-grill.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Thunder Road Bar & Grill case study cover image"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Thunder Road Bar & Grill Case Study — JAMARQ Digital",
+    description: heroDescription,
+    images: [
+      {
+        url: "https://jamarq.digital/case-studies/trbg/og-thunder-road-bar-and-grill.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Thunder Road Bar & Grill case study cover image"
+      }
+    ]
+  }
 };
 
 export default function TRBGCaseStudyPage() {
@@ -12,7 +45,7 @@ export default function TRBGCaseStudyPage() {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Thunder Road Bar & Grill Case Study",
-    "description": "A complete rebuild of a neighborhood bar's digital system with improved load times and clean menu design.",
+    "description": heroDescription,
     "author": {
       "@type": "Person",
       "name": "Jason Marshall",
@@ -26,6 +59,7 @@ export default function TRBGCaseStudyPage() {
         "url": "https://jamarq.digital/assets/logos/wordmark-dark.png"
       }
     },
+    "image": "https://jamarq.digital/case-studies/trbg/og-thunder-road-bar-and-grill.jpg",
     "datePublished": "2025-12-09",
     "dateModified": "2025-12-09"
   };
@@ -47,7 +81,7 @@ export default function TRBGCaseStudyPage() {
             Thunder Road Bar & Grill
           </h1>
           <p className="text-xl md:text-2xl text-mist mb-6">
-            A complete rebuild of a neighborhood bar&rsquo;s digital system.
+            {heroDescription}
           </p>
           <div className="space-x-4">
             <Link href="/work" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">

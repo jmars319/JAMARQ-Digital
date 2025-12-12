@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
+import { caseStudySummaries } from "@/lib/caseStudySummaries";
 
 export const metadata: Metadata = {
   title: "JAMARQ Digital — Modern Web Development & Digital Systems",
@@ -16,6 +18,8 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+  const { trbg, mms } = caseStudySummaries;
+
   return (
     <main id="main-content" className="min-h-screen bg-jamarq-black text-jamarq-white">
       {/* Hero Section */}
@@ -84,9 +88,9 @@ export default function Home() {
               <p className="text-jamarq-gray leading-relaxed mb-4">
                 Hand-built, modern, and responsive. Lightweight architecture. Zero templates. Zero bloat.
               </p>
-              <a href="/services" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
+              <Link href="/services" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
                 View all services →
-              </a>
+              </Link>
             </div>
 
             {/* Service 2 */}
@@ -133,9 +137,9 @@ export default function Home() {
                 We define your goals, constraints, and what the system needs to accomplish. Clarity first. Design second.
               </p>
               <div className="text-center">
-                <a href="/process" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
+                <Link href="/process" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
                   See the full process →
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -230,55 +234,59 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 max-w-5xl mx-auto mb-12">
             {/* TRBG Case Study Card */}
-            <a 
+            <Link 
               href="/case-studies/trbg"
+              title={trbg.hoverShort}
+              aria-label={`${trbg.title} case study preview`}
               className="group p-8 bg-steel rounded-lg hover:bg-slate transition-all duration-300"
             >
               <div className="mb-4">
                 <p className="text-sm text-jamarq-cyan uppercase tracking-wider mb-2">
-                  Web Development
+                  {trbg.category}
                 </p>
                 <h3 className="text-2xl font-semibold mb-4 group-hover:text-jamarq-cyan transition-colors">
-                  Thunder Road Bar & Grill
+                  {trbg.title}
                 </h3>
               </div>
               <p className="text-jamarq-gray leading-relaxed mb-6">
-                Custom restaurant website rebuild. Load times improved from 4–6 seconds to under 1.5 seconds. Simple admin workflow for weekly specials.
+                {trbg.micro}
               </p>
               <div className="flex items-center text-jamarq-cyan group-hover:text-jamarq-magenta transition-colors font-semibold">
                 View Case Study →
               </div>
-            </a>
+            </Link>
 
             {/* MMS Case Study Card */}
-            <a 
+            <Link 
               href="/case-studies/mms"
+              title={mms.hoverShort}
+              aria-label={`${mms.title} case study preview`}
               className="group p-8 bg-steel rounded-lg hover:bg-slate transition-all duration-300"
             >
               <div className="mb-4">
                 <p className="text-sm text-jamarq-cyan uppercase tracking-wider mb-2">
-                  Web Development
+                  {mms.category}
                 </p>
                 <h3 className="text-2xl font-semibold mb-4 group-hover:text-jamarq-cyan transition-colors">
-                  Midway Mobile Storage
+                  {mms.title}
                 </h3>
               </div>
               <p className="text-jamarq-gray leading-relaxed mb-6">
-                Complete digital rebuild with custom inventory system and automated quote workflow. Owner-friendly admin panel.
+                {mms.micro}
               </p>
               <div className="flex items-center text-jamarq-cyan group-hover:text-jamarq-magenta transition-colors font-semibold">
                 View Case Study →
               </div>
-            </a>
+            </Link>
           </div>
 
           <div className="text-center">
-            <a 
+            <Link 
               href="/case-studies" 
               className="inline-block text-jamarq-cyan hover:text-jamarq-magenta transition-colors font-semibold text-lg"
             >
               View All Case Studies →
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -290,7 +298,7 @@ export default function Home() {
             Start a Conversation
           </h2>
           <p className="text-lg text-jamarq-gray leading-relaxed mb-8 max-w-2xl mx-auto">
-            Whether you're starting from scratch or rebuilding something outdated, I can help you design a clear, modern digital system that fits your business.
+            Whether you&rsquo;re starting from scratch or rebuilding something outdated, I can help you design a clear, modern digital system that fits your business.
           </p>
           
           <div className="space-y-6">
@@ -311,7 +319,7 @@ export default function Home() {
             </a>
             
             <p className="text-sm text-jamarq-gray mt-4">
-              Or <a href="/contact" className="text-jamarq-cyan hover:text-jamarq-magenta transition-colors">view all contact options</a>
+              Or <Link href="/contact" className="text-jamarq-cyan hover:text-jamarq-magenta transition-colors">view all contact options</Link>
             </p>
           </div>
         </div>
@@ -337,11 +345,11 @@ export default function Home() {
             <div className="text-center">
               <h4 className="font-semibold mb-3 text-sm">Navigation</h4>
               <nav className="space-y-2">
-                <a href="/" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">Home</a>
-                <a href="/services" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">Services</a>
-                <a href="/process" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">Process</a>
-                <a href="/work" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">Work</a>
-                <a href="/contact" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">Contact</a>
+                <Link href="/" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">Home</Link>
+                <Link href="/services" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">Services</Link>
+                <Link href="/process" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">Process</Link>
+                <Link href="/work" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">Work</Link>
+                <Link href="/contact" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">Contact</Link>
               </nav>
             </div>
 

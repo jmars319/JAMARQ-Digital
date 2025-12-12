@@ -1,10 +1,82 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Footer from "@/components/Footer";
+
+const heroDescription =
+  "A complete rebuild of a local storage company's digital system with elite performance optimization and proven business results.";
+
+const galleryImages = [
+  {
+    src: "/case-studies/mms/home-page.webp",
+    alt: "Midway Mobile Storage home page hero and CTA design",
+    width: 1600,
+    height: 1000,
+    caption: "Home page redesign with clear CTAs and trust signals."
+  },
+  {
+    src: "/case-studies/mms/admin-inventory-system.webp",
+    alt: "Admin dashboard showing Midway Mobile Storage inventory controls",
+    width: 1600,
+    height: 1000,
+    caption: "Custom unit inventory system with filters and ownership-ready controls."
+  },
+  {
+    src: "/case-studies/mms/quote-form-mobile.webp",
+    alt: "Quote request form on a mobile phone for Midway Mobile Storage",
+    width: 775,
+    height: 1600,
+    caption: "Quote workflow on mobile—customers can submit requests 24/7."
+  },
+  {
+    src: "/case-studies/mms/pagespeed-desktop.webp",
+    alt: "PageSpeed Insights desktop score showing 98 out of 100",
+    width: 1600,
+    height: 1000,
+    caption: "Desktop PageSpeed score at 98/100 on shared hosting."
+  },
+  {
+    src: "/case-studies/mms/pagespeed-mobile.webp",
+    alt: "PageSpeed Insights mobile score showing 89 out of 100",
+    width: 1600,
+    height: 1000,
+    caption: "Mobile PageSpeed score boosted to 89/100."
+  }
+] as const;
 
 export const metadata: Metadata = {
   title: "Midway Mobile Storage Case Study — JAMARQ Digital",
-  description: "A complete rebuild of a local storage company's digital system with custom inventory management, quote workflow, and admin tools.",
+  description: heroDescription,
+  alternates: {
+    canonical: "https://jamarq.digital/case-studies/mms"
+  },
+  openGraph: {
+    title: "Midway Mobile Storage Case Study — JAMARQ Digital",
+    description: heroDescription,
+    url: "https://jamarq.digital/case-studies/mms",
+    type: "article",
+    images: [
+      {
+        url: "https://jamarq.digital/case-studies/mms/og-midway-mobile-storage.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Midway Mobile Storage case study cover image"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Midway Mobile Storage Case Study — JAMARQ Digital",
+    description: heroDescription,
+    images: [
+      {
+        url: "https://jamarq.digital/case-studies/mms/og-midway-mobile-storage.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Midway Mobile Storage case study cover image"
+      }
+    ]
+  }
 };
 
 export default function MMSCaseStudyPage() {
@@ -12,7 +84,7 @@ export default function MMSCaseStudyPage() {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Midway Mobile Storage Case Study",
-    "description": "A complete rebuild of a storage company's digital platform with custom inventory system and automated quote workflow.",
+    "description": heroDescription,
     "author": {
       "@type": "Person",
       "name": "Jason Marshall",
@@ -26,6 +98,7 @@ export default function MMSCaseStudyPage() {
         "url": "https://jamarq.digital/assets/logos/wordmark-dark.png"
       }
     },
+    "image": "https://jamarq.digital/case-studies/mms/og-midway-mobile-storage.jpg",
     "datePublished": "2025-12-09",
     "dateModified": "2025-12-09"
   };
@@ -47,7 +120,7 @@ export default function MMSCaseStudyPage() {
             Midway Mobile Storage
           </h1>
           <p className="text-xl md:text-2xl text-mist mb-6">
-            A complete rebuild of a local storage company&rsquo;s digital system.
+            {heroDescription}
           </p>
           <div className="space-x-4">
             <Link href="/work" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
@@ -66,8 +139,60 @@ export default function MMSCaseStudyPage() {
         <div className="max-w-4xl mx-auto px-5 md:px-10">
           <div className="space-y-6 text-lg text-jamarq-gray leading-relaxed">
             <p className="text-xl text-mist">
-              Midway Mobile Storage needed a website that actually worked. Their old site was barebones, slow, and lacked the tools customers needed to request quotes or understand inventory. JAMARQ rebuilt their entire platform into a modern, intentional system with inventory controls, a custom quote form, and a streamlined admin workflow.
+              Midway Mobile Storage needed a website that actually worked. Their old site was barebones, slow, and lacked the tools customers needed to request quotes or understand inventory. JAMARQ rebuilt the entire platform into a modern, intentional system with inventory controls, a custom quote form, streamlined admin workflow, and aggressive performance optimization that achieved a <span className="text-jamarq-cyan font-semibold">98/100 desktop score</span>—faster than 95% of websites globally.
             </p>
+            <p>
+              The rebuild launched November 25, 2025 with a focus on clarity, speed, and owner-friendly controls. Customers could finally browse inventory, request quotes without calling, and trust the legitimacy of the brand thanks to consistent design and messaging.
+            </p>
+            <div className="mt-8 p-6 rounded-lg border border-slate bg-jamarq-black/40">
+              <p className="text-sm uppercase tracking-wider text-jamarq-cyan mb-2">Timeline Highlight</p>
+              <p className="text-2xl font-semibold text-mist mb-2">
+                Launched November 25, 2025
+              </p>
+              <p className="text-lg text-jamarq-gray">
+                First online quote received December 11, 2025 — just <span className="font-semibold text-jamarq-white">16 days after launch</span>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className="py-24 md:py-32" aria-label="Case study visuals">
+        <div className="max-w-5xl mx-auto px-5 md:px-10">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
+            <div>
+              <p className="text-sm uppercase tracking-wider text-jamarq-cyan mb-2">Snapshots</p>
+              <h2 className="text-3xl md:text-4xl font-semibold">
+                System Screens & Performance Proof
+              </h2>
+            </div>
+            <p className="text-jamarq-gray max-w-xl">
+              Screenshots from the rebuilt interface, admin workflow, and PageSpeed Insights scores that document the 98/100 desktop performance result.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {galleryImages.map((image) => (
+              <figure
+                key={image.src}
+                className="bg-jamarq-black rounded-lg border border-slate/60 p-4 flex flex-col gap-4"
+              >
+                <div className="w-full overflow-hidden rounded-md border border-slate/40">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    width={image.width}
+                    height={image.height}
+                    loading="lazy"
+                    sizes="(min-width: 768px) 45vw, 90vw"
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+                <figcaption className="text-sm text-jamarq-gray">
+                  {image.caption}
+                </figcaption>
+              </figure>
+            ))}
           </div>
         </div>
       </section>
@@ -97,11 +222,19 @@ export default function MMSCaseStudyPage() {
               </li>
               <li className="flex gap-3">
                 <span className="text-jamarq-cyan">•</span>
-                <span>No mobile optimization</span>
+                <span>No mobile optimization (74/100 mobile score)</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-jamarq-cyan">•</span>
+                <span>Extremely slow load times (3.5+ seconds)</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-jamarq-cyan">•</span>
                 <span>No way for customers to request quotes without calling</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-jamarq-cyan">•</span>
+                <span>All inquiries required phone calls during business hours</span>
               </li>
             </ul>
             <p className="pt-4">
@@ -119,7 +252,7 @@ export default function MMSCaseStudyPage() {
           </h2>
           <div className="space-y-6 text-lg text-jamarq-gray leading-relaxed">
             <p>
-              JAMARQ designed and built a fully custom website with clear structure, a modern design system, and functional tools that matched how the owner actually operates.
+              JAMARQ designed and built a fully custom website with clear structure, a modern design system, functional tools, and elite performance optimization built around the owner&rsquo;s actual workflow.
             </p>
             <p className="text-mist font-semibold pt-4">
               Delivered features include:
@@ -135,7 +268,7 @@ export default function MMSCaseStudyPage() {
               </li>
               <li className="flex gap-3">
                 <span className="text-jamarq-cyan">•</span>
-                <span>Quote request form with email integration</span>
+                <span>Quote request form with database integration</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-jamarq-cyan">•</span>
@@ -147,7 +280,11 @@ export default function MMSCaseStudyPage() {
               </li>
               <li className="flex gap-3">
                 <span className="text-jamarq-cyan">•</span>
-                <span>Mobile-first performance</span>
+                <span> <span className="font-semibold text-jamarq-white">Aggressive performance optimization</span> (98/100 desktop, 89/100 mobile)</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-jamarq-cyan">•</span>
+                <span>Mobile-first responsive design</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-jamarq-cyan">•</span>
@@ -159,7 +296,7 @@ export default function MMSCaseStudyPage() {
               </li>
             </ul>
             <p className="text-xl text-mist font-semibold pt-6">
-              The result is a professional platform built around clarity, control, and long-term sustainability.
+              The result is a professional platform built around clarity, control, speed, and long-term sustainability.
             </p>
           </div>
         </div>
@@ -167,37 +304,73 @@ export default function MMSCaseStudyPage() {
 
       {/* The Results Section */}
       <section className="py-24 md:py-32" aria-label="The results">
-        <div className="max-w-4xl mx-auto px-5 md:px-10">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-8">
+        <div className="max-w-5xl mx-auto px-5 md:px-10">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-10">
             The Results
           </h2>
-          <div className="space-y-6 text-lg text-jamarq-gray leading-relaxed">
-            <ul className="space-y-4">
-              <li className="flex gap-3">
-                <span className="text-jamarq-cyan">•</span>
-                <span>Customers now submit quote requests directly from the site</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-jamarq-cyan">•</span>
-                <span>Inventory is easy to access and understand</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-jamarq-cyan">•</span>
-                <span>Admin updates are simplified</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-jamarq-cyan">•</span>
-                <span>The brand reads as legitimate, modern, and trustworthy</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-jamarq-cyan">•</span>
-                <span>The owner now has a system that supports future growth and advertising</span>
-              </li>
-            </ul>
-            <p className="text-xl text-mist font-semibold pt-6">
-              A fast, functional, intentional system built to replace guesswork with clarity.
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-lg text-jamarq-gray leading-relaxed">
+            <div className="space-y-5 bg-jamarq-black rounded-lg border border-slate/60 p-6">
+              <h3 className="text-2xl font-semibold text-mist mb-2">Performance</h3>
+              <ul className="space-y-4">
+                <li className="flex gap-3">
+                  <span className="text-jamarq-cyan">•</span>
+                  <span><span className="font-semibold text-jamarq-white">Desktop: 98/100 PageSpeed score</span> (top 5% globally)</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-jamarq-cyan">•</span>
+                  <span><span className="font-semibold text-jamarq-white">Mobile: 89/100</span> (+20% improvement from 74)</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-jamarq-cyan">•</span>
+                  <span>Load time: <span className="font-semibold text-jamarq-white">0.9 seconds</span> on desktop (down from 3.5s)</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-jamarq-cyan">•</span>
+                  <span>Zero layout shift with instant interactivity</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-jamarq-cyan">•</span>
+                  <span>Faster than most Vercel-hosted sites despite shared GoDaddy hosting</span>
+                </li>
+              </ul>
+            </div>
+            <div className="space-y-5 bg-jamarq-black rounded-lg border border-slate/60 p-6">
+              <h3 className="text-2xl font-semibold text-mist mb-2">Business Impact</h3>
+              <ul className="space-y-4">
+                <li className="flex gap-3">
+                  <span className="text-jamarq-cyan">•</span>
+                  <span><span className="font-semibold text-jamarq-white">First online quote received within 16 days of launch</span> (December 11, 2025)</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-jamarq-cyan">•</span>
+                  <span>Customers now submit quote requests 24/7 without calling</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-jamarq-cyan">•</span>
+                  <span>Structured data collection improves quote follow-up</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-jamarq-cyan">•</span>
+                  <span>Inventory is easy to access and understand</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-jamarq-cyan">•</span>
+                  <span>Admin updates are simplified and owner-led</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-jamarq-cyan">•</span>
+                  <span>The brand finally reads as legitimate, modern, and trustworthy</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-jamarq-cyan">•</span>
+                  <span>Fast load times increase trust while supporting future advertising</span>
+                </li>
+              </ul>
+            </div>
           </div>
+          <p className="text-xl text-mist font-semibold pt-10">
+            Timeline to first conversion: <span className="text-jamarq-cyan">16 days</span>. Clarity, performance, and workflow alignment created measurable business results.
+          </p>
         </div>
       </section>
 
@@ -208,7 +381,7 @@ export default function MMSCaseStudyPage() {
             Want the Full Technical Deep Dive?
           </h3>
           <p className="text-lg text-jamarq-gray leading-relaxed mb-8 max-w-2xl mx-auto">
-            A detailed breakdown including inventory system architecture, admin panel features, and technical implementation is available upon request.
+            A detailed breakdown including architecture decisions, database design, content modeling, and front-end performance techniques is available upon request.
           </p>
           <a
             href="mailto:jason@jamarq.digital?subject=MMS Full Case Study Request"

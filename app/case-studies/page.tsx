@@ -51,6 +51,8 @@ export default function CaseStudiesIndexPage() {
             {/* TRBG Case Study Card */}
             <Link 
               href="/case-studies/trbg"
+              title={caseStudySummaries.trbg.hoverShort}
+              aria-label={`${caseStudySummaries.trbg.title} case study preview`}
               className="group p-8 bg-jamarq-black rounded-lg hover:bg-slate transition-all duration-300 hover:scale-105"
             >
               <div className="mb-4">
@@ -72,6 +74,8 @@ export default function CaseStudiesIndexPage() {
             {/* MMS Case Study Card */}
             <Link 
               href="/case-studies/mms"
+              title={caseStudySummaries.mms.hoverShort}
+              aria-label={`${caseStudySummaries.mms.title} case study preview`}
               className="group p-8 bg-jamarq-black rounded-lg hover:bg-slate transition-all duration-300 hover:scale-105"
             >
               <div className="mb-4">

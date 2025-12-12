@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
@@ -30,9 +31,9 @@ export default function ServicesPage() {
           <p className="text-xl md:text-2xl text-mist mb-6">
             Clean, modern digital systems. Built to last. Designed for clarity.
           </p>
-          <a href="/" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
+          <Link href="/" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
             ← Back to Home
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -92,12 +93,12 @@ export default function ServicesPage() {
                   <li>• Content updates (plan-dependent)</li>
                 </ul>
               </div>
-              <a 
+              <Link 
                 href="/maintenance" 
                 className="inline-block mt-6 text-jamarq-cyan hover:text-jamarq-magenta transition-colors text-sm font-semibold"
               >
                 View Maintenance Plans →
-              </a>
+              </Link>
             </div>
 
             {/* Service 4 */}
@@ -224,7 +225,7 @@ export default function ServicesPage() {
             </a>
             
             <p className="text-sm text-jamarq-gray">
-              Want to see how I work? <a href="/process" className="text-jamarq-cyan hover:text-jamarq-magenta transition-colors">View the full process</a>
+              Want to see how I work? <Link href="/process" className="text-jamarq-cyan hover:text-jamarq-magenta transition-colors">View the full process</Link>
             </p>
           </div>
         </div>

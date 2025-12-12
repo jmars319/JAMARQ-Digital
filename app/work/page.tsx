@@ -33,17 +33,17 @@ export default function WorkPage() {
             A closer look at the systems behind the work.
           </p>
           <div className="space-x-4">
-            <a href="/" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
+            <Link href="/" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
               ← Back to Home
-            </a>
+            </Link>
             <span className="text-jamarq-gray">|</span>
-            <a href="/services" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
+            <Link href="/services" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
               View Services
-            </a>
+            </Link>
             <span className="text-jamarq-gray">|</span>
-            <a href="/process" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
+            <Link href="/process" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
               See Process
-            </a>
+            </Link>
           </div>
         </div>
       </section>

@@ -12,9 +12,9 @@ export const caseStudySummaries = {
   },
   mms: {
     title: "Midway Mobile Storage",
-    micro: "A complete rebuild of a storage company's digital platform with a custom unit inventory system and automated quote workflow. Clearer information, faster performance, and an owner-friendly admin panel for managing units and customer requests.",
-    hoverShort: "Custom-built site with storage unit inventory, quote workflow, and simple owner-managed admin tools.",
-    hoverUltraShort: "Custom site + inventory + quote workflow.",
+    micro: "A complete rebuild of a storage company's digital platform with a custom unit inventory system, automated quote workflow, and a 98/100 performance score. Built November 2025 with the first online quote 16 days later. Clearer information, blazing-fast load times, and an owner-friendly admin panel.",
+    hoverShort: "Custom-built site with storage unit inventory, quote workflow, and 98/100 performance. First online quote within 16 days.",
+    hoverUltraShort: "Custom site + inventory + quote workflow + elite performance + proven results.",
     slug: "mms",
     category: "Web Development"
   }

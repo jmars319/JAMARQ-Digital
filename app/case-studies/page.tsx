@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
-import { caseStudySummaries } from "@/lib/caseStudySummaries";
+import { caseStudySummaries, caseStudyDisplayOrder } from "@/lib/caseStudySummaries";
 
 export const metadata: Metadata = {
   title: "Case Studies — JAMARQ Digital",
@@ -47,52 +47,37 @@ export default function CaseStudiesIndexPage() {
       {/* Case Studies Grid */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Case studies list">
         <div className="max-w-6xl mx-auto px-5 md:px-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 max-w-5xl mx-auto">
-            {/* TRBG Case Study Card */}
-            <Link 
-              href="/case-studies/trbg"
-              title={caseStudySummaries.trbg.hoverShort}
-              aria-label={`${caseStudySummaries.trbg.title} case study preview`}
-              className="group p-8 bg-jamarq-black rounded-lg hover:bg-slate transition-all duration-300 hover:scale-105"
-            >
-              <div className="mb-4">
-                <p className="text-sm text-jamarq-cyan uppercase tracking-wider mb-2">
-                  {caseStudySummaries.trbg.category}
-                </p>
-                <h2 className="text-2xl font-semibold mb-4 group-hover:text-jamarq-cyan transition-colors">
-                  {caseStudySummaries.trbg.title}
-                </h2>
-              </div>
-              <p className="text-jamarq-gray leading-relaxed mb-6">
-                {caseStudySummaries.trbg.micro}
-              </p>
-              <div className="flex items-center text-jamarq-cyan group-hover:text-jamarq-magenta transition-colors font-semibold">
-                View Case Study →
-              </div>
-            </Link>
-
-            {/* MMS Case Study Card */}
-            <Link 
-              href="/case-studies/mms"
-              title={caseStudySummaries.mms.hoverShort}
-              aria-label={`${caseStudySummaries.mms.title} case study preview`}
-              className="group p-8 bg-jamarq-black rounded-lg hover:bg-slate transition-all duration-300 hover:scale-105"
-            >
-              <div className="mb-4">
-                <p className="text-sm text-jamarq-cyan uppercase tracking-wider mb-2">
-                  {caseStudySummaries.mms.category}
-                </p>
-                <h2 className="text-2xl font-semibold mb-4 group-hover:text-jamarq-cyan transition-colors">
-                  {caseStudySummaries.mms.title}
-                </h2>
-              </div>
-              <p className="text-jamarq-gray leading-relaxed mb-6">
-                {caseStudySummaries.mms.micro}
-              </p>
-              <div className="flex items-center text-jamarq-cyan group-hover:text-jamarq-magenta transition-colors font-semibold">
-                View Case Study →
-              </div>
-            </Link>
+          <p className="text-center text-jamarq-gray mb-8">
+            Featured case study: Midway Music Hall, a full-stack venue system designed, shipped, and operated under real-world constraints.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 max-w-6xl mx-auto">
+            {caseStudyDisplayOrder.map((key) => {
+              const study = caseStudySummaries[key];
+              return (
+                <Link
+                  key={study.slug}
+                  href={`/case-studies/${study.slug}`}
+                  title={study.hoverShort}
+                  aria-label={`${study.title} case study preview`}
+                  className="group p-8 bg-jamarq-black rounded-lg hover:bg-slate transition-all duration-300 hover:scale-105"
+                >
+                  <div className="mb-4">
+                    <p className="text-sm text-jamarq-cyan uppercase tracking-wider mb-2">
+                      {study.category}
+                    </p>
+                    <h2 className="text-2xl font-semibold mb-4 group-hover:text-jamarq-cyan transition-colors">
+                      {study.title}
+                    </h2>
+                  </div>
+                  <p className="text-jamarq-gray leading-relaxed mb-6">
+                    {study.micro}
+                  </p>
+                  <div className="flex items-center text-jamarq-cyan group-hover:text-jamarq-magenta transition-colors font-semibold">
+                    View Case Study →
+                  </div>
+                </Link>
+              );
+            })}
           </div>
 
           {/* More Coming Soon */}

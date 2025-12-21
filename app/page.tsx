@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { caseStudySummaries } from "@/lib/caseStudySummaries";
+import { caseStudySummaries, caseStudyDisplayOrder } from "@/lib/caseStudySummaries";
 
 export const metadata: Metadata = {
   title: "JAMARQ Digital — Modern Web Development & Digital Systems",
@@ -18,7 +18,10 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const { trbg, mms } = caseStudySummaries;
+  const orderedCaseStudies = caseStudyDisplayOrder.map((key) => ({
+    key,
+    ...caseStudySummaries[key]
+  }));
 
   return (
     <main id="main-content" className="min-h-screen bg-jamarq-black text-jamarq-white">
@@ -235,52 +238,34 @@ export default function Home() {
             Work
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 max-w-5xl mx-auto mb-12">
-            {/* TRBG Case Study Card */}
-            <Link 
-              href="/case-studies/trbg"
-              title={trbg.hoverShort}
-              aria-label={`${trbg.title} case study preview`}
-              className="group p-8 bg-steel rounded-lg hover:bg-slate transition-all duration-300"
-            >
-              <div className="mb-4">
-                <p className="text-sm text-jamarq-cyan uppercase tracking-wider mb-2">
-                  {trbg.category}
+          <p className="text-center text-jamarq-gray mb-8">
+            Featured case study: Midway Music Hall, a full-stack venue system designed, shipped, and operated under real-world constraints.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 max-w-6xl mx-auto mb-12">
+            {orderedCaseStudies.map((study) => (
+              <Link
+                key={study.slug}
+                href={`/case-studies/${study.slug}`}
+                title={study.hoverShort}
+                aria-label={`${study.title} case study preview`}
+                className="group p-8 bg-steel rounded-lg hover:bg-slate transition-all duration-300"
+              >
+                <div className="mb-4">
+                  <p className="text-sm text-jamarq-cyan uppercase tracking-wider mb-2">
+                    {study.category}
+                  </p>
+                  <h3 className="text-2xl font-semibold mb-4 group-hover:text-jamarq-cyan transition-colors">
+                    {study.title}
+                  </h3>
+                </div>
+                <p className="text-jamarq-gray leading-relaxed mb-6">
+                  {study.micro}
                 </p>
-                <h3 className="text-2xl font-semibold mb-4 group-hover:text-jamarq-cyan transition-colors">
-                  {trbg.title}
-                </h3>
-              </div>
-              <p className="text-jamarq-gray leading-relaxed mb-6">
-                {trbg.micro}
-              </p>
-              <div className="flex items-center text-jamarq-cyan group-hover:text-jamarq-magenta transition-colors font-semibold">
-                View Case Study →
-              </div>
-            </Link>
-
-            {/* MMS Case Study Card */}
-            <Link 
-              href="/case-studies/mms"
-              title={mms.hoverShort}
-              aria-label={`${mms.title} case study preview`}
-              className="group p-8 bg-steel rounded-lg hover:bg-slate transition-all duration-300"
-            >
-              <div className="mb-4">
-                <p className="text-sm text-jamarq-cyan uppercase tracking-wider mb-2">
-                  {mms.category}
-                </p>
-                <h3 className="text-2xl font-semibold mb-4 group-hover:text-jamarq-cyan transition-colors">
-                  {mms.title}
-                </h3>
-              </div>
-              <p className="text-jamarq-gray leading-relaxed mb-6">
-                {mms.micro}
-              </p>
-              <div className="flex items-center text-jamarq-cyan group-hover:text-jamarq-magenta transition-colors font-semibold">
-                View Case Study →
-              </div>
-            </Link>
+                <div className="flex items-center text-jamarq-cyan group-hover:text-jamarq-magenta transition-colors font-semibold">
+                  View Case Study →
+                </div>
+              </Link>
+            ))}
           </div>
 
           <div className="text-center">

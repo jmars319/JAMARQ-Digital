@@ -49,3 +49,7 @@ docs/portfolio-instructions-v2/
 
 # Brand documentation (internal use only)
 brand-style-guide.md
+
+# Local MMH source screenshots (reference only)
+content/case-studies/midway-music-hall/Screenshots/*.png
+content/case-studies/midway-music-hall/Screenshots/*.webp

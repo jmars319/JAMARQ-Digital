@@ -17,7 +17,17 @@ export const caseStudySummaries = {
     hoverUltraShort: "Custom site + inventory + quote workflow + elite performance + proven results.",
     slug: "mms",
     category: "Web Development"
+  },
+  mmh: {
+    title: "Midway Music Hall",
+    micro: "Custom event website and seating system built with React and PHP. Includes interactive seating, admin tools, and automated notifications. Launched December 2025.",
+    hoverShort: "Midway Music Hall required a modern website that could support live event operations without relying on third-party ticketing platforms.",
+    hoverUltraShort: "Custom Website, Seating System, and Admin Platform.",
+    slug: "mmh",
+    category: "Web Development"
   }
 };
 
 export type CaseStudyKey = keyof typeof caseStudySummaries;
+
+export const caseStudyDisplayOrder: CaseStudyKey[] = ["mmh", "trbg", "mms"];

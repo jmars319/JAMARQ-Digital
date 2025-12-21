@@ -72,7 +72,7 @@ export default function TRBGCaseStudyPage() {
       />
       {/* Hero Section */}
       <section 
-        className="min-h-[60vh] flex items-center justify-center px-5 md:px-10"
+        className="min-h-[60vh] flex items-center justify-center px-5 md:px-10 pt-32 md:pt-40 pb-24"
         aria-label="Case study hero"
       >
         <div className="text-center max-w-4xl mx-auto">

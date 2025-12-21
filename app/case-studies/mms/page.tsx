@@ -111,7 +111,7 @@ export default function MMSCaseStudyPage() {
       />
       {/* Hero Section */}
       <section 
-        className="min-h-[60vh] flex items-center justify-center px-5 md:px-10"
+        className="min-h-[60vh] flex items-center justify-center px-5 md:px-10 pt-32 md:pt-40 pb-24"
         aria-label="Case study hero"
       >
         <div className="text-center max-w-4xl mx-auto">
@@ -406,7 +406,13 @@ export default function MMSCaseStudyPage() {
               href="/work"
               className="text-jamarq-cyan hover:text-jamarq-magenta transition-colors font-semibold"
             >
-              Back to All Work →
+              Back to All Work
+            </Link>
+            <Link 
+              href="/case-studies/mmh"
+              className="text-jamarq-cyan hover:text-jamarq-magenta transition-colors font-semibold"
+            >
+              Next: Midway Music Hall →
             </Link>
           </div>
         </div>

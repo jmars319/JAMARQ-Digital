@@ -1,5 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
+import { PAGE_SPEED_INSIGHTS_HOME } from "@/lib/pageSpeed";
+import { ContactModalTrigger } from "@/components/contact/ContactModalTrigger";
+import { FadeIn } from "@/components/FadeIn";
 
 export default function Footer() {
   return (
@@ -7,7 +10,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 justify-items-center">
           {/* Brand */}
-          <div className="text-center">
+          <FadeIn className="text-center">
             <div className="relative mx-auto mb-2 h-12 md:h-16 w-[200px] md:w-[260px]">
               <Image
                 src="/assets/logos/wordmark-dark.png"
@@ -18,11 +21,11 @@ export default function Footer() {
               />
             </div>
             <p className="text-jamarq-gray text-sm">Build with intention.</p>
-          </div>
+          </FadeIn>
 
           {/* Navigation */}
-          <div className="text-center">
-            <h4 className="font-semibold mb-3 text-sm">Navigation</h4>
+          <FadeIn delay={120} className="text-center">
+            <p className="font-semibold mb-3 text-sm uppercase tracking-wide">Navigation</p>
             <nav className="space-y-2">
               <Link href="/" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">
                 Home
@@ -40,26 +43,36 @@ export default function Footer() {
                 Contact
               </Link>
             </nav>
-          </div>
+          </FadeIn>
 
           {/* Contact */}
-          <div className="text-center">
-            <h4 className="font-semibold mb-3 text-sm">Contact</h4>
+          <FadeIn delay={240} className="text-center">
+            <p className="font-semibold mb-3 text-sm uppercase tracking-wide">Contact</p>
             <p className="text-jamarq-gray text-xs mb-2">Based in Winston-Salem, North Carolina</p>
             <p className="text-jamarq-gray text-xs mb-3">Serving businesses nationwide</p>
-            <a 
-              href="mailto:hello@jamarq.digital" 
+            <ContactModalTrigger
+              prefill={{ subject: "Website inquiry", source: "footer" }}
               className="text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors"
             >
               hello@jamarq.digital
-            </a>
-          </div>
+            </ContactModalTrigger>
+            <div className="mt-3">
+              <a
+                href={PAGE_SPEED_INSIGHTS_HOME}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-jamarq-gray hover:text-jamarq-cyan transition-colors"
+              >
+                PageSpeed Live check ↗
+              </a>
+            </div>
+          </FadeIn>
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-slate pt-6 text-center text-jamarq-gray text-xs">
+        <FadeIn delay={360} className="border-t border-slate pt-6 text-center text-jamarq-gray text-xs">
           <p>&copy; 2025 JAMARQ Digital. All rights reserved.</p>
-        </div>
+        </FadeIn>
       </div>
     </footer>
   );

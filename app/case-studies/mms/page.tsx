@@ -1,48 +1,91 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import Footer from "@/components/Footer";
+import { CaseStudyScreenshotTabs } from "@/components/CaseStudyScreenshotTabs";
+import type { ScreenshotTab } from "@/components/CaseStudyScreenshotTabs";
+import { buildPageSpeedReportUrl } from "@/lib/pageSpeed";
+import { ContactModalTrigger } from "@/components/contact/ContactModalTrigger";
+import { FadeIn } from "@/components/FadeIn";
+import { ScrollProgressBar } from "@/components/ScrollProgressBar";
 
 const heroDescription =
   "A complete rebuild of a local storage company's digital system with elite performance optimization and proven business results.";
 
-const galleryImages = [
+const screenshotTabs: ScreenshotTab[] = [
   {
-    src: "/case-studies/mms/home-page.webp",
-    alt: "Midway Mobile Storage home page hero and CTA design",
-    width: 1600,
-    height: 1000,
-    caption: "Home page redesign with clear CTAs and trust signals."
+    id: "pagespeed",
+    label: "PageSpeed results",
+    description: "Desktop and mobile Lighthouse proof that documents the 98/100 (desktop) and 89/100 (mobile) scores achieved on shared GoDaddy hosting.",
+    items: [
+      {
+        id: "mms-pagespeed-desktop",
+        caption: "Desktop PageSpeed score at 98/100 on shared hosting.",
+        fallbackSrc: "/case-studies/mms/pagespeed-desktop.webp",
+        webpSrcSet: "/case-studies/mms/pagespeed-desktop.webp 1600w",
+        width: 1600,
+        height: 1000,
+        alt: "PageSpeed Insights desktop score showing 98 out of 100"
+      },
+      {
+        id: "mms-pagespeed-mobile",
+        caption: "Mobile PageSpeed score boosted to 89/100 with code-level optimizations.",
+        fallbackSrc: "/case-studies/mms/pagespeed-mobile.webp",
+        webpSrcSet: "/case-studies/mms/pagespeed-mobile.webp 1600w",
+        width: 1600,
+        height: 1000,
+        alt: "PageSpeed Insights mobile score showing 89 out of 100"
+      }
+    ]
   },
   {
-    src: "/case-studies/mms/admin-inventory-system.webp",
-    alt: "Admin dashboard showing Midway Mobile Storage inventory controls",
-    width: 1600,
-    height: 1000,
-    caption: "Custom unit inventory system with filters and ownership-ready controls."
+    id: "public",
+    label: "Public views",
+    description: "Customer-facing site experience that helped the business capture its first online quote within 16 days.",
+    items: [
+      {
+        id: "mms-public-home",
+        caption: "Home page redesign with clear CTAs, trust signals, and real inventory messaging.",
+        fallbackSrc: "/case-studies/mms/home-page.webp",
+        webpSrcSet: "/case-studies/mms/home-page.webp 1600w",
+        width: 1600,
+        height: 1000,
+        alt: "Midway Mobile Storage home page hero and CTA design"
+      }
+    ]
   },
   {
-    src: "/case-studies/mms/quote-form-mobile.webp",
-    alt: "Quote request form on a mobile phone for Midway Mobile Storage",
-    width: 775,
-    height: 1600,
-    caption: "Quote workflow on mobile—customers can submit requests 24/7."
+    id: "admin",
+    label: "Admin views",
+    description: "Screens and tooling used by ownership to manage units, quotes, and messaging without a vendor lock-in.",
+    items: [
+      {
+        id: "mms-admin-inventory",
+        caption: "Custom unit inventory system with filters and owner-ready controls.",
+        fallbackSrc: "/case-studies/mms/admin-inventory-system.webp",
+        webpSrcSet: "/case-studies/mms/admin-inventory-system.webp 1600w",
+        width: 1600,
+        height: 1000,
+        alt: "Admin dashboard showing Midway Mobile Storage inventory controls"
+      }
+    ]
   },
   {
-    src: "/case-studies/mms/pagespeed-desktop.webp",
-    alt: "PageSpeed Insights desktop score showing 98 out of 100",
-    width: 1600,
-    height: 1000,
-    caption: "Desktop PageSpeed score at 98/100 on shared hosting."
-  },
-  {
-    src: "/case-studies/mms/pagespeed-mobile.webp",
-    alt: "PageSpeed Insights mobile score showing 89 out of 100",
-    width: 1600,
-    height: 1000,
-    caption: "Mobile PageSpeed score boosted to 89/100."
+    id: "mobile",
+    label: "Mobile views",
+    description: "Mobile-first flows that keep quote requests and conversions moving even after hours.",
+    items: [
+      {
+        id: "mms-quote-mobile",
+        caption: "Quote workflow on mobile lets customers submit requests 24/7 without calling.",
+        fallbackSrc: "/case-studies/mms/quote-form-mobile.webp",
+        webpSrcSet: "/case-studies/mms/quote-form-mobile.webp 775w",
+        width: 775,
+        height: 1600,
+        alt: "Quote request form on a mobile phone for Midway Mobile Storage"
+      }
+    ]
   }
-] as const;
+];
 
 export const metadata: Metadata = {
   title: "Midway Mobile Storage Case Study — JAMARQ Digital",
@@ -105,16 +148,18 @@ export default function MMSCaseStudyPage() {
 
   return (
     <main id="main-content" className="min-h-screen bg-jamarq-black text-jamarq-white">
+      <ScrollProgressBar />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       {/* Hero Section */}
-      <section 
+      <section
         className="min-h-[60vh] flex items-center justify-center px-5 md:px-10 pt-32 md:pt-40 pb-24"
         aria-label="Case study hero"
       >
-        <div className="text-center max-w-4xl mx-auto">
+        <FadeIn className="w-full">
+          <div className="text-center max-w-4xl mx-auto space-y-4">
           <p className="text-sm text-jamarq-cyan mb-4 uppercase tracking-wider">Case Study</p>
           <h1 className="text-4xl md:text-5xl font-semibold mb-6">
             Midway Mobile Storage
@@ -122,21 +167,43 @@ export default function MMSCaseStudyPage() {
           <p className="text-xl md:text-2xl text-mist mb-6">
             {heroDescription}
           </p>
-          <div className="space-x-4">
-            <Link href="/work" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
-              ← Back to Work
-            </Link>
-            <span className="text-jamarq-gray">|</span>
-            <Link href="/" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
-              Home
-            </Link>
+          <div className="space-y-3">
+            <div className="flex flex-col md:flex-row md:justify-center md:items-center gap-2 text-sm text-jamarq-cyan">
+              <Link
+                href="https://midwaymobilestorage.com"
+                className="hover:text-jamarq-magenta transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit live site ↗
+              </Link>
+              <span className="text-jamarq-gray">|</span>
+              <Link
+                href={buildPageSpeedReportUrl("https://midwaymobilestorage.com")}
+                className="hover:text-jamarq-magenta transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                PageSpeed Live check ↗
+              </Link>
+            </div>
+            <div className="space-x-4">
+              <Link href="/work" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
+                ← Back to Work
+              </Link>
+              <span className="text-jamarq-gray">|</span>
+              <Link href="/" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
+                Home
+              </Link>
+            </div>
           </div>
-        </div>
+          </div>
+        </FadeIn>
       </section>
 
       {/* Overview Section */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Project overview">
-        <div className="max-w-4xl mx-auto px-5 md:px-10">
+        <FadeIn className="max-w-4xl mx-auto px-5 md:px-10">
           <div className="space-y-6 text-lg text-jamarq-gray leading-relaxed">
             <p className="text-xl text-mist">
               Midway Mobile Storage needed a website that actually worked. Their old site was barebones, slow, and lacked the tools customers needed to request quotes or understand inventory. JAMARQ rebuilt the entire platform into a modern, intentional system with inventory controls, a custom quote form, streamlined admin workflow, and aggressive performance optimization that achieved a <span className="text-jamarq-cyan font-semibold">98/100 desktop score</span>—faster than 95% of websites globally.
@@ -154,52 +221,30 @@ export default function MMSCaseStudyPage() {
               </p>
             </div>
           </div>
-        </div>
+        </FadeIn>
       </section>
 
-      {/* Gallery Section */}
-      <section className="py-24 md:py-32" aria-label="Case study visuals">
-        <div className="max-w-5xl mx-auto px-5 md:px-10">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
+      {/* Screenshots Section */}
+      <section className="py-24 md:py-32" aria-label="Screenshots and technical proof">
+        <div className="max-w-6xl mx-auto px-5 md:px-10">
+          <FadeIn className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
             <div>
-              <p className="text-sm uppercase tracking-wider text-jamarq-cyan mb-2">Snapshots</p>
-              <h2 className="text-3xl md:text-4xl font-semibold">
-                System Screens & Performance Proof
-              </h2>
+              <p className="text-sm uppercase tracking-wider text-jamarq-cyan mb-2">Screenshots</p>
+              <h2 className="text-3xl md:text-4xl font-semibold">Operational Coverage</h2>
             </div>
-            <p className="text-jamarq-gray max-w-xl">
-              Screenshots from the rebuilt interface, admin workflow, and PageSpeed Insights scores that document the 98/100 desktop performance result.
+            <p className="text-jamarq-gray max-w-2xl">
+              Documentation of performance proof, customer-facing flows, and owner tooling using the same structure as every JAMARQ case study.
             </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {galleryImages.map((image) => (
-              <figure
-                key={image.src}
-                className="bg-jamarq-black rounded-lg border border-slate/60 p-4 flex flex-col gap-4"
-              >
-                <div className="w-full overflow-hidden rounded-md border border-slate/40">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    width={image.width}
-                    height={image.height}
-                    loading="lazy"
-                    sizes="(min-width: 768px) 45vw, 90vw"
-                    className="w-full h-auto object-cover"
-                  />
-                </div>
-                <figcaption className="text-sm text-jamarq-gray">
-                  {image.caption}
-                </figcaption>
-              </figure>
-            ))}
-          </div>
+          </FadeIn>
+          <FadeIn delay={150}>
+            <CaseStudyScreenshotTabs tabs={screenshotTabs} defaultTabId="pagespeed" />
+          </FadeIn>
         </div>
       </section>
 
       {/* The Challenge Section */}
       <section className="py-24 md:py-32" aria-label="The challenge">
-        <div className="max-w-4xl mx-auto px-5 md:px-10">
+        <FadeIn className="max-w-4xl mx-auto px-5 md:px-10">
           <h2 className="text-3xl md:text-4xl font-semibold mb-8">
             The Challenge
           </h2>
@@ -241,12 +286,12 @@ export default function MMSCaseStudyPage() {
               The lack of structure made it difficult for customers to trust the business or understand what was available.
             </p>
           </div>
-        </div>
+        </FadeIn>
       </section>
 
       {/* The Solution Section */}
       <section className="py-24 md:py-32 bg-steel" aria-label="The solution">
-        <div className="max-w-4xl mx-auto px-5 md:px-10">
+        <FadeIn className="max-w-4xl mx-auto px-5 md:px-10">
           <h2 className="text-3xl md:text-4xl font-semibold mb-8">
             The Solution
           </h2>
@@ -299,17 +344,19 @@ export default function MMSCaseStudyPage() {
               The result is a professional platform built around clarity, control, speed, and long-term sustainability.
             </p>
           </div>
-        </div>
+        </FadeIn>
       </section>
 
       {/* The Results Section */}
       <section className="py-24 md:py-32" aria-label="The results">
         <div className="max-w-5xl mx-auto px-5 md:px-10">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-10">
-            The Results
-          </h2>
+          <FadeIn className="mb-10">
+            <h2 className="text-3xl md:text-4xl font-semibold">
+              The Results
+            </h2>
+          </FadeIn>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-lg text-jamarq-gray leading-relaxed">
-            <div className="space-y-5 bg-jamarq-black rounded-lg border border-slate/60 p-6">
+            <FadeIn className="space-y-5 bg-jamarq-black rounded-lg border border-slate/60 p-6">
               <h3 className="text-2xl font-semibold text-mist mb-2">Performance</h3>
               <ul className="space-y-4">
                 <li className="flex gap-3">
@@ -333,8 +380,8 @@ export default function MMSCaseStudyPage() {
                   <span>Faster than most Vercel-hosted sites despite shared GoDaddy hosting</span>
                 </li>
               </ul>
-            </div>
-            <div className="space-y-5 bg-jamarq-black rounded-lg border border-slate/60 p-6">
+            </FadeIn>
+            <FadeIn delay={150} className="space-y-5 bg-jamarq-black rounded-lg border border-slate/60 p-6">
               <h3 className="text-2xl font-semibold text-mist mb-2">Business Impact</h3>
               <ul className="space-y-4">
                 <li className="flex gap-3">
@@ -366,56 +413,60 @@ export default function MMSCaseStudyPage() {
                   <span>Fast load times increase trust while supporting future advertising</span>
                 </li>
               </ul>
-            </div>
+            </FadeIn>
           </div>
-          <p className="text-xl text-mist font-semibold pt-10">
+          <FadeIn delay={150} className="text-xl text-mist font-semibold pt-10">
             Timeline to first conversion: <span className="text-jamarq-cyan">16 days</span>. Clarity, performance, and workflow alignment created measurable business results.
-          </p>
+          </FadeIn>
         </div>
       </section>
 
       {/* Full Case Study CTA */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Full case study">
-        <div className="max-w-4xl mx-auto text-center px-5 md:px-10">
+        <FadeIn className="max-w-4xl mx-auto text-center px-5 md:px-10">
           <h3 className="text-2xl md:text-3xl font-semibold mb-6">
             Want the Full Technical Deep Dive?
           </h3>
           <p className="text-lg text-jamarq-gray leading-relaxed mb-8 max-w-2xl mx-auto">
             A detailed breakdown including architecture decisions, database design, content modeling, and front-end performance techniques is available upon request.
           </p>
-          <a
-            href="mailto:jason@jamarq.digital?subject=MMS Full Case Study Request"
+          <ContactModalTrigger
+            prefill={{
+              subject: "MMS full case study request",
+              source: "mms-full-case-study",
+              initialMessage: "I'd like a full walkthrough of the Midway Mobile Storage build."
+            }}
             className="inline-block bg-jamarq-cyan text-jamarq-black px-8 py-3 rounded-md font-semibold text-lg hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-jamarq-cyan focus:ring-offset-2 focus:ring-offset-steel"
           >
             Request Full Case Study
-          </a>
-        </div>
+          </ContactModalTrigger>
+        </FadeIn>
       </section>
 
       {/* Navigation CTA */}
       <section className="py-16" aria-label="Navigation">
-        <div className="max-w-4xl mx-auto px-5 md:px-10">
+        <FadeIn className="max-w-4xl mx-auto px-5 md:px-10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 border-t border-slate pt-8">
-            <Link 
+            <Link
               href="/case-studies/trbg"
               className="text-jamarq-cyan hover:text-jamarq-magenta transition-colors font-semibold"
             >
               ← Previous: Thunder Road Bar & Grill
             </Link>
-            <Link 
+            <Link
               href="/work"
               className="text-jamarq-cyan hover:text-jamarq-magenta transition-colors font-semibold"
             >
               Back to All Work
             </Link>
-            <Link 
+            <Link
               href="/case-studies/mmh"
               className="text-jamarq-cyan hover:text-jamarq-magenta transition-colors font-semibold"
             >
               Next: Midway Music Hall →
             </Link>
           </div>
-        </div>
+        </FadeIn>
       </section>
 
       <Footer />

@@ -3,6 +3,7 @@ import { Inter, Montserrat } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Header from "@/components/Header";
+import { ContactModalProvider } from "@/components/contact/ContactModalProvider";
 import "./globals.css";
 
 const inter = Inter({
@@ -258,10 +259,12 @@ export default function RootLayout({
             This site works best with JavaScript enabled, but all content is fully accessible without it.
           </div>
         </noscript>
-        <Header />
-        <main id="main-content" className="pt-20">
-          {children}
-        </main>
+        <ContactModalProvider>
+          <Header />
+          <main id="main-content" className="pt-20">
+            {children}
+          </main>
+        </ContactModalProvider>
         <Analytics />
         <SpeedInsights />
       </body>

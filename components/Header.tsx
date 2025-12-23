@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { FadeIn } from "@/components/FadeIn";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -87,38 +88,45 @@ export default function Header() {
 
       {/* Mobile Menu (JS) */}
       {mobileMenuOpen && (
-        <div id="mobile-menu" className="md:hidden border-t border-slate bg-jamarq-black" role="navigation" aria-label="Mobile menu">
-          <div className="flex flex-col space-y-4 px-4 py-6">
-            <Link 
-              href="/services" 
-              className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Services
-            </Link>
-            <Link 
-              href="/process" 
-              className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Process
-            </Link>
-            <Link 
-              href="/work" 
-              className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Work
-            </Link>
-            <Link 
-              href="/contact" 
-              className="text-sm bg-jamarq-cyan text-jamarq-black px-6 py-2 rounded font-semibold hover:bg-opacity-90 transition-all inline-block text-center"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Contact
-            </Link>
+        <FadeIn className="md:hidden">
+          <div
+            id="mobile-menu"
+            className="border-t border-slate bg-jamarq-black dropdown-animate"
+            role="navigation"
+            aria-label="Mobile menu"
+          >
+            <div className="flex flex-col space-y-4 px-4 py-6">
+              <Link 
+                href="/services" 
+                className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Services
+              </Link>
+              <Link 
+                href="/process" 
+                className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Process
+              </Link>
+              <Link 
+                href="/work" 
+                className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Work
+              </Link>
+              <Link 
+                href="/contact" 
+                className="text-sm bg-jamarq-cyan text-jamarq-black px-6 py-2 rounded font-semibold hover:bg-opacity-90 transition-all inline-block text-center"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Contact
+              </Link>
+            </div>
           </div>
-        </div>
+        </FadeIn>
       )}
 
       {/* No-JS Mobile Navigation (Always visible without JS) */}

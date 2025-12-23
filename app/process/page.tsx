@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import { ContactModalTrigger } from "@/components/contact/ContactModalTrigger";
+import { FadeIn } from "@/components/FadeIn";
 
 export const metadata: Metadata = {
   title: "Process — JAMARQ Digital",
@@ -15,6 +17,109 @@ export const metadata: Metadata = {
     type: "website"
   }
 };
+
+type ProcessCategory = {
+  heading: string;
+  items: string[];
+};
+
+type ProcessStep = {
+  number: string;
+  title: string;
+  categories: ProcessCategory[];
+  highlight: string;
+  cta?: {
+    href: string;
+    label: string;
+  };
+};
+
+const processSteps: ProcessStep[] = [
+  {
+    number: "01",
+    title: "Discovery",
+    categories: [
+      {
+        heading: "What happens",
+        items: [
+          "Project goals defined",
+          "Requirements gathered",
+          "Timeline estimated",
+          "Initial structure outlined"
+        ]
+      }
+    ],
+    highlight: "A clear plan and shared understanding."
+  },
+  {
+    number: "02",
+    title: "Architecture & Design",
+    categories: [
+      {
+        heading: "Architecture",
+        items: ["Site map", "Content structure", "Workflows", "Integrations planning"]
+      },
+      {
+        heading: "Design",
+        items: ["Layout direction", "Typography system", "Spacing rules", "Brand implementation"]
+      }
+    ],
+    highlight: "A blueprint for the build."
+  },
+  {
+    number: "03",
+    title: "Development",
+    categories: [
+      {
+        heading: "What happens",
+        items: [
+          "Custom build using clean, modern code",
+          "Responsive behavior",
+          "Performance optimization",
+          "Accessibility considerations"
+        ]
+      }
+    ],
+    highlight: "A functional system built from scratch."
+  },
+  {
+    number: "04",
+    title: "Review & Revisions",
+    categories: [
+      {
+        heading: "What happens",
+        items: ["You receive a working version", "Feedback is gathered", "Revisions are applied", "Final approval required before launch"]
+      }
+    ],
+    highlight: "A refined system ready for launch."
+  },
+  {
+    number: "05",
+    title: "Launch",
+    categories: [
+      {
+        heading: "What happens",
+        items: ["Domain connection", "SSL setup", "Forms tested", "Search Console submitted", "Live handoff provided"]
+      }
+    ],
+    highlight: "Your site goes live with full support."
+  },
+  {
+    number: "06",
+    title: "Support Window",
+    categories: [
+      {
+        heading: "What happens",
+        items: ["Technical questions answered", "Minor fixes handled", "Content corrections made", "Stability checks performed"]
+      }
+    ],
+    highlight: "A smooth transition to ownership.",
+    cta: {
+      href: "/maintenance",
+      label: "View Maintenance Plans →"
+    }
+  }
+];
 
 export default function ProcessPage() {
   return (
@@ -31,7 +136,7 @@ export default function ProcessPage() {
           <p className="text-xl md:text-2xl text-mist mb-6">
             Clear milestones. Predictable timelines. No guesswork.
           </p>
-          <Link href="/" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
+          <Link href="/" className="link-underline text-sm text-jamarq-cyan">
             ← Back to Home
           </Link>
         </div>
@@ -39,132 +144,54 @@ export default function ProcessPage() {
 
       {/* Process Steps Section */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Process steps">
-        <div className="max-w-5xl mx-auto space-y-20 px-5 md:px-10">
-          {/* Step 01 */}
-          <div>
-            <div className="text-jamarq-cyan text-5xl md:text-6xl font-semibold mb-4">01</div>
-            <h2 className="text-3xl font-semibold mb-6">Discovery</h2>
-            <div className="space-y-4 text-center">
-              <p className="text-sm font-semibold text-mist mb-3">What Happens:</p>
-              <ul className="space-y-2 text-jamarq-gray">
-                <li>• Project goals defined</li>
-                <li>• Requirements gathered</li>
-                <li>• Timeline estimated</li>
-                <li>• Initial structure outlined</li>
-              </ul>
-              <p className="text-lg text-mist mt-6 italic">
-                A clear plan and shared understanding.
-              </p>
-            </div>
-          </div>
-
-          {/* Step 02 */}
-          <div>
-            <div className="text-jamarq-cyan text-5xl md:text-6xl font-semibold mb-4">02</div>
-            <h2 className="text-3xl font-semibold mb-6">Architecture & Design</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
-              <div className="text-center">
-                <p className="text-sm font-semibold text-mist mb-3">Architecture:</p>
-                <ul className="space-y-2 text-jamarq-gray">
-                  <li>• Site map</li>
-                  <li>• Content structure</li>
-                  <li>• Workflows</li>
-                  <li>• Integrations planning</li>
-                </ul>
-              </div>
-              <div className="text-center">
-                <p className="text-sm font-semibold text-mist mb-3">Design:</p>
-                <ul className="space-y-2 text-jamarq-gray">
-                  <li>• Layout direction</li>
-                  <li>• Typography system</li>
-                  <li>• Spacing rules</li>
-                  <li>• Brand implementation</li>
-                </ul>
-              </div>
-            </div>
-            <p className="text-lg text-mist mt-6 italic">
-              A blueprint for the build.
-            </p>
-          </div>
-
-          {/* Step 03 */}
-          <div>
-            <div className="text-jamarq-cyan text-5xl md:text-6xl font-semibold mb-4">03</div>
-            <h2 className="text-3xl font-semibold mb-6">Development</h2>
-            <div className="space-y-4 text-center">
-              <p className="text-sm font-semibold text-mist mb-3">What Happens:</p>
-              <ul className="space-y-2 text-jamarq-gray">
-                <li>• Custom build using clean, modern code</li>
-                <li>• Responsive behavior</li>
-                <li>• Performance optimization</li>
-                <li>• Accessibility considerations</li>
-              </ul>
-              <p className="text-lg text-mist mt-6 italic">
-                A functional system built from scratch.
-              </p>
-            </div>
-          </div>
-
-          {/* Step 04 */}
-          <div>
-            <div className="text-jamarq-cyan text-5xl md:text-6xl font-semibold mb-4">04</div>
-            <h2 className="text-3xl font-semibold mb-6">Review & Revisions</h2>
-            <div className="space-y-4 text-center">
-              <p className="text-sm font-semibold text-mist mb-3">What Happens:</p>
-              <ul className="space-y-2 text-jamarq-gray">
-                <li>• You receive a working version</li>
-                <li>• Feedback is gathered</li>
-                <li>• Revisions are applied</li>
-                <li>• Final approval required before launch</li>
-              </ul>
-              <p className="text-lg text-mist mt-6 italic">
-                A refined system ready for launch.
-              </p>
-            </div>
-          </div>
-
-          {/* Step 05 */}
-          <div>
-            <div className="text-jamarq-cyan text-5xl md:text-6xl font-semibold mb-4">05</div>
-            <h2 className="text-3xl font-semibold mb-6">Launch</h2>
-            <div className="space-y-4 text-center">
-              <p className="text-sm font-semibold text-mist mb-3">What Happens:</p>
-              <ul className="space-y-2 text-jamarq-gray">
-                <li>• Domain connection</li>
-                <li>• SSL setup</li>
-                <li>• Forms tested</li>
-                <li>• Search Console submitted</li>
-                <li>• Live handoff provided</li>
-              </ul>
-              <p className="text-lg text-mist mt-6 italic">
-                Your site goes live with full support.
-              </p>
-            </div>
-          </div>
-
-          {/* Step 06 */}
-          <div>
-            <div className="text-jamarq-cyan text-5xl md:text-6xl font-semibold mb-4">06</div>
-            <h2 className="text-3xl font-semibold mb-6">Support Window</h2>
-            <div className="space-y-4 text-center">
-              <p className="text-sm font-semibold text-mist mb-3">What Happens:</p>
-              <ul className="space-y-2 text-jamarq-gray">
-                <li>• Technical questions answered</li>
-                <li>• Minor fixes handled</li>
-                <li>• Content corrections made</li>
-                <li>• Stability checks performed</li>
-              </ul>
-              <p className="text-lg text-mist mt-6 italic">
-                A smooth transition to ownership.
-              </p>
-              <Link 
-                href="/maintenance" 
-                className="inline-block mt-6 text-jamarq-cyan hover:text-jamarq-magenta transition-colors text-sm font-semibold"
-              >
-                View Maintenance Plans →
-              </Link>
-            </div>
-          </div>
+        <div className="max-w-6xl mx-auto space-y-12 px-5 md:px-10">
+          {processSteps.map((step, index) => {
+            const multiColumn = step.categories.length > 1;
+            const isEven = index % 2 === 0;
+            return (
+              <FadeIn key={step.number} delay={index * 150}>
+                <article
+                  className={`md:flex md:items-start gap-10 p-8 rounded-3xl border border-slate/50 ${
+                    isEven ? "bg-jamarq-black/40" : "bg-jamarq-black/20"
+                  }`}
+                >
+                  <div className="md:w-1/4 space-y-3 text-center md:text-left">
+                    <p className="text-xs uppercase tracking-[0.4em] text-slate">Phase</p>
+                    <p className="text-jamarq-cyan text-5xl md:text-6xl font-semibold">{step.number}</p>
+                    <h2 className="text-3xl font-semibold">{step.title}</h2>
+                  </div>
+                  <div className="md:flex-1 space-y-6">
+                    <div className={`grid gap-8 grid-cols-1 ${multiColumn ? "md:grid-cols-2" : ""}`}>
+                      {step.categories.map((category) => (
+                        <div key={category.heading} className="space-y-3">
+                          <p className="text-xs font-semibold tracking-[0.2em] uppercase text-jamarq-gray">
+                            {category.heading}
+                          </p>
+                          <ul className="space-y-2 text-jamarq-gray text-base">
+                            {category.items.map((item) => (
+                              <li key={item} className="flex gap-3">
+                                <span className="text-jamarq-cyan">•</span>
+                                <span>{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                    <p className="text-lg text-mist italic">{step.highlight}</p>
+                    {step.cta && (
+                      <Link
+                        href={step.cta.href}
+                        className="link-underline inline-flex items-center text-sm font-semibold text-jamarq-cyan"
+                      >
+                        {step.cta.label}
+                      </Link>
+                    )}
+                  </div>
+                </article>
+              </FadeIn>
+            );
+          })}
         </div>
       </section>
 
@@ -253,12 +280,12 @@ export default function ProcessPage() {
           </p>
           
           <div className="space-y-4">
-            <a
-              href="mailto:hello@jamarq.digital?subject=Project Inquiry"
+            <ContactModalTrigger
+              prefill={{ subject: "Process page inquiry", source: "process-cta" }}
               className="inline-block bg-jamarq-cyan text-jamarq-black px-8 py-3 rounded-md font-semibold text-lg hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-jamarq-cyan focus:ring-offset-2 focus:ring-offset-jamarq-black"
             >
               Get in Touch
-            </a>
+            </ContactModalTrigger>
             
             <p className="text-sm text-jamarq-gray">
               <Link href="/services" className="text-jamarq-cyan hover:text-jamarq-magenta transition-colors">View all services</Link> or <Link href="/contact" className="text-jamarq-cyan hover:text-jamarq-magenta transition-colors">see more contact options</Link>

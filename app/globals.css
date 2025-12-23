@@ -116,6 +116,101 @@ li {
   display: block;
 }
 
+.link-underline {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease-out;
+  opacity: 0.7;
+}
+
+.link-underline:hover::after,
+.link-underline:focus-visible::after {
+  transform: scaleX(1);
+}
+
+@keyframes modalOverlayIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalContentIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-overlay {
+  animation: modalOverlayIn 0.25s ease-out;
+}
+
+.modal-content {
+  animation: modalContentIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.case-study-tab {
+  position: relative;
+  overflow: hidden;
+}
+
+.case-study-tab::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0.45rem;
+  width: 50%;
+  height: 2px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, var(--color-jamarq-cyan), var(--color-jamarq-magenta));
+  transform: translate(-50%, 8px);
+  opacity: 0;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.case-study-tab:hover::after,
+.case-study-tab:focus-visible::after,
+.case-study-tab[aria-selected="true"]::after {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+@keyframes dropdownReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-animate {
+  animation: dropdownReveal 0.25s ease-out;
+}
+
 /* Screen reader only - hides content visually but keeps it accessible */
 .sr-only {
   position: absolute;

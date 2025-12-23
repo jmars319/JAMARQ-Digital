@@ -63,13 +63,16 @@ interface IntermediateScreenshotEntry {
 
 export interface ScreenshotAsset {
   id: string;
-  group: ScreenshotGroup;
+  group?: ScreenshotGroup;
   caption: string;
   technicalNote?: string;
-  webpSrcSet: string;
-  pngSrcSet: string;
+  webpSrcSet?: string;
+  pngSrcSet?: string;
   fallbackSrc: string;
-  fallbackWidth: number;
+  fallbackWidth?: number;
+  width?: number;
+  height?: number;
+  alt?: string;
 }
 
 export function getMMHScreenshotGroups() {

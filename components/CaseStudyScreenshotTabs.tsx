@@ -39,7 +39,7 @@ export function CaseStudyScreenshotTabs({ tabs, defaultTabId }: CaseStudyScreens
               aria-selected={isActive}
               aria-controls={`${tab.id}-panel`}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-4 py-2 rounded-full border transition-all text-sm font-semibold tracking-wide uppercase ${
+              className={`case-study-tab px-4 py-2 rounded-full border transition-all text-sm font-semibold tracking-wide uppercase ${
                 isActive
                   ? "bg-jamarq-cyan text-jamarq-black border-jamarq-cyan"
                   : "border-slate text-jamarq-gray hover:border-jamarq-cyan hover:text-jamarq-white"
@@ -83,8 +83,10 @@ export function CaseStudyScreenshotTabs({ tabs, defaultTabId }: CaseStudyScreens
                     )}
                     <img
                       src={item.fallbackSrc}
-                      alt={item.caption}
+                      alt={item.alt ?? item.caption}
                       loading="lazy"
+                      width={item.width ?? item.fallbackWidth}
+                      height={item.height}
                       className="w-full h-auto"
                     />
                   </picture>

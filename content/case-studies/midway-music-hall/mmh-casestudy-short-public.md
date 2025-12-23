@@ -7,6 +7,8 @@ Midway Music Hall required a modern website that could support live event operat
 
 JAMARQ rebuilt the site from the ground up, delivering a fast public-facing experience paired with a secure admin system for staff. The platform includes event scheduling, interactive seating layouts, reservation request handling, media management, and automated notifications, all deployed on shared hosting and validated under real use.
 
+Critical admin actions are guarded by non-destructive workflows, confirmation steps, and recoverable snapshots, allowing staff to manage live events without risking existing reservations or customer data.
+
 The system replaces manual workflows with clear, auditable processes while preserving full ownership of code and data.
 
 Stack: React, PHP, MySQL, Tailwind, Cloudflare

@@ -38,12 +38,12 @@ export const metadata: Metadata = {
     "custom websites NC",
     "Winston-Salem web developer"
   ],
-  authors: [{ name: "Jason Marshall", url: "https://www.jamarq.digital" }],
+  authors: [{ name: "Jason Marshall", url: "https://jamarq.digital" }],
   creator: "Jason Marshall",
   publisher: "JAMARQ Digital",
-  metadataBase: new URL("https://www.jamarq.digital"),
+  metadataBase: new URL("https://jamarq.digital"),
   alternates: {
-    canonical: "https://www.jamarq.digital"
+    canonical: "https://jamarq.digital"
   },
   robots: {
     index: true,
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.jamarq.digital",
+    url: "https://jamarq.digital",
     siteName: "JAMARQ Digital",
     title: "JAMARQ Digital — Build with intention",
     description: "Modern digital systems designed for clarity, speed, and long-term stability. Custom web development in Winston-Salem, NC.",
@@ -113,9 +113,9 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "JAMARQ Digital",
-    "url": "https://www.jamarq.digital",
-    "logo": "https://www.jamarq.digital/assets/logos/wordmark-dark.png",
-    "image": "https://www.jamarq.digital/assets/logos/wordmark-dark.png",
+    "url": "https://jamarq.digital",
+    "logo": "https://jamarq.digital/assets/logos/wordmark-dark.png",
+    "image": "https://jamarq.digital/assets/logos/wordmark-dark.png",
     "description": "Custom web development and digital systems in Winston-Salem, NC. Clean, intentional architecture built for clarity, speed, and long-term stability.",
     "founder": {
       "@type": "Person",
@@ -169,19 +169,19 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "JAMARQ Digital",
-    "url": "https://www.jamarq.digital",
+    "url": "https://jamarq.digital",
     "description": "Custom web development and digital systems. Clean, intentional architecture built for clarity and speed.",
     "publisher": {
       "@type": "Organization",
       "name": "JAMARQ Digital",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.jamarq.digital/assets/logos/wordmark-dark.png"
+        "url": "https://jamarq.digital/assets/logos/wordmark-dark.png"
       }
     },
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://www.jamarq.digital/work?q={search_term_string}",
+      "target": "https://jamarq.digital/work?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   };

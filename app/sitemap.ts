@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.jamarq.digital';
+  const baseUrl = 'https://jamarq.digital';
   const currentDate = new Date();
 
   return [

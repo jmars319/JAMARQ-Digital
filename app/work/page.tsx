@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   title: "Work — JAMARQ Digital",
   description: "Selected work from JAMARQ Digital. Custom websites, digital systems, and operational tooling built with proof-of-performance and owner-first infrastructure.",
   alternates: {
-    canonical: "https://www.jamarq.digital/work"
+    canonical: "https://jamarq.digital/work"
   },
   openGraph: {
     title: "Work — JAMARQ Digital",
     description: "Custom websites, digital systems, and admin tooling built for clarity, speed, and ownership.",
-    url: "https://www.jamarq.digital/work",
+    url: "https://jamarq.digital/work",
     type: "website"
   }
 };

@@ -10,20 +10,20 @@
 ### 1. URL Consistency - www.jamarq.digital ✅
 
 **Updated Files:**
-- ✅ `app/sitemap.ts` - Base URL changed to `https://www.jamarq.digital`
-- ✅ `app/robots.ts` - Sitemap URL updated to `https://www.jamarq.digital/sitemap.xml`
-- ✅ `app/layout.tsx` - metadataBase set to `https://www.jamarq.digital`
+- ✅ `app/sitemap.ts` - Base URL changed to `https://jamarq.digital`
+- ✅ `app/robots.ts` - Sitemap URL updated to `https://jamarq.digital/sitemap.xml`
+- ✅ `app/layout.tsx` - metadataBase set to `https://jamarq.digital`
 - ✅ All page canonical tags now use www subdomain
 
 **All 8 pages updated:**
-- Homepage: `https://www.jamarq.digital/`
-- Services: `https://www.jamarq.digital/services`
-- Process: `https://www.jamarq.digital/process`
-- Work: `https://www.jamarq.digital/work`
-- Contact: `https://www.jamarq.digital/contact`
-- Case Studies: `https://www.jamarq.digital/case-studies`
-- TRBG: `https://www.jamarq.digital/case-studies/trbg`
-- MMS: `https://www.jamarq.digital/case-studies/mms`
+- Homepage: `https://jamarq.digital/`
+- Services: `https://jamarq.digital/services`
+- Process: `https://jamarq.digital/process`
+- Work: `https://jamarq.digital/work`
+- Contact: `https://jamarq.digital/contact`
+- Case Studies: `https://jamarq.digital/case-studies`
+- TRBG: `https://jamarq.digital/case-studies/trbg`
+- MMS: `https://jamarq.digital/case-studies/mms`
 
 ---
 
@@ -60,36 +60,36 @@ New keyword array:
 ```typescript
 title: "JAMARQ Digital — Modern Web Development & Digital Systems"
 description: "Custom web development in Winston-Salem, NC. Clean, intentional digital systems built for clarity and speed. No templates. No shortcuts. Build with intention."
-canonical: "https://www.jamarq.digital/"
+canonical: "https://jamarq.digital/"
 
 OpenGraph:
 - title: "JAMARQ Digital — Build with intention"
 - description: "Modern digital systems designed for clarity, speed, and long-term stability."
-- url: "https://www.jamarq.digital/"
+- url: "https://jamarq.digital/"
 ```
 
 #### Services Page
 ```typescript
 description: "Custom web development, digital systems, and ongoing support in Winston-Salem, NC. No templates. Clean, intentional architecture built to last."
-canonical: "https://www.jamarq.digital/services"
+canonical: "https://jamarq.digital/services"
 ```
 
 #### Process Page
 ```typescript
 // Canonical updated to www
-canonical: "https://www.jamarq.digital/process"
+canonical: "https://jamarq.digital/process"
 ```
 
 #### Work Page
 ```typescript
 description: "Case studies of modern digital systems built by JAMARQ. See the design decisions, architecture, and results behind each project."
-canonical: "https://www.jamarq.digital/work"
+canonical: "https://jamarq.digital/work"
 ```
 
 #### Contact Page
 ```typescript
 description: "Start a project with JAMARQ in Winston-Salem, NC. Clear communication, predictable timelines. Get a reply within one business day."
-canonical: "https://www.jamarq.digital/contact"
+canonical: "https://jamarq.digital/contact"
 ```
 
 ---
@@ -102,7 +102,7 @@ canonical: "https://www.jamarq.digital/contact"
 {
   "@type": "ProfessionalService",
   "name": "JAMARQ Digital",
-  "url": "https://www.jamarq.digital",
+  "url": "https://jamarq.digital",
   "address": {
     "addressLocality": "Winston-Salem",
     "addressRegion": "NC",
@@ -176,7 +176,7 @@ canonical: "https://www.jamarq.digital/contact"
 ```typescript
 title: "JAMARQ Digital — Build with intention"
 description: "Modern digital systems designed for clarity, speed, and long-term stability. Custom web development in Winston-Salem, NC."
-url: "https://www.jamarq.digital"
+url: "https://jamarq.digital"
 ```
 
 **Twitter Card:**
@@ -240,8 +240,8 @@ description: "Custom web development in Winston-Salem, NC. Clean, intentional di
    - Configure in Vercel if needed
 
 2. **Submit to Google Search Console**
-   - Add property: `https://www.jamarq.digital`
-   - Submit sitemap: `https://www.jamarq.digital/sitemap.xml`
+   - Add property: `https://jamarq.digital`
+   - Submit sitemap: `https://jamarq.digital/sitemap.xml`
    - Verify ownership
 
 3. **Validate Structured Data**
@@ -335,18 +335,18 @@ description: "Custom web development in Winston-Salem, NC. Clean, intentional di
 After deployment, test these:
 
 **Sitemap:**
-- https://www.jamarq.digital/sitemap.xml
+- https://jamarq.digital/sitemap.xml
 
 **Robots:**
-- https://www.jamarq.digital/robots.txt
+- https://jamarq.digital/robots.txt
 
 **Canonical Tags:**
 View page source and search for `<link rel="canonical"`:
-- https://www.jamarq.digital/ ✅
-- https://www.jamarq.digital/services ✅
-- https://www.jamarq.digital/process ✅
-- https://www.jamarq.digital/work ✅
-- https://www.jamarq.digital/contact ✅
+- https://jamarq.digital/ ✅
+- https://jamarq.digital/services ✅
+- https://jamarq.digital/process ✅
+- https://jamarq.digital/work ✅
+- https://jamarq.digital/contact ✅
 
 **Structured Data:**
 View page source and search for `application/ld+json`:

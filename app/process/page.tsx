@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   title: "Process — JAMARQ Digital",
   description: "A clear, structured process for every project. Discovery, design, development, launch, and support. Predictable timelines, no surprises.",
   alternates: {
-    canonical: "https://www.jamarq.digital/process"
+    canonical: "https://jamarq.digital/process"
   },
   openGraph: {
     title: "Process — JAMARQ Digital",
     description: "A clear, structured process for every project. Discovery, design, development, launch, and support. Predictable timelines, no surprises.",
-    url: "https://www.jamarq.digital/process",
+    url: "https://jamarq.digital/process",
     type: "website"
   }
 };

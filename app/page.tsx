@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   title: "JAMARQ Digital — Modern Web Development & Digital Systems",
   description: "Custom web development in Winston-Salem, NC. Clean, intentional digital systems built for clarity and speed. No templates. No shortcuts. Build with intention.",
   alternates: {
-    canonical: "https://www.jamarq.digital/"
+    canonical: "https://jamarq.digital/"
   },
   openGraph: {
     title: "JAMARQ Digital — Build with intention",
     description: "Modern digital systems designed for clarity, speed, and long-term stability.",
-    url: "https://www.jamarq.digital/",
+    url: "https://jamarq.digital/",
     type: "website"
   }
 };

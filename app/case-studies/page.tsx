@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   title: "Case Studies — JAMARQ Digital",
   description: "Public documentation of JAMARQ Digital builds: challenges, architecture decisions, performance proof, and ownership plans.",
   alternates: {
-    canonical: "https://www.jamarq.digital/case-studies"
+    canonical: "https://jamarq.digital/case-studies"
   },
   openGraph: {
     title: "Case Studies — JAMARQ Digital",
     description: "Detailed breakdowns of custom web systems with screenshots, PageSpeed data, and technical notes.",
-    url: "https://www.jamarq.digital/case-studies",
+    url: "https://jamarq.digital/case-studies",
     type: "website"
   }
 };

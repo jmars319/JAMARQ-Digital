@@ -52,7 +52,7 @@ export default function ContactPage() {
       <section className="pt-32 pb-24" aria-label="Contact hero">
         <div className="max-w-6xl mx-auto px-5 md:px-10 grid gap-12 md:grid-cols-[minmax(0,1fr)_360px] items-start">
           <FadeIn className="space-y-6">
-            <p className="text-xs uppercase tracking-[0.35em] text-slate">Contact</p>
+            <p className="text-xs uppercase tracking-[0.35em] text-jamarq-gray">Contact</p>
             <h1 className="text-4xl md:text-5xl font-semibold leading-tight">Start a project or request a walkthrough.</h1>
             <p className="text-lg text-jamarq-gray leading-relaxed">
               You’ll hear back within one business day. No sales team—just me. Provide as much context as you can and I’ll map the plan, timeline, and price range.
@@ -73,11 +73,11 @@ export default function ContactPage() {
             </div>
           </FadeIn>
           <FadeIn delay={150} className="bg-jamarq-black/40 border border-slate/60 rounded-3xl p-6 space-y-4">
-            <p className="text-xs uppercase tracking-[0.3em] text-slate">Response time</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Response time</p>
             <p className="text-lg font-semibold text-mist">Within one business day</p>
             <p className="text-jamarq-gray text-sm">I reply personally. No handoffs, no waiting on account managers.</p>
             <div className="border-t border-slate/60 pt-4">
-              <p className="text-xs uppercase tracking-[0.3em] text-slate">Availability</p>
+              <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Availability</p>
               <p className="text-mist">Next slot opens in ~2 weeks</p>
             </div>
           </FadeIn>
@@ -90,7 +90,7 @@ export default function ContactPage() {
           <FadeIn className="space-y-6">
             <h2 className="text-3xl font-semibold">Choose what fits</h2>
             <div className="p-6 rounded-2xl border border-slate/60 bg-jamarq-black/30 space-y-4">
-              <p className="text-sm uppercase tracking-[0.3em] text-slate">New projects</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-jamarq-gray">New projects</p>
               <EmailCopyButton email="hello@jamarq.digital" />
               <ContactModalTrigger
                 prefill={{ subject: "New project inquiry", source: "contact-options" }}
@@ -101,12 +101,12 @@ export default function ContactPage() {
               <p className="text-jamarq-gray text-sm">All general CTAs route to this inbox.</p>
             </div>
             <div className="p-6 rounded-2xl border border-slate/60 bg-jamarq-black/30 space-y-4">
-              <p className="text-sm uppercase tracking-[0.3em] text-slate">Active clients</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-jamarq-gray">Active clients</p>
               <EmailCopyButton email="jason@jamarq.digital" />
               <p className="text-jamarq-gray text-sm">Fastest path for builds already in progress.</p>
             </div>
             <div className="p-6 rounded-2xl border border-slate/60 bg-jamarq-black/30 space-y-4">
-              <p className="text-sm uppercase tracking-[0.3em] text-slate">Support & maintenance</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-jamarq-gray">Support & maintenance</p>
               <EmailCopyButton email="support@jamarq.digital" />
               <p className="text-jamarq-gray text-sm">For launched sites and retainers.</p>
             </div>
@@ -154,7 +154,7 @@ export default function ContactPage() {
       {/* CTA */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Contact CTA">
         <FadeIn className="max-w-5xl mx-auto px-5 md:px-10 rounded-3xl border border-slate/60 bg-jamarq-black/30 p-10 space-y-4 text-center">
-          <p className="text-xs uppercase tracking-[0.3em] text-slate">Ready?</p>
+          <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Ready?</p>
           <h2 className="text-3xl md:text-4xl font-semibold">Tell me what you need. I’ll respond with a plan.</h2>
           <ContactModalTrigger
             prefill={{ subject: "Contact CTA", source: "contact-cta" }}

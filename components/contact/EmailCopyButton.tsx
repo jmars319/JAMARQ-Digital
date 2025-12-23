@@ -26,7 +26,7 @@ export function EmailCopyButton({ email, label, className = "" }: EmailCopyButto
       className={`inline-flex items-center gap-3 text-jamarq-cyan hover:text-jamarq-magenta transition-colors ${className}`}
     >
       <span className="font-semibold text-xl">{label ?? email}</span>
-      <span className="text-xs uppercase tracking-[0.3em] text-slate">
+      <span className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">
         {copied ? "Copied" : "Copy"}
       </span>
     </button>

@@ -120,7 +120,7 @@ export default function MMHCaseStudyPage() {
           ))}
           <div className="flex flex-col md:flex-row md:justify-center md:items-center gap-2 text-sm text-jamarq-gray">
             <span className="font-semibold text-jamarq-cyan">{mmhCaseStudyContent.hero.stack}</span>
-            <span className="hidden md:inline text-slate">|</span>
+            <span className="hidden md:inline text-jamarq-gray">|</span>
             <span>{mmhCaseStudyContent.hero.launch}</span>
           </div>
             <div className="space-y-3">

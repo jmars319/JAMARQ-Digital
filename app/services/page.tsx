@@ -98,7 +98,7 @@ export default function ServicesPage() {
       <section className="pt-32 pb-24" aria-label="Services hero">
         <div className="max-w-6xl mx-auto px-5 md:px-10 grid gap-12 md:grid-cols-[minmax(0,1fr)_320px] items-start">
           <div className="space-y-6">
-            <p className="text-xs uppercase tracking-[0.35em] text-slate">Services</p>
+            <p className="text-xs uppercase tracking-[0.35em] text-jamarq-gray">Services</p>
             <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
               Digital systems built for clarity, speed, and long-term ownership.
             </h1>
@@ -121,7 +121,7 @@ export default function ServicesPage() {
             </div>
           </div>
           <div className="bg-jamarq-black/40 border border-slate/60 rounded-3xl p-6 space-y-5">
-            <p className="text-xs uppercase tracking-[0.3em] text-slate">Snapshot</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Snapshot</p>
             <ul className="space-y-4">
               {snapshot.map((item, index) => (
                 <li key={item.label}>
@@ -142,7 +142,7 @@ export default function ServicesPage() {
       <section className="py-24 md:py-32 bg-steel" aria-label="Core services">
         <div className="max-w-6xl mx-auto px-5 md:px-10 space-y-10">
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-slate mb-3">Service lines</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray mb-3">Service lines</p>
             <h2 className="text-3xl md:text-4xl font-semibold">How I can help</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -175,7 +175,7 @@ export default function ServicesPage() {
       <section className="py-24 md:py-32" aria-label="Engagement structure">
         <div className="max-w-6xl mx-auto px-5 md:px-10 space-y-12">
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-slate mb-3">Engagement roadmap</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray mb-3">Engagement roadmap</p>
             <h2 className="text-3xl md:text-4xl font-semibold">What the build includes</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -205,7 +205,7 @@ export default function ServicesPage() {
       <section className="py-24 md:py-32 bg-steel" aria-label="Pricing philosophy">
         <div className="max-w-6xl mx-auto px-5 md:px-10 grid gap-12 md:grid-cols-2">
           <FadeIn className="space-y-4">
-            <p className="text-xs uppercase tracking-[0.3em] text-slate mb-2">Pricing</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray mb-2">Pricing</p>
             <h2 className="text-3xl md:text-4xl font-semibold">Transparent, scoped, and predictable.</h2>
             <p className="text-jamarq-gray leading-relaxed">
               Every engagement starts with an itemized estimate—deliverables, timeline, and payment schedule. No retainers without scope, no vague ranges after kickoff.

@@ -80,7 +80,7 @@ export default function Home() {
               {heroStats.map((stat, index) => (
                 <FadeIn key={stat.label} delay={index * 120}>
                   <div className="border-l-2 border-jamarq-cyan/70 pl-4">
-                    <p className="text-xs uppercase tracking-[0.25em] text-slate">{stat.label}</p>
+                    <p className="text-xs uppercase tracking-[0.25em] text-jamarq-gray">{stat.label}</p>
                     <p className="text-lg font-semibold text-mist">{stat.value}</p>
                   </div>
                 </FadeIn>
@@ -88,8 +88,8 @@ export default function Home() {
             </div>
           </div>
           <aside className="bg-jamarq-black/40 border border-slate/60 rounded-3xl p-6 space-y-4">
-            <p className="text-xs uppercase tracking-[0.3em] text-slate">Featured case study</p>
-            <h3 className="text-2xl font-semibold">{featuredStudy.title}</h3>
+            <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Featured case study</p>
+            <h2 className="text-2xl font-semibold">{featuredStudy.title}</h2>
             <p className="text-sm text-jamarq-gray leading-relaxed">{featuredStudy.hoverShort}</p>
             <Link
               href={`/case-studies/${featuredStudy.slug}`}
@@ -113,7 +113,7 @@ export default function Home() {
             </p>
           </div>
           <div className="space-y-4 text-jamarq-gray">
-            <p className="text-xs uppercase tracking-[0.3em] text-slate">What this means</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">What this means</p>
             <ul className="space-y-3">
               <li className="flex gap-3">
                 <span className="text-jamarq-cyan">•</span>
@@ -136,7 +136,7 @@ export default function Home() {
       <section className="py-24 md:py-32 bg-steel" aria-label="Services">
         <div className="max-w-6xl mx-auto px-5 md:px-10 space-y-10">
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-slate mb-3">Capabilities</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray mb-3">Capabilities</p>
             <h2 className="text-3xl md:text-4xl font-semibold">What I build</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -185,7 +185,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-5 md:px-10 space-y-10">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-slate mb-3">Approach</p>
+              <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray mb-3">Approach</p>
               <h2 className="text-3xl md:text-4xl font-semibold">How I work</h2>
             </div>
             <Link
@@ -222,7 +222,7 @@ export default function Home() {
       <section className="py-24 md:py-32 bg-steel" aria-label="Value proposition">
         <div className="max-w-6xl mx-auto px-5 md:px-10 space-y-12">
           <div className="max-w-3xl">
-            <p className="text-xs uppercase tracking-[0.3em] text-slate mb-3">Outcomes</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray mb-3">Outcomes</p>
             <h2 className="text-3xl md:text-4xl font-semibold leading-tight">
               You get a modern system that’s fast, intentional, and still yours after launch.
             </h2>
@@ -271,7 +271,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-5 md:px-10 space-y-12">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-slate mb-3">Work</p>
+              <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray mb-3">Work</p>
               <h2 className="text-3xl md:text-4xl font-semibold">Recent builds</h2>
               <p className="text-jamarq-gray max-w-2xl">
                 Real systems with measurable performance and ownership built in. Screenshots, PageSpeed receipts, and technical notes are public on every case study.
@@ -293,7 +293,7 @@ export default function Home() {
                   aria-label={`${study.title} case study preview`}
                   className="group block h-full p-8 rounded-3xl border border-slate/60 bg-jamarq-black/30 hover:border-jamarq-cyan transition-all duration-300"
                 >
-                  <p className="text-xs uppercase tracking-[0.3em] text-slate mb-3">{study.category}</p>
+                  <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray mb-3">{study.category}</p>
                   <h3 className="text-2xl font-semibold mb-4 group-hover:text-jamarq-cyan transition-colors">
                     {study.title}
                   </h3>
@@ -312,7 +312,7 @@ export default function Home() {
       <section className="py-24 md:py-32 bg-steel" aria-label="Contact call-to-action">
         <div className="max-w-5xl mx-auto px-5 md:px-10 rounded-3xl border border-slate/60 bg-jamarq-black/30 p-10 md:p-16">
           <div className="space-y-4">
-            <p className="text-xs uppercase tracking-[0.3em] text-slate">Ready?</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Ready?</p>
             <h2 className="text-3xl md:text-4xl font-semibold">Let’s build something intentional.</h2>
             <p className="text-lg text-jamarq-gray leading-relaxed max-w-3xl">
               Whether you’re launching from scratch or rebuilding a system that fell apart, I can map the plan, design the interface, and ship the code with real proof attached.

@@ -38,7 +38,7 @@ export default function CaseStudiesPage() {
       <section className="pt-32 pb-24" aria-label="Case studies hero">
         <div className="max-w-6xl mx-auto px-5 md:px-10 space-y-8">
           <div className="space-y-4 max-w-4xl">
-            <p className="text-xs uppercase tracking-[0.35em] text-slate">Case studies</p>
+            <p className="text-xs uppercase tracking-[0.35em] text-jamarq-gray">Case studies</p>
             <h1 className="text-4xl md:text-5xl font-semibold leading-tight">Documentation of real, shipped systems.</h1>
             <p className="text-lg text-jamarq-gray leading-relaxed">
               Each case study includes the challenge, approach, technical stack, and proofs—screenshots, PageSpeed reports, admin flows, and ownership notes. No fluff.
@@ -48,7 +48,7 @@ export default function CaseStudiesPage() {
             {proofPoints.map((point, index) => (
               <FadeIn key={point.label} delay={index * 100}>
                 <div className="p-4 rounded-2xl border border-slate/60 bg-jamarq-black/30">
-                  <p className="text-xs uppercase tracking-[0.3em] text-slate">{point.label}</p>
+                  <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">{point.label}</p>
                   <p className="text-base text-mist font-semibold">{point.value}</p>
                 </div>
               </FadeIn>
@@ -62,7 +62,7 @@ export default function CaseStudiesPage() {
         <div className="max-w-6xl mx-auto px-5 md:px-10 space-y-12">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-slate mb-3">Live documentation</p>
+              <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray mb-3">Live documentation</p>
               <h2 className="text-3xl md:text-4xl font-semibold">Explore the builds</h2>
               <p className="text-jamarq-gray max-w-3xl">
                 These are public excerpts. If you need deeper architecture diagrams, admin flows, or QA notes, just ask—I have the full decks ready.
@@ -83,7 +83,7 @@ export default function CaseStudiesPage() {
                   aria-label={`${study.title} case study`}
                   className="group block h-full p-8 rounded-3xl border border-slate/60 bg-jamarq-black/30 hover:border-jamarq-cyan transition-all duration-300"
                 >
-                  <p className="text-xs uppercase tracking-[0.3em] text-slate mb-3">{study.category}</p>
+                  <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray mb-3">{study.category}</p>
                   <h3 className="text-2xl font-semibold mb-3 group-hover:text-jamarq-cyan transition-colors">{study.title}</h3>
                   <p className="text-jamarq-gray text-sm leading-relaxed mb-6">{study.micro}</p>
                   <div className="flex items-center text-jamarq-cyan group-hover:text-jamarq-magenta transition-colors font-semibold">
@@ -99,7 +99,7 @@ export default function CaseStudiesPage() {
       {/* Private previews + CTA */}
       <section className="py-24 md:py-32" aria-label="Additional docs">
         <FadeIn className="max-w-5xl mx-auto px-5 md:px-10 rounded-3xl border border-slate/60 bg-jamarq-black/30 p-10 space-y-4">
-          <p className="text-xs uppercase tracking-[0.3em] text-slate">Need more?</p>
+          <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Need more?</p>
           <h2 className="text-3xl md:text-4xl font-semibold">Private previews and deeper dives.</h2>
           <p className="text-lg text-jamarq-gray leading-relaxed">
             Some work is NDA-restricted or still launching. I can share private screenshots, admin flows, monitoring dashboards, and technical breakdowns on a call.

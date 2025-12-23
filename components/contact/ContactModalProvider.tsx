@@ -41,7 +41,7 @@ const defaultFormValues: ContactFormValues = {
   projectDetails: ""
 };
 
-const LABEL_CLASSES = "text-xs uppercase tracking-[0.3em] text-slate";
+const LABEL_CLASSES = "text-xs uppercase tracking-[0.3em] text-jamarq-gray";
 const INPUT_CLASSES =
   "w-full rounded-lg border border-slate bg-jamarq-black/40 px-4 py-2 text-jamarq-white focus:outline-none focus:ring-2 focus:ring-jamarq-cyan";
 

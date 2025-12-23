@@ -156,7 +156,7 @@ export default function ProcessPage() {
                   }`}
                 >
                   <div className="md:w-1/4 space-y-3 text-center md:text-left">
-                    <p className="text-xs uppercase tracking-[0.4em] text-slate">Phase</p>
+                    <p className="text-xs uppercase tracking-[0.4em] text-jamarq-gray">Phase</p>
                     <p className="text-jamarq-cyan text-5xl md:text-6xl font-semibold">{step.number}</p>
                     <h2 className="text-3xl font-semibold">{step.title}</h2>
                   </div>

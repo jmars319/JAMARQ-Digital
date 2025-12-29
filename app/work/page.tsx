@@ -26,10 +26,10 @@ export default function WorkPage() {
   }));
 
   const heroStats = [
-    { label: "PageSpeed receipts", value: "98/100 avg desktop" },
-    { label: "Launch-to-first result", value: "16 days (MMS quote)" },
-    { label: "Scope", value: "Websites, systems, admin tooling" },
-    { label: "Stack", value: "Next.js, React, PHP, custom APIs" }
+    { label: "PageSpeed receipts", value: "Avg 97/100 desktop, 89/100 mobile (MMH, TRBG, MMS)" },
+    { label: "Launch-to-first result", value: "Day 2 (MMH), Week 1 (TRBG), Day 16 (MMS)" },
+    { label: "Scope", value: "Custom websites, owner-ready admin systems, mobile parity" },
+    { label: "Stack", value: "Next.js, React, PHP APIs, Tailwind, SendGrid" }
   ];
 
   const highlights = [

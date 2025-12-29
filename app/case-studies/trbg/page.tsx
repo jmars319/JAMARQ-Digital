@@ -3,40 +3,15 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 import { CaseStudyScreenshotTabs } from "@/components/CaseStudyScreenshotTabs";
 import type { ScreenshotTab } from "@/components/CaseStudyScreenshotTabs";
+import { trbgCaseStudyContent } from "@/lib/trbgCaseStudyContent";
+import { getTRBGScreenshotGroups } from "@/lib/trbgScreenshots";
 import { buildPageSpeedReportUrl } from "@/lib/pageSpeed";
 import { ContactModalTrigger } from "@/components/contact/ContactModalTrigger";
 import { FadeIn } from "@/components/FadeIn";
 import { ScrollProgressBar } from "@/components/ScrollProgressBar";
 
-const screenshotTabs: ScreenshotTab[] = [
-  {
-    id: "pagespeed",
-    label: "PageSpeed results",
-    description: "Live Lighthouse validation for the bar’s rebuilt website. Desktop and mobile captures will land here as they are documented.",
-    items: []
-  },
-  {
-    id: "public",
-    label: "Public views",
-    description: "Customer-facing pages for menus, weekly specials, and events. Gallery updates will slot into this tab without layout changes.",
-    items: []
-  },
-  {
-    id: "admin",
-    label: "Admin views",
-    description: "Owner tooling for menu edits and weekly updates will be published here as screenshots become available.",
-    items: []
-  },
-  {
-    id: "mobile",
-    label: "Mobile views",
-    description: "Mobile parity checks that mirror the desktop experience. Assets will be added once photography is staged.",
-    items: []
-  }
-];
-
 const heroDescription =
-  "A complete rebuild of a neighborhood bar's digital system. Custom React website with improved load times, clean menu design, and simple admin workflow.";
+  trbgCaseStudyContent.hero.summary[0] ?? trbgCaseStudyContent.hero.subtitle ?? "Thunder Road Bar & Grill project summary.";
 
 export const metadata: Metadata = {
   title: "Thunder Road Bar & Grill Case Study — JAMARQ Digital",
@@ -93,9 +68,41 @@ export default function TRBGCaseStudyPage() {
       }
     },
     "image": "https://jamarq.digital/case-studies/trbg/og-thunder-road-bar-and-grill.jpg",
-    "datePublished": "2025-12-09",
-    "dateModified": "2025-12-09"
+    "datePublished": "2025-11-01",
+    "dateModified": "2025-11-01"
   };
+
+  const screenshotGroups = getTRBGScreenshotGroups();
+  const screenshotTabs: ScreenshotTab[] = [
+    {
+      id: "pagespeed",
+      label: "PageSpeed results",
+      description:
+        "Live Lighthouse proof before and after the rebuild, documenting the impact of responsive media, caching, and code cleanup.",
+      items: screenshotGroups.pagespeed
+    },
+    {
+      id: "public",
+      label: "Public views",
+      description:
+        "Customer-facing menu, reservations, and hiring flows that reflect the bar’s identity while keeping information clear.",
+      items: screenshotGroups.public
+    },
+    {
+      id: "admin",
+      label: "Admin views",
+      description:
+        "Operational tooling the owners use weekly to manage menus, hero slots, media, and hiring without vendor lock-in.",
+      items: screenshotGroups.admin
+    },
+    {
+      id: "mobile",
+      label: "Mobile views",
+      description:
+        "Mobile parity checks that mirror desktop behavior. Assets will appear here automatically as photography is staged.",
+      items: screenshotGroups.mobile
+    }
+  ];
 
   return (
     <main id="main-content" className="min-h-screen bg-jamarq-black text-jamarq-white">
@@ -104,6 +111,7 @@ export default function TRBGCaseStudyPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
+
       {/* Hero Section */}
       <section
         className="min-h-[60vh] flex items-center justify-center px-5 md:px-10 pt-32 md:pt-40 pb-24"
@@ -111,56 +119,85 @@ export default function TRBGCaseStudyPage() {
       >
         <FadeIn className="w-full">
           <div className="text-center max-w-4xl mx-auto space-y-4">
-          <p className="text-sm text-jamarq-cyan mb-4 uppercase tracking-wider">Case Study</p>
-          <h1 className="text-4xl md:text-5xl font-semibold mb-6">
-            Thunder Road Bar & Grill
-          </h1>
-          <p className="text-xl md:text-2xl text-mist mb-6">
-            {heroDescription}
-          </p>
-          <div className="space-y-3">
-            <div className="flex flex-col md:flex-row md:justify-center md:items-center gap-2 text-sm text-jamarq-cyan">
-              <Link
-                href="https://trbgmidway.com"
-                className="hover:text-jamarq-magenta transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Visit live site ↗
-              </Link>
-              <span className="text-jamarq-gray">|</span>
-              <Link
-                href={buildPageSpeedReportUrl("https://trbgmidway.com")}
-                className="hover:text-jamarq-magenta transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                PageSpeed Live check ↗
-              </Link>
+            <p className="text-sm text-jamarq-cyan uppercase tracking-wider">Case Study</p>
+            <h1 className="text-4xl md:text-5xl font-semibold">{trbgCaseStudyContent.hero.title}</h1>
+            <p className="text-lg md:text-xl text-jamarq-gray">{trbgCaseStudyContent.hero.subtitle}</p>
+            {trbgCaseStudyContent.hero.summary.map((paragraph) => (
+              <p key={paragraph} className="text-lg md:text-xl text-mist leading-relaxed">
+                {paragraph}
+              </p>
+            ))}
+            <div className="flex flex-col md:flex-row md:justify-center md:items-center gap-2 text-sm text-jamarq-gray">
+              <span className="font-semibold text-jamarq-cyan">{trbgCaseStudyContent.hero.stack}</span>
+              <span className="hidden md:inline text-jamarq-gray">|</span>
+              <span>{trbgCaseStudyContent.hero.launch}</span>
             </div>
-            <div className="space-x-4">
-              <Link href="/work" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
-                ← Back to Work
-              </Link>
-              <span className="text-jamarq-gray">|</span>
-              <Link href="/" className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors">
-                Home
-              </Link>
+            <div className="space-y-3">
+              <div className="flex flex-col md:flex-row md:justify-center md:items-center gap-2 text-sm text-jamarq-cyan">
+                <Link
+                  href="https://trbgmidway.com"
+                  className="hover:text-jamarq-magenta transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Visit live site ↗
+                </Link>
+                <span className="text-jamarq-gray">|</span>
+                <Link
+                  href={buildPageSpeedReportUrl("https://trbgmidway.com")}
+                  className="hover:text-jamarq-magenta transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  PageSpeed Live check ↗
+                </Link>
+              </div>
+              <div className="space-x-4">
+                <Link
+                  href="/work"
+                  className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors"
+                >
+                  ← Back to Work
+                </Link>
+                <span className="text-jamarq-gray">|</span>
+                <Link
+                  href="/"
+                  className="text-sm text-jamarq-cyan hover:text-jamarq-magenta transition-colors"
+                >
+                  Home
+                </Link>
+              </div>
             </div>
-          </div>
           </div>
         </FadeIn>
       </section>
 
-      {/* Overview Section */}
+      {/* Project Overview */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Project overview">
-        <FadeIn className="max-w-4xl mx-auto px-5 md:px-10">
-          <div className="space-y-6 text-lg text-jamarq-gray leading-relaxed">
-            <p className="text-xl text-mist">
-              Thunder Road Bar & Grill needed a website that matched the energy and clarity of their restaurant, but their old vendor-run system was slow, restrictive, and expensive. JAMARQ rebuilt the entire platform from the ground up — a custom, fast, intentional digital system the owners fully control.
-            </p>
+        <div className="max-w-5xl mx-auto px-5 md:px-10 space-y-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <FadeIn className="space-y-4">
+              <h2 className="text-3xl font-semibold">{trbgCaseStudyContent.projectOverview.heading}</h2>
+              <div className="space-y-3 text-lg text-jamarq-gray">
+                {trbgCaseStudyContent.projectOverview.paragraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+            </FadeIn>
+            <FadeIn delay={150} className="grid grid-cols-1 gap-4">
+              {trbgCaseStudyContent.projectOverview.facts.map((fact, index) => (
+                <FadeIn
+                  key={fact.label}
+                  delay={index * 80}
+                  className="p-4 rounded-lg border border-slate bg-jamarq-black/40"
+                >
+                  <p className="text-xs uppercase tracking-widest text-jamarq-cyan">{fact.label}</p>
+                  <p className="text-lg text-mist font-semibold">{fact.value}</p>
+                </FadeIn>
+              ))}
+            </FadeIn>
           </div>
-        </FadeIn>
+        </div>
       </section>
 
       {/* Screenshots Section */}
@@ -172,7 +209,7 @@ export default function TRBGCaseStudyPage() {
               <h2 className="text-3xl md:text-4xl font-semibold">Operational Coverage</h2>
             </div>
             <p className="text-jamarq-gray max-w-2xl">
-              Structured space for PageSpeed captures, menu flows, admin tooling, and mobile coverage. Assets will be added without additional engineering.
+              Structured proof covering PageSpeed captures, menu flows, admin tooling, and mobile parity.
             </p>
           </FadeIn>
           <FadeIn delay={150}>
@@ -181,78 +218,128 @@ export default function TRBGCaseStudyPage() {
         </div>
       </section>
 
-      {/* The Challenge Section */}
-      <section className="py-24 md:py-32" aria-label="The challenge">
-        <FadeIn className="max-w-4xl mx-auto px-5 md:px-10">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-8">
-            The Challenge
-          </h2>
-          <div className="space-y-6 text-lg text-jamarq-gray leading-relaxed">
-            <p>
-              TRBG&rsquo;s previous website was locked behind a subscription service with rigid templates, unclear menu layout, and slow load speeds. Weekly specials took too long to update, and nothing truly reflected the restaurant&rsquo;s authentic identity.
+      {/* Challenges and Objectives */}
+      <section className="py-24 md:py-32 bg-steel" aria-label="Challenges and objectives">
+        <div className="max-w-5xl mx-auto px-5 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-12">
+          <FadeIn>
+            <h2 className="text-3xl font-semibold mb-6">{trbgCaseStudyContent.challenge.heading}</h2>
+            <p className="text-jamarq-gray text-lg mb-6 leading-relaxed">
+              {trbgCaseStudyContent.challenge.intro}
             </p>
-          </div>
-        </FadeIn>
-      </section>
-
-      {/* The Solution Section */}
-      <section className="py-24 md:py-32 bg-steel" aria-label="The solution">
-        <FadeIn className="max-w-4xl mx-auto px-5 md:px-10">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-8">
-            The Solution
-          </h2>
-          <div className="space-y-6 text-lg text-jamarq-gray leading-relaxed">
-            <p>
-              JAMARQ created a custom React website with a focused design system, mobile-first performance, and a dead-simple admin panel built around the owners&rsquo; workflow. The result is a modern, high-clarity menu experience and a reliable platform they fully own.
-            </p>
-          </div>
-        </FadeIn>
-      </section>
-
-      {/* The Results Section */}
-      <section className="py-24 md:py-32" aria-label="The results">
-        <div className="max-w-4xl mx-auto px-5 md:px-10">
-          <FadeIn className="mb-8">
-            <h2 className="text-3xl md:text-4xl font-semibold">
-              The Results
-            </h2>
+            <ul className="space-y-3 text-jamarq-gray">
+              {trbgCaseStudyContent.challenge.bullets.map((item) => (
+                <li key={item} className="flex gap-3">
+                  <span className="text-jamarq-cyan">•</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-jamarq-gray text-lg mt-6">{trbgCaseStudyContent.challenge.closing}</p>
           </FadeIn>
+          <FadeIn delay={150}>
+            <h2 className="text-3xl font-semibold mb-6">{trbgCaseStudyContent.objectives.heading}</h2>
+            <ul className="space-y-3 text-jamarq-gray">
+              {trbgCaseStudyContent.objectives.bullets.map((item) => (
+                <li key={item} className="flex gap-3">
+                  <span className="text-jamarq-cyan">•</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Approach */}
+      <section className="py-24 md:py-32" aria-label="Approach">
+        <FadeIn className="max-w-4xl mx-auto px-5 md:px-10">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-8">{trbgCaseStudyContent.approach.heading}</h2>
           <div className="space-y-6 text-lg text-jamarq-gray leading-relaxed">
-            <FadeIn>
-              <ul className="space-y-4">
-                <li className="flex gap-3">
-                  <span className="text-jamarq-cyan">•</span>
-                  <span>Load time reduced from ~4–6s to &lt;1.5s</span>
-                </li>
-              <li className="flex gap-3">
-                <span className="text-jamarq-cyan">•</span>
-                <span>Clean, intuitive menu browsing</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-jamarq-cyan">•</span>
-                <span>Weekly specials updated in under 5 minutes</span>
-              </li>
-                <li className="flex gap-3">
-                  <span className="text-jamarq-cyan">•</span>
-                  <span>No subscriptions, no vendor lock-in, full ownership</span>
-                </li>
-              </ul>
-            </FadeIn>
-            <FadeIn delay={150} className="text-xl text-mist font-semibold pt-6">
-              A fast, intentional system built to match the way TRBG actually works.
-            </FadeIn>
+            {trbgCaseStudyContent.approach.paragraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
+        </FadeIn>
+      </section>
+
+      {/* Solution */}
+      <section className="py-24 md:py-32 bg-steel" aria-label="Solution details">
+        <div className="max-w-6xl mx-auto px-5 md:px-10">
+          <FadeIn className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-semibold">{trbgCaseStudyContent.solution.heading}</h2>
+          </FadeIn>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {trbgCaseStudyContent.solution.sections.map((section, index) => (
+              <FadeIn
+                key={section.title}
+                delay={index * 120}
+                className="p-6 rounded-xl border border-slate bg-jamarq-black/40 space-y-4"
+              >
+                <h3 className="text-2xl font-semibold text-mist">{section.title}</h3>
+                <ul className="space-y-3 text-jamarq-gray">
+                  {section.items.map((item) => (
+                    <li key={item} className="flex gap-3">
+                      <span className="text-jamarq-cyan">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </FadeIn>
+            ))}
           </div>
         </div>
       </section>
 
+      {/* Results */}
+      <section className="py-24 md:py-32" aria-label="Results">
+        <div className="max-w-5xl mx-auto px-5 md:px-10">
+          <FadeIn className="mb-10">
+            <h2 className="text-3xl md:text-4xl font-semibold">{trbgCaseStudyContent.results.heading}</h2>
+          </FadeIn>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {trbgCaseStudyContent.results.categories.map((category, index) => (
+              <FadeIn
+                key={category.title}
+                delay={index * 120}
+                className="p-6 border border-slate rounded-xl bg-jamarq-black/40"
+              >
+                <h3 className="text-2xl font-semibold text-mist mb-4">{category.title}</h3>
+                <ul className="space-y-3 text-jamarq-gray text-base">
+                  {category.items.map((item) => (
+                    <li key={item} className="flex gap-3">
+                      <span className="text-jamarq-cyan">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Key Takeaways */}
+      <section className="py-24 md:py-32 bg-steel" aria-label="Key takeaways">
+        <FadeIn className="max-w-4xl mx-auto px-5 md:px-10">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-8">{trbgCaseStudyContent.keyTakeaways.heading}</h2>
+          <ul className="space-y-4 text-lg text-jamarq-gray leading-relaxed">
+            {trbgCaseStudyContent.keyTakeaways.bullets.map((item) => (
+              <li key={item} className="flex gap-4">
+                <span className="text-jamarq-cyan">•</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </FadeIn>
+      </section>
+
       {/* Full Case Study CTA */}
-      <section className="py-24 md:py-32 bg-steel" aria-label="Full case study">
+      <section className="py-24 md:py-32" aria-label="Full case study">
         <FadeIn className="max-w-4xl mx-auto text-center px-5 md:px-10">
-          <h3 className="text-2xl md:text-3xl font-semibold mb-6">
-            Want the Full Technical Deep Dive?
-          </h3>
+          <h3 className="text-2xl md:text-3xl font-semibold mb-6">Want the Full Technical Deep Dive?</h3>
           <p className="text-lg text-jamarq-gray leading-relaxed mb-8 max-w-2xl mx-auto">
-            A detailed breakdown including architecture decisions, admin panel features, and technical implementation is available upon request.
+            A detailed breakdown including architecture decisions, admin panel features, and technical implementation is
+            available upon request.
           </p>
           <ContactModalTrigger
             prefill={{
@@ -260,7 +347,7 @@ export default function TRBGCaseStudyPage() {
               source: "trbg-full-case-study",
               initialMessage: "I'd like to see the full Thunder Road Bar & Grill case study."
             }}
-            className="inline-block bg-jamarq-cyan text-jamarq-black px-8 py-3 rounded-md font-semibold text-lg hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-jamarq-cyan focus:ring-offset-2 focus:ring-offset-steel"
+            className="inline-block bg-jamarq-cyan text-jamarq-black px-8 py-3 rounded-md font-semibold text-lg hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-jamarq-cyan focus:ring-offset-2 focus:ring-offset-jamarq-black"
           >
             Request Full Case Study
           </ContactModalTrigger>
@@ -272,10 +359,10 @@ export default function TRBGCaseStudyPage() {
         <FadeIn className="max-w-4xl mx-auto px-5 md:px-10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 border-t border-slate pt-8">
             <Link
-              href="/work"
+              href="/case-studies/mmh"
               className="text-jamarq-cyan hover:text-jamarq-magenta transition-colors font-semibold"
             >
-              ← Back to All Work
+              ← Previous: Midway Music Hall
             </Link>
             <Link
               href="/case-studies/mms"

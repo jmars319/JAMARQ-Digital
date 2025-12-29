@@ -11,5 +11,7 @@ Critical admin actions are guarded by non-destructive workflows, confirmation st
 
 The system replaces manual workflows with clear, auditable processes while preserving full ownership of code and data.
 
+Proof of adoption arrived immediately: the very first reserved seating request hit the new system on Day 2 of launch.
+
 Stack: React, PHP, MySQL, Tailwind, Cloudflare
 Launch: December 2025

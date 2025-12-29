@@ -8,8 +8,15 @@ import { ContactModalTrigger } from "@/components/contact/ContactModalTrigger";
 import { FadeIn } from "@/components/FadeIn";
 import { ScrollProgressBar } from "@/components/ScrollProgressBar";
 
-const heroDescription =
-  "A complete rebuild of a local storage company's digital system with elite performance optimization and proven business results.";
+const heroSummary = [
+  "Midway Mobile Storage needed a trustworthy web presence and quote workflow—the previous site was barebones, slow, and unable to collect leads without a phone call.",
+  "JAMARQ rebuilt the entire stack with custom inventory controls, automated quote requests, streamlined admin workflows, and performance optimization that landed 98/100 desktop and 89/100 mobile scores on shared hosting.",
+  "Proof arrived quickly: the first online quote hit the system just 16 days after launch, validating the whole build."
+];
+
+const heroDescription = heroSummary[0];
+const heroStack = "Stack: Next.js, React, PHP API, Tailwind";
+const heroLaunch = "Launch: November 25, 2025";
 
 const screenshotTabs: ScreenshotTab[] = [
   {
@@ -20,8 +27,8 @@ const screenshotTabs: ScreenshotTab[] = [
       {
         id: "mms-pagespeed-desktop",
         caption: "Desktop PageSpeed score at 98/100 on shared hosting.",
-        fallbackSrc: "/case-studies/mms/pagespeed-desktop.webp",
-        webpSrcSet: "/case-studies/mms/pagespeed-desktop.webp 1600w",
+        fallbackSrc: "/case-studies/mms/PageSpeed/pagespeed-desktop.webp",
+        webpSrcSet: "/case-studies/mms/PageSpeed/pagespeed-desktop.webp 1600w",
         width: 1600,
         height: 1000,
         alt: "PageSpeed Insights desktop score showing 98 out of 100"
@@ -29,8 +36,8 @@ const screenshotTabs: ScreenshotTab[] = [
       {
         id: "mms-pagespeed-mobile",
         caption: "Mobile PageSpeed score boosted to 89/100 with code-level optimizations.",
-        fallbackSrc: "/case-studies/mms/pagespeed-mobile.webp",
-        webpSrcSet: "/case-studies/mms/pagespeed-mobile.webp 1600w",
+        fallbackSrc: "/case-studies/mms/PageSpeed/pagespeed-mobile.webp",
+        webpSrcSet: "/case-studies/mms/PageSpeed/pagespeed-mobile.webp 1600w",
         width: 1600,
         height: 1000,
         alt: "PageSpeed Insights mobile score showing 89 out of 100"
@@ -45,8 +52,8 @@ const screenshotTabs: ScreenshotTab[] = [
       {
         id: "mms-public-home",
         caption: "Home page redesign with clear CTAs, trust signals, and real inventory messaging.",
-        fallbackSrc: "/case-studies/mms/home-page.webp",
-        webpSrcSet: "/case-studies/mms/home-page.webp 1600w",
+        fallbackSrc: "/case-studies/mms/Public Views/home-page.webp",
+        webpSrcSet: "/case-studies/mms/Public Views/home-page.webp 1600w",
         width: 1600,
         height: 1000,
         alt: "Midway Mobile Storage home page hero and CTA design"
@@ -61,8 +68,8 @@ const screenshotTabs: ScreenshotTab[] = [
       {
         id: "mms-admin-inventory",
         caption: "Custom unit inventory system with filters and owner-ready controls.",
-        fallbackSrc: "/case-studies/mms/admin-inventory-system.webp",
-        webpSrcSet: "/case-studies/mms/admin-inventory-system.webp 1600w",
+        fallbackSrc: "/case-studies/mms/Admin Views/admin-inventory-system.webp",
+        webpSrcSet: "/case-studies/mms/Admin Views/admin-inventory-system.webp 1600w",
         width: 1600,
         height: 1000,
         alt: "Admin dashboard showing Midway Mobile Storage inventory controls"
@@ -77,8 +84,8 @@ const screenshotTabs: ScreenshotTab[] = [
       {
         id: "mms-quote-mobile",
         caption: "Quote workflow on mobile lets customers submit requests 24/7 without calling.",
-        fallbackSrc: "/case-studies/mms/quote-form-mobile.webp",
-        webpSrcSet: "/case-studies/mms/quote-form-mobile.webp 775w",
+        fallbackSrc: "/case-studies/mms/Mobile Views/quote-form-mobile.webp",
+        webpSrcSet: "/case-studies/mms/Mobile Views/quote-form-mobile.webp 775w",
         width: 775,
         height: 1600,
         alt: "Quote request form on a mobile phone for Midway Mobile Storage"
@@ -164,9 +171,16 @@ export default function MMSCaseStudyPage() {
           <h1 className="text-4xl md:text-5xl font-semibold mb-6">
             Midway Mobile Storage
           </h1>
-          <p className="text-xl md:text-2xl text-mist mb-6">
-            {heroDescription}
-          </p>
+          {heroSummary.map((paragraph) => (
+            <p key={paragraph} className="text-lg md:text-xl text-mist leading-relaxed">
+              {paragraph}
+            </p>
+          ))}
+          <div className="flex flex-col md:flex-row md:justify-center md:items-center gap-2 text-sm text-jamarq-gray">
+            <span className="font-semibold text-jamarq-cyan">{heroStack}</span>
+            <span className="hidden md:inline text-jamarq-gray">|</span>
+            <span>{heroLaunch}</span>
+          </div>
           <div className="space-y-3">
             <div className="flex flex-col md:flex-row md:justify-center md:items-center gap-2 text-sm text-jamarq-cyan">
               <Link

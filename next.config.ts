@@ -1,6 +1,11 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig: NextConfig = {
+  turbopack: {
+    root: process.cwd()
+  },
   async redirects() {
     return [
       {
@@ -12,6 +17,9 @@ const nextConfig: NextConfig = {
     ];
   },
   async headers() {
+    if (!isProd) {
+      return [];
+    }
     return [
       {
         source: "/:path*",

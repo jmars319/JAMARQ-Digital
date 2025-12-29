@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import type { ScreenshotAsset } from "@/lib/mmhScreenshots";
+import type { ScreenshotAsset } from "@/lib/caseStudyScreenshots";
 
 export interface ScreenshotTab {
   id: string;

@@ -6,20 +6,67 @@ import { FadeIn } from "@/components/FadeIn";
 import { ContactModalTrigger } from "@/components/contact/ContactModalTrigger";
 
 export const metadata: Metadata = {
-  title: "JAMARQ Digital — Modern Web Development & Digital Systems",
-  description: "Custom web development in Winston-Salem, NC. Clean, intentional digital systems built for clarity and speed. No templates. No shortcuts. Build with intention.",
+  title: { absolute: "JAMARQ Digital | Custom Websites & Web Systems | Winston-Salem" },
+  description: "Custom websites and operational web systems built for speed and ownership. No templates, no rented platforms. Proof-of-performance included. Based in Winston-Salem.",
   alternates: {
     canonical: "https://jamarq.digital/"
   },
   openGraph: {
-    title: "JAMARQ Digital — Build with intention",
-    description: "Modern digital systems designed for clarity, speed, and long-term stability.",
+    title: "JAMARQ Digital | Custom Websites & Web Systems | Winston-Salem",
+    description: "Custom websites and operational web systems built for speed and ownership. No templates, no rented platforms. Proof-of-performance included. Based in Winston-Salem.",
     url: "https://jamarq.digital/",
-    type: "website"
+    type: "website",
+    images: [
+      {
+        url: "https://jamarq.digital/og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "JAMARQ Digital"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "JAMARQ Digital | Custom Websites & Web Systems | Winston-Salem",
+    description: "Custom websites and operational web systems built for speed and ownership. No templates, no rented platforms. Proof-of-performance included. Based in Winston-Salem.",
+    images: ["https://jamarq.digital/og.jpg"]
   }
 };
 
 export default function Home() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "JAMARQ Digital",
+    "url": "https://jamarq.digital/",
+    "email": "hello@jamarq.digital",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Winston-Salem",
+      "addressRegion": "NC",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Winston-Salem"
+      },
+      {
+        "@type": "State",
+        "name": "North Carolina"
+      },
+      {
+        "@type": "Country",
+        "name": "United States"
+      }
+    ],
+    "serviceType": [
+      "Custom websites",
+      "Web development",
+      "Operational web systems"
+    ]
+  };
+
   const orderedCaseStudies = caseStudyDisplayOrder.map((key) => ({
     key,
     ...caseStudySummaries[key]
@@ -50,7 +97,12 @@ export default function Home() {
   ];
 
   return (
-    <main id="main-content" className="min-h-screen bg-jamarq-black text-jamarq-white">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <main id="main-content" className="min-h-screen bg-jamarq-black text-jamarq-white">
       {/* Hero Section */}
       <section className="pt-32 pb-24 md:pb-32" aria-label="Hero section">
         <div className="max-w-6xl mx-auto px-5 md:px-10 grid gap-12 md:grid-cols-[minmax(0,1fr)_360px] items-center">
@@ -61,6 +113,9 @@ export default function Home() {
             </h1>
             <p className="text-lg md:text-xl text-mist leading-relaxed">
               I build custom websites and digital platforms that actually support the way you operate. No templates. No rented software. Proof-of-performance included.
+            </p>
+            <p className="text-sm text-jamarq-gray">
+              Custom web development in Winston-Salem for owner-led businesses and small teams.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <ContactModalTrigger
@@ -392,6 +447,7 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </main>
+      </main>
+    </>
   );
 }

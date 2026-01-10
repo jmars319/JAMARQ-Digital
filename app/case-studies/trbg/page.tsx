@@ -14,13 +14,13 @@ const heroDescription =
   trbgCaseStudyContent.hero.summary[0] ?? trbgCaseStudyContent.hero.subtitle ?? "Thunder Road Bar & Grill project summary.";
 
 export const metadata: Metadata = {
-  title: "Thunder Road Bar & Grill Case Study — JAMARQ Digital",
+  title: "Thunder Road Bar & Grill Case Study",
   description: heroDescription,
   alternates: {
     canonical: "https://jamarq.digital/case-studies/trbg"
   },
   openGraph: {
-    title: "Thunder Road Bar & Grill Case Study — JAMARQ Digital",
+    title: "Thunder Road Bar & Grill Case Study",
     description: heroDescription,
     url: "https://jamarq.digital/case-studies/trbg",
     type: "article",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Thunder Road Bar & Grill Case Study — JAMARQ Digital",
+    title: "Thunder Road Bar & Grill Case Study",
     description: heroDescription,
     images: [
       {

@@ -12,13 +12,13 @@ import { ScrollProgressBar } from "@/components/ScrollProgressBar";
 const heroDescription = mmhCaseStudyContent.hero.summary[0];
 
 export const metadata: Metadata = {
-  title: "Midway Music Hall Case Study — JAMARQ Digital",
+  title: "Midway Music Hall Case Study",
   description: heroDescription,
   alternates: {
     canonical: "https://jamarq.digital/case-studies/mmh"
   },
   openGraph: {
-    title: "Midway Music Hall Case Study — JAMARQ Digital",
+    title: "Midway Music Hall Case Study",
     description: heroDescription,
     url: "https://jamarq.digital/case-studies/mmh",
     type: "article",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Midway Music Hall Case Study — JAMARQ Digital",
+    title: "Midway Music Hall Case Study",
     description: heroDescription,
     images: [
       {

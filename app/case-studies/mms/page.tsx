@@ -95,13 +95,13 @@ const screenshotTabs: ScreenshotTab[] = [
 ];
 
 export const metadata: Metadata = {
-  title: "Midway Mobile Storage Case Study — JAMARQ Digital",
+  title: "Midway Mobile Storage Case Study",
   description: heroDescription,
   alternates: {
     canonical: "https://jamarq.digital/case-studies/mms"
   },
   openGraph: {
-    title: "Midway Mobile Storage Case Study — JAMARQ Digital",
+    title: "Midway Mobile Storage Case Study",
     description: heroDescription,
     url: "https://jamarq.digital/case-studies/mms",
     type: "article",
@@ -116,7 +116,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Midway Mobile Storage Case Study — JAMARQ Digital",
+    title: "Midway Mobile Storage Case Study",
     description: heroDescription,
     images: [
       {

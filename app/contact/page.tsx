@@ -29,7 +29,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Contact",
     description: "Start a project with JAMARQ Digital. Clear replies within one business day, no sales team.",
-    images: ["https://jamarq.digital/og.jpg"]
+    images: ["https://jamarq.digital/og.jpg"],
+    creator: "@jamarqdigital",
+    site: "@jamarqdigital"
   }
 };
 

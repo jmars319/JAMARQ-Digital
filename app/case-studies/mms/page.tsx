@@ -125,7 +125,9 @@ export const metadata: Metadata = {
         height: 630,
         alt: "Midway Mobile Storage case study cover image"
       }
-    ]
+    ],
+    creator: "@jamarqdigital",
+    site: "@jamarqdigital"
   }
 };
 

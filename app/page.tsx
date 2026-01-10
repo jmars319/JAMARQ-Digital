@@ -29,7 +29,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "JAMARQ Digital | Custom Websites & Web Systems | Winston-Salem",
     description: "Custom websites and operational web systems built for speed and ownership. No templates, no rented platforms. Proof-of-performance included. Based in Winston-Salem.",
-    images: ["https://jamarq.digital/og.jpg"]
+    images: ["https://jamarq.digital/og.jpg"],
+    creator: "@jamarqdigital",
+    site: "@jamarqdigital"
   }
 };
 

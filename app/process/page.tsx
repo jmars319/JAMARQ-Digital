@@ -28,7 +28,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Process",
     description: "A clear, structured process for every project: discovery, build, launch, and support with predictable timelines.",
-    images: ["https://jamarq.digital/og.jpg"]
+    images: ["https://jamarq.digital/og.jpg"],
+    creator: "@jamarqdigital",
+    site: "@jamarqdigital"
   }
 };
 

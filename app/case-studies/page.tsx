@@ -29,7 +29,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Case Studies",
     description: "Detailed breakdowns of custom web systems with screenshots, PageSpeed data, and technical notes.",
-    images: ["https://jamarq.digital/og.jpg"]
+    images: ["https://jamarq.digital/og.jpg"],
+    creator: "@jamarqdigital",
+    site: "@jamarqdigital"
   }
 };
 

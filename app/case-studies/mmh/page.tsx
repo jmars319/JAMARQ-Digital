@@ -24,10 +24,10 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: "https://jamarq.digital/case-studies/mmh/mmh-public-homepageafter-1200.png",
+        url: "https://jamarq.digital/case-studies/mmh/og-midway-music-hall.jpg",
         width: 1200,
-        height: 750,
-        alt: "Midway Music Hall public homepage after rebuild"
+        height: 630,
+        alt: "Midway Music Hall case study cover image"
       }
     ]
   },
@@ -37,12 +37,14 @@ export const metadata: Metadata = {
     description: heroDescription,
     images: [
       {
-        url: "https://jamarq.digital/case-studies/mmh/mmh-public-homepageafter-1200.png",
+        url: "https://jamarq.digital/case-studies/mmh/og-midway-music-hall.jpg",
         width: 1200,
-        height: 750,
-        alt: "Midway Music Hall public homepage after rebuild"
+        height: 630,
+        alt: "Midway Music Hall case study cover image"
       }
-    ]
+    ],
+    creator: "@jamarqdigital",
+    site: "@jamarqdigital"
   }
 };
 
@@ -65,7 +67,7 @@ export default function MMHCaseStudyPage() {
         "url": "https://jamarq.digital/assets/logos/wordmark-dark.png"
       }
     },
-    "image": "https://jamarq.digital/case-studies/mmh/mmh-public-homepageafter-1200.png",
+    "image": "https://jamarq.digital/case-studies/mmh/og-midway-music-hall.jpg",
     "datePublished": "2025-12-01",
     "dateModified": "2025-12-01"
   };

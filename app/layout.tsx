@@ -81,6 +81,7 @@ export const metadata: Metadata = {
     description: "Custom websites and operational web systems built for speed and ownership. No templates, no rented platforms. Proof-of-performance included. Based in Winston-Salem.",
     images: ["/og.jpg"],
     creator: "@jamarqdigital",
+    site: "@jamarqdigital",
   },
   icons: {
     icon: [

@@ -44,7 +44,9 @@ export const metadata: Metadata = {
         height: 630,
         alt: "Thunder Road Bar & Grill case study cover image"
       }
-    ]
+    ],
+    creator: "@jamarqdigital",
+    site: "@jamarqdigital"
   }
 };
 

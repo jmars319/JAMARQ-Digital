@@ -29,7 +29,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Work",
     description: "Selected work: custom websites, digital systems, and operational tooling built with proof-of-performance and owner-first infrastructure.",
-    images: ["https://jamarq.digital/og.jpg"]
+    images: ["https://jamarq.digital/og.jpg"],
+    creator: "@jamarqdigital",
+    site: "@jamarqdigital"
   }
 };
 

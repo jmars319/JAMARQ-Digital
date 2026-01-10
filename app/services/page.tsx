@@ -28,7 +28,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Services",
     description: "Custom websites, operational web systems, and ongoing support for teams that want speed and ownership.",
-    images: ["https://jamarq.digital/og.jpg"]
+    images: ["https://jamarq.digital/og.jpg"],
+    creator: "@jamarqdigital",
+    site: "@jamarqdigital"
   }
 };
 

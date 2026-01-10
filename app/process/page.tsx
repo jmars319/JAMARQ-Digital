@@ -5,16 +5,30 @@ import { ContactModalTrigger } from "@/components/contact/ContactModalTrigger";
 import { FadeIn } from "@/components/FadeIn";
 
 export const metadata: Metadata = {
-  title: "Process — JAMARQ Digital",
-  description: "A clear, structured process for every project. Discovery, design, development, launch, and support. Predictable timelines, no surprises.",
+  title: "Process",
+  description: "A clear, structured process for every project: discovery, build, launch, and support with predictable timelines.",
   alternates: {
     canonical: "https://jamarq.digital/process"
   },
   openGraph: {
-    title: "Process — JAMARQ Digital",
-    description: "A clear, structured process for every project. Discovery, design, development, launch, and support. Predictable timelines, no surprises.",
+    title: "Process",
+    description: "A clear, structured process for every project: discovery, build, launch, and support with predictable timelines.",
     url: "https://jamarq.digital/process",
-    type: "website"
+    type: "website",
+    images: [
+      {
+        url: "https://jamarq.digital/og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "JAMARQ Digital"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Process",
+    description: "A clear, structured process for every project: discovery, build, launch, and support with predictable timelines.",
+    images: ["https://jamarq.digital/og.jpg"]
   }
 };
 

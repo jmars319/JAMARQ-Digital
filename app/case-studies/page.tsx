@@ -6,16 +6,30 @@ import { ContactModalTrigger } from "@/components/contact/ContactModalTrigger";
 import { FadeIn } from "@/components/FadeIn";
 
 export const metadata: Metadata = {
-  title: "Case Studies — JAMARQ Digital",
+  title: "Case Studies",
   description: "Public documentation of JAMARQ Digital builds: challenges, architecture decisions, performance proof, and ownership plans.",
   alternates: {
     canonical: "https://jamarq.digital/case-studies"
   },
   openGraph: {
-    title: "Case Studies — JAMARQ Digital",
+    title: "Case Studies",
     description: "Detailed breakdowns of custom web systems with screenshots, PageSpeed data, and technical notes.",
     url: "https://jamarq.digital/case-studies",
-    type: "website"
+    type: "website",
+    images: [
+      {
+        url: "https://jamarq.digital/og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "JAMARQ Digital"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Case Studies",
+    description: "Detailed breakdowns of custom web systems with screenshots, PageSpeed data, and technical notes.",
+    images: ["https://jamarq.digital/og.jpg"]
   }
 };
 

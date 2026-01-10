@@ -22,10 +22,10 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: {
-    default: "JAMARQ Digital — Modern Web Development & Digital Systems",
+    default: "JAMARQ Digital | Custom Websites & Web Systems | Winston-Salem",
     template: "%s | JAMARQ Digital"
   },
-  description: "Custom web development in Winston-Salem, NC. Clean, intentional digital systems built for clarity and speed. No templates. No shortcuts. Build with intention.",
+  description: "Custom websites and operational web systems built for speed and ownership. No templates, no rented platforms. Proof-of-performance included. Based in Winston-Salem.",
   keywords: [
     "web development Winston-Salem NC",
     "custom website design Winston-Salem",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   publisher: "JAMARQ Digital",
   metadataBase: new URL("https://jamarq.digital"),
   alternates: {
-    canonical: "https://jamarq.digital"
+    canonical: "https://jamarq.digital/"
   },
   robots: {
     index: true,
@@ -64,22 +64,22 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://jamarq.digital",
     siteName: "JAMARQ Digital",
-    title: "JAMARQ Digital — Build with intention",
-    description: "Modern digital systems designed for clarity, speed, and long-term stability. Custom web development in Winston-Salem, NC.",
+    title: "JAMARQ Digital | Custom Websites & Web Systems | Winston-Salem",
+    description: "Custom websites and operational web systems built for speed and ownership. No templates, no rented platforms. Proof-of-performance included. Based in Winston-Salem.",
     images: [
       {
-        url: "/assets/logos/wordmark-dark.png",
+        url: "/og.jpg",
         width: 1200,
         height: 630,
-        alt: "JAMARQ Digital - Custom Web Development & Brand Identity Services",
+        alt: "JAMARQ Digital",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "JAMARQ Digital — Modern Web Development",
-    description: "Custom web development in Winston-Salem, NC. Clean, intentional digital systems built for clarity and speed.",
-    images: ["/assets/logos/wordmark-dark.png"],
+    title: "JAMARQ Digital | Custom Websites & Web Systems | Winston-Salem",
+    description: "Custom websites and operational web systems built for speed and ownership. No templates, no rented platforms. Proof-of-performance included. Based in Winston-Salem.",
+    images: ["/og.jpg"],
     creator: "@jamarqdigital",
   },
   icons: {
@@ -108,140 +108,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Enhanced structured data with multiple schema types
-  const organizationData = {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "JAMARQ Digital",
-    "url": "https://jamarq.digital",
-    "logo": "https://jamarq.digital/assets/logos/wordmark-dark.png",
-    "image": "https://jamarq.digital/assets/logos/wordmark-dark.png",
-    "description": "Custom web development and digital systems in Winston-Salem, NC. Clean, intentional architecture built for clarity, speed, and long-term stability.",
-    "founder": {
-      "@type": "Person",
-      "name": "Jason Marshall",
-      "email": "jason@jamarq.digital",
-      "jobTitle": "Founder & Lead Developer"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Winston-Salem",
-      "addressRegion": "NC",
-      "addressCountry": "US"
-    },
-    "areaServed": [
-      {
-        "@type": "City",
-        "name": "Winston-Salem",
-        "containedInPlace": {
-          "@type": "State",
-          "name": "North Carolina"
-        }
-      },
-      {
-        "@type": "State",
-        "name": "North Carolina"
-      },
-      {
-        "@type": "Country",
-        "name": "United States"
-      }
-    ],
-    "sameAs": [
-      "https://github.com/jmars319"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "email": "hello@jamarq.digital",
-      "contactType": "Customer Service",
-      "availableLanguage": "English"
-    },
-    "priceRange": "$3,500 - $15,000",
-    "serviceType": ["Web Development", "Custom Websites", "Digital Systems", "React Development"],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "2"
-    }
-  };
-
-  const websiteData = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "JAMARQ Digital",
-    "url": "https://jamarq.digital",
-    "description": "Custom web development and digital systems. Clean, intentional architecture built for clarity and speed.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "JAMARQ Digital",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://jamarq.digital/assets/logos/wordmark-dark.png"
-      }
-    },
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://jamarq.digital/work?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  };
-
-  const servicesData = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "itemListElement": [
-      {
-        "@type": "Service",
-        "name": "Web Development",
-        "description": "Hand-built, modern, responsive websites. Zero templates.",
-        "provider": {
-          "@type": "Organization",
-          "name": "JAMARQ Digital"
-        },
-        "areaServed": "Winston-Salem, North Carolina",
-        "serviceType": "Custom Web Development"
-      },
-      {
-        "@type": "Service",
-        "name": "Brand Identity",
-        "description": "Visual identity that makes sense and sticks. Logo, colors, the works.",
-        "provider": {
-          "@type": "Organization",
-          "name": "JAMARQ Digital"
-        },
-        "areaServed": "Winston-Salem, North Carolina",
-        "serviceType": "Brand Identity Design"
-      },
-      {
-        "@type": "Service",
-        "name": "Consulting",
-        "description": "Strategic guidance for web projects. Architecture, planning, problem-solving.",
-        "provider": {
-          "@type": "Organization",
-          "name": "JAMARQ Digital"
-        },
-        "areaServed": "Winston-Salem, North Carolina",
-        "serviceType": "Web Consulting"
-      }
-    ]
-  };
-
   return (
     <html lang="en">
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationData) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteData) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesData) }}
-        />
-      </head>
       <body className={`${inter.variable} ${montserrat.variable} ${inter.className} antialiased bg-jamarq-black text-jamarq-white`}>
         {/* Skip to main content for accessibility */}
         <a 

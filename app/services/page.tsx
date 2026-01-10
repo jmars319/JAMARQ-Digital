@@ -5,16 +5,30 @@ import { ContactModalTrigger } from "@/components/contact/ContactModalTrigger";
 import { FadeIn } from "@/components/FadeIn";
 
 export const metadata: Metadata = {
-  title: "Services — JAMARQ Digital",
-  description: "Custom web development, digital systems, and ongoing support in Winston-Salem, NC. No templates. Clean, intentional architecture built to last.",
+  title: "Services",
+  description: "Custom websites, operational web systems, and ongoing support for teams that want speed and ownership.",
   alternates: {
     canonical: "https://jamarq.digital/services"
   },
   openGraph: {
-    title: "Services — JAMARQ Digital",
-    description: "Custom web development, digital systems, and ongoing support in Winston-Salem, NC. No templates. Clean, intentional architecture built to last.",
+    title: "Services",
+    description: "Custom websites, operational web systems, and ongoing support for teams that want speed and ownership.",
     url: "https://jamarq.digital/services",
-    type: "website"
+    type: "website",
+    images: [
+      {
+        url: "https://jamarq.digital/og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "JAMARQ Digital"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Services",
+    description: "Custom websites, operational web systems, and ongoing support for teams that want speed and ownership.",
+    images: ["https://jamarq.digital/og.jpg"]
   }
 };
 

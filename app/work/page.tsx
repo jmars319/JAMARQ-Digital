@@ -6,16 +6,30 @@ import { ContactModalTrigger } from "@/components/contact/ContactModalTrigger";
 import { FadeIn } from "@/components/FadeIn";
 
 export const metadata: Metadata = {
-  title: "Work — JAMARQ Digital",
-  description: "Selected work from JAMARQ Digital. Custom websites, digital systems, and operational tooling built with proof-of-performance and owner-first infrastructure.",
+  title: "Work",
+  description: "Selected work: custom websites, digital systems, and operational tooling built with proof-of-performance and owner-first infrastructure.",
   alternates: {
     canonical: "https://jamarq.digital/work"
   },
   openGraph: {
-    title: "Work — JAMARQ Digital",
-    description: "Custom websites, digital systems, and admin tooling built for clarity, speed, and ownership.",
+    title: "Work",
+    description: "Selected work: custom websites, digital systems, and operational tooling built with proof-of-performance and owner-first infrastructure.",
     url: "https://jamarq.digital/work",
-    type: "website"
+    type: "website",
+    images: [
+      {
+        url: "https://jamarq.digital/og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "JAMARQ Digital"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Work",
+    description: "Selected work: custom websites, digital systems, and operational tooling built with proof-of-performance and owner-first infrastructure.",
+    images: ["https://jamarq.digital/og.jpg"]
   }
 };
 

@@ -6,16 +6,30 @@ import { EmailCopyButton } from "@/components/contact/EmailCopyButton";
 import { FadeIn } from "@/components/FadeIn";
 
 export const metadata: Metadata = {
-  title: "Contact — JAMARQ Digital",
-  description: "Start a project with JAMARQ Digital. Clear replies within one business day, no sales team. Tell me what you need and I’ll map the plan.",
+  title: "Contact",
+  description: "Start a project with JAMARQ Digital. Clear replies within one business day, no sales team.",
   alternates: {
     canonical: "https://jamarq.digital/contact"
   },
   openGraph: {
-    title: "Contact — JAMARQ Digital",
-    description: "Start a project with JAMARQ Digital. Clear communication and predictable timelines.",
+    title: "Contact",
+    description: "Start a project with JAMARQ Digital. Clear replies within one business day, no sales team.",
     url: "https://jamarq.digital/contact",
-    type: "website"
+    type: "website",
+    images: [
+      {
+        url: "https://jamarq.digital/og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "JAMARQ Digital"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact",
+    description: "Start a project with JAMARQ Digital. Clear replies within one business day, no sales team.",
+    images: ["https://jamarq.digital/og.jpg"]
   }
 };
 

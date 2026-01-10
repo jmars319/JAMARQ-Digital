@@ -34,6 +34,15 @@ npm start
 
 Open [http://localhost:3000](http://localhost:3000) to view the site.
 
+## SEO Verification
+
+Use these checks after running `npm run dev` or a production preview:
+
+- View rendered head tags: `curl -s http://localhost:3000 | rg -n "<title>|<meta|<link rel=\"canonical\"|<script type=\"application/ld\\+json\""`
+- Confirm robots.txt: `curl -s http://localhost:3000/robots.txt`
+- Confirm sitemap.xml: `curl -s http://localhost:3000/sitemap.xml`
+- Confirm OG image size: `sips -g pixelWidth -g pixelHeight public/og.jpg` (expect 1200x630)
+
 ## Phase 0 Features
 
 ✅ Single-page layout  

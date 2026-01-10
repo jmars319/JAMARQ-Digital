@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jamarq.digital/sitemap.xml

@@ -36,6 +36,9 @@ export default function Footer() {
               <Link href="/process" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">
                 Process
               </Link>
+              <Link href="/mission" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">
+                Mission
+              </Link>
               <Link href="/work" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">
                 Work
               </Link>

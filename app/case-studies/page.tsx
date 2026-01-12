@@ -57,7 +57,7 @@ export default function CaseStudiesPage() {
             <p className="text-xs uppercase tracking-[0.35em] text-jamarq-gray">Case studies</p>
             <h1 className="text-4xl md:text-5xl font-semibold leading-tight">Documentation of real, shipped systems.</h1>
             <p className="text-lg text-jamarq-gray leading-relaxed">
-              Each case study includes the challenge, approach, technical stack, and proofs—screenshots, PageSpeed reports, admin flows, and ownership notes. No fluff.
+              Each case study includes the challenge, approach, technical stack, and proofs—screenshots, PageSpeed reports, admin flows, and ownership notes. No fluff, no hidden steps.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">

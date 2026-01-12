@@ -51,7 +51,7 @@ export default function ServicesPage() {
     {
       title: "Digital Systems & Integrations",
       description:
-        "Quote workflows, dashboards, inventory systems, and admin tooling that mirror real operations.",
+        "Quote workflows, dashboards, inventory systems, and admin tooling that mirror real operations. Automation supports the team, not the other way around.",
       items: [
         "Architecture & workflow mapping",
         "API / CMS integrations",
@@ -78,7 +78,7 @@ export default function ServicesPage() {
     {
       number: "01",
       title: "Discovery & Architecture",
-      copy: "Requirements, constraints, and success metrics. I map content structures, workflows, and system diagrams before writing code."
+      copy: "Requirements, constraints, and success metrics. I map content structures, workflows, and system diagrams before writing code, with your signoff."
     },
     {
       number: "02",
@@ -97,7 +97,7 @@ export default function ServicesPage() {
     "Owner-first infrastructure so you control hosting, domains, and data.",
     "Performance and SEO proof included—PageSpeed, accessibility, and Lighthouse data.",
     "Direct communication with me. No account managers or multi-layer approvals.",
-    "Systems-first thinking. The site, admin, and workflows are designed together.",
+    "Systems-first thinking. The site, admin, and workflows are designed together so decisions stay transparent.",
     "Long-term reliability. Clean code, documentation, and maintenance options."
   ];
 
@@ -116,10 +116,10 @@ export default function ServicesPage() {
           <div className="space-y-6">
             <p className="text-xs uppercase tracking-[0.35em] text-jamarq-gray">Services</p>
             <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
-              Digital systems built for clarity, speed, and long-term ownership.
+              Digital systems built for clarity, long-term ownership, and human oversight.
             </h1>
             <p className="text-lg text-jamarq-gray leading-relaxed">
-              Web experiences, admin tooling, and workflows designed around how your business actually operates. No templates, no throwaway builds—just intentional software.
+              Web experiences, admin tooling, and workflows designed around how your business actually operates, with you as the author. No templates, no throwaway builds—just intentional software.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <ContactModalTrigger

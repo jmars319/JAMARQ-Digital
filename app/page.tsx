@@ -84,17 +84,17 @@ export default function Home() {
     {
       number: "01",
       title: "Discovery",
-      copy: "Define requirements, budgets, and the constraints we have to respect. Every build starts with clarity."
+      copy: "Define requirements, budgets, and the constraints we have to respect. Nothing moves forward without your signoff."
     },
     {
       number: "02",
       title: "Architecture & Build",
-      copy: "Translate the plan into intentional UI, copy, and code. Custom components, no templates, performance-first."
+      copy: "Translate the plan into intentional UI, copy, and code. Custom components, no templates, performance-first and reviewable."
     },
     {
       number: "03",
       title: "Launch & Support",
-      copy: "Structured rollout, documentation, and a support window so you can own the system without babysitting."
+      copy: "Structured rollout, documentation, and a support window so you can own the system without dependency."
     }
   ];
 
@@ -114,7 +114,7 @@ export default function Home() {
               Modern web systems for teams that value clarity, speed, and ownership.
             </h1>
             <p className="text-lg md:text-xl text-mist leading-relaxed">
-              I build custom websites and digital platforms that actually support the way you operate. No templates. No rented software. Proof-of-performance included.
+              I build custom websites and digital platforms that support the way you operate, with you in the loop. No templates. No rented software. Proof-of-performance included.
             </p>
             <p className="text-sm text-jamarq-gray">
               Custom web development in Winston-Salem for owner-led businesses and small teams.
@@ -270,7 +270,7 @@ export default function Home() {
       <section className="py-16 flex items-center justify-center" aria-label="Transition">
         <div className="max-w-3xl mx-auto text-center px-5 md:px-10">
           <p className="text-lg text-jamarq-gray">
-            The result: a system you can rely on.
+            The result: a system you can trust and control.
           </p>
         </div>
       </section>

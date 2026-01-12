@@ -9,10 +9,10 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-jamarq-black/95 backdrop-blur-sm border-b border-slate" role="banner">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-jamarq-black border-b border-slate" role="banner">
       <nav className="max-w-6xl mx-auto px-5 md:px-10 py-5 flex items-center justify-between" aria-label="Main navigation">
         {/* Logo */}
-        <Link href="/" className="flex items-center" aria-label="JAMARQ Digital homepage">
+        <Link href="/" className="flex items-center gap-3" aria-label="JAMARQ Digital homepage">
           <div className="relative h-12 w-12">
             <Image
               src="/assets/logos/icon-dark.png"
@@ -20,6 +20,15 @@ export default function Header() {
               fill
               sizes="48px"
               priority
+              className="object-contain"
+            />
+          </div>
+          <div className="relative hidden sm:block h-8 w-[160px]">
+            <Image
+              src="/assets/logos/wordmark-dark.png"
+              alt="JAMARQ"
+              fill
+              sizes="160px"
               className="object-contain"
             />
           </div>
@@ -38,6 +47,12 @@ export default function Header() {
             className="text-sm font-medium text-jamarq-gray hover:text-jamarq-cyan transition-colors"
           >
             Process
+          </Link>
+          <Link 
+            href="/mission" 
+            className="text-sm font-medium text-jamarq-gray hover:text-jamarq-cyan transition-colors"
+          >
+            Mission
           </Link>
           <Link 
             href="/work" 
@@ -111,6 +126,13 @@ export default function Header() {
                 Process
               </Link>
               <Link 
+                href="/mission" 
+                className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Mission
+              </Link>
+              <Link 
                 href="/work" 
                 className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
@@ -144,6 +166,12 @@ export default function Header() {
               className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
             >
               Process
+            </a>
+            <a 
+              href="/mission" 
+              className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
+            >
+              Mission
             </a>
             <a 
               href="/work" 

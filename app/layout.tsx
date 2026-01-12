@@ -1,23 +1,16 @@
 import type { Metadata } from "next";
-import { Inter, Montserrat } from "next/font/google";
+import { IBM_Plex_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Header from "@/components/Header";
 import { ContactModalProvider } from "@/components/contact/ContactModalProvider";
 import "./globals.css";
 
-const inter = Inter({
+const ibmPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-inter",
+  variable: "--font-ibm-plex-sans",
   weight: ["400", "500", "600"],
-});
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-montserrat",
-  weight: ["600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -111,7 +104,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${montserrat.variable} ${inter.className} antialiased bg-jamarq-black text-jamarq-white`}>
+      <body className={`${ibmPlexSans.variable} ${ibmPlexSans.className} antialiased bg-jamarq-black text-jamarq-white`}>
         {/* Skip to main content for accessibility */}
         <a 
           href="#main-content" 

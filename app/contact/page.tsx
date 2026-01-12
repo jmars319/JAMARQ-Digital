@@ -50,7 +50,7 @@ export default function ContactPage() {
     {
       number: "03",
       title: "Plan the project",
-      copy: "We align on deliverables, timeline, and pricing. No work begins without a written plan."
+      copy: "We align on deliverables, timeline, and pricing. No work begins without your written approval."
     }
   ];
 
@@ -71,7 +71,7 @@ export default function ContactPage() {
             <p className="text-xs uppercase tracking-[0.35em] text-jamarq-gray">Contact</p>
             <h1 className="text-4xl md:text-5xl font-semibold leading-tight">Start a project or request a walkthrough.</h1>
             <p className="text-lg text-jamarq-gray leading-relaxed">
-              You’ll hear back within one business day. No sales team—just me. Provide as much context as you can and I’ll map the plan, timeline, and price range.
+              You’ll hear back within one business day. No sales team—just me. Provide as much context as you can and I’ll map the plan, timeline, and price range with you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <ContactModalTrigger

@@ -59,7 +59,7 @@ export default function WorkPage() {
     },
     {
       title: "Operational focus",
-      copy: "Public site, admin workflow, and supporting automations are designed together so they stay in sync."
+      copy: "Public site, admin workflow, and supporting automations are designed together so decisions stay visible."
     }
   ];
 
@@ -74,7 +74,7 @@ export default function WorkPage() {
               Systems built for teams that want proof, not hype.
             </h1>
             <p className="text-lg text-jamarq-gray leading-relaxed">
-              These projects combine custom UI, clean code, and operational tooling. Every build ships with PageSpeed data, accessibility checks, and a clear handoff.
+              These projects combine custom UI, clean code, and operational tooling. Every build ships with PageSpeed data, accessibility checks, and a clear handoff so you stay in control.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <ContactModalTrigger

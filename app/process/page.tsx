@@ -150,7 +150,7 @@ export default function ProcessPage() {
             A clean, structured process.
           </h1>
           <p className="text-xl md:text-2xl text-mist mb-6">
-            Clear milestones. Predictable timelines. No guesswork.
+            Clear milestones. Predictable timelines. Decisions stay with you.
           </p>
           <Link href="/" className="link-underline text-sm text-jamarq-cyan">
             ← Back to Home
@@ -230,7 +230,7 @@ export default function ProcessPage() {
               </ul>
             </div>
             <p className="text-mist pt-4">
-              You&rsquo;ll receive a detailed timeline during the Discovery phase.
+              You&rsquo;ll receive a detailed timeline and approval checkpoints during the Discovery phase.
             </p>
           </div>
         </div>

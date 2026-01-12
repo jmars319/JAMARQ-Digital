@@ -36,6 +36,25 @@ export const metadata: Metadata = {
 };
 
 export default function CaseStudiesPage() {
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://jamarq.digital/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Case Studies",
+        "item": "https://jamarq.digital/case-studies"
+      }
+    ]
+  };
+
   const orderedCaseStudies = caseStudyDisplayOrder.map((key) => ({
     key,
     ...caseStudySummaries[key]
@@ -50,6 +69,10 @@ export default function CaseStudiesPage() {
 
   return (
     <main id="main-content" className="min-h-screen bg-jamarq-black text-jamarq-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+      />
       {/* Hero */}
       <section className="pt-32 pb-24" aria-label="Case studies hero">
         <div className="max-w-6xl mx-auto px-5 md:px-10 space-y-8">

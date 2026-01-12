@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     default: "JAMARQ Digital | Custom Websites & Web Systems | Winston-Salem",
     template: "%s | JAMARQ Digital"
   },
-  description: "Custom websites and operational web systems built for speed and ownership. No templates, no rented platforms. Proof-of-performance included. Based in Winston-Salem.",
+  description: "Custom websites and operational web systems built for speed and ownership. No templates, no rented platforms. Proof-of-performance included. Based in Winston-Salem, serving nationwide.",
   keywords: [
     "web development Winston-Salem NC",
     "custom website design Winston-Salem",
@@ -49,16 +49,13 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: 'add-your-verification-code-here', // User can add later
-  },
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://jamarq.digital",
     siteName: "JAMARQ Digital",
     title: "JAMARQ Digital | Custom Websites & Web Systems | Winston-Salem",
-    description: "Custom websites and operational web systems built for speed and ownership. No templates, no rented platforms. Proof-of-performance included. Based in Winston-Salem.",
+    description: "Custom websites and operational web systems built for speed and ownership. No templates, no rented platforms. Proof-of-performance included. Based in Winston-Salem, serving nationwide.",
     images: [
       {
         url: "/og.jpg",
@@ -71,7 +68,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "JAMARQ Digital | Custom Websites & Web Systems | Winston-Salem",
-    description: "Custom websites and operational web systems built for speed and ownership. No templates, no rented platforms. Proof-of-performance included. Based in Winston-Salem.",
+    description: "Custom websites and operational web systems built for speed and ownership. No templates, no rented platforms. Proof-of-performance included. Based in Winston-Salem, serving nationwide.",
     images: ["/og.jpg"],
     creator: "@jamarqdigital",
     site: "@jamarqdigital",
@@ -102,9 +99,45 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const organizationStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "JAMARQ Digital",
+    url: "https://jamarq.digital",
+    logo: "https://jamarq.digital/og.jpg",
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "business inquiries",
+        email: "hello@jamarq.digital",
+      }
+    ],
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Winston-Salem",
+      addressRegion: "NC",
+      addressCountry: "US"
+    }
+  };
+
+  const websiteStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "JAMARQ Digital",
+    url: "https://jamarq.digital"
+  };
+
   return (
     <html lang="en">
       <body className={`${ibmPlexSans.variable} ${ibmPlexSans.className} antialiased bg-jamarq-black text-jamarq-white`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationStructuredData) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteStructuredData) }}
+        />
         {/* Skip to main content for accessibility */}
         <a 
           href="#main-content" 

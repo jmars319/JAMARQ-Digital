@@ -56,6 +56,10 @@ export default function TRBGCaseStudyPage() {
     "@type": "Article",
     "headline": "Thunder Road Bar & Grill Case Study",
     "description": heroDescription,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://jamarq.digital/case-studies/trbg"
+    },
     "author": {
       "@type": "Person",
       "name": "Jason Marshall",
@@ -72,6 +76,31 @@ export default function TRBGCaseStudyPage() {
     "image": "https://jamarq.digital/case-studies/trbg/og-thunder-road-bar-and-grill.jpg",
     "datePublished": "2025-11-01",
     "dateModified": "2025-11-01"
+  };
+
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://jamarq.digital/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Case Studies",
+        "item": "https://jamarq.digital/case-studies"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": trbgCaseStudyContent.hero.title,
+        "item": "https://jamarq.digital/case-studies/trbg"
+      }
+    ]
   };
 
   const screenshotGroups = getTRBGScreenshotGroups();
@@ -112,6 +141,10 @@ export default function TRBGCaseStudyPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
       />
 
       {/* Hero Section */}

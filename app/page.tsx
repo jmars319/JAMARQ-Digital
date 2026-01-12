@@ -7,13 +7,13 @@ import { ContactModalTrigger } from "@/components/contact/ContactModalTrigger";
 
 export const metadata: Metadata = {
   title: { absolute: "JAMARQ Digital | Custom Websites & Web Systems | Winston-Salem" },
-  description: "Custom websites and operational web systems built for speed and ownership. No templates, no rented platforms. Proof-of-performance included. Based in Winston-Salem.",
+  description: "Custom websites and operational web systems built for speed and ownership. No templates, no rented platforms. Proof-of-performance included. Based in Winston-Salem, serving nationwide.",
   alternates: {
     canonical: "https://jamarq.digital/"
   },
   openGraph: {
     title: "JAMARQ Digital | Custom Websites & Web Systems | Winston-Salem",
-    description: "Custom websites and operational web systems built for speed and ownership. No templates, no rented platforms. Proof-of-performance included. Based in Winston-Salem.",
+    description: "Custom websites and operational web systems built for speed and ownership. No templates, no rented platforms. Proof-of-performance included. Based in Winston-Salem, serving nationwide.",
     url: "https://jamarq.digital/",
     type: "website",
     images: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "JAMARQ Digital | Custom Websites & Web Systems | Winston-Salem",
-    description: "Custom websites and operational web systems built for speed and ownership. No templates, no rented platforms. Proof-of-performance included. Based in Winston-Salem.",
+    description: "Custom websites and operational web systems built for speed and ownership. No templates, no rented platforms. Proof-of-performance included. Based in Winston-Salem, serving nationwide.",
     images: ["https://jamarq.digital/og.jpg"],
     creator: "@jamarqdigital",
     site: "@jamarqdigital"
@@ -69,6 +69,19 @@ export default function Home() {
     ]
   };
 
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://jamarq.digital/"
+      }
+    ]
+  };
+
   const orderedCaseStudies = caseStudyDisplayOrder.map((key) => ({
     key,
     ...caseStudySummaries[key]
@@ -104,6 +117,10 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+      />
       <main id="main-content" className="min-h-screen bg-jamarq-black text-jamarq-white">
       {/* Hero Section */}
       <section className="pt-32 pb-24 md:pb-32" aria-label="Hero section">
@@ -117,7 +134,10 @@ export default function Home() {
               I build custom websites and digital platforms that support the way you operate, with you in the loop. No templates. No rented software. Proof-of-performance included.
             </p>
             <p className="text-sm text-jamarq-gray">
-              Custom web development in Winston-Salem for owner-led businesses and small teams.
+              Based in Winston-Salem, working with owner-led businesses and small teams nationwide.
+            </p>
+            <p className="text-sm text-jamarq-gray">
+              Learn the principles behind the work: <Link href="/mission" className="link-underline text-jamarq-cyan">Read the mission</Link>
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <ContactModalTrigger

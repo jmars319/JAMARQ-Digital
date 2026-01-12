@@ -36,6 +36,25 @@ export const metadata: Metadata = {
 };
 
 export default function WorkPage() {
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://jamarq.digital/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Work",
+        "item": "https://jamarq.digital/work"
+      }
+    ]
+  };
+
   const orderedCaseStudies = caseStudyDisplayOrder.map((key) => ({
     key,
     ...caseStudySummaries[key]
@@ -65,6 +84,10 @@ export default function WorkPage() {
 
   return (
     <main id="main-content" className="min-h-screen bg-jamarq-black text-jamarq-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-24" aria-label="Work hero">
         <div className="max-w-6xl mx-auto px-5 md:px-10 grid gap-12 md:grid-cols-[minmax(0,1fr)_320px] items-start">
@@ -75,6 +98,9 @@ export default function WorkPage() {
             </h1>
             <p className="text-lg text-jamarq-gray leading-relaxed">
               These projects combine custom UI, clean code, and operational tooling. Every build ships with PageSpeed data, accessibility checks, and a clear handoff so you stay in control.
+            </p>
+            <p className="text-sm text-jamarq-gray">
+              See how the principles map to the work: <Link href="/mission" className="link-underline text-jamarq-cyan">Read the mission</Link>
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <ContactModalTrigger

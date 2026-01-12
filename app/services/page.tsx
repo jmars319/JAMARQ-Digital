@@ -6,13 +6,13 @@ import { FadeIn } from "@/components/FadeIn";
 
 export const metadata: Metadata = {
   title: "Services",
-  description: "Custom websites, operational web systems, and ongoing support for teams that want speed and ownership.",
+  description: "Custom websites, operational web systems, and ongoing support for teams based in Winston-Salem and working nationwide.",
   alternates: {
     canonical: "https://jamarq.digital/services"
   },
   openGraph: {
     title: "Services",
-    description: "Custom websites, operational web systems, and ongoing support for teams that want speed and ownership.",
+    description: "Custom websites, operational web systems, and ongoing support for teams based in Winston-Salem and working nationwide.",
     url: "https://jamarq.digital/services",
     type: "website",
     images: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Services",
-    description: "Custom websites, operational web systems, and ongoing support for teams that want speed and ownership.",
+    description: "Custom websites, operational web systems, and ongoing support for teams based in Winston-Salem and working nationwide.",
     images: ["https://jamarq.digital/og.jpg"],
     creator: "@jamarqdigital",
     site: "@jamarqdigital"
@@ -35,6 +35,77 @@ export const metadata: Metadata = {
 };
 
 export default function ServicesPage() {
+  const serviceStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Custom Websites and Digital Systems",
+    provider: {
+      "@type": "Organization",
+      name: "JAMARQ Digital",
+      url: "https://jamarq.digital"
+    },
+    areaServed: {
+      "@type": "Place",
+      name: "Winston-Salem, NC"
+    },
+    serviceType: [
+      "Custom websites",
+      "Digital systems",
+      "Operational tooling",
+      "Ongoing support"
+    ]
+  };
+
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What’s included in a typical build?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Discovery, architecture, design, development, performance and accessibility validation, plus a launch handoff with documentation."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "Do you work outside Winston-Salem?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. JAMARQ is based in Winston-Salem and works with teams nationwide."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "Who owns the code and hosting?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "You do. You keep the stack, hosting, and data after launch."
+        }
+      }
+    ]
+  };
+
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://jamarq.digital/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://jamarq.digital/services"
+      }
+    ]
+  };
+
   const serviceLines = [
     {
       title: "Custom Websites",
@@ -110,6 +181,18 @@ export default function ServicesPage() {
 
   return (
     <main id="main-content" className="min-h-screen bg-jamarq-black text-jamarq-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceStructuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-24" aria-label="Services hero">
         <div className="max-w-6xl mx-auto px-5 md:px-10 grid gap-12 md:grid-cols-[minmax(0,1fr)_320px] items-start">
@@ -120,6 +203,9 @@ export default function ServicesPage() {
             </h1>
             <p className="text-lg text-jamarq-gray leading-relaxed">
               Web experiences, admin tooling, and workflows designed around how your business actually operates, with you as the author. No templates, no throwaway builds—just intentional software.
+            </p>
+            <p className="text-sm text-jamarq-gray">
+              Based in Winston-Salem, serving teams nationwide. <Link href="/mission" className="link-underline text-jamarq-cyan">Read the mission</Link>
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <ContactModalTrigger
@@ -252,6 +338,36 @@ export default function ServicesPage() {
               </li>
             </ul>
           </FadeIn>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-24 md:py-32" aria-label="Services FAQ">
+        <div className="max-w-5xl mx-auto px-5 md:px-10 space-y-10">
+          <div>
+            <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray mb-3">FAQ</p>
+            <h2 className="text-3xl md:text-4xl font-semibold">Service FAQ</h2>
+          </div>
+          <div className="space-y-6">
+            <div className="p-6 rounded-2xl border border-slate/60 bg-jamarq-black/20">
+              <h3 className="text-xl font-semibold mb-2">What’s included in a typical build?</h3>
+              <p className="text-jamarq-gray leading-relaxed">
+                Discovery, architecture, design, development, performance and accessibility validation, plus a launch handoff with documentation.
+              </p>
+            </div>
+            <div className="p-6 rounded-2xl border border-slate/60 bg-jamarq-black/20">
+              <h3 className="text-xl font-semibold mb-2">Do you work outside Winston-Salem?</h3>
+              <p className="text-jamarq-gray leading-relaxed">
+                Yes. JAMARQ is based in Winston-Salem and works with teams nationwide.
+              </p>
+            </div>
+            <div className="p-6 rounded-2xl border border-slate/60 bg-jamarq-black/20">
+              <h3 className="text-xl font-semibold mb-2">Who owns the code and hosting?</h3>
+              <p className="text-jamarq-gray leading-relaxed">
+                You do. You keep the stack, hosting, and data after launch.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

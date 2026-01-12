@@ -138,8 +138,66 @@ const processSteps: ProcessStep[] = [
 ];
 
 export default function ProcessPage() {
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "How long does a typical build take?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Most projects take 4–8 weeks from kickoff to launch, depending on scope and content readiness."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "What happens before development starts?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Discovery defines requirements, constraints, and success metrics. Architecture and content structure are mapped before code is written."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "When do I review and approve work?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Review happens in the revision phase, and final approval is required before launch."
+        }
+      }
+    ]
+  };
+
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://jamarq.digital/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Process",
+        "item": "https://jamarq.digital/process"
+      }
+    ]
+  };
+
   return (
     <main id="main-content" className="min-h-screen bg-jamarq-black text-jamarq-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+      />
       {/* Hero Section */}
       <section 
         className="min-h-[60vh] flex items-center justify-center px-5 md:px-10"
@@ -151,6 +209,9 @@ export default function ProcessPage() {
           </h1>
           <p className="text-xl md:text-2xl text-mist mb-6">
             Clear milestones. Predictable timelines. Decisions stay with you.
+          </p>
+          <p className="text-sm text-jamarq-gray">
+            Based in Winston-Salem, working nationwide. <Link href="/mission" className="link-underline text-jamarq-cyan">Read the mission</Link>
           </p>
           <Link href="/" className="link-underline text-sm text-jamarq-cyan">
             ← Back to Home

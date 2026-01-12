@@ -54,6 +54,10 @@ export default function MMHCaseStudyPage() {
     "@type": "Article",
     "headline": "Midway Music Hall Case Study",
     "description": heroDescription,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://jamarq.digital/case-studies/mmh"
+    },
     "author": {
       "@type": "Person",
       "name": "Jason Marshall",
@@ -70,6 +74,31 @@ export default function MMHCaseStudyPage() {
     "image": "https://jamarq.digital/case-studies/mmh/og-midway-music-hall.jpg",
     "datePublished": "2025-12-01",
     "dateModified": "2025-12-01"
+  };
+
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://jamarq.digital/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Case Studies",
+        "item": "https://jamarq.digital/case-studies"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": mmhCaseStudyContent.hero.title,
+        "item": "https://jamarq.digital/case-studies/mmh"
+      }
+    ]
   };
 
   const screenshotGroups = getMMHScreenshotGroups();
@@ -106,6 +135,10 @@ export default function MMHCaseStudyPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
       />
 
       {/* Hero Section */}

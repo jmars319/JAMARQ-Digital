@@ -7,13 +7,13 @@ import { FadeIn } from "@/components/FadeIn";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Start a project with JAMARQ Digital. Clear replies within one business day, no sales team.",
+  description: "Start a project with JAMARQ Digital. Based in Winston-Salem, working nationwide. Clear replies within one business day, no sales team.",
   alternates: {
     canonical: "https://jamarq.digital/contact"
   },
   openGraph: {
     title: "Contact",
-    description: "Start a project with JAMARQ Digital. Clear replies within one business day, no sales team.",
+    description: "Start a project with JAMARQ Digital. Based in Winston-Salem, working nationwide. Clear replies within one business day, no sales team.",
     url: "https://jamarq.digital/contact",
     type: "website",
     images: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Contact",
-    description: "Start a project with JAMARQ Digital. Clear replies within one business day, no sales team.",
+    description: "Start a project with JAMARQ Digital. Based in Winston-Salem, working nationwide. Clear replies within one business day, no sales team.",
     images: ["https://jamarq.digital/og.jpg"],
     creator: "@jamarqdigital",
     site: "@jamarqdigital"
@@ -36,6 +36,25 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://jamarq.digital/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Contact",
+        "item": "https://jamarq.digital/contact"
+      }
+    ]
+  };
+
   const steps = [
     {
       number: "01",
@@ -64,6 +83,10 @@ export default function ContactPage() {
 
   return (
     <main id="main-content" className="min-h-screen bg-jamarq-black text-jamarq-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+      />
       {/* Hero */}
       <section className="pt-32 pb-24" aria-label="Contact hero">
         <div className="max-w-6xl mx-auto px-5 md:px-10 grid gap-12 md:grid-cols-[minmax(0,1fr)_360px] items-start">
@@ -72,6 +95,9 @@ export default function ContactPage() {
             <h1 className="text-4xl md:text-5xl font-semibold leading-tight">Start a project or request a walkthrough.</h1>
             <p className="text-lg text-jamarq-gray leading-relaxed">
               You’ll hear back within one business day. No sales team—just me. Provide as much context as you can and I’ll map the plan, timeline, and price range with you.
+            </p>
+            <p className="text-sm text-jamarq-gray">
+              Based in Winston-Salem, working nationwide. <Link href="/mission" className="link-underline text-jamarq-cyan">Read the mission</Link>
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <ContactModalTrigger

@@ -137,6 +137,10 @@ export default function MMSCaseStudyPage() {
     "@type": "Article",
     "headline": "Midway Mobile Storage Case Study",
     "description": heroDescription,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://jamarq.digital/case-studies/mms"
+    },
     "author": {
       "@type": "Person",
       "name": "Jason Marshall",
@@ -155,12 +159,41 @@ export default function MMSCaseStudyPage() {
     "dateModified": "2025-12-09"
   };
 
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://jamarq.digital/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Case Studies",
+        "item": "https://jamarq.digital/case-studies"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Midway Mobile Storage Case Study",
+        "item": "https://jamarq.digital/case-studies/mms"
+      }
+    ]
+  };
+
   return (
     <main id="main-content" className="min-h-screen bg-jamarq-black text-jamarq-white">
       <ScrollProgressBar />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
       />
       {/* Hero Section */}
       <section

@@ -32,8 +32,31 @@ export const metadata: Metadata = {
 };
 
 export default function MissionPage() {
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://jamarq.digital/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Mission",
+        "item": "https://jamarq.digital/mission"
+      }
+    ]
+  };
+
   return (
     <main id="main-content" className="min-h-screen bg-jamarq-black text-jamarq-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+      />
       <section className="pt-32 pb-24" aria-label="Mission statement">
         <div className="max-w-4xl mx-auto px-5 md:px-10 space-y-8">
           <p className="text-lg md:text-xl font-semibold text-mist">With you, not for you.</p>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import { ContactModalTrigger } from "@/components/contact/ContactModalTrigger";
@@ -270,6 +271,31 @@ export default function ServicesPage() {
               </FadeIn>
             ))}
           </div>
+          <FadeIn delay={360}>
+            <div className="flex flex-col md:flex-row md:items-center gap-4 p-6 rounded-2xl border border-slate/60 bg-jamarq-black/40">
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/assets/logos/tenra-logo-light.png"
+                  alt="Tenra"
+                  width={40}
+                  height={40}
+                  className="h-10 w-10 object-contain"
+                />
+                <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Smaller scope?</p>
+              </div>
+              <p className="text-sm md:text-base text-jamarq-gray flex-1">
+                For smaller, static-first websites with a simple handoff, see Tenra.
+              </p>
+              <a
+                href="https://tenra.dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-underline inline-flex items-center justify-center text-sm font-semibold text-jamarq-cyan focus:outline-none focus:ring-2 focus:ring-jamarq-cyan focus:ring-offset-2 focus:ring-offset-steel"
+              >
+                Tenra →
+              </a>
+            </div>
+          </FadeIn>
         </div>
       </section>
 

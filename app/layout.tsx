@@ -15,10 +15,11 @@ const ibmPlexSans = IBM_Plex_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "JAMARQ Digital | Custom Websites & Web Systems | Winston-Salem",
+    default: "JAMARQ Digital | Websites, Rebuilds & Web Systems | Winston-Salem",
     template: "%s | JAMARQ Digital"
   },
-  description: "Custom websites and operational web systems built for speed and ownership. No templates, no rented platforms. Proof-of-performance included. Based in Winston-Salem, serving nationwide.",
+  description:
+    "JAMARQ Digital builds websites that work, fixes the ones that do not, and creates the systems behind them. Based in Winston-Salem, serving independent businesses and established teams with websites, rebuilds, and web systems built for clarity, clear ownership, and long-term use.",
   keywords: [
     "web development Winston-Salem NC",
     "custom website design Winston-Salem",
@@ -54,8 +55,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://jamarq.digital",
     siteName: "JAMARQ Digital",
-    title: "JAMARQ Digital | Custom Websites & Web Systems | Winston-Salem",
-    description: "Custom websites and operational web systems built for speed and ownership. No templates, no rented platforms. Proof-of-performance included. Based in Winston-Salem, serving nationwide.",
+    title: "JAMARQ Digital | Websites, Rebuilds & Web Systems | Winston-Salem",
+    description:
+      "JAMARQ Digital builds websites that work, fixes the ones that do not, and creates the systems behind them. Based in Winston-Salem, serving independent businesses and established teams with websites, rebuilds, and web systems built for clarity, clear ownership, and long-term use.",
     images: [
       {
         url: "/og.jpg",
@@ -67,8 +69,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "JAMARQ Digital | Custom Websites & Web Systems | Winston-Salem",
-    description: "Custom websites and operational web systems built for speed and ownership. No templates, no rented platforms. Proof-of-performance included. Based in Winston-Salem, serving nationwide.",
+    title: "JAMARQ Digital | Websites, Rebuilds & Web Systems | Winston-Salem",
+    description:
+      "JAMARQ Digital builds websites that work, fixes the ones that do not, and creates the systems behind them. Based in Winston-Salem, serving independent businesses and established teams with websites, rebuilds, and web systems built for clarity, clear ownership, and long-term use.",
     images: ["/og.jpg"],
     creator: "@jamarqdigital",
     site: "@jamarqdigital",
@@ -156,9 +159,7 @@ export default function RootLayout({
         </noscript>
         <ContactModalProvider>
           <Header />
-          <main id="main-content" className="pt-20">
-            {children}
-          </main>
+          <div className="pt-20">{children}</div>
         </ContactModalProvider>
         <Analytics />
         <SpeedInsights />

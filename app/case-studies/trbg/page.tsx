@@ -109,7 +109,7 @@ export default function TRBGCaseStudyPage() {
       id: "pagespeed",
       label: "PageSpeed results",
       description:
-        "Live Lighthouse proof before and after the rebuild, documenting the impact of responsive media, caching, and code cleanup.",
+        "Live Lighthouse captures before and after the rebuild, showing the impact of responsive media, caching, and code cleanup.",
       items: screenshotGroups.pagespeed
     },
     {
@@ -244,7 +244,7 @@ export default function TRBGCaseStudyPage() {
               <h2 className="text-3xl md:text-4xl font-semibold">Operational Coverage</h2>
             </div>
             <p className="text-jamarq-gray max-w-2xl">
-              Structured proof covering PageSpeed captures, menu flows, admin tooling, and mobile parity.
+              Screenshots covering PageSpeed, menu flows, admin tooling, and mobile layouts.
             </p>
           </FadeIn>
           <FadeIn delay={150}>
@@ -371,10 +371,9 @@ export default function TRBGCaseStudyPage() {
       {/* Full Case Study CTA */}
       <section className="py-24 md:py-32" aria-label="Full case study">
         <FadeIn className="max-w-4xl mx-auto text-center px-5 md:px-10">
-          <h3 className="text-2xl md:text-3xl font-semibold mb-6">Want the Full Technical Deep Dive?</h3>
+          <h3 className="text-2xl md:text-3xl font-semibold mb-6">Want the full technical breakdown?</h3>
           <p className="text-lg text-jamarq-gray leading-relaxed mb-8 max-w-2xl mx-auto">
-            A detailed breakdown including architecture decisions, admin panel features, and technical implementation is
-            available upon request.
+            A detailed breakdown of the architecture, admin workflows, and implementation is available on request.
           </p>
           <ContactModalTrigger
             prefill={{

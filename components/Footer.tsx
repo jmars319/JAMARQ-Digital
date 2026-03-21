@@ -5,6 +5,8 @@ import { ContactModalTrigger } from "@/components/contact/ContactModalTrigger";
 import { FadeIn } from "@/components/FadeIn";
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="py-12 px-4 border-t border-slate bg-jamarq-black" role="contentinfo">
       <div className="max-w-6xl mx-auto">
@@ -21,6 +23,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-jamarq-gray text-sm">Build with intention.</p>
+            <p className="mt-2 text-jamarq-gray text-xs">Tenra is the software division of JAMARQ Digital.</p>
           </FadeIn>
 
           {/* Navigation */}
@@ -37,7 +40,7 @@ export default function Footer() {
                 Process
               </Link>
               <Link href="/mission" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">
-                Mission
+                Principles
               </Link>
               <Link href="/work" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">
                 Work
@@ -74,7 +77,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <FadeIn delay={360} className="border-t border-slate pt-6 text-center text-jamarq-gray text-xs">
-          <p>&copy; 2025 JAMARQ Digital. All rights reserved.</p>
+          <p>&copy; {currentYear} JAMARQ Digital. All rights reserved.</p>
         </FadeIn>
       </div>
     </footer>

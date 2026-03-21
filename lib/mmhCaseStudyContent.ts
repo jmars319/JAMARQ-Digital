@@ -4,7 +4,7 @@ export const mmhCaseStudyContent = {
     subtitle: "Custom Website and Seating System",
     summary: [
       "Midway Music Hall needed a modern, owner-controlled system that could handle live event operations without renting a ticketing platform.",
-      "JAMARQ rebuilt the stack end to end: fast public site, secure admin workspace, interactive seating layouts, reservation workflow, media management, and automated notifications—all hardened on shared hosting.",
+      "JAMARQ rebuilt the stack end to end: fast public site, secure admin workspace, interactive seating layouts, reservation workflow, media management, and automated notifications designed around day-to-day venue operations.",
       "Proof of adoption arrived immediately: the first reserved seating request hit the new system two days after launch."
     ],
     stack: "Stack: React, PHP, MySQL, Tailwind, Cloudflare",
@@ -20,8 +20,8 @@ export const mmhCaseStudyContent = {
     ],
     paragraphs: [
       "Midway Music Hall needed more than a visual refresh. The venue required a dependable, long-term system that reflected how shows are actually scheduled, how reserved seating is handled in practice, and how staff communicate with customers day to day—without relying on third-party ticketing platforms or recurring SaaS fees.",
-      "JAMARQ delivered a fully custom platform combining a public-facing website with a secure admin workspace built specifically for venue operations. The system supports event scheduling, recurring series management, interactive seating layouts, reservation requests, media handling, and automated notifications, all deployed on shared hosting and validated under live use.",
-      "This was not a template site. It was an operational system designed to be trusted."
+      "JAMARQ delivered a fully custom platform combining a public-facing website with a secure admin workspace built specifically for venue operations. The system supports event scheduling, recurring series management, interactive seating layouts, reservation requests, media handling, and automated notifications, all validated under live use.",
+      "This was an operational system built around the venue’s workflow, not a template refresh."
     ]
   },
   challenge: {
@@ -157,7 +157,7 @@ export const mmhCaseStudyContent = {
       {
         title: "Performance & Reliability",
         items: [
-          "Fast load times on shared hosting",
+          "Fast load times in production",
           "Stable layouts with no visual shifting",
           "Strong desktop and mobile performance",
           "Predictable behavior under concurrent seat requests",

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import { ContactModalTrigger } from "@/components/contact/ContactModalTrigger";
@@ -7,13 +6,13 @@ import { FadeIn } from "@/components/FadeIn";
 
 export const metadata: Metadata = {
   title: "Services",
-  description: "Custom websites, operational web systems, and ongoing support for teams based in Winston-Salem and working nationwide.",
+  description: "Custom websites, rebuilds, and web systems for independent businesses and established teams nationwide.",
   alternates: {
     canonical: "https://jamarq.digital/services"
   },
   openGraph: {
     title: "Services",
-    description: "Custom websites, operational web systems, and ongoing support for teams based in Winston-Salem and working nationwide.",
+    description: "Custom websites, rebuilds, and web systems for independent businesses and established teams nationwide.",
     url: "https://jamarq.digital/services",
     type: "website",
     images: [
@@ -28,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Services",
-    description: "Custom websites, operational web systems, and ongoing support for teams based in Winston-Salem and working nationwide.",
+    description: "Custom websites, rebuilds, and web systems for independent businesses and established teams nationwide.",
     images: ["https://jamarq.digital/og.jpg"],
     creator: "@jamarqdigital",
     site: "@jamarqdigital"
@@ -111,7 +110,7 @@ export default function ServicesPage() {
     {
       title: "Custom Websites",
       description:
-        "Hand-built marketing sites, product experiences, and content hubs. Zero templates or page builders.",
+        "Custom marketing sites, product pages, and content-driven websites built without templates or page builders.",
       items: [
         "Responsive layout system",
         "Performance + accessibility budgets",
@@ -123,7 +122,7 @@ export default function ServicesPage() {
     {
       title: "Digital Systems & Integrations",
       description:
-        "Quote workflows, dashboards, inventory systems, and admin tooling that mirror real operations. Automation supports the team, not the other way around.",
+        "Quote workflows, dashboards, inventory systems, and admin tooling built around day-to-day operations.",
       items: [
         "Architecture & workflow mapping",
         "API / CMS integrations",
@@ -135,13 +134,13 @@ export default function ServicesPage() {
     {
       title: "Maintenance & Support",
       description:
-        "Monitoring, updates, analytics checks, and fractional consulting after launch.",
+        "Monitoring, updates, analytics checks, and ongoing support after launch.",
       items: [
         "Performance + uptime monitoring",
         "Security + dependency updates",
-        "Content + copy adjustments",
-        "Support queue for minor fixes",
-        "Quarterly optimization reviews"
+        "Content + copy updates",
+        "Minor fixes and support requests",
+        "Quarterly site reviews"
       ]
     }
   ];
@@ -150,27 +149,27 @@ export default function ServicesPage() {
     {
       number: "01",
       title: "Discovery & Architecture",
-      copy: "Requirements, constraints, and success metrics. I map content structures, workflows, and system diagrams before writing code, with your signoff."
+      copy: "We define requirements, constraints, and success metrics, then map content structure, workflows, and system needs before build work starts."
     },
     {
       number: "02",
       title: "Build & Validation",
-      copy: "Intentional design, copy, and development loops. Each feature is validated against performance budgets and accessibility rules."
+      copy: "We iterate on design, copy, and development, and validate the work against accessibility and performance standards."
     },
     {
       number: "03",
       title: "Launch & Support",
-      copy: "Structured launch checklist, documentation, and a support window. Maintenance plans keep the system healthy once you’re live."
+      copy: "We launch with a checklist, documentation, and a support window so the handoff stays clear."
     }
   ];
 
   const differentiators = [
-    "No templates or page builders. Everything is custom to your stack and workflow.",
-    "Owner-first infrastructure so you control hosting, domains, and data.",
-    "Performance and SEO proof included—PageSpeed, accessibility, and Lighthouse data.",
-    "Direct communication with me. No account managers or multi-layer approvals.",
-    "Systems-first thinking. The site, admin, and workflows are designed together so decisions stay transparent.",
-    "Long-term reliability. Clean code, documentation, and maintenance options."
+    "No templates or page builders. JAMARQ builds around the actual stack and workflow.",
+    "You keep control of hosting, domains, and data.",
+    "PageSpeed, Lighthouse, and accessibility checks are part of delivery.",
+    "You work directly with the person doing the build.",
+    "The public site, admin tools, and workflows are planned together.",
+    "The goal is code and documentation that stay manageable."
   ];
 
   const snapshot = [
@@ -200,20 +199,20 @@ export default function ServicesPage() {
           <div className="space-y-6">
             <p className="text-xs uppercase tracking-[0.35em] text-jamarq-gray">Services</p>
             <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
-              Digital systems built for clarity, long-term ownership, and human oversight.
+              Custom websites, rebuilds, and web systems built to hold up.
             </h1>
             <p className="text-lg text-jamarq-gray leading-relaxed">
-              Web experiences, admin tooling, and workflows designed around how your business actually operates, with you as the author. No templates, no throwaway builds—just intentional software.
+              JAMARQ builds custom websites, rebuilds aging or unstable setups, and creates the admin tools and workflows behind them. The work is scoped to the actual needs of the business, not forced into a package.
             </p>
             <p className="text-sm text-jamarq-gray">
-              Based in Winston-Salem, serving teams nationwide. <Link href="/mission" className="link-underline text-jamarq-cyan">Read the mission</Link>
+              Based in Winston-Salem, serving independent businesses and established teams nationwide. <Link href="/mission" className="link-underline text-jamarq-cyan">Read the principles</Link>
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <ContactModalTrigger
                 prefill={{ subject: "Service inquiry", source: "services-hero" }}
                 className="inline-flex items-center justify-center bg-jamarq-cyan text-jamarq-black px-8 py-3 rounded-md font-semibold text-base hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-jamarq-cyan focus:ring-offset-2 focus:ring-offset-jamarq-black"
               >
-                Start a project
+                Start a Project
               </ContactModalTrigger>
               <Link
                 href="/work"
@@ -246,7 +245,7 @@ export default function ServicesPage() {
         <div className="max-w-6xl mx-auto px-5 md:px-10 space-y-10">
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray mb-3">Service lines</p>
-            <h2 className="text-3xl md:text-4xl font-semibold">How I can help</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold">What JAMARQ builds</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {serviceLines.map((service, index) => (
@@ -263,39 +262,14 @@ export default function ServicesPage() {
                     ))}
                   </ul>
                   {service.title === "Maintenance & Support" && (
-                    <Link href="/maintenance" className="link-underline inline-flex text-sm font-semibold text-jamarq-cyan">
-                      View maintenance plans →
+                    <Link href="/contact" className="link-underline inline-flex text-sm font-semibold text-jamarq-cyan">
+                      Ask about support →
                     </Link>
                   )}
                 </div>
               </FadeIn>
             ))}
           </div>
-          <FadeIn delay={360}>
-            <div className="flex flex-col md:flex-row md:items-center gap-4 p-6 rounded-2xl border border-slate/60 bg-jamarq-black/40">
-              <div className="flex items-center gap-3">
-                <Image
-                  src="/assets/logos/tenra-logo-light.png"
-                  alt="Tenra"
-                  width={40}
-                  height={40}
-                  className="h-10 w-10 object-contain"
-                />
-                <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Smaller scope?</p>
-              </div>
-              <p className="text-sm md:text-base text-jamarq-gray flex-1">
-                For smaller, static-first websites with a simple handoff, see Tenra.
-              </p>
-              <a
-                href="https://tenra.dev"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="link-underline inline-flex items-center justify-center text-sm font-semibold text-jamarq-cyan focus:outline-none focus:ring-2 focus:ring-jamarq-cyan focus:ring-offset-2 focus:ring-offset-steel"
-              >
-                Tenra →
-              </a>
-            </div>
-          </FadeIn>
         </div>
       </section>
 
@@ -336,11 +310,11 @@ export default function ServicesPage() {
             <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray mb-2">Pricing</p>
             <h2 className="text-3xl md:text-4xl font-semibold">Transparent, scoped, and predictable.</h2>
             <p className="text-jamarq-gray leading-relaxed">
-              Every engagement starts with an itemized estimate—deliverables, timeline, and payment schedule. No retainers without scope, no vague ranges after kickoff.
+              Every engagement starts with an itemized estimate covering deliverables, timeline, and payment schedule. No retainers without scope, and no vague ranges after kickoff.
             </p>
             <p className="text-xl text-mist font-semibold">Most website projects land between $4,000 and $15,000.</p>
             <p className="text-jamarq-gray leading-relaxed">
-              Maintenance plans start at $150/mo and scale with site complexity and support requirements.
+              Ongoing support typically starts at $150/mo and scales with site complexity and support requirements.
             </p>
           </FadeIn>
           <FadeIn className="p-6 rounded-2xl border border-slate/60 bg-jamarq-black/20 space-y-4" delay={120}>
@@ -407,10 +381,10 @@ export default function ServicesPage() {
               prefill={{ subject: "Services inquiry", source: "services-cta" }}
               className="inline-block bg-jamarq-cyan text-jamarq-black px-8 py-3 rounded-md font-semibold text-lg hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-jamarq-cyan focus:ring-offset-2 focus:ring-offset-jamarq-black"
             >
-              Get in Touch
+              Start a Project
             </ContactModalTrigger>
             <p className="text-sm text-jamarq-gray">
-              Want to see how I work? <Link href="/process" className="link-underline text-jamarq-cyan">View the full process</Link>
+              Want to see how JAMARQ works? <Link href="/process" className="link-underline text-jamarq-cyan">View the process</Link>
             </p>
           </div>
         </div>

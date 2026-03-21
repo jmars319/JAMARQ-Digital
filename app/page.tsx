@@ -1,19 +1,25 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
-import { caseStudySummaries, caseStudyDisplayOrder } from "@/lib/caseStudySummaries";
+import Footer from "@/components/Footer";
+import {
+  caseStudySummaries,
+  caseStudyDisplayOrder,
+  type CaseStudyKey
+} from "@/lib/caseStudySummaries";
 import { FadeIn } from "@/components/FadeIn";
 import { ContactModalTrigger } from "@/components/contact/ContactModalTrigger";
 
 export const metadata: Metadata = {
-  title: { absolute: "JAMARQ Digital | Custom Websites & Web Systems | Winston-Salem" },
-  description: "Custom websites and operational web systems built for speed and ownership. No templates, no rented platforms. Proof-of-performance included. Based in Winston-Salem, serving nationwide.",
+  title: { absolute: "JAMARQ Digital | Websites, Rebuilds & Web Systems | Winston-Salem" },
+  description:
+    "JAMARQ Digital builds websites that work, fixes the ones that do not, and creates the systems behind them. Based in Winston-Salem, serving independent businesses and established teams.",
   alternates: {
     canonical: "https://jamarq.digital/"
   },
   openGraph: {
-    title: "JAMARQ Digital | Custom Websites & Web Systems | Winston-Salem",
-    description: "Custom websites and operational web systems built for speed and ownership. No templates, no rented platforms. Proof-of-performance included. Based in Winston-Salem, serving nationwide.",
+    title: "JAMARQ Digital | Websites, Rebuilds & Web Systems | Winston-Salem",
+    description:
+      "JAMARQ Digital builds websites that work, fixes the ones that do not, and creates the systems behind them. Based in Winston-Salem, serving independent businesses and established teams.",
     url: "https://jamarq.digital/",
     type: "website",
     images: [
@@ -27,11 +33,186 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "JAMARQ Digital | Custom Websites & Web Systems | Winston-Salem",
-    description: "Custom websites and operational web systems built for speed and ownership. No templates, no rented platforms. Proof-of-performance included. Based in Winston-Salem, serving nationwide.",
+    title: "JAMARQ Digital | Websites, Rebuilds & Web Systems | Winston-Salem",
+    description:
+      "JAMARQ Digital builds websites that work, fixes the ones that do not, and creates the systems behind them. Based in Winston-Salem, serving independent businesses and established teams.",
     images: ["https://jamarq.digital/og.jpg"],
     creator: "@jamarqdigital",
     site: "@jamarqdigital"
+  }
+};
+
+type WorkCardContent = {
+  problem: string;
+  completed: string;
+  outcome: string;
+};
+
+type ProofCard = {
+  label: string;
+  value: string;
+  copy: string;
+};
+
+type ReasonCard = {
+  title: string;
+  copy: string;
+};
+
+type ProcessStep = {
+  title: string;
+  copy: string;
+};
+
+const recentProof: ProofCard[] = [
+  {
+    label: "Midway Music Hall",
+    value: "First reserved seating request in 2 days",
+    copy: "Custom venue site, seating workflow, and admin system built around live operations."
+  },
+  {
+    label: "Thunder Road Bar & Grill",
+    value: "Load times cut to under 1.5 seconds",
+    copy: "Restaurant rebuild with clearer menus, better mobile performance, and simpler weekly updates."
+  },
+  {
+    label: "Midway Mobile Storage",
+    value: "First online quote in 16 days",
+    copy: "Full rebuild with inventory controls, quote workflow, and owner-friendly admin tools."
+  }
+];
+
+const whatWeDo = [
+  {
+    title: "Websites",
+    copy: "New builds with clear structure, strong performance, and code that stays maintainable."
+  },
+  {
+    title: "Rebuilds",
+    copy: "Replacing outdated sites, vendor lock-in, or unstable setups with something cleaner."
+  },
+  {
+    title: "Systems",
+    copy: "Admin tools, workflows, and supporting infrastructure behind the site."
+  }
+];
+
+const whoWeWorkWith = [
+  {
+    title: "Independent businesses",
+    points: [
+      "Need something that works",
+      "Want clarity and reliability",
+      "Prefer minimal complexity"
+    ]
+  },
+  {
+    title: "Established teams",
+    points: [
+      "Need structured builds or rebuilds",
+      "Have real operational requirements",
+      "Need systems that scale and hold up"
+    ]
+  }
+];
+
+const whyJamarq: ReasonCard[] = [
+  {
+    title: "Built to stay manageable",
+    copy: "The work should still make sense when you are running it later."
+  },
+  {
+    title: "Complexity is used carefully",
+    copy: "If a simpler stack will do the job well, that is usually the better choice."
+  },
+  {
+    title: "Rebuilds are treated like system work",
+    copy: "Broken sites usually point to deeper structural problems, not just design issues."
+  },
+  {
+    title: "Direct communication",
+    copy: "You talk directly to the person doing the work, so scope, tradeoffs, and updates stay clear."
+  },
+  {
+    title: "Process without theater",
+    copy: "Enough structure to reduce risk, without unnecessary ceremony."
+  },
+  {
+    title: "Ownership stays clear",
+    copy: "Code, hosting, content, and responsibilities are defined plainly before handoff."
+  }
+];
+
+const pricingTiers = [
+  {
+    title: "Foundational Work",
+    description: "Simple builds and smaller rebuilds",
+    price: "$2,000 – $5,000"
+  },
+  {
+    title: "Structured Builds",
+    description: "Multi-page sites and moderate complexity",
+    price: "$5,000 – $12,000"
+  },
+  {
+    title: "Rebuilds & Systems",
+    description: "Complex rebuilds, admin systems, migrations",
+    price: "$10,000 – $25,000+"
+  },
+  {
+    title: "Ongoing Work",
+    description: "Maintenance and long-term support",
+    price: "Scoped or monthly"
+  }
+];
+
+const processSteps: ProcessStep[] = [
+  {
+    title: "Understand the problem",
+    copy: "Review the current setup, requirements, and constraints before promising a solution."
+  },
+  {
+    title: "Define the scope",
+    copy: "Set the deliverables, timeline, and responsibilities clearly before build work starts."
+  },
+  {
+    title: "Build and verify",
+    copy: "Ship the work carefully and test the details that affect reliability, performance, and usability."
+  },
+  {
+    title: "Launch",
+    copy: "Move the site live in a controlled way with the right checks in place."
+  },
+  {
+    title: "Support if needed",
+    copy: "Stay available for follow-up fixes, maintenance, or longer-term support."
+  }
+];
+
+const workCardContent: Record<CaseStudyKey, WorkCardContent> = {
+  mmh: {
+    problem:
+      "The venue needed a modern public site and seating workflow without relying on third-party ticketing software.",
+    completed:
+      "Built a custom website, secure admin workspace, seating layouts, reservation flow, and automated notifications.",
+    outcome:
+      "The system now matches venue operations, and the first reserved seating request came in two days after launch."
+  },
+  trbg: {
+    problem:
+      "The restaurant's previous vendor-run site was slow, restrictive, and hard to update week to week.",
+    completed:
+      "Rebuilt the site with a clearer menu experience, stronger mobile performance, and a simple admin workflow for ongoing updates.",
+    outcome:
+      "The owners can manage content directly, and load times dropped from roughly 4 to 6 seconds to under 1.5 seconds."
+  },
+  mms: {
+    problem:
+      "The old site was barebones, slow, and could not collect quote requests without a phone call.",
+    completed:
+      "Built a full rebuild with inventory controls, a custom quote workflow, and owner-friendly admin tools.",
+    outcome:
+      "Customers can request quotes online, the site reached a 98/100 desktop PageSpeed score, and the first online quote arrived 16 days after launch."
   }
 };
 
@@ -39,77 +220,49 @@ export default function Home() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": "JAMARQ Digital",
-    "url": "https://jamarq.digital/",
-    "email": "hello@jamarq.digital",
-    "address": {
+    name: "JAMARQ Digital",
+    url: "https://jamarq.digital/",
+    email: "hello@jamarq.digital",
+    address: {
       "@type": "PostalAddress",
-      "addressLocality": "Winston-Salem",
-      "addressRegion": "NC",
-      "addressCountry": "US"
+      addressLocality: "Winston-Salem",
+      addressRegion: "NC",
+      addressCountry: "US"
     },
-    "areaServed": [
+    areaServed: [
       {
         "@type": "City",
-        "name": "Winston-Salem"
+        name: "Winston-Salem"
       },
       {
         "@type": "State",
-        "name": "North Carolina"
+        name: "North Carolina"
       },
       {
         "@type": "Country",
-        "name": "United States"
+        name: "United States"
       }
     ],
-    "serviceType": [
-      "Custom websites",
-      "Web development",
-      "Operational web systems"
-    ]
+    serviceType: ["Websites", "Website rebuilds", "Web systems"]
   };
 
   const breadcrumbStructuredData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [
+    itemListElement: [
       {
         "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://jamarq.digital/"
+        position: 1,
+        name: "Home",
+        item: "https://jamarq.digital/"
       }
     ]
   };
 
-  const orderedCaseStudies = caseStudyDisplayOrder.map((key) => ({
-    key,
-    ...caseStudySummaries[key]
+  const orderedWork = caseStudyDisplayOrder.map((key) => ({
+    ...caseStudySummaries[key],
+    ...workCardContent[key]
   }));
-  const featuredStudy = orderedCaseStudies[0];
-  const heroStats = [
-    { label: "Performance proof", value: "98/100 avg desktop score" },
-    { label: "Ownership", value: "You keep the stack, hosting, and data" },
-    { label: "Stack range", value: "React, Next.js, PHP, custom APIs" },
-    { label: "Timeline", value: "4–8 weeks from kickoff to launch" }
-  ];
-  const workPhases = [
-    {
-      number: "01",
-      title: "Discovery",
-      copy: "Define requirements, budgets, and the constraints we have to respect. Nothing moves forward without your signoff."
-    },
-    {
-      number: "02",
-      title: "Architecture & Build",
-      copy: "Translate the plan into intentional UI, copy, and code. Custom components, no templates, performance-first and reviewable."
-    },
-    {
-      number: "03",
-      title: "Launch & Support",
-      copy: "Structured rollout, documentation, and a support window so you can own the system without dependency."
-    }
-  ];
 
   return (
     <>
@@ -122,353 +275,291 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
       />
       <main id="main-content" className="min-h-screen bg-jamarq-black text-jamarq-white">
-      {/* Hero Section */}
-      <section className="pt-32 pb-24 md:pb-32" aria-label="Hero section">
-        <div className="max-w-6xl mx-auto px-5 md:px-10 grid gap-12 md:grid-cols-[minmax(0,1fr)_360px] items-center">
-          <div className="space-y-6">
-            <p className="text-xs uppercase tracking-[0.4em] text-jamarq-gray">JAMARQ Digital</p>
-            <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
-              Modern web systems for teams that value clarity, speed, and ownership.
-            </h1>
-            <p className="text-lg md:text-xl text-mist leading-relaxed">
-              I build custom websites and digital platforms that support the way you operate, with you in the loop. No templates. No rented software. Proof-of-performance included.
-            </p>
-            <p className="text-sm text-jamarq-gray">
-              Based in Winston-Salem, working with owner-led businesses and small teams nationwide.
-            </p>
-            <p className="text-sm text-jamarq-gray">
-              Learn the principles behind the work: <Link href="/mission" className="link-underline text-jamarq-cyan">Read the mission</Link>
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <ContactModalTrigger
-                prefill={{ subject: "New project inquiry", source: "home-hero" }}
-                className="inline-flex items-center justify-center bg-jamarq-cyan text-jamarq-black px-8 py-3 rounded-md font-semibold text-base hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-jamarq-cyan focus:ring-offset-2 focus:ring-offset-jamarq-black"
-              >
-                Start a project
-              </ContactModalTrigger>
-              <Link
-                href="/work"
-                className="inline-flex items-center justify-center border border-slate px-8 py-3 rounded-md font-semibold text-base text-jamarq-white hover:border-jamarq-cyan hover:text-jamarq-cyan transition-colors"
-              >
-                See work →
-              </Link>
+        <section className="pt-32 pb-24 md:pb-32" aria-label="Hero">
+          <div className="max-w-6xl mx-auto px-5 md:px-10 grid gap-10 md:gap-12 md:grid-cols-[minmax(0,1fr)_340px] items-start">
+            <div className="space-y-6">
+              <p className="text-xs uppercase tracking-[0.4em] text-jamarq-gray">JAMARQ Digital</p>
+              <h1 className="text-4xl md:text-5xl font-semibold leading-tight max-w-4xl">
+                We build websites that work, fix the ones that don&apos;t, and create the systems behind them.
+              </h1>
+              <p className="text-lg md:text-xl text-mist leading-relaxed max-w-3xl">
+                JAMARQ Digital works with independent businesses and established teams, building
+                websites, rebuilds, and supporting systems to match the actual complexity of the work.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <ContactModalTrigger
+                  prefill={{ subject: "New project inquiry", source: "home-hero" }}
+                  className="inline-flex items-center justify-center bg-jamarq-cyan text-jamarq-black px-8 py-3 rounded-md font-semibold text-base hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-jamarq-cyan focus:ring-offset-2 focus:ring-offset-jamarq-black"
+                >
+                  Start a Project
+                </ContactModalTrigger>
+                <Link
+                  href="#work"
+                  className="inline-flex items-center justify-center border border-slate px-8 py-3 rounded-md font-semibold text-base text-jamarq-white hover:border-jamarq-cyan hover:text-jamarq-cyan transition-colors"
+                >
+                  View Work
+                </Link>
+              </div>
+              <p className="text-sm text-jamarq-gray">
+                No inflated packages. No unnecessary complexity. Just systems that hold up.
+              </p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
-              {heroStats.map((stat, index) => (
-                <FadeIn key={stat.label} delay={index * 120}>
-                  <div className="border-l-2 border-jamarq-cyan/70 pl-4">
-                    <p className="text-xs uppercase tracking-[0.25em] text-jamarq-gray">{stat.label}</p>
-                    <p className="text-lg font-semibold text-mist">{stat.value}</p>
+            <aside className="bg-jamarq-black/40 border border-slate/60 rounded-3xl p-6 space-y-5">
+              <div className="space-y-2">
+                <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Recent proof</p>
+                <p className="text-sm text-jamarq-gray leading-relaxed">
+                  Real outcomes from current client work.
+                </p>
+              </div>
+              <div className="grid gap-4 sm:grid-cols-3 md:grid-cols-1">
+                {recentProof.map((item, index) => (
+                  <FadeIn key={item.label} delay={index * 100} className="h-full">
+                    <div className="h-full rounded-2xl border border-slate/60 bg-jamarq-black/20 p-4 space-y-2">
+                      <p className="text-xs uppercase tracking-[0.2em] text-jamarq-gray">
+                        {item.label}
+                      </p>
+                      <p className="text-base font-semibold text-mist leading-snug">{item.value}</p>
+                      <p className="text-sm text-jamarq-gray leading-relaxed">{item.copy}</p>
+                    </div>
+                  </FadeIn>
+                ))}
+              </div>
+              <Link
+                href="/case-studies"
+                className="inline-flex items-center text-sm font-semibold text-jamarq-cyan hover:text-jamarq-magenta transition-colors"
+              >
+                Read the case studies →
+              </Link>
+            </aside>
+          </div>
+        </section>
+
+        <section className="py-24 md:py-32 bg-steel" aria-labelledby="what-we-do-heading">
+          <div className="max-w-6xl mx-auto px-5 md:px-10 space-y-10">
+            <div className="max-w-3xl space-y-3">
+              <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">What we do</p>
+              <h2 id="what-we-do-heading" className="text-3xl md:text-4xl font-semibold">
+                Website builds, rebuilds, and the systems behind them.
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+              {whatWeDo.map((item, index) => (
+                <FadeIn key={item.title} delay={index * 120} className="h-full">
+                  <div className="h-full p-6 rounded-2xl border border-slate/60 bg-jamarq-black/30 space-y-3">
+                    <h3 className="text-2xl font-semibold">{item.title}</h3>
+                    <p className="text-jamarq-gray leading-relaxed">{item.copy}</p>
                   </div>
                 </FadeIn>
               ))}
             </div>
           </div>
-          <aside className="bg-jamarq-black/40 border border-slate/60 rounded-3xl p-6 space-y-4">
-            <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Featured case study</p>
-            <h2 className="text-2xl font-semibold">{featuredStudy.title}</h2>
-            <p className="text-sm text-jamarq-gray leading-relaxed">{featuredStudy.hoverShort}</p>
-            <Link
-              href={`/case-studies/${featuredStudy.slug}`}
-              className="inline-flex items-center text-sm font-semibold text-jamarq-cyan hover:text-jamarq-magenta transition-colors"
-            >
-              Read the case study →
-            </Link>
-          </aside>
-        </div>
-      </section>
+        </section>
 
-      {/* Positioning Section */}
-      <section className="py-20 md:py-28 border-y border-slate/40" aria-label="What we do">
-        <div className="max-w-6xl mx-auto px-5 md:px-10 grid gap-10 md:grid-cols-2">
-          <div className="space-y-4">
-            <h2 className="text-3xl md:text-4xl font-semibold leading-tight">
-              Build with intention. Ship with receipts.
-            </h2>
-            <p className="text-lg text-mist leading-relaxed">
-              Every JAMARQ build is a purpose-built system: custom UI, clean code, accessible performance, and a launch plan that doesn’t fall apart after go-live.
-            </p>
+        <section className="py-24 md:py-32" aria-labelledby="who-we-work-with-heading">
+          <div className="max-w-6xl mx-auto px-5 md:px-10 space-y-10">
+            <div className="max-w-3xl space-y-3">
+              <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">
+                Who we work with
+              </p>
+              <h2
+                id="who-we-work-with-heading"
+                className="text-3xl md:text-4xl font-semibold"
+              >
+                Different projects, same need for clarity.
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {whoWeWorkWith.map((group, index) => (
+                <FadeIn key={group.title} delay={index * 120} className="h-full">
+                  <article className="h-full p-6 rounded-2xl border border-slate/60 bg-jamarq-black/20 space-y-5">
+                    <h3 className="text-2xl font-semibold">{group.title}</h3>
+                    <ul className="space-y-3 text-jamarq-gray">
+                      {group.points.map((point) => (
+                        <li key={point} className="flex gap-3">
+                          <span className="text-jamarq-cyan">•</span>
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </article>
+                </FadeIn>
+              ))}
+            </div>
           </div>
-          <div className="space-y-4 text-jamarq-gray">
-            <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">What this means</p>
-            <ul className="space-y-3">
-              <li className="flex gap-3">
-                <span className="text-jamarq-cyan">•</span>
-                <span>Custom builds only. No generic templates or plug-and-play page builders.</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-jamarq-cyan">•</span>
-                <span>Owner-first hosting so you control the infrastructure, stack, and data.</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-jamarq-cyan">•</span>
-                <span>Performance and SEO proof included—PageSpeed, accessibility, and real-world validation.</span>
-              </li>
+        </section>
+
+        <section className="py-24 md:py-32 bg-steel" aria-labelledby="why-jamarq-heading">
+          <div className="max-w-6xl mx-auto px-5 md:px-10 space-y-10">
+            <div className="max-w-3xl space-y-3">
+              <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Why JAMARQ</p>
+              <h2 id="why-jamarq-heading" className="text-3xl md:text-4xl font-semibold">
+                Built to hold up after launch.
+              </h2>
+            </div>
+            <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+              {whyJamarq.map((point, index) => (
+                <li key={point.title} className="h-full">
+                  <FadeIn delay={index * 90} className="h-full">
+                    <div className="h-full p-5 rounded-2xl border border-slate/60 bg-jamarq-black/30 space-y-3">
+                      <h3 className="text-xl font-semibold">{point.title}</h3>
+                      <p className="text-jamarq-gray leading-relaxed">{point.copy}</p>
+                    </div>
+                  </FadeIn>
+                </li>
+              ))}
             </ul>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* What I Build Section */}
-      <section className="py-24 md:py-32 bg-steel" aria-label="Services">
-        <div className="max-w-6xl mx-auto px-5 md:px-10 space-y-10">
-          <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray mb-3">Capabilities</p>
-            <h2 className="text-3xl md:text-4xl font-semibold">What I build</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Custom Websites",
-                copy: "Hand-built, modern, and responsive. Lightweight architecture with zero template bloat.",
-                link: { href: "/services", label: "View all services →" }
-              },
-              {
-                title: "Digital Systems",
-                copy: "Workflows, dashboards, and integrations that mirror your real operations and data flow."
-              },
-              {
-                title: "Ongoing Support",
-                copy: "Maintenance plans, monitoring, updates, and performance care after launch."
-              }
-            ].map((card, index) => (
-              <FadeIn key={card.title} delay={index * 120} className="h-full">
-                <div className="h-full p-6 rounded-2xl border border-slate/50 bg-jamarq-black/30 space-y-4">
-                  <h3 className="text-2xl font-semibold">{card.title}</h3>
-                  <p className="text-jamarq-gray leading-relaxed">{card.copy}</p>
-                  {card.link && (
-                    <Link href={card.link.href} className="link-underline text-sm font-semibold text-jamarq-cyan">
-                      {card.link.label}
-                    </Link>
-                  )}
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Transition 1 */}
-      <section className="py-16 flex items-center justify-center bg-steel" aria-label="Transition">
-        <div className="max-w-3xl mx-auto text-center px-5 md:px-10">
-          <p className="text-lg text-jamarq-gray">
-            Every project follows a clear, structured process.
-          </p>
-        </div>
-      </section>
-
-      {/* How I Work Section */}
-      <section className="py-24 md:py-32" aria-label="Process overview">
-        <div className="max-w-6xl mx-auto px-5 md:px-10 space-y-10">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-            <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray mb-3">Approach</p>
-              <h2 className="text-3xl md:text-4xl font-semibold">How I work</h2>
+        <section id="work" className="scroll-mt-28 py-24 md:py-32" aria-labelledby="work-heading">
+          <div className="max-w-6xl mx-auto px-5 md:px-10 space-y-12">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+              <div className="max-w-3xl space-y-3">
+                <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Work</p>
+                <h2 id="work-heading" className="text-3xl md:text-4xl font-semibold">
+                  Recent projects
+                </h2>
+                <p className="text-jamarq-gray leading-relaxed">
+                  Selected work across business sites, rebuilds, and more operational systems.
+                  Each card covers the problem, the build, and the outcome.
+                </p>
+              </div>
+              <Link
+                href="/case-studies"
+                className="link-underline text-sm font-semibold text-jamarq-cyan"
+              >
+                View all case studies
+              </Link>
             </div>
-            <Link
-              href="/process"
-              className="link-underline text-sm font-semibold text-jamarq-cyan"
-            >
-              See the full process →
-            </Link>
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+              {orderedWork.map((study, index) => (
+                <FadeIn key={study.slug} delay={index * 120} className="h-full">
+                  <article className="h-full p-6 rounded-3xl border border-slate/60 bg-jamarq-black/30 hover:border-jamarq-cyan transition-colors flex flex-col gap-5">
+                    <div className="space-y-3">
+                      <h3 className="text-2xl font-semibold">{study.title}</h3>
+                    </div>
+                    <div className="space-y-4 text-sm leading-relaxed">
+                      <div className="space-y-1 border-t border-slate/60 pt-4">
+                        <p className="text-xs uppercase tracking-[0.25em] text-jamarq-gray">
+                          Problem
+                        </p>
+                        <p className="text-jamarq-gray">{study.problem}</p>
+                      </div>
+                      <div className="space-y-1 border-t border-slate/60 pt-4">
+                        <p className="text-xs uppercase tracking-[0.25em] text-jamarq-gray">
+                          What was done
+                        </p>
+                        <p className="text-jamarq-gray">{study.completed}</p>
+                      </div>
+                      <div className="rounded-2xl border border-slate/60 bg-jamarq-black/20 px-4 py-4 space-y-1">
+                        <p className="text-xs uppercase tracking-[0.25em] text-jamarq-gray">
+                          Outcome
+                        </p>
+                        <p className="text-mist">{study.outcome}</p>
+                      </div>
+                    </div>
+                    <Link
+                      href={`/case-studies/${study.slug}`}
+                      className="mt-auto inline-flex items-center text-sm font-semibold text-jamarq-cyan hover:text-jamarq-magenta transition-colors"
+                    >
+                      View case study →
+                    </Link>
+                  </article>
+                </FadeIn>
+              ))}
+            </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {workPhases.map((phase, index) => (
-              <FadeIn key={phase.number} delay={index * 120} className="h-full">
-                <div className="h-full p-6 rounded-2xl border border-slate/50 bg-jamarq-black/20 space-y-4">
-                  <div className="text-jamarq-cyan text-4xl font-semibold">{phase.number}</div>
-                  <h3 className="text-2xl font-semibold">{phase.title}</h3>
-                  <p className="text-jamarq-gray leading-relaxed">{phase.copy}</p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Transition 2 */}
-      <section className="py-16 flex items-center justify-center" aria-label="Transition">
-        <div className="max-w-3xl mx-auto text-center px-5 md:px-10">
-          <p className="text-lg text-jamarq-gray">
-            The result: a system you can trust and control.
-          </p>
-        </div>
-      </section>
-
-      {/* What You Get Section */}
-      <section className="py-24 md:py-32 bg-steel" aria-label="Value proposition">
-        <div className="max-w-6xl mx-auto px-5 md:px-10 space-y-12">
-          <div className="max-w-3xl">
-            <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray mb-3">Outcomes</p>
-            <h2 className="text-3xl md:text-4xl font-semibold leading-tight">
-              You get a modern system that’s fast, intentional, and still yours after launch.
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {[
-              {
-                title: "Clarity first",
-                copy: "Focused design, typography, and content structure that directs attention instead of burning it."
-              },
-              {
-                title: "Operational reliability",
-                copy: "Clean development, accessibility checks, QA, and documented handoff so your team can run it."
-              },
-              {
-                title: "Proof and transparency",
-                copy: "Real PageSpeed and Lighthouse results with production content—not throwaway demos."
-              },
-              {
-                title: "Long-term support",
-                copy: "Maintenance plans, analytics health checks, and fractional consulting when you need it."
-              }
-            ].map((item, index) => (
-              <FadeIn key={item.title} delay={index * 120}>
-                <div className="p-6 rounded-2xl border border-slate/50 bg-jamarq-black/30 space-y-3">
-                  <h3 className="text-2xl font-semibold">{item.title}</h3>
-                  <p className="text-jamarq-gray leading-relaxed">{item.copy}</p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Transition 3 */}
-      <section className="py-16 flex items-center justify-center bg-steel" aria-label="Transition">
-        <div className="max-w-3xl mx-auto text-center px-5 md:px-10">
-          <p className="text-lg text-jamarq-gray">
-            See how this approach creates real results.
-          </p>
-        </div>
-      </section>
-
-      {/* Work Section - Case Studies */}
-      <section className="py-24 md:py-32" aria-label="Portfolio and case studies">
-        <div className="max-w-6xl mx-auto px-5 md:px-10 space-y-12">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-            <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray mb-3">Work</p>
-              <h2 className="text-3xl md:text-4xl font-semibold">Recent builds</h2>
-              <p className="text-jamarq-gray max-w-2xl">
-                Real systems with measurable performance and ownership built in. Screenshots, PageSpeed receipts, and technical notes are public on every case study.
+        <section id="pricing" className="scroll-mt-28 py-24 md:py-32 bg-steel" aria-labelledby="pricing-heading">
+          <div className="max-w-6xl mx-auto px-5 md:px-10 space-y-10">
+            <div className="max-w-3xl space-y-3">
+              <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Pricing</p>
+              <h2 id="pricing-heading" className="text-3xl md:text-4xl font-semibold">
+                Pricing
+              </h2>
+              <p className="text-jamarq-gray leading-relaxed">
+                Every project is scoped based on real complexity. These ranges reflect where most
+                work falls.
               </p>
             </div>
-            <Link 
-              href="/case-studies" 
-              className="link-underline text-sm font-semibold text-jamarq-cyan"
-            >
-              View all case studies →
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {orderedCaseStudies.map((study, index) => (
-              <FadeIn key={study.slug} delay={index * 120} className="h-full">
-                <Link
-                  href={`/case-studies/${study.slug}`}
-                  title={study.hoverShort}
-                  aria-label={`${study.title} case study preview`}
-                  className="group block h-full p-8 rounded-3xl border border-slate/60 bg-jamarq-black/30 hover:border-jamarq-cyan transition-all duration-300"
-                >
-                  <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray mb-3">{study.category}</p>
-                  <h3 className="text-2xl font-semibold mb-4 group-hover:text-jamarq-cyan transition-colors">
-                    {study.title}
-                  </h3>
-                  <p className="text-jamarq-gray leading-relaxed mb-6 text-sm">{study.micro}</p>
-                  <div className="flex items-center text-jamarq-cyan group-hover:text-jamarq-magenta transition-colors font-semibold">
-                    View case study →
-                  </div>
-                </Link>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Enhanced CTA Section */}
-      <section className="py-24 md:py-32 bg-steel" aria-label="Contact call-to-action">
-        <div className="max-w-5xl mx-auto px-5 md:px-10 rounded-3xl border border-slate/60 bg-jamarq-black/30 p-10 md:p-16">
-          <div className="space-y-4">
-            <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Ready?</p>
-            <h2 className="text-3xl md:text-4xl font-semibold">Let’s build something intentional.</h2>
-            <p className="text-lg text-jamarq-gray leading-relaxed max-w-3xl">
-              Whether you’re launching from scratch or rebuilding a system that fell apart, I can map the plan, design the interface, and ship the code with real proof attached.
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {pricingTiers.map((tier, index) => (
+                <FadeIn key={tier.title} delay={index * 100} className="h-full">
+                  <article className="h-full p-6 rounded-2xl border border-slate/60 bg-jamarq-black/30 space-y-3">
+                    <h3 className="text-2xl font-semibold">{tier.title}</h3>
+                    <p className="text-jamarq-gray leading-relaxed">{tier.description}</p>
+                    <p className="text-xl font-semibold text-mist">{tier.price}</p>
+                  </article>
+                </FadeIn>
+              ))}
+            </div>
+            <p className="text-sm text-jamarq-gray">
+              Pricing depends on scope, content, integrations, and whether the work is new or a
+              rebuild.
             </p>
           </div>
-          <div className="mt-10 flex flex-col sm:flex-row gap-4">
-            <ContactModalTrigger
-              prefill={{ subject: "Project inquiry", source: "home-cta" }}
-              className="inline-flex items-center justify-center bg-jamarq-cyan text-jamarq-black px-8 py-3 rounded-md font-semibold text-base hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-jamarq-cyan focus:ring-offset-2 focus:ring-offset-steel"
-            >
-              Get in touch
-            </ContactModalTrigger>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center border border-slate px-8 py-3 rounded-md font-semibold text-base text-jamarq-white hover:border-jamarq-cyan hover:text-jamarq-cyan transition-colors"
-            >
-              View contact options
-            </Link>
+        </section>
+
+        <section id="process" className="scroll-mt-28 py-24 md:py-32" aria-labelledby="process-heading">
+          <div className="max-w-6xl mx-auto px-5 md:px-10 space-y-10">
+            <div className="max-w-3xl space-y-3">
+              <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Process</p>
+              <h2 id="process-heading" className="text-3xl md:text-4xl font-semibold">
+                Lean enough to stay readable. Structured enough to reduce risk.
+              </h2>
+            </div>
+            <ol className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-6">
+              {processSteps.map((step, index) => (
+                <li key={step.title} className="h-full">
+                  <FadeIn delay={index * 90} className="h-full">
+                    <div className="h-full p-5 rounded-2xl border border-slate/60 bg-jamarq-black/20">
+                      <div className="grid grid-cols-[48px_1fr] gap-4 xl:grid-cols-1 xl:gap-3">
+                        <p className="text-3xl font-semibold text-jamarq-cyan">
+                          {String(index + 1).padStart(2, "0")}
+                        </p>
+                        <div className="space-y-2">
+                          <h3 className="text-lg font-semibold">{step.title}</h3>
+                          <p className="text-jamarq-gray leading-relaxed text-sm">{step.copy}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </FadeIn>
+                </li>
+              ))}
+            </ol>
           </div>
-          <p className="text-sm text-jamarq-gray mt-6">
-            Prefer direct email?{" "}
-            <ContactModalTrigger
-              prefill={{ subject: "General question", source: "home-cta-direct" }}
-              className="text-jamarq-cyan hover:text-jamarq-magenta transition-colors underline decoration-dotted"
-            >
-              hello@jamarq.digital
-            </ContactModalTrigger>
-          </p>
-        </div>
-      </section>
+        </section>
 
-      {/* Footer */}
-      <footer className="py-12 border-t border-slate" role="contentinfo">
-        <div className="max-w-6xl mx-auto px-5 md:px-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 justify-items-center">
-            {/* Brand */}
-            <div className="text-center">
-              <Image
-                src="/assets/logos/wordmark-dark.png"
-                alt="JAMARQ Digital"
-                width={200}
-                height={50}
-                className="h-12 md:h-16 w-auto mx-auto mb-2"
-              />
-              <p className="text-jamarq-gray text-sm">Build with intention.</p>
-            </div>
-
-            {/* Navigation */}
-            <div className="text-center">
-              <p className="font-semibold mb-3 text-sm uppercase tracking-wide">Navigation</p>
-              <nav className="space-y-2">
-                <Link href="/" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">Home</Link>
-                <Link href="/services" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">Services</Link>
-                <Link href="/process" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">Process</Link>
-                <Link href="/work" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">Work</Link>
-                <Link href="/contact" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">Contact</Link>
-              </nav>
-            </div>
-
-            {/* Contact */}
-            <div className="text-center">
-              <p className="font-semibold mb-3 text-sm uppercase tracking-wide">Contact</p>
-              <p className="text-jamarq-gray text-xs mb-2">Based in Winston-Salem, North Carolina</p>
-              <p className="text-jamarq-gray text-xs mb-3">Serving businesses nationwide</p>
+        <section className="py-24 md:py-32 bg-steel" aria-labelledby="final-cta-heading">
+          <div className="max-w-5xl mx-auto px-5 md:px-10 rounded-3xl border border-slate/60 bg-jamarq-black/30 p-10 md:p-16 space-y-4">
+            <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Start a Project</p>
+            <h2 id="final-cta-heading" className="text-3xl md:text-4xl font-semibold">
+              Start a Project
+            </h2>
+            <p className="text-lg text-jamarq-gray leading-relaxed max-w-3xl">
+              If you know what you need or just know something isn&apos;t working, we can figure it
+              out.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
               <ContactModalTrigger
-                prefill={{ subject: "Website inquiry", source: "home-footer" }}
-                className="text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors"
+                prefill={{ subject: "Project inquiry", source: "home-cta" }}
+                className="inline-flex items-center justify-center bg-jamarq-cyan text-jamarq-black px-8 py-3 rounded-md font-semibold text-base hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-jamarq-cyan focus:ring-offset-2 focus:ring-offset-steel"
               >
-                hello@jamarq.digital
+                Start a Project
               </ContactModalTrigger>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center border border-slate px-8 py-3 rounded-md font-semibold text-base text-jamarq-white hover:border-jamarq-cyan hover:text-jamarq-cyan transition-colors"
+              >
+                Contact Options
+              </Link>
             </div>
+            <p className="text-sm text-jamarq-gray">A rough brief is fine. Clear next steps are part of the job.</p>
           </div>
+        </section>
 
-          {/* Copyright */}
-          <div className="border-t border-slate pt-6 text-center text-jamarq-gray text-xs">
-            <p>&copy; 2025 JAMARQ Digital. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+        <Footer />
       </main>
     </>
   );

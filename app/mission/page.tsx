@@ -1,15 +1,42 @@
 import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 
+const principles = [
+  {
+    title: "People stay in control",
+    copy: "Technology should support human judgment, approvals, and accountability instead of hiding decisions behind automation."
+  },
+  {
+    title: "Clarity beats speed theater",
+    copy: "Fast output is not useful if the system becomes confusing to run, update, or maintain later."
+  },
+  {
+    title: "Complexity has to earn its place",
+    copy: "If a simpler stack can do the job well, JAMARQ uses the simpler stack."
+  },
+  {
+    title: "The system should stay understandable",
+    copy: "Code, hosting, content, and responsibilities should be clear before handoff, not sorted out later."
+  },
+  {
+    title: "Tools should create independence",
+    copy: "The work should leave clients with more control and fewer dependencies, not a new layer of lock-in."
+  },
+  {
+    title: "Work should match real operations",
+    copy: "Websites, admin tools, and workflows should reflect how the business actually runs day to day."
+  }
+];
+
 export const metadata: Metadata = {
-  title: "Mission",
-  description: "Our mission is to build systems that respect human agency, keep people in control, and deliver clarity over speed.",
+  title: "Principles",
+  description: "The principles behind JAMARQ's work: clear systems, direct communication, client control, and long-term maintainability.",
   alternates: {
     canonical: "https://jamarq.digital/mission"
   },
   openGraph: {
-    title: "Mission",
-    description: "Our mission is to build systems that respect human agency, keep people in control, and deliver clarity over speed.",
+    title: "Principles",
+    description: "The principles behind JAMARQ's work: clear systems, direct communication, client control, and long-term maintainability.",
     url: "https://jamarq.digital/mission",
     type: "website",
     images: [
@@ -23,8 +50,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mission",
-    description: "Our mission is to build systems that respect human agency, keep people in control, and deliver clarity over speed.",
+    title: "Principles",
+    description: "The principles behind JAMARQ's work: clear systems, direct communication, client control, and long-term maintainability.",
     images: ["https://jamarq.digital/og.jpg"],
     creator: "@jamarqdigital",
     site: "@jamarqdigital"
@@ -35,18 +62,18 @@ export default function MissionPage() {
   const breadcrumbStructuredData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [
+    itemListElement: [
       {
         "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://jamarq.digital/"
+        position: 1,
+        name: "Home",
+        item: "https://jamarq.digital/"
       },
       {
         "@type": "ListItem",
-        "position": 2,
-        "name": "Mission",
-        "item": "https://jamarq.digital/mission"
+        position: 2,
+        name: "Principles",
+        item: "https://jamarq.digital/mission"
       }
     ]
   };
@@ -57,39 +84,29 @@ export default function MissionPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
       />
-      <section className="pt-32 pb-24" aria-label="Mission statement">
-        <div className="max-w-4xl mx-auto px-5 md:px-10 space-y-8">
-          <p className="text-lg md:text-xl font-semibold text-mist">With you, not for you.</p>
-          <h1 className="text-4xl md:text-5xl font-semibold leading-tight">Mission</h1>
-          <div className="space-y-6 text-jamarq-gray leading-relaxed">
-            <h2 className="text-2xl font-semibold text-jamarq-white">Our Mission</h2>
-            <p className="text-lg text-mist">We build systems that respect human agency.</p>
-            <ol className="space-y-6 list-decimal list-inside">
-              <li className="space-y-2">
-                <p className="text-mist font-semibold">Automation is a tool, not an author.</p>
-                <p>Technology exists to extend human capability, not to replace human judgment or responsibility.</p>
-              </li>
-              <li className="space-y-2">
-                <p className="text-mist font-semibold">Meaning is maintained through authorship.</p>
-                <p>Tools should preserve continuity between intention, action, and outcome, not obscure it.</p>
-              </li>
-              <li className="space-y-2">
-                <p className="text-mist font-semibold">Clarity matters more than speed.</p>
-                <p>Faster output without understanding is not progress.</p>
-              </li>
-              <li className="space-y-2">
-                <p className="text-mist font-semibold">Humans remain in the loop by design.</p>
-                <p>Review, pause, and consent are features, not friction.</p>
-              </li>
-              <li className="space-y-2">
-                <p className="text-mist font-semibold">Systems should tell the truth about what they do.</p>
-                <p>No hidden decisions. No false intelligence. No performative autonomy.</p>
-              </li>
-              <li className="space-y-2">
-                <p className="text-mist font-semibold">Good tools create independence, not dependency.</p>
-                <p>Our work should leave people more capable than when we arrived.</p>
-              </li>
-            </ol>
+      <section className="pt-32 pb-24 md:pb-32" aria-label="Principles">
+        <div className="max-w-5xl mx-auto px-5 md:px-10 space-y-10">
+          <div className="max-w-3xl space-y-4">
+            <p className="text-xs uppercase tracking-[0.35em] text-jamarq-gray">Principles</p>
+            <h1 className="text-4xl md:text-5xl font-semibold leading-tight">Principles</h1>
+            <p className="text-lg md:text-xl text-mist leading-relaxed">
+              The work is built around a few simple rules: keep clients in control, use complexity carefully,
+              and make sure the system still makes sense after launch.
+            </p>
+            <p className="text-jamarq-gray leading-relaxed">
+              These principles shape how JAMARQ approaches websites, rebuilds, and the systems behind them.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {principles.map((item) => (
+              <article
+                key={item.title}
+                className="h-full rounded-2xl border border-slate/60 bg-jamarq-black/20 p-6 space-y-3"
+              >
+                <h2 className="text-2xl font-semibold">{item.title}</h2>
+                <p className="text-jamarq-gray leading-relaxed">{item.copy}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>

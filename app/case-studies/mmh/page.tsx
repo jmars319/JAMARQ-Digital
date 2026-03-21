@@ -106,7 +106,7 @@ export default function MMHCaseStudyPage() {
     {
       id: "pagespeed",
       label: "PageSpeed results",
-      description: "Before-and-after Lighthouse results for desktop and mobile under shared hosting constraints.",
+      description: "Before-and-after Lighthouse results for desktop and mobile in the live production environment.",
       items: screenshotGroups.pagespeed
     },
     {
@@ -225,7 +225,7 @@ export default function MMHCaseStudyPage() {
               <h2 className="text-3xl md:text-4xl font-semibold">Operational Coverage</h2>
             </div>
             <p className="text-jamarq-gray max-w-2xl">
-              Documentation of performance results, customer-facing work, administrative controls, and mobile parity using the shared component system.
+              Documentation covering performance results, public pages, admin controls, and mobile parity.
             </p>
           </FadeIn>
           <FadeIn delay={150}>
@@ -342,7 +342,7 @@ export default function MMHCaseStudyPage() {
       {/* Full Case Study CTA */}
       <section className="py-24 md:py-32" aria-label="Full case study">
         <FadeIn className="max-w-4xl mx-auto text-center px-5 md:px-10">
-          <h3 className="text-2xl md:text-3xl font-semibold mb-6">Want the full technical deep dive?</h3>
+          <h3 className="text-2xl md:text-3xl font-semibold mb-6">Want the full technical breakdown?</h3>
           <p className="text-lg text-jamarq-gray leading-relaxed mb-8 max-w-2xl mx-auto">
             Detailed architecture decisions, database schema, reservation logic, and deployment checklists are available on request.
           </p>

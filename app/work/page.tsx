@@ -7,13 +7,13 @@ import { FadeIn } from "@/components/FadeIn";
 
 export const metadata: Metadata = {
   title: "Work",
-  description: "Selected work: custom websites, digital systems, and operational tooling built with proof-of-performance and owner-first infrastructure.",
+  description: "Selected work across custom websites, rebuilds, and web systems, with clear outcomes and technical detail.",
   alternates: {
     canonical: "https://jamarq.digital/work"
   },
   openGraph: {
     title: "Work",
-    description: "Selected work: custom websites, digital systems, and operational tooling built with proof-of-performance and owner-first infrastructure.",
+    description: "Selected work across custom websites, rebuilds, and web systems, with clear outcomes and technical detail.",
     url: "https://jamarq.digital/work",
     type: "website",
     images: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Work",
-    description: "Selected work: custom websites, digital systems, and operational tooling built with proof-of-performance and owner-first infrastructure.",
+    description: "Selected work across custom websites, rebuilds, and web systems, with clear outcomes and technical detail.",
     images: ["https://jamarq.digital/og.jpg"],
     creator: "@jamarqdigital",
     site: "@jamarqdigital"
@@ -61,7 +61,7 @@ export default function WorkPage() {
   }));
 
   const heroStats = [
-    { label: "PageSpeed receipts", value: "Avg 97/100 desktop, 89/100 mobile (MMH, TRBG, MMS)" },
+    { label: "Performance snapshot", value: "Avg 97/100 desktop, 89/100 mobile (MMH, TRBG, MMS)" },
     { label: "Launch-to-first result", value: "Day 2 (MMH), Week 1 (TRBG), Day 16 (MMS)" },
     { label: "Scope", value: "Custom websites, owner-ready admin systems, mobile parity" },
     { label: "Stack", value: "Next.js, React, PHP APIs, Tailwind, SendGrid" }
@@ -69,16 +69,16 @@ export default function WorkPage() {
 
   const highlights = [
     {
-      title: "Proof on every project",
-      copy: "Each case study includes screenshots, performance data, and technical notes—no vague promises."
+      title: "Documented results",
+      copy: "Case studies include screenshots, technical notes, and implementation detail where it matters."
     },
     {
-      title: "Owner-first builds",
-      copy: "You keep the stack, repo, hosting, and content. No subscriptions required to keep things running."
+      title: "Clear handoff",
+      copy: "You keep the stack, hosting, and content after launch."
     },
     {
-      title: "Operational focus",
-      copy: "Public site, admin workflow, and supporting automations are designed together so decisions stay visible."
+      title: "Operational thinking",
+      copy: "The public site, admin workflow, and supporting systems are planned together."
     }
   ];
 
@@ -94,20 +94,20 @@ export default function WorkPage() {
           <div className="space-y-6">
             <p className="text-xs uppercase tracking-[0.35em] text-jamarq-gray">Selected work</p>
             <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
-              Systems built for teams that want proof, not hype.
+              Selected work for independent businesses and established teams.
             </h1>
             <p className="text-lg text-jamarq-gray leading-relaxed">
-              These projects combine custom UI, clean code, and operational tooling. Every build ships with PageSpeed data, accessibility checks, and a clear handoff so you stay in control.
+              These projects cover custom websites, rebuilds, and supporting systems. Each one is documented with real outcomes, technical detail, and a clear handoff.
             </p>
             <p className="text-sm text-jamarq-gray">
-              See how the principles map to the work: <Link href="/mission" className="link-underline text-jamarq-cyan">Read the mission</Link>
+              See how the principles show up in the work: <Link href="/mission" className="link-underline text-jamarq-cyan">Read the principles</Link>
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <ContactModalTrigger
                 prefill={{ subject: "Work inquiry", source: "work-hero" }}
                 className="inline-flex items-center justify-center bg-jamarq-cyan text-jamarq-black px-8 py-3 rounded-md font-semibold text-base hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-jamarq-cyan focus:ring-offset-2 focus:ring-offset-jamarq-black"
               >
-                Start a project
+                Start a Project
               </ContactModalTrigger>
               <Link
                 href="/case-studies"
@@ -140,7 +140,7 @@ export default function WorkPage() {
             <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Featured work</p>
             <h2 className="text-3xl md:text-4xl font-semibold">Recent builds</h2>
             <p className="text-jamarq-gray max-w-3xl">
-              Every case study includes the problem, system design, performance proof, and ownership plan. Tap into the full write-ups for screenshots and technical notes.
+              Each case study covers the problem, the build, and the outcome, with screenshots and technical notes where useful.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -151,7 +151,6 @@ export default function WorkPage() {
                   aria-label={`${study.title} case study`}
                   className="group block h-full p-8 rounded-3xl border border-slate/60 bg-jamarq-black/30 hover:border-jamarq-cyan transition-all duration-300"
                 >
-                  <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray mb-3">{study.category}</p>
                   <h3 className="text-2xl font-semibold mb-4 group-hover:text-jamarq-cyan transition-colors">{study.title}</h3>
                   <p className="text-jamarq-gray text-sm leading-relaxed mb-6">{study.micro}</p>
                   <div className="flex items-center text-jamarq-cyan group-hover:text-jamarq-magenta transition-colors font-semibold">
@@ -184,7 +183,7 @@ export default function WorkPage() {
           <div className="rounded-3xl border border-slate/60 bg-jamarq-black/30 p-8 space-y-4">
             <h3 className="text-2xl font-semibold">Need private previews?</h3>
             <p className="text-jamarq-gray leading-relaxed">
-              Some work is under NDA or still in rollout. If you need to see more, I’m happy to walk through private screenshots and architecture notes.
+              Some work is under NDA or still in rollout. If you need deeper examples, we can walk you through private screenshots and architecture notes.
             </p>
             <ContactModalTrigger
               prefill={{ subject: "Private preview request", source: "work-previews" }}
@@ -202,14 +201,14 @@ export default function WorkPage() {
           <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Next build</p>
           <h2 className="text-3xl md:text-4xl font-semibold">Let’s plan your project.</h2>
           <p className="text-lg text-jamarq-gray leading-relaxed">
-            Tell me about the system you need. I’ll map the scope, timeline, and proof plan within one business day.
+            Tell us what needs to be built, rebuilt, or cleaned up. We’ll outline scope, timing, and the next step within one business day.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <ContactModalTrigger
               prefill={{ subject: "Work page inquiry", source: "work-cta" }}
               className="inline-flex items-center justify-center bg-jamarq-cyan text-jamarq-black px-8 py-3 rounded-md font-semibold text-base hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-jamarq-cyan focus:ring-offset-2 focus:ring-offset-steel"
             >
-              Get in touch
+              Start a Project
             </ContactModalTrigger>
             <Link
               href="/process"

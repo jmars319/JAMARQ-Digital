@@ -7,9 +7,9 @@ JAMARQ rebuilt the site from the ground up, delivering a fast public-facing expe
 
 The admin interface is designed around real restaurant workflows, allowing non-technical staff to update specials in minutes while preventing common errors. Layout stability, image delivery, and mobile performance were treated as first-class concerns throughout the build.
 
-The result is a clear, fast, maintainable system that gives the owners full control of their digital presence.
+The result is a clear, fast, maintainable system the owners can manage without outside help.
 
-Proof of traction was immediate: the team published new specials, menu updates, and job listings within the first week of launch without outside help.
+Within the first week of launch, the team published new specials, menu updates, and job listings without outside help.
 
 **Stack:** React, PHP, MySQL  
 **Launch:** November 2025  

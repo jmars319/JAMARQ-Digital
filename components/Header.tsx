@@ -35,57 +35,66 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-10">
+        <div className="hidden md:flex items-center gap-8">
           <Link 
             href="/services" 
             className="text-sm font-medium text-jamarq-gray hover:text-jamarq-cyan transition-colors"
           >
             Services
           </Link>
-          <Link 
-            href="/process" 
+          <Link
+            href="/work"
+            className="text-sm font-medium text-jamarq-gray hover:text-jamarq-cyan transition-colors"
+          >
+            Work
+          </Link>
+          <Link
+            href="/process"
             className="text-sm font-medium text-jamarq-gray hover:text-jamarq-cyan transition-colors"
           >
             Process
           </Link>
-          <Link 
-            href="/mission" 
+          <Link
+            href="/mission"
             className="text-sm font-medium text-jamarq-gray hover:text-jamarq-cyan transition-colors"
           >
-            Mission
-          </Link>
-          <Link 
-            href="/work" 
-            className="text-sm font-medium text-jamarq-gray hover:text-jamarq-cyan transition-colors"
-          >
-            Work
+            Principles
           </Link>
           <Link 
             href="/contact" 
             className="text-sm bg-jamarq-cyan text-jamarq-black px-7 py-2.5 rounded font-semibold hover:bg-opacity-90 transition-all"
           >
-            Contact
+            Start a Project
           </Link>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden text-jamarq-white p-2 focus:outline-none focus:ring-2 focus:ring-jamarq-cyan focus:ring-offset-2 focus:ring-offset-jamarq-black rounded"
-          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
-          aria-expanded={mobileMenuOpen}
-          aria-controls="mobile-menu"
-        >
-          {mobileMenuOpen ? (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          ) : (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          )}
-        </button>
+        <div className="md:hidden flex items-center gap-2">
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center rounded px-4 py-2 text-[11px] font-semibold bg-jamarq-cyan text-jamarq-black hover:bg-opacity-90 transition-all"
+            aria-label="Start a project"
+          >
+            Start a Project
+          </Link>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="text-jamarq-white p-2 focus:outline-none focus:ring-2 focus:ring-jamarq-cyan focus:ring-offset-2 focus:ring-offset-jamarq-black rounded"
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-menu"
+          >
+            {mobileMenuOpen ? (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
+        </div>
 
         {/* No-JS Mobile Navigation Fallback */}
         <noscript>
@@ -118,33 +127,33 @@ export default function Header() {
               >
                 Services
               </Link>
-              <Link 
-                href="/process" 
+              <Link
+                href="/work"
+                className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Work
+              </Link>
+              <Link
+                href="/process"
                 className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Process
               </Link>
-              <Link 
-                href="/mission" 
+              <Link
+                href="/mission"
                 className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Mission
-              </Link>
-              <Link 
-                href="/work" 
-                className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Work
+                Principles
               </Link>
               <Link 
                 href="/contact" 
                 className="text-sm bg-jamarq-cyan text-jamarq-black px-6 py-2 rounded font-semibold hover:bg-opacity-90 transition-all inline-block text-center"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Contact
+                Start a Project
               </Link>
             </div>
           </div>
@@ -161,29 +170,29 @@ export default function Header() {
             >
               Services
             </a>
-            <a 
-              href="/process" 
+            <a
+              href="/work"
+              className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
+            >
+              Work
+            </a>
+            <a
+              href="/process"
               className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
             >
               Process
             </a>
-            <a 
-              href="/mission" 
+            <a
+              href="/mission"
               className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
             >
-              Mission
-            </a>
-            <a 
-              href="/work" 
-              className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
-            >
-              Work
+              Principles
             </a>
             <a 
               href="/contact" 
               className="text-sm bg-jamarq-cyan text-jamarq-black px-6 py-2 rounded font-semibold hover:bg-opacity-90 transition-all inline-block text-center"
             >
-              Contact
+              Start a Project
             </a>
           </nav>
         </div>

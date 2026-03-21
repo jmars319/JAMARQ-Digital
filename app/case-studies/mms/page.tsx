@@ -10,8 +10,8 @@ import { ScrollProgressBar } from "@/components/ScrollProgressBar";
 
 const heroSummary = [
   "Midway Mobile Storage needed a trustworthy web presence and quote workflow—the previous site was barebones, slow, and unable to collect leads without a phone call.",
-  "JAMARQ rebuilt the entire stack with custom inventory controls, automated quote requests, streamlined admin workflows, and performance optimization that landed 98/100 desktop and 89/100 mobile scores on shared hosting.",
-  "Proof arrived quickly: the first online quote hit the system just 16 days after launch, validating the whole build."
+  "JAMARQ rebuilt the stack with custom inventory controls, an online quote workflow, streamlined admin tools, and performance work that landed 98/100 desktop and 89/100 mobile scores on shared hosting.",
+  "The rebuilt site received its first online quote 16 days after launch."
 ];
 
 const heroDescription = heroSummary[0];
@@ -22,7 +22,7 @@ const screenshotTabs: ScreenshotTab[] = [
   {
     id: "pagespeed",
     label: "PageSpeed results",
-    description: "Desktop and mobile Lighthouse proof that documents the 98/100 (desktop) and 89/100 (mobile) scores achieved on shared GoDaddy hosting.",
+    description: "Desktop and mobile Lighthouse results showing 98/100 desktop and 89/100 mobile scores on shared hosting.",
     items: [
       {
         id: "mms-pagespeed-desktop",
@@ -47,7 +47,7 @@ const screenshotTabs: ScreenshotTab[] = [
   {
     id: "public",
     label: "Public views",
-    description: "Customer-facing site experience that helped the business capture its first online quote within 16 days.",
+    description: "Customer-facing pages that helped the business start collecting online quotes within 16 days.",
     items: [
       {
         id: "mms-public-home",
@@ -63,7 +63,7 @@ const screenshotTabs: ScreenshotTab[] = [
   {
     id: "admin",
     label: "Admin views",
-    description: "Screens and tooling used by ownership to manage units, quotes, and messaging without a vendor lock-in.",
+    description: "Screens and tools used to manage units, quotes, and messaging without vendor lock-in.",
     items: [
       {
         id: "mms-admin-inventory",
@@ -79,7 +79,7 @@ const screenshotTabs: ScreenshotTab[] = [
   {
     id: "mobile",
     label: "Mobile views",
-    description: "Mobile-first flows that keep quote requests and conversions moving even after hours.",
+    description: "Mobile flows that keep quote requests moving after hours.",
     items: [
       {
         id: "mms-quote-mobile",
@@ -255,10 +255,10 @@ export default function MMSCaseStudyPage() {
         <FadeIn className="max-w-4xl mx-auto px-5 md:px-10">
           <div className="space-y-6 text-lg text-jamarq-gray leading-relaxed">
             <p className="text-xl text-mist">
-              Midway Mobile Storage needed a website that actually worked. Their old site was barebones, slow, and lacked the tools customers needed to request quotes or understand inventory. JAMARQ rebuilt the entire platform into a modern, intentional system with inventory controls, a custom quote form, streamlined admin workflow, and aggressive performance optimization that achieved a <span className="text-jamarq-cyan font-semibold">98/100 desktop score</span>—faster than 95% of websites globally.
+              Midway Mobile Storage needed a website that actually worked. The old site was barebones, slow, and lacked the tools customers needed to request quotes or understand available inventory. JAMARQ rebuilt the platform with inventory controls, a custom quote form, streamlined admin workflows, and performance work that reached a <span className="text-jamarq-cyan font-semibold">98/100 desktop PageSpeed score</span> on shared hosting.
             </p>
             <p>
-              The rebuild launched November 25, 2025 with a focus on clarity, speed, and owner-friendly controls. Customers could finally browse inventory, request quotes without calling, and trust the legitimacy of the brand thanks to consistent design and messaging.
+              The rebuild launched November 25, 2025 with a focus on clarity, speed, and owner-friendly controls. Customers could browse inventory, request quotes without calling, and get clearer information about the business and available units.
             </p>
             <div className="mt-8 p-6 rounded-lg border border-slate bg-jamarq-black/40">
               <p className="text-sm uppercase tracking-wider text-jamarq-cyan mb-2">Timeline Highlight</p>
@@ -282,7 +282,7 @@ export default function MMSCaseStudyPage() {
               <h2 className="text-3xl md:text-4xl font-semibold">Operational Coverage</h2>
             </div>
             <p className="text-jamarq-gray max-w-2xl">
-              Documentation of performance proof, customer-facing flows, and owner tooling using the same structure as every JAMARQ case study.
+              Documentation covering performance results, customer-facing flows, and owner tooling in the same format as the rest of the case studies.
             </p>
           </FadeIn>
           <FadeIn delay={150}>
@@ -346,7 +346,7 @@ export default function MMSCaseStudyPage() {
           </h2>
           <div className="space-y-6 text-lg text-jamarq-gray leading-relaxed">
             <p>
-              JAMARQ designed and built a fully custom website with clear structure, a modern design system, functional tools, and elite performance optimization built around the owner&rsquo;s actual workflow.
+              JAMARQ designed and built a custom website with clear structure, working tools, and performance improvements built around the owner&rsquo;s actual workflow.
             </p>
             <p className="text-mist font-semibold pt-4">
               Delivered features include:
@@ -354,7 +354,7 @@ export default function MMSCaseStudyPage() {
             <ul className="space-y-3">
               <li className="flex gap-3">
                 <span className="text-jamarq-cyan">•</span>
-                <span>Clean, trustworthy visual identity and layout</span>
+                <span>Clear site structure and messaging</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-jamarq-cyan">•</span>
@@ -374,7 +374,7 @@ export default function MMSCaseStudyPage() {
               </li>
               <li className="flex gap-3">
                 <span className="text-jamarq-cyan">•</span>
-                <span> <span className="font-semibold text-jamarq-white">Aggressive performance optimization</span> (98/100 desktop, 89/100 mobile)</span>
+                <span>Performance optimization (98/100 desktop, 89/100 mobile)</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-jamarq-cyan">•</span>
@@ -382,15 +382,11 @@ export default function MMSCaseStudyPage() {
               </li>
               <li className="flex gap-3">
                 <span className="text-jamarq-cyan">•</span>
-                <span>SEO foundations + deployment</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-jamarq-cyan">•</span>
-                <span>A flexible system ready for future advertising</span>
+                <span>SEO foundations and deployment setup</span>
               </li>
             </ul>
             <p className="text-xl text-mist font-semibold pt-6">
-              The result is a professional platform built around clarity, control, speed, and long-term sustainability.
+              The rebuilt site gives customers clear information and gives the owner working tools.
             </p>
           </div>
         </FadeIn>
@@ -410,11 +406,11 @@ export default function MMSCaseStudyPage() {
               <ul className="space-y-4">
                 <li className="flex gap-3">
                   <span className="text-jamarq-cyan">•</span>
-                  <span><span className="font-semibold text-jamarq-white">Desktop: 98/100 PageSpeed score</span> (top 5% globally)</span>
+                  <span><span className="font-semibold text-jamarq-white">Desktop: 98/100 PageSpeed score</span></span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-jamarq-cyan">•</span>
-                  <span><span className="font-semibold text-jamarq-white">Mobile: 89/100</span> (+20% improvement from 74)</span>
+                  <span><span className="font-semibold text-jamarq-white">Mobile: 89/100</span>, up from 74</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-jamarq-cyan">•</span>
@@ -426,7 +422,7 @@ export default function MMSCaseStudyPage() {
                 </li>
                 <li className="flex gap-3">
                   <span className="text-jamarq-cyan">•</span>
-                  <span>Faster than most Vercel-hosted sites despite shared GoDaddy hosting</span>
+                  <span>Strong performance on shared GoDaddy hosting</span>
                 </li>
               </ul>
             </FadeIn>
@@ -455,17 +451,17 @@ export default function MMSCaseStudyPage() {
                 </li>
                 <li className="flex gap-3">
                   <span className="text-jamarq-cyan">•</span>
-                  <span>The brand finally reads as legitimate, modern, and trustworthy</span>
+                  <span>Clearer information gives the business a more credible public presence</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-jamarq-cyan">•</span>
-                  <span>Fast load times increase trust while supporting future advertising</span>
+                  <span>The rebuilt site is better prepared for future marketing and content updates</span>
                 </li>
               </ul>
             </FadeIn>
           </div>
           <FadeIn delay={150} className="text-xl text-mist font-semibold pt-10">
-            Timeline to first conversion: <span className="text-jamarq-cyan">16 days</span>. Clarity, performance, and workflow alignment created measurable business results.
+            First online quote: <span className="text-jamarq-cyan">16 days after launch</span>. The rebuilt site gave the business a workable quote path and clearer day-to-day controls.
           </FadeIn>
         </div>
       </section>
@@ -474,10 +470,10 @@ export default function MMSCaseStudyPage() {
       <section className="py-24 md:py-32 bg-steel" aria-label="Full case study">
         <FadeIn className="max-w-4xl mx-auto text-center px-5 md:px-10">
           <h3 className="text-2xl md:text-3xl font-semibold mb-6">
-            Want the Full Technical Deep Dive?
+            Want the full technical breakdown?
           </h3>
           <p className="text-lg text-jamarq-gray leading-relaxed mb-8 max-w-2xl mx-auto">
-            A detailed breakdown including architecture decisions, database design, content modeling, and front-end performance techniques is available upon request.
+            A detailed breakdown of the architecture, database design, content model, and front-end performance work is available on request.
           </p>
           <ContactModalTrigger
             prefill={{

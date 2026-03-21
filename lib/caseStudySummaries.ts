@@ -4,17 +4,17 @@
 export const caseStudySummaries = {
   trbg: {
     title: "Thunder Road Bar & Grill",
-    micro: "A custom rebuild of a neighborhood restaurant's digital system. Fast, intentional React architecture with a clean menu experience and a simple admin workflow for weekly specials. Load times improved from 4–6 seconds to under 1.5 seconds.",
-    hoverShort: "Custom-built website and admin system for a local bar & grill. Faster load times, clearer menus, and a 5-minute weekly update workflow.",
+    micro: "Custom rebuild of a neighborhood restaurant's site and admin system. Clearer menu structure, faster mobile performance, and a simpler weekly update workflow.",
+    hoverShort: "Custom website and admin system for a local bar and grill. Clearer menus, faster load times, and a five-minute weekly update workflow.",
     hoverUltraShort: "Custom site + admin panel. Fast, clear, easy to update.",
     slug: "trbg",
     category: "Web Development"
   },
   mms: {
     title: "Midway Mobile Storage",
-    micro: "A complete rebuild of a storage company's digital platform with a custom unit inventory system, automated quote workflow, and a 98/100 performance score. Built November 2025 with the first online quote 16 days later. Clearer information, blazing-fast load times, and an owner-friendly admin panel.",
-    hoverShort: "Custom-built site with storage unit inventory, quote workflow, and 98/100 performance. First online quote within 16 days.",
-    hoverUltraShort: "Custom site + inventory + quote workflow + elite performance + proven results.",
+    micro: "Complete rebuild of a storage company's site with custom unit inventory, an online quote workflow, and owner-friendly admin tools. Built in November 2025, with the first online quote 16 days later.",
+    hoverShort: "Custom site with unit inventory, quote workflow, and strong performance on shared hosting. First online quote within 16 days.",
+    hoverUltraShort: "Custom site + inventory + quote workflow + strong performance.",
     slug: "mms",
     category: "Web Development"
   },

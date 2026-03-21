@@ -1,6 +1,6 @@
 # Thunder Road Bar & Grill
 
-Custom restaurant website and admin system built for ownership, speed, and weekly menu updates.
+Custom restaurant website and admin system built for control, speed, and weekly menu updates.
 
 Launched November 2025.
 
@@ -52,28 +52,17 @@ This led to a minimal admin interface that prevents errors and reduces time spen
 
 ### User-First Navigation
 
-The public site was restructured around how customers actually use restaurant websites:
-- Menu access prioritized
-- Hours and location immediately visible
-- Fewer pages, clearer sections
-- Mobile navigation simplified
+The public site was restructured around the information restaurant customers look for first: menus, hours, location, reservations, and hiring. The result is fewer decisions, clearer sections, and a simpler mobile path to the information people actually need.
 
 ### Low-Maintenance Architecture
 
-The technology stack was selected for durability and clarity rather than novelty:
-- React frontend for predictable rendering
-- PHP and MySQL backend for straightforward data management
-- Shared hosting deployment without external service dependencies
+The technology stack was selected for durability and clarity rather than novelty. React handles the public experience, PHP and MySQL keep content management straightforward, and the deployment avoids unnecessary external dependencies so the system stays easier to maintain.
 
 The system avoids unnecessary abstractions and favors explicit behavior.
 
 ### Friction Removal
 
-Every feature was evaluated through the lens of effort:
-- Fewer clicks
-- Fewer decisions
-- Faster loads
-- Clear visual hierarchy
+Every feature was reviewed for the effort it adds to both staff and customers. That led to faster menu access, simpler weekly updates, fewer clicks, and clearer visual hierarchy across the public site and admin workflow.
 
 ---
 

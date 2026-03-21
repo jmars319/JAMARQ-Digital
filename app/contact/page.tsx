@@ -7,13 +7,13 @@ import { FadeIn } from "@/components/FadeIn";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Start a project with JAMARQ Digital. Based in Winston-Salem, working nationwide. Clear replies within one business day, no sales team.",
+  description: "Start a project with JAMARQ Digital. Based in Winston-Salem, working nationwide, with replies within one business day.",
   alternates: {
     canonical: "https://jamarq.digital/contact"
   },
   openGraph: {
     title: "Contact",
-    description: "Start a project with JAMARQ Digital. Based in Winston-Salem, working nationwide. Clear replies within one business day, no sales team.",
+    description: "Start a project with JAMARQ Digital. Based in Winston-Salem, working nationwide, with replies within one business day.",
     url: "https://jamarq.digital/contact",
     type: "website",
     images: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Contact",
-    description: "Start a project with JAMARQ Digital. Based in Winston-Salem, working nationwide. Clear replies within one business day, no sales team.",
+    description: "Start a project with JAMARQ Digital. Based in Winston-Salem, working nationwide, with replies within one business day.",
     images: ["https://jamarq.digital/og.jpg"],
     creator: "@jamarqdigital",
     site: "@jamarqdigital"
@@ -59,7 +59,7 @@ export default function ContactPage() {
     {
       number: "01",
       title: "Send details",
-      copy: "Tell me what you need—project scope, timeline, budget range, and any context."
+      copy: "Tell me what you need, your timing, budget range, and any context that matters."
     },
     {
       number: "02",
@@ -69,7 +69,7 @@ export default function ContactPage() {
     {
       number: "03",
       title: "Plan the project",
-      copy: "We align on deliverables, timeline, and pricing. No work begins without your written approval."
+      copy: "We align on deliverables, timeline, and pricing. No work starts without written approval."
     }
   ];
 
@@ -94,10 +94,10 @@ export default function ContactPage() {
             <p className="text-xs uppercase tracking-[0.35em] text-jamarq-gray">Contact</p>
             <h1 className="text-4xl md:text-5xl font-semibold leading-tight">Start a project or request a walkthrough.</h1>
             <p className="text-lg text-jamarq-gray leading-relaxed">
-              You’ll hear back within one business day. No sales team—just me. Provide as much context as you can and I’ll map the plan, timeline, and price range with you.
+              You’ll hear back within one business day. No sales team, just me. Share as much context as you can and I’ll map the likely scope, timeline, and price range with you.
             </p>
             <p className="text-sm text-jamarq-gray">
-              Based in Winston-Salem, working nationwide. <Link href="/mission" className="link-underline text-jamarq-cyan">Read the mission</Link>
+              Based in Winston-Salem, working nationwide. <Link href="/mission" className="link-underline text-jamarq-cyan">Read the principles</Link>
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <ContactModalTrigger
@@ -117,7 +117,7 @@ export default function ContactPage() {
           <FadeIn delay={150} className="bg-jamarq-black/40 border border-slate/60 rounded-3xl p-6 space-y-4">
             <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Response time</p>
             <p className="text-lg font-semibold text-mist">Within one business day</p>
-            <p className="text-jamarq-gray text-sm">I reply personally. No handoffs, no waiting on account managers.</p>
+            <p className="text-jamarq-gray text-sm">I reply personally. No handoffs or account managers.</p>
             <div className="border-t border-slate/60 pt-4">
               <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Availability</p>
               <p className="text-mist">Next slot opens in ~2 weeks</p>
@@ -130,7 +130,7 @@ export default function ContactPage() {
       <section className="py-24 md:py-32 bg-steel" aria-label="Contact options">
         <div className="max-w-6xl mx-auto px-5 md:px-10 grid gap-10 md:grid-cols-2">
           <FadeIn className="space-y-6">
-            <h2 className="text-3xl font-semibold">Choose what fits</h2>
+            <h2 className="text-3xl font-semibold">Choose the right contact path</h2>
             <div className="p-6 rounded-2xl border border-slate/60 bg-jamarq-black/30 space-y-4">
               <p className="text-sm uppercase tracking-[0.3em] text-jamarq-gray">New projects</p>
               <EmailCopyButton email="hello@jamarq.digital" />
@@ -156,7 +156,7 @@ export default function ContactPage() {
           <FadeIn delay={150} className="space-y-6">
             <h2 className="text-3xl font-semibold">What to include</h2>
             <p className="text-jamarq-gray leading-relaxed">
-              Use this structure to keep things moving quickly. Bullet points are totally fine.
+              A few bullet points are enough to keep things moving.
             </p>
             <div className="p-6 rounded-2xl border border-slate/60 bg-jamarq-black/30">
               <ul className="space-y-3 text-jamarq-gray">
@@ -197,16 +197,14 @@ export default function ContactPage() {
       <section className="py-24 md:py-32 bg-steel" aria-label="Contact CTA">
         <FadeIn className="max-w-5xl mx-auto px-5 md:px-10 rounded-3xl border border-slate/60 bg-jamarq-black/30 p-10 space-y-4 text-center">
           <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Ready?</p>
-          <h2 className="text-3xl md:text-4xl font-semibold">Tell me what you need. I’ll respond with a plan.</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold">Tell me what you need. I’ll reply with the next step.</h2>
           <ContactModalTrigger
             prefill={{ subject: "Contact CTA", source: "contact-cta" }}
             className="inline-flex items-center justify-center bg-jamarq-cyan text-jamarq-black px-8 py-3 rounded-md font-semibold text-base hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-jamarq-cyan focus:ring-offset-2 focus:ring-offset-steel"
           >
             Send a message
           </ContactModalTrigger>
-          <p className="text-sm text-jamarq-gray">
-            Prefer a different channel? <Link href="/process" className="link-underline text-jamarq-cyan">See the process</Link> first.
-          </p>
+          <p className="text-sm text-jamarq-gray">Prefer email instead? Use the contact options above.</p>
         </FadeIn>
       </section>
 

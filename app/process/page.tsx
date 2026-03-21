@@ -6,13 +6,13 @@ import { FadeIn } from "@/components/FadeIn";
 
 export const metadata: Metadata = {
   title: "Process",
-  description: "A clear, structured process for every project: discovery, build, launch, and support with predictable timelines.",
+  description: "A clear process for scoping, building, launching, and supporting JAMARQ projects.",
   alternates: {
     canonical: "https://jamarq.digital/process"
   },
   openGraph: {
     title: "Process",
-    description: "A clear, structured process for every project: discovery, build, launch, and support with predictable timelines.",
+    description: "A clear process for scoping, building, launching, and supporting JAMARQ projects.",
     url: "https://jamarq.digital/process",
     type: "website",
     images: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Process",
-    description: "A clear, structured process for every project: discovery, build, launch, and support with predictable timelines.",
+    description: "A clear process for scoping, building, launching, and supporting JAMARQ projects.",
     images: ["https://jamarq.digital/og.jpg"],
     creator: "@jamarqdigital",
     site: "@jamarqdigital"
@@ -69,18 +69,18 @@ const processSteps: ProcessStep[] = [
   },
   {
     number: "02",
-    title: "Architecture & Design",
+    title: "Structure & Design",
     categories: [
       {
-        heading: "Architecture",
-        items: ["Site map", "Content structure", "Workflows", "Integrations planning"]
+        heading: "Structure",
+        items: ["Site structure", "Content plan", "Required workflows", "Integration needs"]
       },
       {
-        heading: "Design",
-        items: ["Layout direction", "Typography system", "Spacing rules", "Brand implementation"]
+        heading: "Design direction",
+        items: ["Layout direction", "Navigation patterns", "Responsive behavior", "Brand-aligned implementation"]
       }
     ],
-    highlight: "A blueprint for the build."
+    highlight: "A clear blueprint before build work starts."
   },
   {
     number: "03",
@@ -89,10 +89,10 @@ const processSteps: ProcessStep[] = [
       {
         heading: "What happens",
         items: [
-          "Custom build using clean, modern code",
-          "Responsive behavior",
-          "Performance optimization",
-          "Accessibility considerations"
+          "Custom build with clean, maintainable code",
+          "Responsive layouts tested across devices",
+          "Performance checks",
+          "Accessibility review"
         ]
       }
     ],
@@ -129,11 +129,38 @@ const processSteps: ProcessStep[] = [
         items: ["Technical questions answered", "Minor fixes handled", "Content corrections made", "Stability checks performed"]
       }
     ],
-    highlight: "A smooth transition to ownership.",
+    highlight: "A clear handoff and support path.",
     cta: {
-      href: "/maintenance",
-      label: "View Maintenance Plans →"
+      href: "/contact",
+      label: "Ask about support →"
     }
+  }
+];
+
+const processSafeguards = [
+  {
+    title: "Scope creep",
+    copy: "Scope is defined before build work starts."
+  },
+  {
+    title: "Miscommunication",
+    copy: "Requirements and decisions are written down."
+  },
+  {
+    title: "Missed deadlines",
+    copy: "Timeline and checkpoints are set early."
+  },
+  {
+    title: "Surprise costs",
+    copy: "Changes are discussed before they change budget."
+  },
+  {
+    title: "Unclear expectations",
+    copy: "Deliverables and responsibilities are defined up front."
+  },
+  {
+    title: "Post-launch confusion",
+    copy: "Handoff and support are part of the plan."
   }
 ];
 
@@ -211,7 +238,7 @@ export default function ProcessPage() {
             Clear milestones. Predictable timelines. Decisions stay with you.
           </p>
           <p className="text-sm text-jamarq-gray">
-            Based in Winston-Salem, working nationwide. <Link href="/mission" className="link-underline text-jamarq-cyan">Read the mission</Link>
+            Based in Winston-Salem, working nationwide. <Link href="/mission" className="link-underline text-jamarq-cyan">Read the principles</Link>
           </p>
           <Link href="/" className="link-underline text-sm text-jamarq-cyan">
             ← Back to Home
@@ -305,42 +332,12 @@ export default function ProcessPage() {
             What This Process Prevents
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-jamarq-gray">
-            <div className="group relative p-6 bg-jamarq-black rounded-lg text-center cursor-pointer transition-all duration-300 hover:bg-slate hover:scale-105 hover:shadow-lg">
-              <p className="font-semibold text-mist group-hover:text-jamarq-cyan transition-colors">Scope creep</p>
-              <div className="absolute inset-0 bg-jamarq-black rounded-lg p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <p className="text-sm text-jamarq-gray leading-relaxed">Clear boundaries set upfront. No unexpected features or expanding requirements after agreement.</p>
+            {processSafeguards.map((item) => (
+              <div key={item.title} className="p-6 bg-jamarq-black rounded-lg border border-slate/60 space-y-3">
+                <p className="font-semibold text-mist">{item.title}</p>
+                <p className="text-sm leading-relaxed">{item.copy}</p>
               </div>
-            </div>
-            <div className="group relative p-6 bg-jamarq-black rounded-lg text-center cursor-pointer transition-all duration-300 hover:bg-slate hover:scale-105 hover:shadow-lg">
-              <p className="font-semibold text-mist group-hover:text-jamarq-cyan transition-colors">Miscommunication</p>
-              <div className="absolute inset-0 bg-jamarq-black rounded-lg p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <p className="text-sm text-jamarq-gray leading-relaxed">Everything documented. Every decision confirmed. No assumptions about what you want or need.</p>
-              </div>
-            </div>
-            <div className="group relative p-6 bg-jamarq-black rounded-lg text-center cursor-pointer transition-all duration-300 hover:bg-slate hover:scale-105 hover:shadow-lg">
-              <p className="font-semibold text-mist group-hover:text-jamarq-cyan transition-colors">Missed deadlines</p>
-              <div className="absolute inset-0 bg-jamarq-black rounded-lg p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <p className="text-sm text-jamarq-gray leading-relaxed">Realistic timelines with buffer built in. Milestone-based progress tracking keeps the project on schedule.</p>
-              </div>
-            </div>
-            <div className="group relative p-6 bg-jamarq-black rounded-lg text-center cursor-pointer transition-all duration-300 hover:bg-slate hover:scale-105 hover:shadow-lg">
-              <p className="font-semibold text-mist group-hover:text-jamarq-cyan transition-colors">Surprise costs</p>
-              <div className="absolute inset-0 bg-jamarq-black rounded-lg p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <p className="text-sm text-jamarq-gray leading-relaxed">Fixed pricing based on defined scope. Any changes discussed and approved before adding to budget.</p>
-              </div>
-            </div>
-            <div className="group relative p-6 bg-jamarq-black rounded-lg text-center cursor-pointer transition-all duration-300 hover:bg-slate hover:scale-105 hover:shadow-lg">
-              <p className="font-semibold text-mist group-hover:text-jamarq-cyan transition-colors">Unclear expectations</p>
-              <div className="absolute inset-0 bg-jamarq-black rounded-lg p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <p className="text-sm text-jamarq-gray leading-relaxed">Detailed project brief. Defined deliverables. You know exactly what you&rsquo;re getting at every stage.</p>
-              </div>
-            </div>
-            <div className="group relative p-6 bg-jamarq-black rounded-lg text-center cursor-pointer transition-all duration-300 hover:bg-slate hover:scale-105 hover:shadow-lg">
-              <p className="font-semibold text-mist group-hover:text-jamarq-cyan transition-colors">Post-launch confusion</p>
-              <div className="absolute inset-0 bg-jamarq-black rounded-lg p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <p className="text-sm text-jamarq-gray leading-relaxed">Complete documentation and training. Support window included. You&rsquo;ll know how to manage your site.</p>
-              </div>
-            </div>
+            ))}
           </div>
           </div>
         </div>
@@ -361,11 +358,11 @@ export default function ProcessPage() {
               prefill={{ subject: "Process page inquiry", source: "process-cta" }}
               className="inline-block bg-jamarq-cyan text-jamarq-black px-8 py-3 rounded-md font-semibold text-lg hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-jamarq-cyan focus:ring-offset-2 focus:ring-offset-jamarq-black"
             >
-              Get in Touch
+              Start a Project
             </ContactModalTrigger>
             
             <p className="text-sm text-jamarq-gray">
-              <Link href="/services" className="text-jamarq-cyan hover:text-jamarq-magenta transition-colors">View all services</Link> or <Link href="/contact" className="text-jamarq-cyan hover:text-jamarq-magenta transition-colors">see more contact options</Link>
+              <Link href="/services" className="text-jamarq-cyan hover:text-jamarq-magenta transition-colors">View services</Link> or <Link href="/contact" className="text-jamarq-cyan hover:text-jamarq-magenta transition-colors">see contact options</Link>
             </p>
           </div>
         </div>

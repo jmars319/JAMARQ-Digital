@@ -2,9 +2,9 @@ import { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'JAMARQ Digital - Web Development & Creative Services',
+    name: 'JAMARQ Digital - Websites, Rebuilds & Web Systems',
     short_name: 'JAMARQ',
-    description: 'Custom web development, brand identity, and consulting services. Clean, modern digital solutions.',
+    description: 'Websites, rebuilds, and web systems built for clarity, ownership, and long-term use.',
     start_url: '/',
     display: 'standalone',
     background_color: '#0a0a0c',

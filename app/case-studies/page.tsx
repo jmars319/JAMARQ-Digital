@@ -7,7 +7,7 @@ import { FadeIn } from "@/components/FadeIn";
 
 export const metadata: Metadata = {
   title: "Case Studies",
-  description: "Public documentation of JAMARQ Digital builds: challenges, architecture decisions, performance proof, and ownership plans.",
+  description: "Public case studies documenting the problem, build, and outcome across JAMARQ projects.",
   alternates: {
     canonical: "https://jamarq.digital/case-studies"
   },
@@ -63,8 +63,8 @@ export default function CaseStudiesPage() {
   const proofPoints = [
     { label: "Screenshots", value: "Full galleries per project" },
     { label: "Performance", value: "PageSpeed + Lighthouse data" },
-    { label: "Ownership", value: "Infra + handoff documented" },
-    { label: "Support", value: "Launch + maintenance details" }
+    { label: "Admin flows", value: "Tooling and workflow coverage" },
+    { label: "Launch notes", value: "Handoff + support details" }
   ];
 
   return (
@@ -80,7 +80,7 @@ export default function CaseStudiesPage() {
             <p className="text-xs uppercase tracking-[0.35em] text-jamarq-gray">Case studies</p>
             <h1 className="text-4xl md:text-5xl font-semibold leading-tight">Documentation of real, shipped systems.</h1>
             <p className="text-lg text-jamarq-gray leading-relaxed">
-              Each case study includes the challenge, approach, technical stack, and proofs—screenshots, PageSpeed reports, admin flows, and ownership notes. No fluff, no hidden steps.
+              Each case study covers the challenge, the build, and the technical details: screenshots, PageSpeed reports, admin views, and handoff notes. No fluff, no missing steps.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -104,7 +104,7 @@ export default function CaseStudiesPage() {
               <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray mb-3">Live documentation</p>
               <h2 className="text-3xl md:text-4xl font-semibold">Explore the builds</h2>
               <p className="text-jamarq-gray max-w-3xl">
-                These are public excerpts. If you need deeper architecture diagrams, admin flows, or QA notes, just ask—I have the full decks ready.
+                These are public excerpts. If you need architecture notes, admin flows, or QA details, ask and JAMARQ can walk you through them.
               </p>
             </div>
             <ContactModalTrigger
@@ -122,7 +122,6 @@ export default function CaseStudiesPage() {
                   aria-label={`${study.title} case study`}
                   className="group block h-full p-8 rounded-3xl border border-slate/60 bg-jamarq-black/30 hover:border-jamarq-cyan transition-all duration-300"
                 >
-                  <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray mb-3">{study.category}</p>
                   <h3 className="text-2xl font-semibold mb-3 group-hover:text-jamarq-cyan transition-colors">{study.title}</h3>
                   <p className="text-jamarq-gray text-sm leading-relaxed mb-6">{study.micro}</p>
                   <div className="flex items-center text-jamarq-cyan group-hover:text-jamarq-magenta transition-colors font-semibold">
@@ -138,10 +137,10 @@ export default function CaseStudiesPage() {
       {/* Private previews + CTA */}
       <section className="py-24 md:py-32" aria-label="Additional docs">
         <FadeIn className="max-w-5xl mx-auto px-5 md:px-10 rounded-3xl border border-slate/60 bg-jamarq-black/30 p-10 space-y-4">
-          <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Need more?</p>
-          <h2 className="text-3xl md:text-4xl font-semibold">Private previews and deeper dives.</h2>
+          <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Private previews</p>
+          <h2 className="text-3xl md:text-4xl font-semibold">Private previews available.</h2>
           <p className="text-lg text-jamarq-gray leading-relaxed">
-            Some work is NDA-restricted or still launching. I can share private screenshots, admin flows, monitoring dashboards, and technical breakdowns on a call.
+            Some work is under NDA or still rolling out. We can share private screenshots, admin flows, and technical walkthroughs on a call.
           </p>
           <ContactModalTrigger
             prefill={{ subject: "Private case study preview", source: "case-studies-preview" }}

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Case Studies",
-    description: "Detailed breakdowns of custom web systems with screenshots, PageSpeed data, and technical notes.",
+    description: "Detailed breakdowns of JAMARQ websites, rebuilds, and systems with screenshots and technical notes.",
     url: "https://jamarq.digital/case-studies",
     type: "website",
     images: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Case Studies",
-    description: "Detailed breakdowns of custom web systems with screenshots, PageSpeed data, and technical notes.",
+    description: "Detailed breakdowns of JAMARQ websites, rebuilds, and systems with screenshots and technical notes.",
     images: ["https://jamarq.digital/og.jpg"],
     creator: "@jamarqdigital",
     site: "@jamarqdigital"
@@ -78,7 +78,7 @@ export default function CaseStudiesPage() {
         <div className="max-w-6xl mx-auto px-5 md:px-10 space-y-8">
           <div className="space-y-4 max-w-4xl">
             <p className="text-xs uppercase tracking-[0.35em] text-jamarq-gray">Case studies</p>
-            <h1 className="text-4xl md:text-5xl font-semibold leading-tight">Documentation of real, shipped systems.</h1>
+            <h1 className="text-4xl md:text-5xl font-semibold leading-tight">Documentation of real websites, rebuilds, and systems.</h1>
             <p className="text-lg text-jamarq-gray leading-relaxed">
               Each case study covers the challenge, the build, and the technical details: screenshots, PageSpeed reports, admin views, and handoff notes. No fluff, no missing steps.
             </p>

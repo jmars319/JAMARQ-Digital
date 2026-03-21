@@ -38,7 +38,7 @@ export default function ServicesPage() {
   const serviceStructuredData = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Custom Websites and Digital Systems",
+    name: "Custom Websites, Rebuilds, and Web Systems",
     provider: {
       "@type": "Organization",
       name: "JAMARQ Digital",
@@ -50,7 +50,8 @@ export default function ServicesPage() {
     },
     serviceType: [
       "Custom websites",
-      "Digital systems",
+      "Website rebuilds",
+      "Web systems",
       "Operational tooling",
       "Ongoing support"
     ]
@@ -73,7 +74,7 @@ export default function ServicesPage() {
         name: "Do you work outside Winston-Salem?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. JAMARQ is based in Winston-Salem and works with teams nationwide."
+          text: "Yes. JAMARQ is based in Winston-Salem and works with independent businesses and established teams nationwide."
         }
       },
       {
@@ -120,7 +121,7 @@ export default function ServicesPage() {
       ]
     },
     {
-      title: "Digital Systems & Integrations",
+      title: "Systems & Integrations",
       description:
         "Quote workflows, dashboards, inventory systems, and admin tooling built around day-to-day operations.",
       items: [
@@ -358,7 +359,7 @@ export default function ServicesPage() {
             <div className="p-6 rounded-2xl border border-slate/60 bg-jamarq-black/20">
               <h3 className="text-xl font-semibold mb-2">Do you work outside Winston-Salem?</h3>
               <p className="text-jamarq-gray leading-relaxed">
-                Yes. JAMARQ is based in Winston-Salem and works with teams nationwide.
+                Yes. JAMARQ is based in Winston-Salem and works with independent businesses and established teams nationwide.
               </p>
             </div>
             <div className="p-6 rounded-2xl border border-slate/60 bg-jamarq-black/20">

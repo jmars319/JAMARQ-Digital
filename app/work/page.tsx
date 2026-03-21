@@ -63,7 +63,7 @@ export default function WorkPage() {
   const heroStats = [
     { label: "Performance snapshot", value: "Avg 97/100 desktop, 89/100 mobile (MMH, TRBG, MMS)" },
     { label: "Launch-to-first result", value: "Day 2 (MMH), Week 1 (TRBG), Day 16 (MMS)" },
-    { label: "Scope", value: "Custom websites, owner-ready admin systems, mobile parity" },
+    { label: "Scope", value: "Websites, rebuilds, admin systems, mobile parity" },
     { label: "Stack", value: "Next.js, React, PHP APIs, Tailwind, SendGrid" }
   ];
 
@@ -94,10 +94,10 @@ export default function WorkPage() {
           <div className="space-y-6">
             <p className="text-xs uppercase tracking-[0.35em] text-jamarq-gray">Selected work</p>
             <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
-              Selected work for independent businesses and established teams.
+              Selected work across websites, rebuilds, and systems.
             </h1>
             <p className="text-lg text-jamarq-gray leading-relaxed">
-              These projects cover custom websites, rebuilds, and supporting systems. Each one is documented with real outcomes, technical detail, and a clear handoff.
+              Work for independent businesses and established teams across custom websites, rebuilds, and supporting systems. Each project is documented with real outcomes and technical detail.
             </p>
             <p className="text-sm text-jamarq-gray">
               See how the principles show up in the work: <Link href="/mission" className="link-underline text-jamarq-cyan">Read the principles</Link>

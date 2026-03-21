@@ -94,7 +94,7 @@ export default function ContactPage() {
             <p className="text-xs uppercase tracking-[0.35em] text-jamarq-gray">Contact</p>
             <h1 className="text-4xl md:text-5xl font-semibold leading-tight">Start a project or request a walkthrough.</h1>
             <p className="text-lg text-jamarq-gray leading-relaxed">
-              You’ll hear back within one business day. No sales team, just me. Share as much context as you can and I’ll map the likely scope, timeline, and price range with you.
+              Whether you need a new site, a rebuild, or something behind the site, you’ll hear back within one business day. No sales team, just me. Share as much context as you can and I’ll map the likely scope, timeline, and price range with you.
             </p>
             <p className="text-sm text-jamarq-gray">
               Based in Winston-Salem, working nationwide. <Link href="/mission" className="link-underline text-jamarq-cyan">Read the principles</Link>

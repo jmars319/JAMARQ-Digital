@@ -23,15 +23,9 @@ export default function Header() {
               className="object-contain"
             />
           </div>
-          <div className="relative hidden sm:block h-8 w-[160px]">
-            <Image
-              src="/assets/logos/wordmark-dark.png"
-              alt="JAMARQ"
-              fill
-              sizes="160px"
-              className="object-contain"
-            />
-          </div>
+          <span className="hidden sm:block text-sm md:text-base font-semibold tracking-[0.2em] uppercase text-jamarq-white">
+            JAMARQ Digital
+          </span>
         </Link>
 
         {/* Desktop Navigation */}

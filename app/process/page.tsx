@@ -232,10 +232,10 @@ export default function ProcessPage() {
       >
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-semibold mb-6">
-            A clean, structured process.
+            How JAMARQ works from scope to launch.
           </h1>
           <p className="text-xl md:text-2xl text-mist mb-6">
-            Clear milestones. Predictable timelines. Decisions stay with you.
+            Clear milestones. Predictable timelines. Enough structure to reduce risk.
           </p>
           <p className="text-sm text-jamarq-gray">
             Based in Winston-Salem, working nationwide. <Link href="/mission" className="link-underline text-jamarq-cyan">Read the principles</Link>

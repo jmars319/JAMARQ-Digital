@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'JAMARQ Digital - Websites, Rebuilds & Web Systems',
     short_name: 'JAMARQ',
-    description: 'Websites, rebuilds, and web systems built for clarity, ownership, and long-term use.',
+    description: 'Websites, rebuilds, and web systems that work and hold up over time.',
     start_url: '/',
     display: 'standalone',
     background_color: '#0a0a0c',

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s | JAMARQ Digital"
   },
   description:
-    "JAMARQ Digital builds websites that work, fixes the ones that do not, and creates the systems behind them. Based in Winston-Salem, serving independent businesses and established teams with websites, rebuilds, and web systems built for clarity, clear ownership, and long-term use.",
+    "JAMARQ Digital builds websites that work, fixes the ones that do not, and creates the systems behind them. Based in Winston-Salem, serving independent businesses and established teams.",
   keywords: [
     "web development Winston-Salem NC",
     "custom website design Winston-Salem",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     siteName: "JAMARQ Digital",
     title: "JAMARQ Digital | Websites, Rebuilds & Web Systems | Winston-Salem",
     description:
-      "JAMARQ Digital builds websites that work, fixes the ones that do not, and creates the systems behind them. Based in Winston-Salem, serving independent businesses and established teams with websites, rebuilds, and web systems built for clarity, clear ownership, and long-term use.",
+      "JAMARQ Digital builds websites that work, fixes the ones that do not, and creates the systems behind them. Based in Winston-Salem, serving independent businesses and established teams.",
     images: [
       {
         url: "/og.jpg",
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "JAMARQ Digital | Websites, Rebuilds & Web Systems | Winston-Salem",
     description:
-      "JAMARQ Digital builds websites that work, fixes the ones that do not, and creates the systems behind them. Based in Winston-Salem, serving independent businesses and established teams with websites, rebuilds, and web systems built for clarity, clear ownership, and long-term use.",
+      "JAMARQ Digital builds websites that work, fixes the ones that do not, and creates the systems behind them. Based in Winston-Salem, serving independent businesses and established teams.",
     images: ["/og.jpg"],
     creator: "@jamarqdigital",
     site: "@jamarqdigital",

@@ -2,6 +2,7 @@
 
 import type { ButtonHTMLAttributes, ReactNode } from "react";
 import { useContactModal, type ContactModalOptions } from "./ContactModalProvider";
+import { loadContactModal } from "./contactModalLoader";
 
 interface ContactModalTriggerProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
@@ -16,6 +17,18 @@ export function ContactModalTrigger({ children, prefill, className = "", ...rest
       type="button"
       {...rest}
       className={className}
+      onPointerEnter={(event) => {
+        rest.onPointerEnter?.(event);
+        void loadContactModal();
+      }}
+      onFocus={(event) => {
+        rest.onFocus?.(event);
+        void loadContactModal();
+      }}
+      onTouchStart={(event) => {
+        rest.onTouchStart?.(event);
+        void loadContactModal();
+      }}
       onClick={(event) => {
         rest.onClick?.(event);
         if (event.defaultPrevented) {

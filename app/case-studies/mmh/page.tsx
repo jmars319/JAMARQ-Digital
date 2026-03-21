@@ -6,7 +6,7 @@ import { mmhCaseStudyContent } from "@/lib/mmhCaseStudyContent";
 import { getMMHScreenshotGroups } from "@/lib/mmhScreenshots";
 import { buildPageSpeedReportUrl } from "@/lib/pageSpeed";
 import { ContactModalTrigger } from "@/components/contact/ContactModalTrigger";
-import { FadeIn } from "@/components/FadeIn";
+import { Reveal } from "@/components/Reveal";
 import { ScrollProgressBar } from "@/components/ScrollProgressBar";
 
 const heroDescription = mmhCaseStudyContent.hero.summary[0];
@@ -143,7 +143,7 @@ export default function MMHCaseStudyPage() {
 
       {/* Hero Section */}
       <section className="min-h-[60vh] flex items-center justify-center px-5 md:px-10 pt-32 md:pt-40 pb-24" aria-label="Case study hero">
-        <FadeIn className="w-full">
+        <Reveal className="w-full">
           <div className="text-center max-w-4xl mx-auto space-y-4">
             <p className="text-sm text-jamarq-cyan uppercase tracking-wider">Case Study</p>
             <h1 className="text-4xl md:text-5xl font-semibold">{mmhCaseStudyContent.hero.title}</h1>
@@ -189,29 +189,29 @@ export default function MMHCaseStudyPage() {
               </div>
             </div>
           </div>
-        </FadeIn>
+        </Reveal>
       </section>
 
       {/* Project Overview */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Project overview">
         <div className="max-w-5xl mx-auto px-5 md:px-10 space-y-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <FadeIn className="space-y-4">
+            <Reveal className="space-y-4">
               <h2 className="text-3xl font-semibold">{mmhCaseStudyContent.projectOverview.heading}</h2>
               <div className="space-y-3 text-lg text-jamarq-gray">
                 {mmhCaseStudyContent.projectOverview.paragraphs.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}
               </div>
-            </FadeIn>
-            <FadeIn delay={150} className="grid grid-cols-1 gap-4">
+            </Reveal>
+            <Reveal delay={150} className="grid grid-cols-1 gap-4">
               {mmhCaseStudyContent.projectOverview.facts.map((fact, index) => (
-                <FadeIn key={fact.label} delay={index * 80} className="p-4 rounded-lg border border-slate bg-jamarq-black/40">
+                <Reveal key={fact.label} delay={index * 80} className="p-4 rounded-lg border border-slate bg-jamarq-black/40">
                   <p className="text-xs uppercase tracking-widest text-jamarq-cyan">{fact.label}</p>
                   <p className="text-lg text-mist font-semibold">{fact.value}</p>
-                </FadeIn>
+                </Reveal>
               ))}
-            </FadeIn>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -219,7 +219,7 @@ export default function MMHCaseStudyPage() {
       {/* Screenshots Section */}
       <section className="py-24 md:py-32" aria-label="Screenshots and technical proof">
         <div className="max-w-6xl mx-auto px-5 md:px-10">
-          <FadeIn className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+          <Reveal className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
             <div>
               <p className="text-sm uppercase tracking-wider text-jamarq-cyan mb-2">Screenshots</p>
               <h2 className="text-3xl md:text-4xl font-semibold">Operational Coverage</h2>
@@ -227,17 +227,17 @@ export default function MMHCaseStudyPage() {
             <p className="text-jamarq-gray max-w-2xl">
               Documentation covering performance results, public pages, admin controls, and mobile parity.
             </p>
-          </FadeIn>
-          <FadeIn delay={150}>
+          </Reveal>
+          <Reveal delay={150}>
             <CaseStudyScreenshotTabs tabs={screenshotTabs} defaultTabId="pagespeed" />
-          </FadeIn>
+          </Reveal>
         </div>
       </section>
 
       {/* Challenges and Objectives */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Challenges and objectives">
         <div className="max-w-5xl mx-auto px-5 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-12">
-          <FadeIn>
+          <Reveal>
             <h2 className="text-3xl font-semibold mb-6">{mmhCaseStudyContent.challenge.heading}</h2>
             <p className="text-jamarq-gray text-lg mb-6 leading-relaxed">{mmhCaseStudyContent.challenge.intro}</p>
             <ul className="space-y-3 text-jamarq-gray">
@@ -249,8 +249,8 @@ export default function MMHCaseStudyPage() {
               ))}
             </ul>
             <p className="text-jamarq-gray text-lg mt-6">{mmhCaseStudyContent.challenge.closing}</p>
-          </FadeIn>
-          <FadeIn delay={150}>
+          </Reveal>
+          <Reveal delay={150}>
             <h2 className="text-3xl font-semibold mb-6">{mmhCaseStudyContent.objectives.heading}</h2>
             <ul className="space-y-3 text-jamarq-gray">
               {mmhCaseStudyContent.objectives.bullets.map((item) => (
@@ -260,31 +260,31 @@ export default function MMHCaseStudyPage() {
                 </li>
               ))}
             </ul>
-          </FadeIn>
+          </Reveal>
         </div>
       </section>
 
       {/* Approach */}
       <section className="py-24 md:py-32" aria-label="Approach">
-        <FadeIn className="max-w-4xl mx-auto px-5 md:px-10">
+        <Reveal className="max-w-4xl mx-auto px-5 md:px-10">
           <h2 className="text-3xl md:text-4xl font-semibold mb-8">{mmhCaseStudyContent.approach.heading}</h2>
           <div className="space-y-6 text-lg text-jamarq-gray leading-relaxed">
             {mmhCaseStudyContent.approach.paragraphs.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
-        </FadeIn>
+        </Reveal>
       </section>
 
       {/* Solution */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Solution details">
         <div className="max-w-6xl mx-auto px-5 md:px-10">
-          <FadeIn className="text-center mb-12">
+          <Reveal className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-semibold">{mmhCaseStudyContent.solution.heading}</h2>
-          </FadeIn>
+          </Reveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {mmhCaseStudyContent.solution.sections.map((section, index) => (
-              <FadeIn key={section.title} delay={index * 120} className="p-6 rounded-xl border border-slate bg-jamarq-black/40 space-y-4">
+              <Reveal key={section.title} delay={index * 120} className="p-6 rounded-xl border border-slate bg-jamarq-black/40 space-y-4">
                 <h3 className="text-2xl font-semibold text-mist">{section.title}</h3>
                 <ul className="space-y-3 text-jamarq-gray">
                   {section.items.map((item) => (
@@ -294,7 +294,7 @@ export default function MMHCaseStudyPage() {
                     </li>
                   ))}
                 </ul>
-              </FadeIn>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -303,12 +303,12 @@ export default function MMHCaseStudyPage() {
       {/* Results */}
       <section className="py-24 md:py-32" aria-label="Results">
         <div className="max-w-5xl mx-auto px-5 md:px-10">
-          <FadeIn className="mb-10">
+          <Reveal className="mb-10">
             <h2 className="text-3xl md:text-4xl font-semibold">{mmhCaseStudyContent.results.heading}</h2>
-          </FadeIn>
+          </Reveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {mmhCaseStudyContent.results.categories.map((category, index) => (
-              <FadeIn key={category.title} delay={index * 120} className="p-6 border border-slate rounded-xl bg-jamarq-black/40">
+              <Reveal key={category.title} delay={index * 120} className="p-6 border border-slate rounded-xl bg-jamarq-black/40">
                 <h3 className="text-2xl font-semibold text-mist mb-4">{category.title}</h3>
                 <ul className="space-y-3 text-jamarq-gray text-base">
                   {category.items.map((item) => (
@@ -318,7 +318,7 @@ export default function MMHCaseStudyPage() {
                     </li>
                   ))}
                 </ul>
-              </FadeIn>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -326,7 +326,7 @@ export default function MMHCaseStudyPage() {
 
       {/* Key Takeaways */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Key takeaways">
-        <FadeIn className="max-w-4xl mx-auto px-5 md:px-10">
+        <Reveal className="max-w-4xl mx-auto px-5 md:px-10">
           <h2 className="text-3xl md:text-4xl font-semibold mb-8">{mmhCaseStudyContent.keyTakeaways.heading}</h2>
           <ul className="space-y-4 text-lg text-jamarq-gray leading-relaxed">
             {mmhCaseStudyContent.keyTakeaways.bullets.map((item) => (
@@ -336,12 +336,12 @@ export default function MMHCaseStudyPage() {
               </li>
             ))}
           </ul>
-        </FadeIn>
+        </Reveal>
       </section>
 
       {/* Full Case Study CTA */}
       <section className="py-24 md:py-32" aria-label="Full case study">
-        <FadeIn className="max-w-4xl mx-auto text-center px-5 md:px-10">
+        <Reveal className="max-w-4xl mx-auto text-center px-5 md:px-10">
           <h3 className="text-2xl md:text-3xl font-semibold mb-6">Want the full technical breakdown?</h3>
           <p className="text-lg text-jamarq-gray leading-relaxed mb-8 max-w-2xl mx-auto">
             Detailed architecture decisions, database schema, reservation logic, and deployment checklists are available on request.
@@ -356,12 +356,12 @@ export default function MMHCaseStudyPage() {
           >
             Request Full Case Study
           </ContactModalTrigger>
-        </FadeIn>
+        </Reveal>
       </section>
 
       {/* Navigation CTA */}
       <section className="py-16" aria-label="Navigation">
-        <FadeIn className="max-w-4xl mx-auto px-5 md:px-10">
+        <Reveal className="max-w-4xl mx-auto px-5 md:px-10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 border-t border-slate pt-8">
             <Link href="/case-studies/mms" className="text-jamarq-cyan hover:text-jamarq-magenta transition-colors font-semibold">
               ← Previous: Midway Mobile Storage
@@ -370,7 +370,7 @@ export default function MMHCaseStudyPage() {
               Back to All Work →
             </Link>
           </div>
-        </FadeIn>
+        </Reveal>
       </section>
 
       <Footer />

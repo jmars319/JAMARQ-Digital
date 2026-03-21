@@ -3,7 +3,7 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 import { ContactModalTrigger } from "@/components/contact/ContactModalTrigger";
 import { EmailCopyButton } from "@/components/contact/EmailCopyButton";
-import { FadeIn } from "@/components/FadeIn";
+import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -90,7 +90,7 @@ export default function ContactPage() {
       {/* Hero */}
       <section className="pt-32 pb-24" aria-label="Contact hero">
         <div className="max-w-6xl mx-auto px-5 md:px-10 grid gap-12 md:grid-cols-[minmax(0,1fr)_360px] items-start">
-          <FadeIn className="space-y-6">
+          <Reveal className="space-y-6">
             <p className="text-xs uppercase tracking-[0.35em] text-jamarq-gray">Contact</p>
             <h1 className="text-4xl md:text-5xl font-semibold leading-tight">Start a project or request a walkthrough.</h1>
             <p className="text-lg text-jamarq-gray leading-relaxed">
@@ -113,8 +113,8 @@ export default function ContactPage() {
                 See recent work →
               </Link>
             </div>
-          </FadeIn>
-          <FadeIn delay={150} className="bg-jamarq-black/40 border border-slate/60 rounded-3xl p-6 space-y-4">
+          </Reveal>
+          <Reveal delay={150} className="bg-jamarq-black/40 border border-slate/60 rounded-3xl p-6 space-y-4">
             <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Response time</p>
             <p className="text-lg font-semibold text-mist">Within one business day</p>
             <p className="text-jamarq-gray text-sm">I reply personally. No handoffs or account managers.</p>
@@ -122,14 +122,14 @@ export default function ContactPage() {
               <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Availability</p>
               <p className="text-mist">Next slot opens in ~2 weeks</p>
             </div>
-          </FadeIn>
+          </Reveal>
         </div>
       </section>
 
       {/* Contact options */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Contact options">
         <div className="max-w-6xl mx-auto px-5 md:px-10 grid gap-10 md:grid-cols-2">
-          <FadeIn className="space-y-6">
+          <Reveal className="space-y-6">
             <h2 className="text-3xl font-semibold">Choose the right contact path</h2>
             <div className="p-6 rounded-2xl border border-slate/60 bg-jamarq-black/30 space-y-4">
               <p className="text-sm uppercase tracking-[0.3em] text-jamarq-gray">New projects</p>
@@ -152,8 +152,8 @@ export default function ContactPage() {
               <EmailCopyButton email="support@jamarq.digital" />
               <p className="text-jamarq-gray text-sm">For launched sites and retainers.</p>
             </div>
-          </FadeIn>
-          <FadeIn delay={150} className="space-y-6">
+          </Reveal>
+          <Reveal delay={150} className="space-y-6">
             <h2 className="text-3xl font-semibold">What to include</h2>
             <p className="text-jamarq-gray leading-relaxed">
               A few bullet points are enough to keep things moving.
@@ -171,23 +171,23 @@ export default function ContactPage() {
             <p className="text-sm text-jamarq-gray">
               NDAs are fine. Mention it in your message and I’ll send a standard mutual NDA before sharing work.
             </p>
-          </FadeIn>
+          </Reveal>
         </div>
       </section>
 
       {/* Process overview */}
       <section className="py-24 md:py-32" aria-label="What happens next">
         <div className="max-w-5xl mx-auto px-5 md:px-10 space-y-10">
-          <FadeIn className="text-center">
+          <Reveal className="text-center">
             <h2 className="text-3xl md:text-4xl font-semibold">What happens next</h2>
-          </FadeIn>
+          </Reveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {steps.map((step, index) => (
-              <FadeIn key={step.number} delay={index * 120} className="p-6 rounded-2xl border border-slate/60 bg-jamarq-black/20 space-y-3 text-center">
+              <Reveal key={step.number} delay={index * 120} className="p-6 rounded-2xl border border-slate/60 bg-jamarq-black/20 space-y-3 text-center">
                 <p className="text-jamarq-cyan text-3xl font-semibold">{step.number}</p>
                 <h3 className="text-xl font-semibold">{step.title}</h3>
                 <p className="text-jamarq-gray leading-relaxed">{step.copy}</p>
-              </FadeIn>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -195,7 +195,7 @@ export default function ContactPage() {
 
       {/* CTA */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Contact CTA">
-        <FadeIn className="max-w-5xl mx-auto px-5 md:px-10 rounded-3xl border border-slate/60 bg-jamarq-black/30 p-10 space-y-4 text-center">
+        <Reveal className="max-w-5xl mx-auto px-5 md:px-10 rounded-3xl border border-slate/60 bg-jamarq-black/30 p-10 space-y-4 text-center">
           <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Ready?</p>
           <h2 className="text-3xl md:text-4xl font-semibold">Tell me what you need. I’ll reply with the next step.</h2>
           <ContactModalTrigger
@@ -205,7 +205,7 @@ export default function ContactPage() {
             Send a message
           </ContactModalTrigger>
           <p className="text-sm text-jamarq-gray">Prefer email instead? Use the contact options above.</p>
-        </FadeIn>
+        </Reveal>
       </section>
 
       <Footer />

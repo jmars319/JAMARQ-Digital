@@ -3,7 +3,7 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 import { caseStudySummaries, caseStudyDisplayOrder } from "@/lib/caseStudySummaries";
 import { ContactModalTrigger } from "@/components/contact/ContactModalTrigger";
-import { FadeIn } from "@/components/FadeIn";
+import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "Work",
@@ -121,12 +121,12 @@ export default function WorkPage() {
             <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Snapshot</p>
             <ul className="space-y-4">
               {heroStats.map((stat, index) => (
-                <FadeIn key={stat.label} delay={index * 120}>
+                <Reveal key={stat.label} delay={index * 120}>
                   <li>
                     <p className="text-xs uppercase tracking-[0.2em] text-jamarq-gray">{stat.label}</p>
                     <p className="text-lg font-semibold text-mist">{stat.value}</p>
                   </li>
-                </FadeIn>
+                </Reveal>
               ))}
             </ul>
           </div>
@@ -145,7 +145,7 @@ export default function WorkPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {orderedCaseStudies.map((study, index) => (
-              <FadeIn key={study.slug} delay={index * 120} className="h-full">
+              <Reveal key={study.slug} delay={index * 120} className="h-full">
                 <Link
                   href={`/case-studies/${study.slug}`}
                   aria-label={`${study.title} case study`}
@@ -157,7 +157,7 @@ export default function WorkPage() {
                     View case study →
                   </div>
                 </Link>
-              </FadeIn>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -172,12 +172,12 @@ export default function WorkPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {highlights.map((item, index) => (
-              <FadeIn key={item.title} delay={index * 120}>
+              <Reveal key={item.title} delay={index * 120}>
                 <div className="p-6 rounded-2xl border border-slate/60 bg-jamarq-black/20 space-y-3">
                   <h3 className="text-xl font-semibold">{item.title}</h3>
                   <p className="text-jamarq-gray leading-relaxed">{item.copy}</p>
                 </div>
-              </FadeIn>
+              </Reveal>
             ))}
           </div>
           <div className="rounded-3xl border border-slate/60 bg-jamarq-black/30 p-8 space-y-4">

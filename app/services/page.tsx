@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import { ContactModalTrigger } from "@/components/contact/ContactModalTrigger";
-import { FadeIn } from "@/components/FadeIn";
+import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -228,12 +228,12 @@ export default function ServicesPage() {
             <ul className="space-y-4">
               {snapshot.map((item, index) => (
                 <li key={item.label}>
-                  <FadeIn delay={index * 120}>
+                  <Reveal delay={index * 120}>
                     <div>
                       <p className="text-xs uppercase tracking-[0.2em] text-jamarq-gray">{item.label}</p>
                       <p className="text-lg font-semibold text-mist">{item.value}</p>
                     </div>
-                  </FadeIn>
+                  </Reveal>
                 </li>
               ))}
             </ul>
@@ -250,7 +250,7 @@ export default function ServicesPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {serviceLines.map((service, index) => (
-              <FadeIn key={service.title} delay={index * 120} className="h-full">
+              <Reveal key={service.title} delay={index * 120} className="h-full">
                 <div className="h-full p-6 rounded-2xl border border-slate/60 bg-jamarq-black/30 space-y-4">
                   <h3 className="text-2xl font-semibold">{service.title}</h3>
                   <p className="text-jamarq-gray leading-relaxed">{service.description}</p>
@@ -268,7 +268,7 @@ export default function ServicesPage() {
                     </Link>
                   )}
                 </div>
-              </FadeIn>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -283,22 +283,22 @@ export default function ServicesPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {engagementPillars.map((pillar, index) => (
-              <FadeIn key={pillar.number} delay={index * 120} className="h-full">
+              <Reveal key={pillar.number} delay={index * 120} className="h-full">
                 <div className="h-full p-6 rounded-2xl border border-slate/60 bg-jamarq-black/20 space-y-3">
                   <p className="text-jamarq-cyan text-3xl font-semibold">{pillar.number}</p>
                   <h3 className="text-2xl font-semibold">{pillar.title}</h3>
                   <p className="text-jamarq-gray leading-relaxed">{pillar.copy}</p>
                 </div>
-              </FadeIn>
+              </Reveal>
             ))}
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {differentiators.map((point, index) => (
-              <FadeIn key={point} delay={index * 80} className="h-full">
+              <Reveal key={point} delay={index * 80} className="h-full">
                 <div className="h-full p-6 rounded-2xl border border-slate/40 bg-jamarq-black/10">
                   <p className="text-jamarq-gray leading-relaxed">{point}</p>
                 </div>
-              </FadeIn>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -307,7 +307,7 @@ export default function ServicesPage() {
       {/* Pricing */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Pricing philosophy">
         <div className="max-w-6xl mx-auto px-5 md:px-10 grid gap-12 md:grid-cols-2">
-          <FadeIn className="space-y-4">
+          <Reveal className="space-y-4">
             <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray mb-2">Pricing</p>
             <h2 className="text-3xl md:text-4xl font-semibold">Transparent, scoped, and predictable.</h2>
             <p className="text-jamarq-gray leading-relaxed">
@@ -317,8 +317,8 @@ export default function ServicesPage() {
             <p className="text-jamarq-gray leading-relaxed">
               Ongoing support typically starts at $150/mo and scales with site complexity and support requirements.
             </p>
-          </FadeIn>
-          <FadeIn className="p-6 rounded-2xl border border-slate/60 bg-jamarq-black/20 space-y-4" delay={120}>
+          </Reveal>
+          <Reveal className="p-6 rounded-2xl border border-slate/60 bg-jamarq-black/20 space-y-4" delay={120}>
             <h3 className="text-2xl font-semibold">What impacts price</h3>
             <ul className="space-y-3 text-jamarq-gray">
               <li className="flex gap-3">
@@ -338,7 +338,7 @@ export default function ServicesPage() {
                 <span>Ongoing support expectations after launch.</span>
               </li>
             </ul>
-          </FadeIn>
+          </Reveal>
         </div>
       </section>
 

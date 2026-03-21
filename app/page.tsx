@@ -6,7 +6,7 @@ import {
   caseStudyDisplayOrder,
   type CaseStudyKey
 } from "@/lib/caseStudySummaries";
-import { FadeIn } from "@/components/FadeIn";
+import { Reveal } from "@/components/Reveal";
 import { ContactModalTrigger } from "@/components/contact/ContactModalTrigger";
 
 export const metadata: Metadata = {
@@ -313,7 +313,7 @@ export default function Home() {
               </div>
               <div className="grid gap-4 sm:grid-cols-3 md:grid-cols-1">
                 {recentProof.map((item, index) => (
-                  <FadeIn key={item.label} delay={index * 100} className="h-full">
+                  <Reveal key={item.label} delay={index * 100} className="h-full">
                     <div className="h-full rounded-2xl border border-slate/60 bg-jamarq-black/20 p-4 space-y-2">
                       <p className="text-xs uppercase tracking-[0.2em] text-jamarq-gray">
                         {item.label}
@@ -321,7 +321,7 @@ export default function Home() {
                       <p className="text-base font-semibold text-mist leading-snug">{item.value}</p>
                       <p className="text-sm text-jamarq-gray leading-relaxed">{item.copy}</p>
                     </div>
-                  </FadeIn>
+                  </Reveal>
                 ))}
               </div>
               <Link
@@ -344,12 +344,12 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
               {whatWeDo.map((item, index) => (
-                <FadeIn key={item.title} delay={index * 120} className="h-full">
+                <Reveal key={item.title} delay={index * 120} className="h-full">
                   <div className="h-full p-6 rounded-2xl border border-slate/60 bg-jamarq-black/30 space-y-3">
                     <h3 className="text-2xl font-semibold">{item.title}</h3>
                     <p className="text-jamarq-gray leading-relaxed">{item.copy}</p>
                   </div>
-                </FadeIn>
+                </Reveal>
               ))}
             </div>
           </div>
@@ -370,7 +370,7 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {whoWeWorkWith.map((group, index) => (
-                <FadeIn key={group.title} delay={index * 120} className="h-full">
+                <Reveal key={group.title} delay={index * 120} className="h-full">
                   <article className="h-full p-6 rounded-2xl border border-slate/60 bg-jamarq-black/20 space-y-5">
                     <h3 className="text-2xl font-semibold">{group.title}</h3>
                     <ul className="space-y-3 text-jamarq-gray">
@@ -382,7 +382,7 @@ export default function Home() {
                       ))}
                     </ul>
                   </article>
-                </FadeIn>
+                </Reveal>
               ))}
             </div>
           </div>
@@ -399,12 +399,12 @@ export default function Home() {
             <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
               {whyJamarq.map((point, index) => (
                 <li key={point.title} className="h-full">
-                  <FadeIn delay={index * 90} className="h-full">
+                  <Reveal delay={index * 90} className="h-full">
                     <div className="h-full p-5 rounded-2xl border border-slate/60 bg-jamarq-black/30 space-y-3">
                       <h3 className="text-xl font-semibold">{point.title}</h3>
                       <p className="text-jamarq-gray leading-relaxed">{point.copy}</p>
                     </div>
-                  </FadeIn>
+                  </Reveal>
                 </li>
               ))}
             </ul>
@@ -433,7 +433,7 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
               {orderedWork.map((study, index) => (
-                <FadeIn key={study.slug} delay={index * 120} className="h-full">
+                <Reveal key={study.slug} delay={index * 120} className="h-full">
                   <article className="h-full p-6 rounded-3xl border border-slate/60 bg-jamarq-black/30 hover:border-jamarq-cyan transition-colors flex flex-col gap-5">
                     <div className="space-y-3">
                       <h3 className="text-2xl font-semibold">{study.title}</h3>
@@ -465,7 +465,7 @@ export default function Home() {
                       View case study →
                     </Link>
                   </article>
-                </FadeIn>
+                </Reveal>
               ))}
             </div>
           </div>
@@ -485,13 +485,13 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {pricingTiers.map((tier, index) => (
-                <FadeIn key={tier.title} delay={index * 100} className="h-full">
+                <Reveal key={tier.title} delay={index * 100} className="h-full">
                   <article className="h-full p-6 rounded-2xl border border-slate/60 bg-jamarq-black/30 space-y-3">
                     <h3 className="text-2xl font-semibold">{tier.title}</h3>
                     <p className="text-jamarq-gray leading-relaxed">{tier.description}</p>
                     <p className="text-xl font-semibold text-mist">{tier.price}</p>
                   </article>
-                </FadeIn>
+                </Reveal>
               ))}
             </div>
             <p className="text-sm text-jamarq-gray">
@@ -512,7 +512,7 @@ export default function Home() {
             <ol className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-6">
               {processSteps.map((step, index) => (
                 <li key={step.title} className="h-full">
-                  <FadeIn delay={index * 90} className="h-full">
+                  <Reveal delay={index * 90} className="h-full">
                     <div className="h-full p-5 rounded-2xl border border-slate/60 bg-jamarq-black/20">
                       <div className="grid grid-cols-[48px_1fr] gap-4 xl:grid-cols-1 xl:gap-3">
                         <p className="text-3xl font-semibold text-jamarq-cyan">
@@ -524,7 +524,7 @@ export default function Home() {
                         </div>
                       </div>
                     </div>
-                  </FadeIn>
+                  </Reveal>
                 </li>
               ))}
             </ol>

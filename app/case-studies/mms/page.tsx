@@ -5,7 +5,7 @@ import { CaseStudyScreenshotTabs } from "@/components/CaseStudyScreenshotTabs";
 import type { ScreenshotTab } from "@/components/CaseStudyScreenshotTabs";
 import { buildPageSpeedReportUrl } from "@/lib/pageSpeed";
 import { ContactModalTrigger } from "@/components/contact/ContactModalTrigger";
-import { FadeIn } from "@/components/FadeIn";
+import { Reveal } from "@/components/Reveal";
 import { ScrollProgressBar } from "@/components/ScrollProgressBar";
 
 const heroSummary = [
@@ -200,7 +200,7 @@ export default function MMSCaseStudyPage() {
         className="min-h-[60vh] flex items-center justify-center px-5 md:px-10 pt-32 md:pt-40 pb-24"
         aria-label="Case study hero"
       >
-        <FadeIn className="w-full">
+        <Reveal className="w-full">
           <div className="text-center max-w-4xl mx-auto space-y-4">
           <p className="text-sm text-jamarq-cyan mb-4 uppercase tracking-wider">Case Study</p>
           <h1 className="text-4xl md:text-5xl font-semibold mb-6">
@@ -247,12 +247,12 @@ export default function MMSCaseStudyPage() {
             </div>
           </div>
           </div>
-        </FadeIn>
+        </Reveal>
       </section>
 
       {/* Overview Section */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Project overview">
-        <FadeIn className="max-w-4xl mx-auto px-5 md:px-10">
+        <Reveal className="max-w-4xl mx-auto px-5 md:px-10">
           <div className="space-y-6 text-lg text-jamarq-gray leading-relaxed">
             <p className="text-xl text-mist">
               Midway Mobile Storage needed a website that actually worked. The old site was barebones, slow, and lacked the tools customers needed to request quotes or understand available inventory. JAMARQ rebuilt the platform with inventory controls, a custom quote form, streamlined admin workflows, and performance work that reached a <span className="text-jamarq-cyan font-semibold">98/100 desktop PageSpeed score</span> on shared hosting.
@@ -270,13 +270,13 @@ export default function MMSCaseStudyPage() {
               </p>
             </div>
           </div>
-        </FadeIn>
+        </Reveal>
       </section>
 
       {/* Screenshots Section */}
       <section className="py-24 md:py-32" aria-label="Screenshots and technical proof">
         <div className="max-w-6xl mx-auto px-5 md:px-10">
-          <FadeIn className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+          <Reveal className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
             <div>
               <p className="text-sm uppercase tracking-wider text-jamarq-cyan mb-2">Screenshots</p>
               <h2 className="text-3xl md:text-4xl font-semibold">Operational Coverage</h2>
@@ -284,16 +284,16 @@ export default function MMSCaseStudyPage() {
             <p className="text-jamarq-gray max-w-2xl">
               Documentation covering performance results, customer-facing flows, and owner tooling in the same format as the rest of the case studies.
             </p>
-          </FadeIn>
-          <FadeIn delay={150}>
+          </Reveal>
+          <Reveal delay={150}>
             <CaseStudyScreenshotTabs tabs={screenshotTabs} defaultTabId="pagespeed" />
-          </FadeIn>
+          </Reveal>
         </div>
       </section>
 
       {/* The Challenge Section */}
       <section className="py-24 md:py-32" aria-label="The challenge">
-        <FadeIn className="max-w-4xl mx-auto px-5 md:px-10">
+        <Reveal className="max-w-4xl mx-auto px-5 md:px-10">
           <h2 className="text-3xl md:text-4xl font-semibold mb-8">
             The Challenge
           </h2>
@@ -335,12 +335,12 @@ export default function MMSCaseStudyPage() {
               The lack of structure made it difficult for customers to trust the business or understand what was available.
             </p>
           </div>
-        </FadeIn>
+        </Reveal>
       </section>
 
       {/* The Solution Section */}
       <section className="py-24 md:py-32 bg-steel" aria-label="The solution">
-        <FadeIn className="max-w-4xl mx-auto px-5 md:px-10">
+        <Reveal className="max-w-4xl mx-auto px-5 md:px-10">
           <h2 className="text-3xl md:text-4xl font-semibold mb-8">
             The Solution
           </h2>
@@ -389,19 +389,19 @@ export default function MMSCaseStudyPage() {
               The rebuilt site gives customers clear information and gives the owner working tools.
             </p>
           </div>
-        </FadeIn>
+        </Reveal>
       </section>
 
       {/* The Results Section */}
       <section className="py-24 md:py-32" aria-label="The results">
         <div className="max-w-5xl mx-auto px-5 md:px-10">
-          <FadeIn className="mb-10">
+          <Reveal className="mb-10">
             <h2 className="text-3xl md:text-4xl font-semibold">
               The Results
             </h2>
-          </FadeIn>
+          </Reveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-lg text-jamarq-gray leading-relaxed">
-            <FadeIn className="space-y-5 bg-jamarq-black rounded-lg border border-slate/60 p-6">
+            <Reveal className="space-y-5 bg-jamarq-black rounded-lg border border-slate/60 p-6">
               <h3 className="text-2xl font-semibold text-mist mb-2">Performance</h3>
               <ul className="space-y-4">
                 <li className="flex gap-3">
@@ -425,8 +425,8 @@ export default function MMSCaseStudyPage() {
                   <span>Strong performance on shared GoDaddy hosting</span>
                 </li>
               </ul>
-            </FadeIn>
-            <FadeIn delay={150} className="space-y-5 bg-jamarq-black rounded-lg border border-slate/60 p-6">
+            </Reveal>
+            <Reveal delay={150} className="space-y-5 bg-jamarq-black rounded-lg border border-slate/60 p-6">
               <h3 className="text-2xl font-semibold text-mist mb-2">Business Impact</h3>
               <ul className="space-y-4">
                 <li className="flex gap-3">
@@ -458,17 +458,17 @@ export default function MMSCaseStudyPage() {
                   <span>The rebuilt site is better prepared for future marketing and content updates</span>
                 </li>
               </ul>
-            </FadeIn>
+            </Reveal>
           </div>
-          <FadeIn delay={150} className="text-xl text-mist font-semibold pt-10">
+          <Reveal delay={150} className="text-xl text-mist font-semibold pt-10">
             First online quote: <span className="text-jamarq-cyan">16 days after launch</span>. The rebuilt site gave the business a workable quote path and clearer day-to-day controls.
-          </FadeIn>
+          </Reveal>
         </div>
       </section>
 
       {/* Full Case Study CTA */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Full case study">
-        <FadeIn className="max-w-4xl mx-auto text-center px-5 md:px-10">
+        <Reveal className="max-w-4xl mx-auto text-center px-5 md:px-10">
           <h3 className="text-2xl md:text-3xl font-semibold mb-6">
             Want the full technical breakdown?
           </h3>
@@ -485,12 +485,12 @@ export default function MMSCaseStudyPage() {
           >
             Request Full Case Study
           </ContactModalTrigger>
-        </FadeIn>
+        </Reveal>
       </section>
 
       {/* Navigation CTA */}
       <section className="py-16" aria-label="Navigation">
-        <FadeIn className="max-w-4xl mx-auto px-5 md:px-10">
+        <Reveal className="max-w-4xl mx-auto px-5 md:px-10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 border-t border-slate pt-8">
             <Link
               href="/case-studies/trbg"
@@ -511,7 +511,7 @@ export default function MMSCaseStudyPage() {
               Next: Midway Music Hall →
             </Link>
           </div>
-        </FadeIn>
+        </Reveal>
       </section>
 
       <Footer />

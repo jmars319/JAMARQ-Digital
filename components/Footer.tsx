@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { PAGE_SPEED_INSIGHTS_HOME } from "@/lib/pageSpeed";
 import { ContactModalTrigger } from "@/components/contact/ContactModalTrigger";
-import { FadeIn } from "@/components/FadeIn";
+import { Reveal } from "@/components/Reveal";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -12,7 +12,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 justify-items-center">
           {/* Brand */}
-          <FadeIn className="text-center">
+          <Reveal className="text-center">
             <div className="relative mx-auto mb-2 h-12 md:h-16 w-[200px] md:w-[260px]">
               <Image
                 src="/assets/logos/wordmark-dark.png"
@@ -24,10 +24,10 @@ export default function Footer() {
             </div>
             <p className="text-jamarq-gray text-sm">Build with intention.</p>
             <p className="mt-2 text-jamarq-gray text-xs">Tenra is the software division of JAMARQ Digital.</p>
-          </FadeIn>
+          </Reveal>
 
           {/* Navigation */}
-          <FadeIn delay={120} className="text-center">
+          <Reveal delay={120} className="text-center">
             <p className="font-semibold mb-3 text-sm uppercase tracking-wide">Navigation</p>
             <nav className="space-y-2">
               <Link href="/" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">
@@ -49,10 +49,10 @@ export default function Footer() {
                 Contact
               </Link>
             </nav>
-          </FadeIn>
+          </Reveal>
 
           {/* Contact */}
-          <FadeIn delay={240} className="text-center">
+          <Reveal delay={240} className="text-center">
             <p className="font-semibold mb-3 text-sm uppercase tracking-wide">Contact</p>
             <p className="text-jamarq-gray text-xs mb-2">Based in Winston-Salem, North Carolina</p>
             <p className="text-jamarq-gray text-xs mb-3">Serving businesses nationwide</p>
@@ -72,13 +72,13 @@ export default function Footer() {
                 PageSpeed Live check ↗
               </a>
             </div>
-          </FadeIn>
+          </Reveal>
         </div>
 
         {/* Copyright */}
-        <FadeIn delay={360} className="border-t border-slate pt-6 text-center text-jamarq-gray text-xs">
+        <Reveal delay={360} className="border-t border-slate pt-6 text-center text-jamarq-gray text-xs">
           <p>&copy; {currentYear} JAMARQ Digital. All rights reserved.</p>
-        </FadeIn>
+        </Reveal>
       </div>
     </footer>
   );

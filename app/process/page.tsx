@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import { ContactModalTrigger } from "@/components/contact/ContactModalTrigger";
-import { FadeIn } from "@/components/FadeIn";
+import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "Process",
@@ -253,7 +253,7 @@ export default function ProcessPage() {
             const multiColumn = step.categories.length > 1;
             const isEven = index % 2 === 0;
             return (
-              <FadeIn key={step.number} delay={index * 150}>
+              <Reveal key={step.number} delay={index * 150}>
                 <article
                   className={`md:flex md:items-start gap-10 p-8 rounded-3xl border border-slate/50 ${
                     isEven ? "bg-jamarq-black/40" : "bg-jamarq-black/20"
@@ -293,7 +293,7 @@ export default function ProcessPage() {
                     )}
                   </div>
                 </article>
-              </FadeIn>
+              </Reveal>
             );
           })}
         </div>

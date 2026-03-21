@@ -3,7 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { FadeIn } from "@/components/FadeIn";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -106,7 +105,7 @@ export default function Header() {
 
       {/* Mobile Menu (JS) */}
       {mobileMenuOpen && (
-        <FadeIn className="md:hidden">
+        <div className="md:hidden">
           <div
             id="mobile-menu"
             className="border-t border-slate bg-jamarq-black dropdown-animate"
@@ -151,7 +150,7 @@ export default function Header() {
               </Link>
             </div>
           </div>
-        </FadeIn>
+        </div>
       )}
 
       {/* No-JS Mobile Navigation (Always visible without JS) */}

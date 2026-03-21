@@ -38,7 +38,7 @@ export default function ServicesPage() {
   const serviceStructuredData = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Custom Websites, Rebuilds, and Web Systems",
+    name: "Custom Websites, Website Rebuilds, and Web Systems",
     provider: {
       "@type": "Organization",
       name: "JAMARQ Digital",
@@ -121,9 +121,9 @@ export default function ServicesPage() {
       ]
     },
     {
-      title: "Systems & Integrations",
+      title: "Systems",
       description:
-        "Quote workflows, dashboards, inventory systems, and admin tooling built around day-to-day operations.",
+        "Quote workflows, dashboards, inventory systems, and admin tooling built around day-to-day operations, with integrations where they are actually needed.",
       items: [
         "Architecture & workflow mapping",
         "API / CMS integrations",
@@ -175,7 +175,7 @@ export default function ServicesPage() {
 
   const snapshot = [
     { label: "Average timeline", value: "4–8 weeks" },
-    { label: "Typical budget", value: "$4k – $15k" },
+    { label: "Project range", value: "$2k – $15k+" },
     { label: "Stack", value: "Next.js, React, PHP, custom APIs" },
     { label: "Launch support", value: "30-day included window" }
   ];
@@ -203,7 +203,7 @@ export default function ServicesPage() {
               Custom websites, rebuilds, and web systems built to hold up.
             </h1>
             <p className="text-lg text-jamarq-gray leading-relaxed">
-              JAMARQ builds custom websites, rebuilds aging or unstable setups, and creates the admin tools and workflows behind them. The work is scoped to the actual needs of the business, not forced into a package.
+              JAMARQ builds custom websites, rebuilds aging or unstable setups, and creates the web systems, admin tools, and workflows behind them. The work is scoped to the actual needs of the business, not forced into a package.
             </p>
             <p className="text-sm text-jamarq-gray">
               Based in Winston-Salem, serving independent businesses and established teams nationwide. <Link href="/mission" className="link-underline text-jamarq-cyan">Read the principles</Link>
@@ -313,7 +313,7 @@ export default function ServicesPage() {
             <p className="text-jamarq-gray leading-relaxed">
               Every engagement starts with an itemized estimate covering deliverables, timeline, and payment schedule. No retainers without scope, and no vague ranges after kickoff.
             </p>
-            <p className="text-xl text-mist font-semibold">Most website projects land between $4,000 and $15,000.</p>
+            <p className="text-xl text-mist font-semibold">Most projects land between $2,000 and $15,000, with larger rebuilds and systems running higher.</p>
             <p className="text-jamarq-gray leading-relaxed">
               Ongoing support typically starts at $150/mo and scales with site complexity and support requirements.
             </p>

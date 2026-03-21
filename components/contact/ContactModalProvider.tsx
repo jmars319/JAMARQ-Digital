@@ -217,7 +217,7 @@ export function ContactModalProvider({ children }: { children: ReactNode }) {
                   type="text"
                   value={formValues.budget}
                   onChange={(event) => handleChange("budget", event.target.value)}
-                  placeholder="$4k–$8k"
+                  placeholder="$2k–$15k+"
                   className={INPUT_CLASSES}
                 />
               </label>

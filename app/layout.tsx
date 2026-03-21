@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   keywords: [
     "web development Winston-Salem NC",
     "custom website design Winston-Salem",
-    "digital systems North Carolina",
+    "web systems North Carolina",
     "React development Winston-Salem",
     "responsive web design NC",
     "accessible web development",

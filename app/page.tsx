@@ -93,7 +93,7 @@ const whatWeDo = [
   },
   {
     title: "Systems",
-    copy: "Admin tools, workflows, and supporting infrastructure behind the site."
+    copy: "Admin tools, workflows, and the systems behind the site."
   }
 ];
 
@@ -284,7 +284,7 @@ export default function Home() {
               </h1>
               <p className="text-lg md:text-xl text-mist leading-relaxed max-w-3xl">
                 JAMARQ Digital works with independent businesses and established teams, building
-                websites, rebuilds, and supporting systems to match the actual complexity of the work.
+                websites, rebuilds, and web systems to match the actual complexity of the work.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <ContactModalTrigger

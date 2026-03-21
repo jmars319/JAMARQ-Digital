@@ -57,7 +57,7 @@ export default function Footer() {
             <p className="text-jamarq-gray text-xs mb-2">Based in Winston-Salem, North Carolina</p>
             <p className="text-jamarq-gray text-xs mb-3">Serving businesses nationwide</p>
             <ContactModalTrigger
-              prefill={{ subject: "Website inquiry", source: "footer" }}
+              prefill={{ subject: "Project inquiry", source: "footer" }}
               className="text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors"
             >
               hello@jamarq.digital

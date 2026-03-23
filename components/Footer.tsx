@@ -23,7 +23,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-jamarq-gray text-sm">Build with intention.</p>
-            <p className="mt-2 text-jamarq-gray text-xs">Tenra is the software division of JAMARQ Digital.</p>
+            <p className="mt-2 text-jamarq-gray text-xs">Tenra.dev is the software development division of JAMARQ Digital LLC.</p>
           </Reveal>
 
           {/* Navigation */}

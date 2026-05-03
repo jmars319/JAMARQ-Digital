@@ -22,8 +22,13 @@ export default function Footer() {
                 className="object-contain"
               />
             </div>
-            <p className="text-jamarq-gray text-sm">Build with intention.</p>
-            <p className="mt-2 text-jamarq-gray text-xs">Tenra.dev is the software development division of JAMARQ Digital LLC.</p>
+            <p className="text-jamarq-gray text-sm">Websites, online presence, rebuilds, and web systems.</p>
+            <p className="mt-2 text-jamarq-gray text-xs">
+              <Link href="https://tenra.dev" target="_blank" rel="noopener noreferrer" className="hover:text-jamarq-cyan transition-colors">
+                Tenra.dev
+              </Link>{" "}
+              is the software development division of JAMARQ Digital LLC.
+            </p>
           </Reveal>
 
           {/* Navigation */}

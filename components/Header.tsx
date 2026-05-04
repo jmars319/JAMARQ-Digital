@@ -42,6 +42,12 @@ export default function Header() {
             Work
           </Link>
           <Link
+            href="/services#pricing"
+            className="text-sm font-medium text-jamarq-gray hover:text-jamarq-cyan transition-colors"
+          >
+            Pricing
+          </Link>
+          <Link
             href="/process"
             className="text-sm font-medium text-jamarq-gray hover:text-jamarq-cyan transition-colors"
           >
@@ -128,6 +134,13 @@ export default function Header() {
                 Work
               </Link>
               <Link
+                href="/services#pricing"
+                className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Pricing
+              </Link>
+              <Link
                 href="/process"
                 className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
@@ -168,6 +181,12 @@ export default function Header() {
               className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
             >
               Work
+            </a>
+            <a
+              href="/services#pricing"
+              className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
+            >
+              Pricing
             </a>
             <a
               href="/process"

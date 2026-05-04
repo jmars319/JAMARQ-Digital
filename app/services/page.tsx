@@ -5,14 +5,14 @@ import { ContactModalTrigger } from "@/components/contact/ContactModalTrigger";
 import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Services",
-  description: "Custom websites, rebuilds, and web systems for independent businesses and established teams nationwide.",
+  title: "Website Development Services",
+  description: "Conversion-focused website development, website rebuilds, web systems, admin tools, SEO structure, and support for businesses nationwide.",
   alternates: {
     canonical: "https://jamarq.digital/services"
   },
   openGraph: {
-    title: "Services",
-    description: "Custom websites, rebuilds, and web systems for independent businesses and established teams nationwide.",
+    title: "Website Development Services",
+    description: "Conversion-focused website development, website rebuilds, web systems, admin tools, SEO structure, and support for businesses nationwide.",
     url: "https://jamarq.digital/services",
     type: "website",
     images: [
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Services",
-    description: "Custom websites, rebuilds, and web systems for independent businesses and established teams nationwide.",
+    title: "Website Development Services",
+    description: "Conversion-focused website development, website rebuilds, web systems, admin tools, SEO structure, and support for businesses nationwide.",
     images: ["https://jamarq.digital/og.jpg"],
     creator: "@jamarqdigital",
     site: "@jamarqdigital"
@@ -84,6 +84,14 @@ export default function ServicesPage() {
           "@type": "Answer",
           text: "You do. You keep the stack, hosting, and data after launch."
         }
+      },
+      {
+        "@type": "Question",
+        name: "Do I need JAMARQ or Tenra?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "JAMARQ handles websites, online presence, rebuilds, and web systems. Tenra.dev is JAMARQ's software development division for local-first apps, internal tools, AI control layers, and selective custom software work."
+        }
       }
     ]
   };
@@ -111,17 +119,29 @@ export default function ServicesPage() {
     {
       title: "Custom Websites",
       description:
-        "Custom marketing sites, product pages, and content-driven websites built without templates or page builders.",
+        "Conversion-focused business websites, marketing pages, product pages, and content-driven sites built without templates or page builders.",
       items: [
         "Responsive layout system",
-        "Performance + accessibility budgets",
-        "SEO-ready content model",
-        "Animation + interaction polish",
+        "Mobile-first service and landing pages",
+        "SEO-ready content structure",
+        "Clear calls to action",
         "Technical documentation"
       ]
     },
     {
-      title: "Systems",
+      title: "Website Rebuilds",
+      description:
+        "Rebuilds for slow, outdated, confusing, hard-to-update, or vendor-locked websites that need a cleaner foundation.",
+      items: [
+        "Current-site audit",
+        "Content and navigation cleanup",
+        "Performance and accessibility repair",
+        "Migration and redirect planning",
+        "Owner-friendly handoff"
+      ]
+    },
+    {
+      title: "Web Systems",
       description:
         "Quote workflows, dashboards, inventory systems, and admin tooling built around day-to-day operations, with integrations where they are actually needed.",
       items: [
@@ -135,7 +155,7 @@ export default function ServicesPage() {
     {
       title: "Maintenance & Support",
       description:
-        "Monitoring, updates, analytics checks, and ongoing support after launch.",
+        "Monitoring, updates, analytics checks, small improvements, and support after launch.",
       items: [
         "Performance + uptime monitoring",
         "Security + dependency updates",
@@ -175,9 +195,32 @@ export default function ServicesPage() {
 
   const snapshot = [
     { label: "Average timeline", value: "4–8 weeks" },
-    { label: "Project range", value: "$2k – $15k+" },
+    { label: "Project range", value: "$2k – $25k+" },
     { label: "Stack", value: "Next.js, React, PHP, custom APIs" },
     { label: "Launch support", value: "30-day included window" }
+  ];
+
+  const projectFit = [
+    {
+      need: "New site",
+      bestFor: "A business needs clearer services, better mobile UX, stronger trust, and a contact path that visitors actually use.",
+      result: "A custom website with page structure, copy direction, SEO basics, analytics, and launch support."
+    },
+    {
+      need: "Rebuild",
+      bestFor: "The existing site is slow, visually dated, hard to edit, locked into a weak vendor setup, or not producing leads.",
+      result: "A cleaner build with better performance, clearer ownership, preserved useful content, and a safer handoff."
+    },
+    {
+      need: "Web system",
+      bestFor: "The site needs quote requests, bookings, documents, admin screens, content workflows, or integrations.",
+      result: "A public site and back-office workflow planned together instead of bolted together later."
+    },
+    {
+      need: "Custom software",
+      bestFor: "The work is more like an app, internal tool, local-first system, or controlled automation layer than a website.",
+      result: "That belongs with Tenra.dev, JAMARQ's software development division."
+    }
   ];
 
   return (
@@ -200,10 +243,12 @@ export default function ServicesPage() {
           <div className="space-y-6">
             <p className="text-xs uppercase tracking-[0.35em] text-jamarq-gray">Services</p>
             <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
-              Custom websites, rebuilds, and web systems built to hold up.
+              Website development services for sites that need to convert, load fast, and stay manageable.
             </h1>
             <p className="text-lg text-jamarq-gray leading-relaxed">
-              JAMARQ builds custom websites, rebuilds aging or unstable setups, and creates the web systems, admin tools, and workflows behind them. The work is scoped to the actual needs of the business, not forced into a package.
+              JAMARQ builds custom websites, rebuilds aging or unstable setups, and creates
+              the web systems, admin tools, and workflows behind them. The work is scoped
+              to the actual needs of the business, not forced into a package.
             </p>
             <p className="text-sm text-jamarq-gray">
               Based in Winston-Salem, serving independent businesses and established teams nationwide. <Link href="/mission" className="link-underline text-jamarq-cyan">Read the principles</Link>
@@ -247,8 +292,13 @@ export default function ServicesPage() {
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray mb-3">Service lines</p>
             <h2 className="text-3xl md:text-4xl font-semibold">What JAMARQ builds</h2>
+            <p className="mt-3 max-w-3xl text-jamarq-gray leading-relaxed">
+              Every service line is built around the same practical goals: make the
+              offer clear, make action easy, keep pages fast, and leave the business
+              with control after launch.
+            </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
             {serviceLines.map((service, index) => (
               <Reveal key={service.title} delay={index * 120} className="h-full">
                 <div className="h-full p-6 rounded-2xl border border-slate/60 bg-jamarq-black/30 space-y-4">
@@ -268,6 +318,37 @@ export default function ServicesPage() {
                     </Link>
                   )}
                 </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 md:py-32" aria-label="Project fit">
+        <div className="max-w-6xl mx-auto px-5 md:px-10 space-y-10">
+          <div className="max-w-3xl">
+            <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray mb-3">
+              Choose the right engagement
+            </p>
+            <h2 className="text-3xl md:text-4xl font-semibold">
+              Start with the job the site needs to do.
+            </h2>
+            <p className="mt-3 text-jamarq-gray leading-relaxed">
+              A good website project is not just a page count. The right scope depends
+              on what the visitor needs to understand, what action they should take,
+              and what the business needs to manage after launch.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {projectFit.map((item, index) => (
+              <Reveal key={item.need} delay={index * 90} className="h-full">
+                <article className="h-full p-6 rounded-2xl border border-slate/60 bg-jamarq-black/20 space-y-4">
+                  <p className="text-xs uppercase tracking-[0.25em] text-jamarq-gray">
+                    {item.need}
+                  </p>
+                  <p className="text-mist leading-relaxed">{item.bestFor}</p>
+                  <p className="text-sm text-jamarq-gray leading-relaxed">{item.result}</p>
+                </article>
               </Reveal>
             ))}
           </div>
@@ -305,7 +386,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Pricing */}
-      <section className="py-24 md:py-32 bg-steel" aria-label="Pricing philosophy">
+      <section id="pricing" className="scroll-mt-28 py-24 md:py-32 bg-steel" aria-label="Pricing philosophy">
         <div className="max-w-6xl mx-auto px-5 md:px-10 grid gap-12 md:grid-cols-2">
           <Reveal className="space-y-4">
             <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray mb-2">Pricing</p>
@@ -313,7 +394,7 @@ export default function ServicesPage() {
             <p className="text-jamarq-gray leading-relaxed">
               Every engagement starts with an itemized estimate covering deliverables, timeline, and payment schedule. No retainers without scope, and no vague ranges after kickoff.
             </p>
-            <p className="text-xl text-mist font-semibold">Most projects land between $2,000 and $15,000, with larger rebuilds and systems running higher.</p>
+            <p className="text-xl text-mist font-semibold">Most projects land between $2,000 and $15,000. Larger rebuilds, migrations, and web systems can run $25,000+.</p>
             <p className="text-jamarq-gray leading-relaxed">
               Ongoing support typically starts at $150/mo and scales with site complexity and support requirements.
             </p>
@@ -368,6 +449,14 @@ export default function ServicesPage() {
                 You do. You keep the stack, hosting, and data after launch.
               </p>
             </div>
+            <div className="p-6 rounded-2xl border border-slate/60 bg-jamarq-black/20">
+              <h3 className="text-xl font-semibold mb-2">Do I need JAMARQ or Tenra?</h3>
+              <p className="text-jamarq-gray leading-relaxed">
+                Choose JAMARQ for websites, rebuilds, online presence, and web systems.
+                Choose <Link href="https://tenra.dev" target="_blank" rel="noopener noreferrer" className="link-underline text-jamarq-cyan">Tenra.dev</Link>{" "}
+                when the work is custom software, internal tools, local-first apps, or controlled automation.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -375,8 +464,10 @@ export default function ServicesPage() {
       {/* CTA Section */}
       <section className="py-24 md:py-32" aria-label="Contact call-to-action">
         <div className="max-w-4xl mx-auto text-center px-5 md:px-10">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6">Ready to start?</h2>
-          <p className="text-lg text-jamarq-gray leading-relaxed mb-8">Let’s talk about your project.</p>
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6">Ready to make the site work harder?</h2>
+          <p className="text-lg text-jamarq-gray leading-relaxed mb-8">
+            Send the current site, the goal, and what is not working. You will get a clear next step within one business day.
+          </p>
           <div className="space-y-4">
             <ContactModalTrigger
               prefill={{ subject: "Services inquiry", source: "services-cta" }}

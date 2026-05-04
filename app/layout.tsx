@@ -19,10 +19,16 @@ export const metadata: Metadata = {
     template: "%s | JAMARQ Digital"
   },
   description:
-    "JAMARQ Digital builds websites that work, fixes the ones that do not, and creates the systems behind them. Based in Winston-Salem, serving independent businesses and established teams.",
+    "JAMARQ Digital builds conversion-focused websites, website rebuilds, web systems, and admin workflows for businesses that need fast pages and clear leads.",
   keywords: [
     "web development Winston-Salem NC",
     "custom website design Winston-Salem",
+    "conversion focused websites",
+    "website rebuilds",
+    "website performance optimization",
+    "business website development",
+    "web systems",
+    "admin tools for websites",
     "web systems North Carolina",
     "React development Winston-Salem",
     "responsive web design NC",
@@ -57,7 +63,7 @@ export const metadata: Metadata = {
     siteName: "JAMARQ Digital",
     title: "JAMARQ Digital | Websites, Rebuilds & Web Systems | Winston-Salem",
     description:
-      "JAMARQ Digital builds websites that work, fixes the ones that do not, and creates the systems behind them. Based in Winston-Salem, serving independent businesses and established teams.",
+      "JAMARQ Digital builds conversion-focused websites, website rebuilds, web systems, and admin workflows for businesses that need fast pages and clear leads.",
     images: [
       {
         url: "/og.jpg",
@@ -71,7 +77,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "JAMARQ Digital | Websites, Rebuilds & Web Systems | Winston-Salem",
     description:
-      "JAMARQ Digital builds websites that work, fixes the ones that do not, and creates the systems behind them. Based in Winston-Salem, serving independent businesses and established teams.",
+      "JAMARQ Digital builds conversion-focused websites, website rebuilds, web systems, and admin workflows for businesses that need fast pages and clear leads.",
     images: ["/og.jpg"],
     creator: "@jamarqdigital",
     site: "@jamarqdigital",
@@ -108,6 +114,8 @@ export default function RootLayout({
     name: "JAMARQ Digital",
     url: "https://jamarq.digital",
     logo: "https://jamarq.digital/og.jpg",
+    description:
+      "Conversion-focused website development, website rebuilds, web systems, and support from Winston-Salem, NC.",
     contactPoint: [
       {
         "@type": "ContactPoint",

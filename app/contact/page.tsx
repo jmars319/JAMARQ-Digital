@@ -7,13 +7,13 @@ import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Start a project with JAMARQ Digital. Based in Winston-Salem, working nationwide, with replies within one business day.",
+  description: "Start a website, rebuild, web system, or support project with JAMARQ Digital. Based in Winston-Salem, working nationwide, with replies within one business day.",
   alternates: {
     canonical: "https://jamarq.digital/contact"
   },
   openGraph: {
     title: "Contact",
-    description: "Start a project with JAMARQ Digital. Based in Winston-Salem, working nationwide, with replies within one business day.",
+    description: "Start a website, rebuild, web system, or support project with JAMARQ Digital. Based in Winston-Salem, working nationwide, with replies within one business day.",
     url: "https://jamarq.digital/contact",
     type: "website",
     images: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Contact",
-    description: "Start a project with JAMARQ Digital. Based in Winston-Salem, working nationwide, with replies within one business day.",
+    description: "Start a website, rebuild, web system, or support project with JAMARQ Digital. Based in Winston-Salem, working nationwide, with replies within one business day.",
     images: ["https://jamarq.digital/og.jpg"],
     creator: "@jamarqdigital",
     site: "@jamarqdigital"
@@ -74,7 +74,8 @@ export default function ContactPage() {
   ];
 
   const quickPrompts = [
-    "What you need built",
+    "Whether this is a new site, rebuild, web system, or support request",
+    "What should become easier for visitors or staff",
     "Timeline or launch window",
     "Budget range (if known)",
     "Current site or tooling",
@@ -92,9 +93,12 @@ export default function ContactPage() {
         <div className="max-w-6xl mx-auto px-5 md:px-10 grid gap-12 md:grid-cols-[minmax(0,1fr)_360px] items-start">
           <Reveal className="space-y-6">
             <p className="text-xs uppercase tracking-[0.35em] text-jamarq-gray">Contact</p>
-            <h1 className="text-4xl md:text-5xl font-semibold leading-tight">Start a project or request a walkthrough.</h1>
+            <h1 className="text-4xl md:text-5xl font-semibold leading-tight">Start with the problem the site needs to solve.</h1>
             <p className="text-lg text-jamarq-gray leading-relaxed">
-              Whether you need a new site, a rebuild, or a web system behind it, you’ll hear back within one business day. No sales team, just me. Share as much context as you can and I’ll map the likely scope, timeline, and price range with you.
+              Whether you need a new website, a rebuild, a web system, or support for
+              an existing build, you’ll hear back within one business day. No sales
+              team, just me. Share the goal and the current friction, and I’ll map the
+              likely scope, timeline, and price range with you.
             </p>
             <p className="text-sm text-jamarq-gray">
               Based in Winston-Salem, working nationwide. <Link href="/mission" className="link-underline text-jamarq-cyan">Read the principles</Link>
@@ -156,7 +160,7 @@ export default function ContactPage() {
           <Reveal delay={150} className="space-y-6">
             <h2 className="text-3xl font-semibold">What to include</h2>
             <p className="text-jamarq-gray leading-relaxed">
-              A few bullet points are enough to keep things moving.
+              A few bullet points are enough. The goal is to identify the right path quickly.
             </p>
             <div className="p-6 rounded-2xl border border-slate/60 bg-jamarq-black/30">
               <ul className="space-y-3 text-jamarq-gray">

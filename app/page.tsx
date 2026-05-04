@@ -12,14 +12,14 @@ import { ContactModalTrigger } from "@/components/contact/ContactModalTrigger";
 export const metadata: Metadata = {
   title: { absolute: "JAMARQ Digital | Websites, Rebuilds & Web Systems | Winston-Salem" },
   description:
-    "JAMARQ Digital builds websites that work, fixes the ones that do not, and creates the systems behind them. Based in Winston-Salem, serving independent businesses and established teams.",
+    "JAMARQ Digital builds conversion-focused websites, website rebuilds, and web systems for businesses that need clearer leads, faster pages, and tools that are easy to run.",
   alternates: {
     canonical: "https://jamarq.digital/"
   },
   openGraph: {
     title: "JAMARQ Digital | Websites, Rebuilds & Web Systems | Winston-Salem",
     description:
-      "JAMARQ Digital builds websites that work, fixes the ones that do not, and creates the systems behind them. Based in Winston-Salem, serving independent businesses and established teams.",
+      "JAMARQ Digital builds conversion-focused websites, website rebuilds, and web systems for businesses that need clearer leads, faster pages, and tools that are easy to run.",
     url: "https://jamarq.digital/",
     type: "website",
     images: [
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "JAMARQ Digital | Websites, Rebuilds & Web Systems | Winston-Salem",
     description:
-      "JAMARQ Digital builds websites that work, fixes the ones that do not, and creates the systems behind them. Based in Winston-Salem, serving independent businesses and established teams.",
+      "JAMARQ Digital builds conversion-focused websites, website rebuilds, and web systems for businesses that need clearer leads, faster pages, and tools that are easy to run.",
     images: ["https://jamarq.digital/og.jpg"],
     creator: "@jamarqdigital",
     site: "@jamarqdigital"
@@ -84,16 +84,40 @@ const recentProof: ProofCard[] = [
 
 const whatWeDo = [
   {
-    title: "Websites",
-    copy: "New builds with clear structure, strong performance, and code that stays maintainable."
+    title: "Custom websites",
+    copy: "Business websites with clear service pages, strong mobile performance, SEO-ready structure, and calls to action visitors can understand quickly."
   },
   {
-    title: "Rebuilds",
-    copy: "Replacing outdated sites, vendor lock-in, or unstable setups with something cleaner."
+    title: "Website rebuilds",
+    copy: "Replacing slow, outdated, hard-to-update, or vendor-locked sites with cleaner systems that owners can actually run."
   },
   {
-    title: "Systems",
-    copy: "Admin tools, workflows, and the systems behind the site."
+    title: "Web systems",
+    copy: "Quote forms, booking paths, admin tools, content workflows, and integrations built around how the business operates."
+  }
+];
+
+const taskRoutes = [
+  {
+    task: "I need a better business website",
+    fit: "JAMARQ plans the pages, copy structure, mobile experience, SEO basics, and conversion paths together.",
+    action: "Start with a website build"
+  },
+  {
+    task: "My current site is slow, stale, or hard to update",
+    fit: "JAMARQ audits the current setup, keeps what is useful, and rebuilds the parts that are blocking performance or trust.",
+    action: "Start with a rebuild"
+  },
+  {
+    task: "The site needs forms, admin tools, or workflows",
+    fit: "JAMARQ treats the public site and the operational system as one project so the handoff is usable.",
+    action: "Start with a web system"
+  },
+  {
+    task: "I need custom software beyond a website",
+    fit: "Tenra.dev is the software development division for internal tools, local-first apps, and controlled automation.",
+    action: "Check Tenra instead",
+    href: "https://tenra.dev"
   }
 ];
 
@@ -101,17 +125,17 @@ const whoWeWorkWith = [
   {
     title: "Independent businesses",
     points: [
-      "Need something that works",
-      "Want clarity and reliability",
-      "Prefer minimal complexity"
+      "Need customers to understand services quickly",
+      "Want a site that loads fast and earns trust",
+      "Prefer direct communication and clear ownership"
     ]
   },
   {
     title: "Established teams",
     points: [
-      "Need structured builds or rebuilds",
-      "Have real operational requirements",
-      "Need systems that scale and hold up"
+      "Need structured rebuilds or workflow-aware web systems",
+      "Have real content, admin, or integration requirements",
+      "Need maintainable code, documentation, and launch support"
     ]
   }
 ];
@@ -119,7 +143,7 @@ const whoWeWorkWith = [
 const whyJamarq: ReasonCard[] = [
   {
     title: "Built to stay manageable",
-    copy: "The work should still make sense when you are running it later."
+    copy: "You should understand the site, the hosting, the content model, and the support path after launch."
   },
   {
     title: "Complexity is used carefully",
@@ -127,7 +151,7 @@ const whyJamarq: ReasonCard[] = [
   },
   {
     title: "Rebuilds are treated like system work",
-    copy: "Broken sites usually point to deeper structural problems, not just design issues."
+    copy: "Slow or broken sites usually point to structure, content, workflow, or ownership problems, not just design issues."
   },
   {
     title: "Direct communication",
@@ -251,7 +275,13 @@ export default function Home() {
         name: "United States"
       }
     ],
-    serviceType: ["Websites", "Website rebuilds", "Web systems"]
+    serviceType: [
+      "Custom website development",
+      "Website rebuilds",
+      "Conversion-focused websites",
+      "Web systems",
+      "Website performance improvement"
+    ]
   };
 
   const breadcrumbStructuredData = {
@@ -288,18 +318,19 @@ export default function Home() {
             <div className="space-y-6">
               <p className="text-xs uppercase tracking-[0.4em] text-jamarq-gray">JAMARQ Digital</p>
               <h1 className="text-4xl md:text-5xl font-semibold leading-tight max-w-4xl">
-                We build websites that work, fix the ones that don&apos;t, and create the systems behind them.
+                Custom websites, rebuilds, and web systems for businesses that need the site to do real work.
               </h1>
               <p className="text-lg md:text-xl text-mist leading-relaxed max-w-3xl">
-                JAMARQ Digital works with independent businesses and established teams, building
-                websites, rebuilds, and web systems to match the actual complexity of the work.
+                JAMARQ Digital builds conversion-focused websites, fixes slow or outdated
+                sites, and creates the forms, admin tools, and workflows behind the public
+                experience. Based in Winston-Salem, working nationwide.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <ContactModalTrigger
                   prefill={{ subject: "New project inquiry", source: "home-hero" }}
                   className="inline-flex items-center justify-center bg-jamarq-cyan text-jamarq-black px-8 py-3 rounded-md font-semibold text-base hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-jamarq-cyan focus:ring-offset-2 focus:ring-offset-jamarq-black"
                 >
-                  Start a Project
+                  Start the Right Build
                 </ContactModalTrigger>
                 <Link
                   href="#work"
@@ -309,7 +340,7 @@ export default function Home() {
                 </Link>
               </div>
               <p className="text-sm text-jamarq-gray">
-                No inflated packages. No unnecessary complexity. Just systems that hold up.
+                Clear scope, fast pages, practical SEO, accessible layouts, and ownership that stays with you.
               </p>
             </div>
             <aside className="bg-jamarq-black/40 border border-slate/60 rounded-3xl p-6 space-y-5">
@@ -347,8 +378,12 @@ export default function Home() {
             <div className="max-w-3xl space-y-3">
               <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">What we do</p>
               <h2 id="what-we-do-heading" className="text-3xl md:text-4xl font-semibold">
-                Website builds, rebuilds, and the systems behind them.
+                Website development that connects the public site to the way the business runs.
               </h2>
+              <p className="text-jamarq-gray leading-relaxed">
+                The work is not just visual. Navigation, content, performance, contact paths,
+                analytics, accessibility, and handoff are planned together.
+              </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
               {whatWeDo.map((item, index) => (
@@ -357,6 +392,53 @@ export default function Home() {
                     <h3 className="text-2xl font-semibold">{item.title}</h3>
                     <p className="text-jamarq-gray leading-relaxed">{item.copy}</p>
                   </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-24 md:py-32" aria-labelledby="task-routing-heading">
+          <div className="max-w-6xl mx-auto px-5 md:px-10 space-y-10">
+            <div className="max-w-3xl space-y-3">
+              <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">
+                Find the right path
+              </p>
+              <h2 id="task-routing-heading" className="text-3xl md:text-4xl font-semibold">
+                Choose JAMARQ when the website needs to become useful, fast, and easy to act on.
+              </h2>
+              <p className="text-jamarq-gray leading-relaxed">
+                Most projects start with a simple question: what should the visitor be able
+                to understand or do that they cannot do well today?
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {taskRoutes.map((route, index) => (
+                <Reveal key={route.task} delay={index * 90} className="h-full">
+                  <article className="h-full rounded-2xl border border-slate/60 bg-jamarq-black/20 p-6 space-y-4">
+                    <p className="text-xs uppercase tracking-[0.25em] text-jamarq-gray">
+                      {route.action}
+                    </p>
+                    <h3 className="text-2xl font-semibold">{route.task}</h3>
+                    <p className="text-jamarq-gray leading-relaxed">{route.fit}</p>
+                    {route.href ? (
+                      <Link
+                        href={route.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="link-underline text-sm font-semibold text-jamarq-cyan"
+                      >
+                        Visit Tenra.dev
+                      </Link>
+                    ) : (
+                      <ContactModalTrigger
+                        prefill={{ subject: route.action, source: "home-task-routing" }}
+                        className="link-underline text-sm font-semibold text-jamarq-cyan"
+                      >
+                        Talk through this path
+                      </ContactModalTrigger>
+                    )}
+                  </article>
                 </Reveal>
               ))}
             </div>
@@ -373,7 +455,7 @@ export default function Home() {
                 id="who-we-work-with-heading"
                 className="text-3xl md:text-4xl font-semibold"
               >
-                Different projects, same need for clarity.
+                A strong fit when clarity, performance, and ownership matter.
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -401,7 +483,7 @@ export default function Home() {
             <div className="max-w-3xl space-y-3">
               <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Why JAMARQ</p>
               <h2 id="why-jamarq-heading" className="text-3xl md:text-4xl font-semibold">
-                Built to hold up after launch.
+                Built so the site keeps helping after launch.
               </h2>
             </div>
             <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
@@ -484,7 +566,7 @@ export default function Home() {
             <div className="max-w-3xl space-y-3">
               <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Pricing</p>
               <h2 id="pricing-heading" className="text-3xl md:text-4xl font-semibold">
-                Pricing
+                Clear project ranges before the work starts.
               </h2>
               <p className="text-jamarq-gray leading-relaxed">
                 Every project is scoped based on real complexity. These ranges reflect where most
@@ -543,11 +625,11 @@ export default function Home() {
           <div className="max-w-5xl mx-auto px-5 md:px-10 rounded-3xl border border-slate/60 bg-jamarq-black/30 p-10 md:p-16 space-y-4">
             <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Start a Project</p>
             <h2 id="final-cta-heading" className="text-3xl md:text-4xl font-semibold">
-              Start a Project
+              Tell me what needs to work better.
             </h2>
             <p className="text-lg text-jamarq-gray leading-relaxed max-w-3xl">
-              If you know what you need or just know something isn&apos;t working, we can figure it
-              out.
+              Send the site, the goal, and what feels stuck. I&apos;ll reply with the
+              likely path, scope questions, and next step within one business day.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <ContactModalTrigger

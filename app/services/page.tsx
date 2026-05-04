@@ -195,7 +195,7 @@ export default function ServicesPage() {
 
   const snapshot = [
     { label: "Average timeline", value: "4–8 weeks" },
-    { label: "Project range", value: "$2k – $25k+" },
+    { label: "Project range", value: "$2.5k – $25k+" },
     { label: "Stack", value: "Next.js, React, PHP, custom APIs" },
     { label: "Launch support", value: "30-day included window" }
   ];
@@ -394,9 +394,14 @@ export default function ServicesPage() {
             <p className="text-jamarq-gray leading-relaxed">
               Every engagement starts with an itemized estimate covering deliverables, timeline, and payment schedule. No retainers without scope, and no vague ranges after kickoff.
             </p>
-            <p className="text-xl text-mist font-semibold">Most projects land between $2,000 and $15,000. Larger rebuilds, migrations, and web systems can run $25,000+.</p>
+            <p className="text-xl text-mist font-semibold">Most projects land between $2,500 and $15,000. Larger rebuilds, migrations, and web systems can run $25,000+.</p>
             <p className="text-jamarq-gray leading-relaxed">
-              Ongoing support typically starts at $150/mo and scales with site complexity and support requirements.
+              Ongoing support typically starts at $250/mo and scales with site complexity and support requirements.
+            </p>
+            <p className="text-sm text-jamarq-gray leading-relaxed">
+              Template sites, DIY builders, and commodity landing pages can cost less.
+              JAMARQ pricing is for custom planning, development, validation, launch,
+              and a handoff the business can keep using.
             </p>
           </Reveal>
           <Reveal className="p-6 rounded-2xl border border-slate/60 bg-jamarq-black/20 space-y-4" delay={120}>

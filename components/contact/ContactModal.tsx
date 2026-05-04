@@ -104,7 +104,7 @@ export function ContactModal({
                 type="text"
                 value={formValues.budget}
                 onChange={(event) => onChange("budget", event.target.value)}
-                placeholder="$2k–$15k+"
+                placeholder="$2.5k–$15k+"
                 className={INPUT_CLASSES}
               />
             </label>

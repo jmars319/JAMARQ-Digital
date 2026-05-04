@@ -171,7 +171,7 @@ const pricingTiers = [
   {
     title: "Foundational Work",
     description: "Simple builds and smaller rebuilds",
-    price: "$2,000 – $5,000"
+    price: "$2,500 – $5,000"
   },
   {
     title: "Structured Builds",
@@ -186,7 +186,7 @@ const pricingTiers = [
   {
     title: "Ongoing Work",
     description: "Maintenance and long-term support",
-    price: "Scoped or monthly"
+    price: "Starts at $250/mo"
   }
 ];
 
@@ -586,7 +586,8 @@ export default function Home() {
             </div>
             <p className="text-sm text-jamarq-gray">
               Pricing depends on scope, content, integrations, and whether the work is new or a
-              rebuild.
+              rebuild. These ranges are for custom work with planning, development,
+              validation, launch, and handoff included.
             </p>
           </div>
         </section>

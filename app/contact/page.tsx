@@ -138,12 +138,6 @@ export default function ContactPage() {
             <div className="p-6 rounded-2xl border border-slate/60 bg-jamarq-black/30 space-y-4">
               <p className="text-sm uppercase tracking-[0.3em] text-jamarq-gray">New projects</p>
               <EmailCopyButton email="hello@jamarq.digital" />
-              <ContactModalTrigger
-                prefill={{ subject: "New project inquiry", source: "contact-options" }}
-                className="inline-flex text-sm font-semibold text-jamarq-cyan hover:text-jamarq-magenta transition-colors"
-              >
-                Open contact form →
-              </ContactModalTrigger>
               <p className="text-jamarq-gray text-sm">All general CTAs route to this inbox.</p>
             </div>
             <div className="p-6 rounded-2xl border border-slate/60 bg-jamarq-black/30 space-y-4">

@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://jamarq.digital';
-  const coreLastModified = '2025-01-15';
+  const coreLastModified = '2026-05-04';
 
   return [
     {
@@ -49,19 +49,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/case-studies/trbg`,
-      lastModified: '2025-11-01',
+      lastModified: coreLastModified,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/case-studies/mmh`,
-      lastModified: '2025-12-01',
+      lastModified: coreLastModified,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/case-studies/mms`,
-      lastModified: '2025-12-09',
+      lastModified: coreLastModified,
       changeFrequency: 'monthly',
       priority: 0.8,
     },

@@ -65,5 +65,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/case-studies/mjr`,
+      lastModified: coreLastModified,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
   ]
 }

@@ -25,9 +25,17 @@ export const caseStudySummaries = {
     hoverUltraShort: "Custom Website, Seating System, and Admin Platform.",
     slug: "mmh",
     category: "Web Development"
+  },
+  mjr: {
+    title: "Midway Junk Removal",
+    micro: "Phone-first local service website for junk removal, demolition, and hauling across the Triad, with clear service coverage and lightweight contact intake.",
+    hoverShort: "Static service site with plain service coverage, phone-first intake, and documented owner handoff for a local junk removal business.",
+    hoverUltraShort: "Local service site + phone-first intake + owner handoff.",
+    slug: "mjr",
+    category: "Web Development"
   }
 };
 
 export type CaseStudyKey = keyof typeof caseStudySummaries;
 
-export const caseStudyDisplayOrder: CaseStudyKey[] = ["mmh", "trbg", "mms"];
+export const caseStudyDisplayOrder: CaseStudyKey[] = ["mmh", "trbg", "mms", "mjr"];

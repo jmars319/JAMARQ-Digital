@@ -213,6 +213,14 @@ const workCardContent: Record<CaseStudyKey, WorkCardContent> = {
       "Built a full rebuild with inventory controls, a custom quote workflow, and owner-friendly admin tools.",
     outcome:
       "Customers can request quotes online, the site reached a 98/100 desktop PageSpeed score, and the first online quote arrived 16 days after launch."
+  },
+  mjr: {
+    problem:
+      "The business needed a clear service website for junk removal, demolition, and hauling that made phone contact and coverage easy to understand.",
+    completed:
+      "Built a static-first service site with organized service lines, Triad coverage copy, direct contact paths, and documented handoff notes.",
+    outcome:
+      "Visitors can quickly confirm fit and contact the owner, while the operator keeps control of the domain, hosting, inbox, and update path."
   }
 };
 

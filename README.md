@@ -1,11 +1,5 @@
 # JAMARQ Digital Portfolio
 
-## Repository About
-
-- **Description:** Primary JAMARQ Digital website for custom websites, rebuilds, web systems, case studies, process/service pages, contact intake, structured SEO metadata, and Vercel-hosted performance monitoring.
-- **Live URL:** https://jamarq.digital/
-- **Suggested GitHub topics:** `agency-website`, `portfolio`, `case-studies`, `web-development`, `nextjs`, `react`, `typescript`, `tailwindcss`, `sendgrid`, `vercel`, `seo`
-
 Primary brand site for JAMARQ Digital. The site is built to project authority and continuity, support long‑form thinking, and frame ongoing partnership work. It is intentionally minimal, performance‑forward, and content‑first.
 
 ## Current Reality

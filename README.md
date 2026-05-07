@@ -1,6 +1,16 @@
 # JAMARQ Digital Portfolio
 
+## Repository About
+
+- **Description:** Primary JAMARQ Digital website for custom websites, rebuilds, web systems, case studies, process/service pages, contact intake, structured SEO metadata, and Vercel-hosted performance monitoring.
+- **Live URL:** https://jamarq.digital/
+- **Suggested GitHub topics:** `agency-website`, `portfolio`, `case-studies`, `web-development`, `nextjs`, `react`, `typescript`, `tailwindcss`, `sendgrid`, `vercel`, `seo`
+
 Primary brand site for JAMARQ Digital. The site is built to project authority and continuity, support long‑form thinking, and frame ongoing partnership work. It is intentionally minimal, performance‑forward, and content‑first.
+
+## Current Reality
+
+This is the production JAMARQ Digital site. It is a Next.js App Router project deployed on Vercel, with no active CMS dependency and no placeholder build. Public routes cover the homepage, services, process, work/case studies, mission, and contact. Contact delivery uses SendGrid through `app/api/contact/route.ts`.
 
 ## What This Repo Contains
 - Public marketing site (Next.js App Router, TypeScript)

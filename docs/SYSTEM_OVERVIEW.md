@@ -12,14 +12,14 @@ This is the production JAMARQ Digital site. It is not a placeholder build and th
 - Hosting: Vercel
 - Analytics: `@vercel/analytics`, `@vercel/speed-insights`
 - Contact delivery: SendGrid via `app/api/contact/route.ts`
-- Admin settings: Turso/libSQL via `@libsql/client`
+- Admin settings + structured public content records: Turso/libSQL via `@libsql/client`
 
 ## System Map
 - Public pages: `app/**/page.tsx`
 - Layout + global metadata: `app/layout.tsx`
 - Global styling + tokens: `app/globals.css`
 - Shared components: `components/*`
-- Case study summaries + display order: `lib/caseStudySummaries.ts`
+- Case study summaries/home cards + suite links: `lib/content-repository.ts`, seeded from `lib/caseStudySummaries.ts`
 - Case study content conventions: `docs/SYSTEM_PUBLIC.md`
 - Contact API: `app/api/contact/route.ts`
 - Admin route: `app/admin`
@@ -38,10 +38,11 @@ This is the production JAMARQ Digital site. It is not a placeholder build and th
 - `/case-studies/mjr`
 - `/contact`
 - `/mission`
-- `/admin` (protected, not linked from public navigation)
+- `/admin` (protected, linked only from the footer)
 
 ## Content Guardrails
-- Case study content is content-locked; only shared layout/navigation changes are allowed unless content work is explicitly requested.
+- Long-form case study content is content-locked; only shared layout/navigation changes are allowed unless content work is explicitly requested.
+- Structured public content uses Turso/libSQL in production with typed seed fallbacks for local development and recovery.
 - "Build with intention." must remain unchanged wherever it appears.
 - Legacy placeholder, CMS, and rebuild instructions are historical only. Do not use them as implementation guidance.
 

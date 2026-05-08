@@ -4,21 +4,21 @@ Primary brand site for JAMARQ Digital. The site is built to project authority an
 
 ## Current Reality
 
-This is the production JAMARQ Digital site. It is a Next.js App Router project deployed on Vercel, with no active CMS dependency and no placeholder build. Public routes cover the homepage, services, process, work/case studies, mission, and contact. Contact delivery uses SendGrid through `app/api/contact/route.ts`.
+This is the production JAMARQ Digital site. It is a Next.js App Router project deployed on Vercel, with no active CMS dependency and no placeholder build. Public routes cover the homepage, services, process, work/case studies, mission, and contact. Contact delivery uses SendGrid through `app/api/contact/route.ts`, and production content records use Turso/libSQL with code-managed seed fallbacks for local development.
 
 ## What This Repo Contains
 - Public marketing site (Next.js App Router, TypeScript)
 - Case study index and detail routes
 - Contact flow via SendGrid
 - Lightweight protected admin route at `/admin`
-- Turso/libSQL-backed admin settings for password changes
+- Turso/libSQL-backed admin settings, structured case study cards, suite links, and contact submissions
 - Shared UI components and brand assets
 
 ## Tech Stack
 - Next.js App Router
 - TypeScript
 - Tailwind CSS v4
-- Turso/libSQL for admin settings
+- Turso/libSQL for admin settings and structured content records
 - Vercel Analytics + Speed Insights
 
 ## Documentation
@@ -34,6 +34,6 @@ Key references:
 - `docs/COPILOT_INSTRUCTIONS_SUMMARY.md`
 
 ## Guardrails
-- Case study content is content‑locked.
+- Case study long-form copy remains content-locked.
 - “Build with intention.” remains unchanged wherever it appears.
-- The database is wired for admin settings only. Do not move public content into it without a deliberate content plan.
+- Public DB content is seeded from typed code fallbacks and should stay structured, reviewable, and easy to recover.

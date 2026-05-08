@@ -16,7 +16,14 @@ Set in Vercel Project → Settings → Environment Variables or `.env.local`.
 
 Reference implementations:
 - Contact: `app/api/contact/route.ts`
-- Admin settings: `lib/admin-db.ts`, `lib/admin.ts`, `app/admin`
+- Admin auth/settings: `lib/admin-db.ts`, `lib/admin.ts`, `app/admin`
+- Structured DB content: `lib/content-repository.ts`
+
+## Database Content
+- `case_study_summaries` and `case_study_home_cards` feed the homepage, `/work`, and `/case-studies` cards.
+- `suite_links` feeds the footer links to Tenra.dev and Vaexil.tv.
+- `contact_submissions` records inbound form submissions before SendGrid delivery status is updated.
+- Seed files remain in the repo as fallbacks for local development and recovery. Do not commit Turso credentials.
 
 ## Security Headers (production)
 Configured in `next.config.ts` under `headers()`.
@@ -43,6 +50,7 @@ Configured in `next.config.ts` under `headers()`.
 ```bash
 npm run build
 npm run lint
+npm run typecheck
 curl -s http://localhost:3000/robots.txt
 curl -s http://localhost:3000/sitemap.xml
 ```

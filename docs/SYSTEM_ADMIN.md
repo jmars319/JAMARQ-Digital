@@ -11,14 +11,21 @@ There is a lightweight protected admin surface at `/admin`.
 ## Current Scope
 - Password login and logout
 - Admin password changes
-- Empty managed-modules state for future database-backed tools
+- DB content module visibility for seeded public content and contact intake
+
+## Database-Backed Modules
+- `admin_settings`: stores the in-app admin password hash.
+- `case_study_summaries`: stores public case study index/work cards.
+- `case_study_home_cards`: stores homepage problem/build/outcome case study cards.
+- `suite_links`: stores footer links across JAMARQ, Tenra, and Vaexil.
+- `contact_submissions`: stores public inquiry records before SendGrid status updates.
 
 ## Admin-Adjacent Touchpoints
-- Contact submissions are handled by a server route, not a UI admin:
+- Contact submissions are recorded by a server route before email delivery:
   - API route: `app/api/contact/route.ts`
   - Email delivery via SendGrid (see `docs/SYSTEM_OPS.md`)
 
 ## Guardrails
-- Public content and case studies remain code-managed.
-- Do not add public admin links without an explicit request.
-- Document any future data modules, access controls, and audit needs here before moving content into the database.
+- Long-form case study copy remains code-managed and content-locked.
+- The public admin link lives only in the footer and stays small/unobtrusive.
+- Future editable modules should follow the current pattern: typed seed fallback, Turso table, protected admin surface, and documented recovery path.

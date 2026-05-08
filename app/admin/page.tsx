@@ -1,6 +1,7 @@
 import { loginAdmin, logoutAdmin } from "@/app/admin/actions";
 import { ChangeAdminPasswordForm } from "@/components/admin-password-form";
 import { adminPasswordIsUsable, isAdminAuthenticated } from "@/lib/admin";
+import { getContentModuleSummary } from "@/lib/content-repository";
 
 export const metadata = {
   title: "Admin",
@@ -24,6 +25,8 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
     );
   }
 
+  const contentModules = await getContentModuleSummary();
+
   return (
     <main id="main-content" className="min-h-screen bg-jamarq-black text-jamarq-white">
       <section className="mx-auto max-w-6xl px-6 py-14 sm:py-20">
@@ -37,7 +40,8 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
             </h1>
             <p className="mt-4 max-w-2xl text-base leading-7 text-jamarq-gray">
               Lightweight protected controls for settings that need to live
-              outside the public build. Public content remains code-managed.
+              outside the public build. Structured public records are
+              DB-backed with code seed fallbacks.
             </p>
           </div>
           <form action={logoutAdmin}>
@@ -68,16 +72,34 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
 
         <div className="mt-5 rounded-lg border border-slate bg-steel/80 p-6">
           <p className="text-sm font-semibold uppercase tracking-[0.16em] text-jamarq-cyan">
-            Managed modules
+            DB content modules
           </p>
           <h2 className="mt-4 text-2xl font-semibold text-jamarq-white">
-            No managed modules yet
+            Seeded and ready
           </h2>
           <p className="mt-3 max-w-2xl text-sm leading-6 text-jamarq-gray">
-            The database is connected for admin settings now. Case studies,
-            lead intake, documentation, and other public content have not been
-            moved into the database.
+            Structured public content now reads from the database with code
+            fallbacks. Full editing controls can be added module by module
+            without changing the public routes again.
           </p>
+          <div className="mt-5 grid gap-3 md:grid-cols-3">
+            {contentModules.map((module) => (
+              <div
+                key={module.label}
+                className="rounded border border-slate bg-jamarq-black/70 p-4"
+              >
+                <p className="text-2xl font-semibold text-jamarq-white">
+                  {module.count}
+                </p>
+                <p className="mt-1 text-sm font-semibold text-mist">
+                  {module.label}
+                </p>
+                <p className="mt-2 text-xs leading-5 text-jamarq-gray">
+                  {module.note}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </main>
@@ -103,7 +125,8 @@ function AdminLogin({
           </h1>
           <p className="mt-4 max-w-2xl text-base leading-7 text-jamarq-gray">
             Protected settings for early admin functionality. This route is not
-            linked from the public navigation.
+            linked from the public navigation and only appears quietly in the
+            footer.
           </p>
         </div>
         <form

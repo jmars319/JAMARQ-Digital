@@ -27,7 +27,10 @@ Public-facing JAMARQ Digital site: authority, continuity, long-form thinking, an
 - Background colors and brand palette: `app/globals.css`
 
 ## Content Sources
-- Case study summaries/order: `lib/caseStudySummaries.ts`
+- Structured public content repository: `lib/content-repository.ts`
+- Case study summaries/order seed fallback: `lib/caseStudySummaries.ts`
+- Homepage case study problem/build/outcome cards: Turso `case_study_home_cards`, seeded from `lib/content-repository.ts`
+- Cross-site suite footer links: Turso `suite_links`, seeded from `lib/content-repository.ts`
 - MMH long-form content: `content/case-studies/midway-music-hall/**`, loaded through `lib/mmhCaseStudyContent.ts` and `lib/mmhScreenshots.ts`
 - TRBG long-form content: `content/case-studies/thunder-road-bar-and-grill/**`, loaded through `lib/trbgCaseStudyContent.ts` and `lib/trbgScreenshots.ts`
 - MMS page copy and screenshot tabs: `app/case-studies/mms/page.tsx`, with supporting summaries in `content/case-studies/midway-mobile-storage/*.md`
@@ -37,8 +40,9 @@ Public-facing JAMARQ Digital site: authority, continuity, long-form thinking, an
 - Document-backed case studies should keep source copy and screenshot notes under `content/case-studies/<client>/` and expose typed data through `lib/*CaseStudyContent.ts` or `lib/*Screenshots.ts`.
 - Page-local case studies may keep the route copy, metadata, and screenshot tab data in the page component when the case study is small and does not have a matching full document set.
 - MJR intentionally follows the page-local convention because its case study is compact service-site proof and the source assets live directly under `public/case-studies/mjr/**`.
-- Add every public case study route to `app/sitemap.ts`, `lib/caseStudySummaries.ts`, and this document.
+- Add every public case study route to `app/sitemap.ts`, `lib/caseStudySummaries.ts`, `lib/content-repository.ts`, and this document.
 
 ## Copy Guardrails
 - "Build with intention." remains unchanged wherever it appears.
-- Case study content is content-locked; avoid edits unless content work is explicitly requested.
+- Long-form case study content is content-locked; avoid edits unless content work is explicitly requested.
+- DB-backed public records should keep code seed fallbacks so local builds and recovery remain simple.

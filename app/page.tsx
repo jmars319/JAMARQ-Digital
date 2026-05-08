@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
-import {
-  caseStudySummaries,
-  caseStudyDisplayOrder,
-  type CaseStudyKey
-} from "@/lib/caseStudySummaries";
+import { listCaseStudySummaries } from "@/lib/content-repository";
 import { Reveal } from "@/components/Reveal";
 import { ContactModalTrigger } from "@/components/contact/ContactModalTrigger";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: { absolute: "JAMARQ Digital | Websites, Rebuilds & Web Systems | Winston-Salem" },
@@ -40,12 +38,6 @@ export const metadata: Metadata = {
     creator: "@jamarqdigital",
     site: "@jamarqdigital"
   }
-};
-
-type WorkCardContent = {
-  problem: string;
-  completed: string;
-  outcome: string;
 };
 
 type ProofCard = {
@@ -213,42 +205,7 @@ const processSteps: ProcessStep[] = [
   }
 ];
 
-const workCardContent: Record<CaseStudyKey, WorkCardContent> = {
-  mmh: {
-    problem:
-      "The venue needed a modern public site and seating workflow without relying on third-party ticketing software.",
-    completed:
-      "Built a custom website, secure admin workspace, seating layouts, reservation flow, and automated notifications.",
-    outcome:
-      "The system now matches venue operations, and the first reserved seating request came in two days after launch."
-  },
-  trbg: {
-    problem:
-      "The restaurant's previous vendor-run site was slow, restrictive, and hard to update week to week.",
-    completed:
-      "Rebuilt the site with a clearer menu experience, stronger mobile performance, and a simple admin workflow for ongoing updates.",
-    outcome:
-      "The owners can manage content directly, and load times dropped from roughly 4 to 6 seconds to under 1.5 seconds."
-  },
-  mms: {
-    problem:
-      "The old site was barebones, slow, and could not collect quote requests without a phone call.",
-    completed:
-      "Built a full rebuild with inventory controls, a custom quote workflow, and owner-friendly admin tools.",
-    outcome:
-      "Customers can request quotes online, the site reached a 98/100 desktop PageSpeed score, and the first online quote arrived 16 days after launch."
-  },
-  mjr: {
-    problem:
-      "The business needed a clear service website for junk removal, demolition, and hauling that made phone contact and coverage easy to understand.",
-    completed:
-      "Built a static-first service site with organized service lines, Triad coverage copy, direct contact paths, and documented handoff notes.",
-    outcome:
-      "Visitors can quickly confirm fit and contact the owner, while the operator keeps control of the domain, hosting, inbox, and update path."
-  }
-};
-
-export default function Home() {
+export default async function Home() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
@@ -297,10 +254,7 @@ export default function Home() {
     ]
   };
 
-  const orderedWork = caseStudyDisplayOrder.map((key) => ({
-    ...caseStudySummaries[key],
-    ...workCardContent[key]
-  }));
+  const orderedWork = await listCaseStudySummaries();
 
   return (
     <>

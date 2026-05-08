@@ -14,13 +14,14 @@ Admin/database variables:
 - `ADMIN_PASSWORD`
 - `ADMIN_SESSION_SECRET`
 
-`ADMIN_PASSWORD` is the bootstrap fallback for `/admin`. Password changes made inside the app are hashed and stored in the `admin_settings` table. Keep `ADMIN_SESSION_SECRET` stable between deployments so existing signed admin sessions remain valid.
+`ADMIN_PASSWORD` is the bootstrap fallback for `/admin`. Password changes made inside the app are hashed and stored in the `admin_settings` table. Structured public content and contact submissions also use Turso/libSQL in production. Keep `ADMIN_SESSION_SECRET` stable between deployments so existing signed admin sessions remain valid.
 
 ## Local Verification
 Run these before pushing deployment changes:
 
 ```bash
 npm run lint
+npm run typecheck
 npm run build
 ```
 

@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
-import { caseStudySummaries, caseStudyDisplayOrder } from "@/lib/caseStudySummaries";
+import { listCaseStudySummaries } from "@/lib/content-repository";
 import { ContactModalTrigger } from "@/components/contact/ContactModalTrigger";
 import { Reveal } from "@/components/Reveal";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Case Studies",
@@ -35,7 +37,7 @@ export const metadata: Metadata = {
   }
 };
 
-export default function CaseStudiesPage() {
+export default async function CaseStudiesPage() {
   const breadcrumbStructuredData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -55,10 +57,7 @@ export default function CaseStudiesPage() {
     ]
   };
 
-  const orderedCaseStudies = caseStudyDisplayOrder.map((key) => ({
-    key,
-    ...caseStudySummaries[key]
-  }));
+  const orderedCaseStudies = await listCaseStudySummaries();
 
   const proofPoints = [
     { label: "Screenshots", value: "Full galleries per project" },

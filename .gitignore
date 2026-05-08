@@ -38,6 +38,7 @@ scripts/dev-config.sh
 # env files (can opt-in for committing if needed)
 .env*
 !.env.example
+.data/
 
 # vercel
 .vercel

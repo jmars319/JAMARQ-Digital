@@ -12,6 +12,7 @@ This is the production JAMARQ Digital site. It is not a placeholder build and th
 - Hosting: Vercel
 - Analytics: `@vercel/analytics`, `@vercel/speed-insights`
 - Contact delivery: SendGrid via `app/api/contact/route.ts`
+- Admin settings: Turso/libSQL via `@libsql/client`
 
 ## System Map
 - Public pages: `app/**/page.tsx`
@@ -21,6 +22,8 @@ This is the production JAMARQ Digital site. It is not a placeholder build and th
 - Case study summaries + display order: `lib/caseStudySummaries.ts`
 - Case study content conventions: `docs/SYSTEM_PUBLIC.md`
 - Contact API: `app/api/contact/route.ts`
+- Admin route: `app/admin`
+- Admin DB helpers: `lib/admin-db.ts`, `lib/admin.ts`
 - SEO infra: `app/robots.ts`, `app/sitemap.ts`, `next.config.ts`
 
 ## Public Routes
@@ -35,6 +38,7 @@ This is the production JAMARQ Digital site. It is not a placeholder build and th
 - `/case-studies/mjr`
 - `/contact`
 - `/mission`
+- `/admin` (protected, not linked from public navigation)
 
 ## Content Guardrails
 - Case study content is content-locked; only shared layout/navigation changes are allowed unless content work is explicitly requested.

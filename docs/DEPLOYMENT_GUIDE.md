@@ -8,6 +8,14 @@
 ## Required Environment Variables
 See `docs/SYSTEM_OPS.md` for the SendGrid variables used by `app/api/contact/route.ts`.
 
+Admin/database variables:
+- `LIBSQL_URL`
+- `LIBSQL_AUTH_TOKEN`
+- `ADMIN_PASSWORD`
+- `ADMIN_SESSION_SECRET`
+
+`ADMIN_PASSWORD` is the bootstrap fallback for `/admin`. Password changes made inside the app are hashed and stored in the `admin_settings` table. Keep `ADMIN_SESSION_SECRET` stable between deployments so existing signed admin sessions remain valid.
+
 ## Local Verification
 Run these before pushing deployment changes:
 
@@ -21,6 +29,7 @@ npm run build
 2. Push to `origin/main`.
 3. Let Vercel build the production deployment.
 4. Verify the deployed route or asset that changed.
+5. For admin changes, verify `/admin` loads and accepts the configured bootstrap password.
 
 ## SEO Verification
 Use a local dev server or deployed preview:

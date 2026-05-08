@@ -10,12 +10,15 @@ This is the production JAMARQ Digital site. It is a Next.js App Router project d
 - Public marketing site (Next.js App Router, TypeScript)
 - Case study index and detail routes
 - Contact flow via SendGrid
+- Lightweight protected admin route at `/admin`
+- Turso/libSQL-backed admin settings for password changes
 - Shared UI components and brand assets
 
 ## Tech Stack
 - Next.js App Router
 - TypeScript
 - Tailwind CSS v4
+- Turso/libSQL for admin settings
 - Vercel Analytics + Speed Insights
 
 ## Documentation
@@ -33,3 +36,4 @@ Key references:
 ## Guardrails
 - Case study content is content‑locked.
 - “Build with intention.” remains unchanged wherever it appears.
+- The database is wired for admin settings only. Do not move public content into it without a deliberate content plan.

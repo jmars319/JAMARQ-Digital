@@ -9,8 +9,14 @@ Set in Vercel Project → Settings → Environment Variables or `.env.local`.
 - `SENDGRID_API_KEY`
 - `SENDGRID_TO_EMAIL`
 - `SENDGRID_FROM_EMAIL`
+- `LIBSQL_URL`
+- `LIBSQL_AUTH_TOKEN`
+- `ADMIN_PASSWORD`
+- `ADMIN_SESSION_SECRET`
 
-Reference implementation: `app/api/contact/route.ts`
+Reference implementations:
+- Contact: `app/api/contact/route.ts`
+- Admin settings: `lib/admin-db.ts`, `lib/admin.ts`, `app/admin`
 
 ## Security Headers (production)
 Configured in `next.config.ts` under `headers()`.

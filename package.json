@@ -6,7 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "doctor": "bash scripts/doctor.sh",
+    "verify": "npm run lint && npm run typecheck && npm run build && bash scripts/dev-verify.sh",
+    "dev:start": "bash scripts/dev-start.sh",
+    "dev:stop": "bash scripts/dev-stop.sh",
+    "dev:restart": "bash scripts/dev-restart.sh",
+    "dev:status": "bash scripts/dev-status.sh"
   },
   "dependencies": {
     "@sendgrid/mail": "^8.1.6",
@@ -28,5 +35,9 @@
   },
   "overrides": {
     "postcss": "^8.5.13"
+  },
+  "packageManager": "npm@11.6.1",
+  "engines": {
+    "node": ">=22.12.0 <23"
   }
 }

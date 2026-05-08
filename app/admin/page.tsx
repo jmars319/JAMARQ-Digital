@@ -1,7 +1,10 @@
 import { loginAdmin, logoutAdmin } from "@/app/admin/actions";
 import { ChangeAdminPasswordForm } from "@/components/admin-password-form";
 import { adminPasswordIsUsable, isAdminAuthenticated } from "@/lib/admin";
-import { getContentModuleSummary } from "@/lib/content-repository";
+import {
+  getContentModuleSummary,
+  listRecentContactSubmissions,
+} from "@/lib/content-repository";
 
 export const metadata = {
   title: "Admin",
@@ -25,7 +28,10 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
     );
   }
 
-  const contentModules = await getContentModuleSummary();
+  const [contentModules, recentSubmissions] = await Promise.all([
+    getContentModuleSummary(),
+    listRecentContactSubmissions(),
+  ]);
 
   return (
     <main id="main-content" className="min-h-screen bg-jamarq-black text-jamarq-white">
@@ -101,9 +107,76 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
             ))}
           </div>
         </div>
+
+        <div className="mt-5 rounded-lg border border-slate bg-steel/80 p-6">
+          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-jamarq-cyan">
+            Recent contact submissions
+          </p>
+          <h2 className="mt-4 text-2xl font-semibold text-jamarq-white">
+            Intake snapshot
+          </h2>
+          <p className="mt-3 max-w-2xl text-sm leading-6 text-jamarq-gray">
+            New inquiries are recorded in the database before email delivery is
+            marked as sent or failed.
+          </p>
+          {recentSubmissions.length === 0 ? (
+            <div className="mt-5 rounded border border-slate bg-jamarq-black/70 p-4 text-sm text-jamarq-gray">
+              No contact submissions have been recorded yet.
+            </div>
+          ) : (
+            <div className="mt-5 grid gap-3">
+              {recentSubmissions.map((submission) => (
+                <article
+                  key={submission.id}
+                  className="rounded border border-slate bg-jamarq-black/70 p-4"
+                >
+                  <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+                    <div>
+                      <p className="text-sm font-semibold text-mist">
+                        {submission.name}
+                      </p>
+                      <p className="mt-1 text-xs text-jamarq-gray">
+                        {submission.email}
+                        {submission.company ? ` / ${submission.company}` : ""}
+                      </p>
+                    </div>
+                    <div className="flex flex-wrap gap-2 text-[0.7rem] font-semibold uppercase tracking-[0.12em]">
+                      <span className="rounded-full border border-slate px-2 py-1 text-jamarq-gray">
+                        {submission.status}
+                      </span>
+                      <span className="rounded-full border border-slate px-2 py-1 text-jamarq-gray">
+                        email {submission.emailStatus}
+                      </span>
+                    </div>
+                  </div>
+                  <p className="mt-3 line-clamp-2 text-sm leading-6 text-jamarq-gray">
+                    {submission.projectDetails}
+                  </p>
+                  <p className="mt-3 text-xs text-jamarq-gray">
+                    {formatAdminDate(submission.createdAt)} / Source:{" "}
+                    {submission.source || "Unknown"}
+                  </p>
+                </article>
+              ))}
+            </div>
+          )}
+        </div>
       </section>
     </main>
   );
+}
+
+function formatAdminDate(value: string) {
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return value;
+  }
+
+  return new Intl.DateTimeFormat("en-US", {
+    dateStyle: "medium",
+    timeStyle: "short",
+  }).format(date);
 }
 
 function AdminLogin({

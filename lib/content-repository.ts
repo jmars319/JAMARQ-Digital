@@ -36,6 +36,20 @@ export type ContactSubmissionInput = {
   source: string;
 };
 
+export type ContactSubmissionRecord = {
+  id: string;
+  name: string;
+  email: string;
+  company: string;
+  budget: string;
+  projectDetails: string;
+  subject: string;
+  source: string;
+  status: string;
+  emailStatus: string;
+  createdAt: string;
+};
+
 function logDbFallback(message: string, error: unknown) {
   if (process.env.LIBSQL_URL) {
     console.error(message, error);
@@ -325,6 +339,50 @@ export async function updateContactSubmissionEmailStatus(
     });
   } catch (error) {
     console.error("Failed to update JAMARQ contact submission status.", error);
+  }
+}
+
+export async function listRecentContactSubmissions(limit = 5) {
+  try {
+    await ensureAdminDb();
+
+    const result = await getAdminDb().execute({
+      sql: `
+        SELECT
+          id,
+          name,
+          email,
+          company,
+          budget,
+          project_details,
+          subject,
+          source,
+          status,
+          email_status,
+          created_at
+        FROM contact_submissions
+        ORDER BY created_at DESC
+        LIMIT ?;
+      `,
+      args: [limit],
+    });
+
+    return result.rows.map((row) => ({
+      id: String(row.id),
+      name: String(row.name),
+      email: String(row.email),
+      company: String(row.company || ""),
+      budget: String(row.budget || ""),
+      projectDetails: String(row.project_details || ""),
+      subject: String(row.subject || ""),
+      source: String(row.source || ""),
+      status: String(row.status),
+      emailStatus: String(row.email_status),
+      createdAt: String(row.created_at),
+    })) satisfies ContactSubmissionRecord[];
+  } catch (error) {
+    console.error("Failed to load recent JAMARQ contact submissions.", error);
+    return [];
   }
 }
 

@@ -29,9 +29,8 @@ Reference implementations:
 Configured in `next.config.ts` under `headers()`.
 - X-DNS-Prefetch-Control: on
 - Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
-- X-Frame-Options: SAMEORIGIN
+- X-Frame-Options: DENY
 - X-Content-Type-Options: nosniff
-- X-XSS-Protection: 1; mode=block
 - Referrer-Policy: strict-origin-when-cross-origin
 - Permissions-Policy: camera=(), microphone=(), geolocation=()
 - Content-Security-Policy: see `next.config.ts`
@@ -176,9 +175,8 @@ Long-tail: `hand-built websites NC`, `responsive web design Lexington`
 ```typescript
 X-DNS-Prefetch-Control: on
 Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
-X-Frame-Options: SAMEORIGIN
+X-Frame-Options: DENY
 X-Content-Type-Options: nosniff
-X-XSS-Protection: 1; mode=block
 Referrer-Policy: strict-origin-when-cross-origin
 Permissions-Policy: camera=(), microphone=(), geolocation=()
 ```
@@ -194,8 +192,8 @@ connect-src 'self' https://vitals.vercel-insights.com https://vercel.live https:
 frame-src 'self' https://vercel.live
 object-src 'none'
 base-uri 'self'
-form-action 'self' mailto:
-frame-ancestors 'self'
+form-action 'self'
+frame-ancestors 'none'
 upgrade-insecure-requests
 ```
 
@@ -203,7 +201,6 @@ upgrade-insecure-requests
 - ✅ **HSTS Preload** - Automatic HTTPS enforcement
 - ✅ **Clickjacking Protection** - X-Frame-Options prevents iframe embedding
 - ✅ **MIME Type Sniffing** - Disabled to prevent content type attacks
-- ✅ **XSS Protection** - Built-in browser XSS filter enabled
 - ✅ **Strict CSP** - Whitelist approach to script/style sources
 - ✅ **Secure Referrer** - Only sends origin on HTTPS→HTTPS
 - ✅ **Permission Lockdown** - Camera/mic/geolocation disabled by default
@@ -221,13 +218,13 @@ upgrade-insecure-requests
 
 ### Link Validation
 - ✅ **Internal Links** - All 27 internal links verified working
-- ✅ **Email Links** - All 14 mailto: links properly formatted
+- ✅ **Contact Form Links** - Public intake routes through structured contact forms
 - ✅ **No Dead Links** - Zero 404s or broken destinations
 - ✅ **Consistent Styling** - Hover states, transitions on all links
 
 ### User Experience
 - ✅ **Clear CTAs** - Every page has obvious next action
-- ✅ **Email Pre-fill** - Contact links include subject lines
+- ✅ **Contact Pre-fill** - Contact triggers include subject and source context
 - ✅ **Back Navigation** - Every page links back to home/previous
 - ✅ **Cross-linking** - Strategic internal linking between related pages
 - ✅ **Loading States** - Next.js automatic page transitions
@@ -283,7 +280,7 @@ upgrade-insecure-requests
 
 ### Link Validation
 - [ ] Validate all internal links working (all verified ✅)
-- [ ] Test mailto: links open email client
+- [ ] Test contact form opens, validates, and submits correctly
 - [ ] Check mobile menu links
 - [ ] Verify footer navigation
 
@@ -751,9 +748,8 @@ You asked for:
 ```
 ✅ X-DNS-Prefetch-Control: on
 ✅ Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
-✅ X-Frame-Options: SAMEORIGIN
+✅ X-Frame-Options: DENY
 ✅ X-Content-Type-Options: nosniff
-✅ X-XSS-Protection: 1; mode=block
 ✅ Referrer-Policy: strict-origin-when-cross-origin
 ✅ Permissions-Policy: camera=(), microphone=(), geolocation=()
 ✅ Content-Security-Policy: (comprehensive policy added)
@@ -765,7 +761,7 @@ You asked for:
 - ✅ style-src whitelist (only Google Fonts + inline styles)
 - ✅ img-src https only (secure images)
 - ✅ object-src 'none' (no Flash, Java applets)
-- ✅ form-action 'self' mailto: (only submit to your domain or email)
+- ✅ form-action 'self' (only submit to this domain)
 - ✅ upgrade-insecure-requests (auto-upgrade HTTP to HTTPS)
 
 **Security Grade: A+ on securityheaders.com** (ready to test)
@@ -813,7 +809,7 @@ You asked for:
 
 #### Link Validation ✅ Zero Dead Links
 - ✅ **27 internal links** - All verified working
-- ✅ **14 email links** - All properly formatted with mailto:
+- ✅ **Contact form links** - Public intake routes through structured contact forms
 - ✅ **No external links** - No risk of dead external URLs
 - ✅ **No 404 errors** - All destinations exist and load
 
@@ -1137,7 +1133,13 @@ canonical: "https://jamarq.digital/contact"
     "Digital Systems",
     "React Development"
   ],
-  "email": "hello@jamarq.digital"
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "contactType": "business inquiries",
+      "url": "https://jamarq.digital/contact"
+    }
+  ]
 }
 ```
 
@@ -1161,9 +1163,9 @@ canonical: "https://jamarq.digital/contact"
 <p className="text-jamarq-gray text-xs mb-3">
   Serving businesses nationwide
 </p>
-<a href="mailto:hello@jamarq.digital">
-  hello@jamarq.digital
-</a>
+<ContactModalTrigger>
+  Send a message
+</ContactModalTrigger>
 ```
 
 **Location Context:**

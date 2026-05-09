@@ -34,15 +34,11 @@ const nextConfig: NextConfig = {
           },
           {
             key: "X-Frame-Options",
-            value: "SAMEORIGIN",
+            value: "DENY",
           },
           {
             key: "X-Content-Type-Options",
             value: "nosniff",
-          },
-          {
-            key: "X-XSS-Protection",
-            value: "1; mode=block",
           },
           {
             key: "Referrer-Policy",
@@ -65,7 +61,7 @@ const nextConfig: NextConfig = {
               "object-src 'none'",
               "base-uri 'self'",
               "form-action 'self'",
-              "frame-ancestors 'self'",
+              "frame-ancestors 'none'",
               "upgrade-insecure-requests"
             ].join("; "),
           },

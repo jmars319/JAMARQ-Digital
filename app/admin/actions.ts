@@ -16,6 +16,11 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
 const contactStatuses = ["received", "reviewed", "archived"] as const;
+const FAILED_LOGIN_DELAY_MS = 500;
+
+function delayFailedLogin() {
+  return new Promise((resolve) => setTimeout(resolve, FAILED_LOGIN_DELAY_MS));
+}
 
 function getString(formData: FormData, key: string) {
   const value = formData.get(key);
@@ -64,6 +69,7 @@ export async function loginAdmin(formData: FormData) {
   const password = getString(formData, "password");
 
   if (!password || !(await passwordMatches(password))) {
+    await delayFailedLogin();
     redirect("/admin?error=invalid");
   }
 

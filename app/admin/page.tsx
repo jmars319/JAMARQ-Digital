@@ -15,6 +15,10 @@ import {
 export const metadata = {
   title: "Admin",
   description: "Lightweight JAMARQ Digital admin surface.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export const runtime = "nodejs";

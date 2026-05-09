@@ -106,12 +106,20 @@ export default async function Footer() {
         {/* Copyright */}
         <Reveal delay={360} className="border-t border-slate pt-6 text-center text-jamarq-gray text-xs">
           <p>&copy; {currentYear} JAMARQ Digital. All rights reserved.</p>
-          <Link
-            href="/admin"
-            className="mt-2 inline-flex text-[0.7rem] text-jamarq-gray/55 hover:text-jamarq-cyan transition-colors"
-          >
-            Admin
-          </Link>
+          <div className="mt-2 flex flex-wrap justify-center gap-4">
+            <Link
+              href="/privacy"
+              className="inline-flex text-[0.7rem] text-jamarq-gray/70 hover:text-jamarq-cyan transition-colors"
+            >
+              Privacy
+            </Link>
+            <Link
+              href="/admin"
+              className="inline-flex text-[0.7rem] text-jamarq-gray/55 hover:text-jamarq-cyan transition-colors"
+            >
+              Admin
+            </Link>
+          </div>
         </Reveal>
       </div>
     </footer>

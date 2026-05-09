@@ -61,6 +61,7 @@ export function ContactModalProvider({ children }: { children: ReactNode }) {
   const [options, setOptions] = useState<ContactModalOptions>({});
   const [status, setStatus] = useState<ContactModalStatus>("idle");
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [formOpenedAt, setFormOpenedAt] = useState(Date.now());
 
   const resetForm = useCallback(() => {
     setFormValues((prev) => ({
@@ -75,6 +76,7 @@ export function ContactModalProvider({ children }: { children: ReactNode }) {
     void loadContactModal();
     setOptions(incomingOptions ?? {});
     setIsOpen(true);
+    setFormOpenedAt(Date.now());
     setFormValues({
       ...defaultFormValues,
       projectDetails: incomingOptions?.initialMessage ?? ""
@@ -120,6 +122,9 @@ export function ContactModalProvider({ children }: { children: ReactNode }) {
       setErrorMessage(null);
 
       try {
+        const submittedFormData = new FormData(event.currentTarget);
+        const website = String(submittedFormData.get("website") ?? "");
+
         const response = await fetch("/api/contact", {
           method: "POST",
           headers: {
@@ -128,7 +133,9 @@ export function ContactModalProvider({ children }: { children: ReactNode }) {
           body: JSON.stringify({
             ...formValues,
             subject: options.subject,
-            source: options.source
+            source: options.source,
+            website,
+            startedAt: formOpenedAt
           })
         });
 
@@ -148,7 +155,7 @@ export function ContactModalProvider({ children }: { children: ReactNode }) {
         );
       }
     },
-    [formValues, options.source, options.subject, closeContactModal]
+    [formOpenedAt, formValues, options.source, options.subject, closeContactModal]
   );
 
   return (

@@ -62,8 +62,7 @@ export default function TRBGCaseStudyPage() {
     },
     "author": {
       "@type": "Person",
-      "name": "Jason Marshall",
-      "email": "jason@jamarq.digital"
+      "name": "Jason Marshall"
     },
     "publisher": {
       "@type": "Organization",

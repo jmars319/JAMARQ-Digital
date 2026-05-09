@@ -4,14 +4,14 @@ Primary brand site for JAMARQ Digital. The site is built to project authority an
 
 ## Current Reality
 
-This is the production JAMARQ Digital site. It is a Next.js App Router project deployed on Vercel, with no active CMS dependency and no placeholder build. Public routes cover the homepage, services, process, work/case studies, mission, and contact. Contact delivery uses SendGrid through `app/api/contact/route.ts`, and production content records use Turso/libSQL with code-managed seed fallbacks for local development.
+This is the production JAMARQ Digital site. It is a Next.js App Router project deployed on Vercel, with no active CMS dependency and no placeholder build. Public routes cover the homepage, services, process, work/case studies, mission, and contact. Public contact runs through the site form, delivery uses SendGrid through `app/api/contact/route.ts`, and production content records use Turso/libSQL with code-managed seed fallbacks for local development.
 
 ## What This Repo Contains
 - Public marketing site (Next.js App Router, TypeScript)
 - Case study index and detail routes
-- Contact flow via SendGrid
+- Contact form flow via SendGrid
 - Lightweight protected admin route at `/admin`
-- Turso/libSQL-backed admin settings, structured case study cards, suite links, and contact submissions
+- Turso/libSQL-backed admin settings, structured case study cards, suite links, contact submissions, and a small first-party page-view snapshot
 - Shared UI components and brand assets
 
 ## Tech Stack

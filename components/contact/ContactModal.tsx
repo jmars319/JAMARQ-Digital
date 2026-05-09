@@ -122,7 +122,7 @@ export function ContactModal({
           {errorMessage && <p className="text-sm text-red-400">{errorMessage}</p>}
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <p className="text-xs text-jamarq-gray">
-              This message goes straight to hello@jamarq.digital. No list, no spam.
+              This form routes directly to JAMARQ intake. No list, no spam.
             </p>
             <button
               type="submit"

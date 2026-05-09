@@ -127,6 +127,17 @@ async function migrateAdminDb() {
     },
     {
       sql: `
+        CREATE TABLE IF NOT EXISTS page_views (
+          id TEXT PRIMARY KEY,
+          path TEXT NOT NULL,
+          referrer TEXT,
+          created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+        );
+      `,
+      args: [],
+    },
+    {
+      sql: `
         CREATE INDEX IF NOT EXISTS idx_case_study_summaries_order
         ON case_study_summaries(display_order);
       `,
@@ -143,6 +154,20 @@ async function migrateAdminDb() {
       sql: `
         CREATE INDEX IF NOT EXISTS idx_contact_submissions_created_at
         ON contact_submissions(created_at);
+      `,
+      args: [],
+    },
+    {
+      sql: `
+        CREATE INDEX IF NOT EXISTS idx_page_views_created_at
+        ON page_views(created_at);
+      `,
+      args: [],
+    },
+    {
+      sql: `
+        CREATE INDEX IF NOT EXISTS idx_page_views_path_created_at
+        ON page_views(path, created_at);
       `,
       args: [],
     },

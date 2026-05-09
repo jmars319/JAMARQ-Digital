@@ -88,7 +88,7 @@ export default async function Footer() {
               prefill={{ subject: "Project inquiry", source: "footer" }}
               className="text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors"
             >
-              hello@jamarq.digital
+              Send a message
             </ContactModalTrigger>
             <div className="mt-3">
               <a

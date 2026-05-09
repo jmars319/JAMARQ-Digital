@@ -211,7 +211,6 @@ export default async function Home() {
     "@type": "ProfessionalService",
     name: "JAMARQ Digital",
     url: "https://jamarq.digital/",
-    email: "hello@jamarq.digital",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Winston-Salem",

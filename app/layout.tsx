@@ -3,6 +3,7 @@ import { IBM_Plex_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Header from "@/components/Header";
+import { PageViewTracker } from "@/components/PageViewTracker";
 import { ContactModalProvider } from "@/components/contact/ContactModalProvider";
 import "./globals.css";
 
@@ -120,7 +121,7 @@ export default function RootLayout({
       {
         "@type": "ContactPoint",
         contactType: "business inquiries",
-        email: "hello@jamarq.digital",
+        url: "https://jamarq.digital/contact",
       }
     ],
     address: {
@@ -166,6 +167,7 @@ export default function RootLayout({
           </div>
         </noscript>
         <ContactModalProvider>
+          <PageViewTracker />
           <Header />
           <div className="pt-20">{children}</div>
         </ContactModalProvider>

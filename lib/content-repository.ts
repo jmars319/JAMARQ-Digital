@@ -52,6 +52,24 @@ export type ContactSubmissionRecord = {
   createdAt: string;
 };
 
+export type PageViewInput = {
+  path: string;
+  referrer?: string;
+};
+
+export type AnalyticsSummary = {
+  viewsLast7Days: number;
+  viewsLast30Days: number;
+  topPaths: {
+    path: string;
+    views: number;
+  }[];
+  recentDays: {
+    day: string;
+    views: number;
+  }[];
+};
+
 function logDbFallback(message: string, error: unknown) {
   if (process.env.LIBSQL_URL) {
     console.error(message, error);
@@ -409,6 +427,106 @@ export async function listRecentContactSubmissions(limit = 5) {
   } catch (error) {
     console.error("Failed to load recent JAMARQ contact submissions.", error);
     return [];
+  }
+}
+
+export async function recordPageView(input: PageViewInput) {
+  const path = input.path.trim().slice(0, 500);
+
+  if (
+    !path ||
+    path.startsWith("/admin") ||
+    path.startsWith("/api") ||
+    path.startsWith("/_next")
+  ) {
+    return;
+  }
+
+  try {
+    await ensureAdminDb();
+
+    await getAdminDb().execute({
+      sql: `
+        INSERT INTO page_views (id, path, referrer)
+        VALUES (?, ?, ?);
+      `,
+      args: [
+        crypto.randomUUID(),
+        path,
+        input.referrer?.trim().slice(0, 500) || null,
+      ],
+    });
+  } catch (error) {
+    console.error("Failed to record JAMARQ page view.", error);
+  }
+}
+
+export async function getAnalyticsSummary(): Promise<AnalyticsSummary> {
+  const empty: AnalyticsSummary = {
+    viewsLast7Days: 0,
+    viewsLast30Days: 0,
+    topPaths: [],
+    recentDays: [],
+  };
+
+  try {
+    await ensureAdminDb();
+
+    const [sevenDays, thirtyDays, topPaths, recentDays] = await Promise.all([
+      getAdminDb().execute({
+        sql: `
+          SELECT COUNT(*) AS count
+          FROM page_views
+          WHERE created_at >= datetime('now', '-7 days');
+        `,
+        args: [],
+      }),
+      getAdminDb().execute({
+        sql: `
+          SELECT COUNT(*) AS count
+          FROM page_views
+          WHERE created_at >= datetime('now', '-30 days');
+        `,
+        args: [],
+      }),
+      getAdminDb().execute({
+        sql: `
+          SELECT path, COUNT(*) AS views
+          FROM page_views
+          WHERE created_at >= datetime('now', '-30 days')
+          GROUP BY path
+          ORDER BY views DESC, path ASC
+          LIMIT 6;
+        `,
+        args: [],
+      }),
+      getAdminDb().execute({
+        sql: `
+          SELECT date(created_at) AS day, COUNT(*) AS views
+          FROM page_views
+          WHERE created_at >= datetime('now', '-7 days')
+          GROUP BY date(created_at)
+          ORDER BY day ASC;
+        `,
+        args: [],
+      }),
+    ]);
+
+    return {
+      viewsLast7Days: Number(sevenDays.rows[0]?.count || 0),
+      viewsLast30Days: Number(thirtyDays.rows[0]?.count || 0),
+      topPaths: topPaths.rows.map((row) => ({
+        path: String(row.path),
+        views: Number(row.views || 0),
+      })),
+      recentDays: recentDays.rows.map((row) => ({
+        day: String(row.day),
+        views: Number(row.views || 0),
+      })),
+    };
+  } catch (error) {
+    console.error("Failed to load JAMARQ analytics summary.", error);
+    return empty;
   }
 }
 

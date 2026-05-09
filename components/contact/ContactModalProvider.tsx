@@ -144,7 +144,7 @@ export function ContactModalProvider({ children }: { children: ReactNode }) {
         console.error(error);
         setStatus("error");
         setErrorMessage(
-          "Something went wrong while sending your message. Please retry or email hello@jamarq.digital."
+          "Something went wrong while sending your message. Please retry the form in a moment."
         );
       }
     },

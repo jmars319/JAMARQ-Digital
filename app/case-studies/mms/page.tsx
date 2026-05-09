@@ -143,8 +143,7 @@ export default function MMSCaseStudyPage() {
     },
     "author": {
       "@type": "Person",
-      "name": "Jason Marshall",
-      "email": "jason@jamarq.digital"
+      "name": "Jason Marshall"
     },
     "publisher": {
       "@type": "Organization",

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import { ContactModalTrigger } from "@/components/contact/ContactModalTrigger";
-import { EmailCopyButton } from "@/components/contact/EmailCopyButton";
 import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
@@ -137,18 +136,33 @@ export default function ContactPage() {
             <h2 className="text-3xl font-semibold">Choose the right contact path</h2>
             <div className="p-6 rounded-2xl border border-slate/60 bg-jamarq-black/30 space-y-4">
               <p className="text-sm uppercase tracking-[0.3em] text-jamarq-gray">New projects</p>
-              <EmailCopyButton email="hello@jamarq.digital" />
-              <p className="text-jamarq-gray text-sm">All general CTAs route to this inbox.</p>
+              <ContactModalTrigger
+                prefill={{ subject: "New project inquiry", source: "contact-new-projects" }}
+                className="inline-flex items-center justify-center rounded-md border border-slate px-4 py-2 text-sm font-semibold text-mist transition hover:border-jamarq-cyan hover:text-jamarq-cyan"
+              >
+                Start a project inquiry
+              </ContactModalTrigger>
+              <p className="text-jamarq-gray text-sm">Best for new sites, rebuilds, and web systems.</p>
             </div>
             <div className="p-6 rounded-2xl border border-slate/60 bg-jamarq-black/30 space-y-4">
               <p className="text-sm uppercase tracking-[0.3em] text-jamarq-gray">Active clients</p>
-              <EmailCopyButton email="jason@jamarq.digital" />
-              <p className="text-jamarq-gray text-sm">Fastest path for builds already in progress.</p>
+              <ContactModalTrigger
+                prefill={{ subject: "Active client request", source: "contact-active-clients" }}
+                className="inline-flex items-center justify-center rounded-md border border-slate px-4 py-2 text-sm font-semibold text-mist transition hover:border-jamarq-cyan hover:text-jamarq-cyan"
+              >
+                Send a client update
+              </ContactModalTrigger>
+              <p className="text-jamarq-gray text-sm">Use this for builds already in progress.</p>
             </div>
             <div className="p-6 rounded-2xl border border-slate/60 bg-jamarq-black/30 space-y-4">
               <p className="text-sm uppercase tracking-[0.3em] text-jamarq-gray">Support & maintenance</p>
-              <EmailCopyButton email="support@jamarq.digital" />
-              <p className="text-jamarq-gray text-sm">For launched sites and retainers.</p>
+              <ContactModalTrigger
+                prefill={{ subject: "Support or maintenance request", source: "contact-support" }}
+                className="inline-flex items-center justify-center rounded-md border border-slate px-4 py-2 text-sm font-semibold text-mist transition hover:border-jamarq-cyan hover:text-jamarq-cyan"
+              >
+                Request support
+              </ContactModalTrigger>
+              <p className="text-jamarq-gray text-sm">For launched sites, retainers, and post-launch help.</p>
             </div>
           </Reveal>
           <Reveal delay={150} className="space-y-6">
@@ -202,7 +216,7 @@ export default function ContactPage() {
           >
             Send a message
           </ContactModalTrigger>
-          <p className="text-sm text-jamarq-gray">Prefer email instead? Use the contact options above.</p>
+          <p className="text-sm text-jamarq-gray">The contact form is the supported public intake path.</p>
         </Reveal>
       </section>
 

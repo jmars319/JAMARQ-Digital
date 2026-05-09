@@ -6,8 +6,10 @@ import {
 import { ChangeAdminPasswordForm } from "@/components/admin-password-form";
 import { adminPasswordIsUsable, isAdminAuthenticated } from "@/lib/admin";
 import {
+  getAnalyticsSummary,
   getContentModuleSummary,
   listRecentContactSubmissions,
+  type AnalyticsSummary,
 } from "@/lib/content-repository";
 
 export const metadata = {
@@ -32,9 +34,10 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
     );
   }
 
-  const [contentModules, recentSubmissions] = await Promise.all([
+  const [contentModules, recentSubmissions, analyticsSummary] = await Promise.all([
     getContentModuleSummary(),
     listRecentContactSubmissions(),
+    getAnalyticsSummary(),
   ]);
 
   return (
@@ -111,6 +114,8 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
             ))}
           </div>
         </div>
+
+        <AnalyticsPanel summary={analyticsSummary} />
 
         <div className="mt-5 rounded-lg border border-slate bg-steel/80 p-6">
           <p className="text-sm font-semibold uppercase tracking-[0.16em] text-jamarq-cyan">
@@ -190,6 +195,57 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
         </div>
       </section>
     </main>
+  );
+}
+
+function AnalyticsPanel({ summary }: { summary: AnalyticsSummary }) {
+  return (
+    <div className="mt-5 rounded-lg border border-slate bg-steel/80 p-6">
+      <p className="text-sm font-semibold uppercase tracking-[0.16em] text-jamarq-cyan">
+        Light analytics
+      </p>
+      <h2 className="mt-4 text-2xl font-semibold text-jamarq-white">
+        Public page views
+      </h2>
+      <p className="mt-3 max-w-2xl text-sm leading-6 text-jamarq-gray">
+        A small first-party snapshot for public route traffic. Admin, API, and
+        framework asset routes are excluded.
+      </p>
+      <div className="mt-5 grid gap-3 md:grid-cols-2">
+        <div className="rounded border border-slate bg-jamarq-black/70 p-4">
+          <p className="text-2xl font-semibold text-jamarq-white">
+            {summary.viewsLast7Days}
+          </p>
+          <p className="mt-1 text-sm font-semibold text-mist">Last 7 days</p>
+        </div>
+        <div className="rounded border border-slate bg-jamarq-black/70 p-4">
+          <p className="text-2xl font-semibold text-jamarq-white">
+            {summary.viewsLast30Days}
+          </p>
+          <p className="mt-1 text-sm font-semibold text-mist">Last 30 days</p>
+        </div>
+      </div>
+      {summary.topPaths.length === 0 ? (
+        <div className="mt-5 rounded border border-slate bg-jamarq-black/70 p-4 text-sm text-jamarq-gray">
+          No page views have been recorded yet.
+        </div>
+      ) : (
+        <div className="mt-5 rounded border border-slate bg-jamarq-black/70 p-4">
+          <p className="text-sm font-semibold text-mist">Top pages, 30 days</p>
+          <div className="mt-3 space-y-2">
+            {summary.topPaths.map((item) => (
+              <div
+                key={item.path}
+                className="flex items-center justify-between gap-4 text-sm text-jamarq-gray"
+              >
+                <span className="truncate">{item.path}</span>
+                <span className="font-semibold text-mist">{item.views}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
   );
 }
 

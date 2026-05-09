@@ -8,12 +8,24 @@ import {
   setStoredAdminPassword,
 } from "@/lib/admin";
 import type { AdminActionState } from "@/lib/admin-types";
+import {
+  updateContactSubmissionStatus,
+  type ContactSubmissionStatus,
+} from "@/lib/content-repository";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
+
+const contactStatuses = ["received", "reviewed", "archived"] as const;
 
 function getString(formData: FormData, key: string) {
   const value = formData.get(key);
   return typeof value === "string" ? value.trim() : "";
+}
+
+function isContactSubmissionStatus(
+  status: string,
+): status is ContactSubmissionStatus {
+  return contactStatuses.includes(status as ContactSubmissionStatus);
 }
 
 function validatePasswordChange(
@@ -105,4 +117,18 @@ export async function changeAdminPassword(
     ok: true,
     message: "Admin password changed.",
   };
+}
+
+export async function updateContactSubmissionStatusAction(formData: FormData) {
+  await assertAdmin();
+
+  const submissionId = getString(formData, "submissionId");
+  const status = getString(formData, "status");
+
+  if (!submissionId || !isContactSubmissionStatus(status)) {
+    throw new Error("Invalid contact submission status update.");
+  }
+
+  await updateContactSubmissionStatus(submissionId, status);
+  revalidatePath("/admin");
 }

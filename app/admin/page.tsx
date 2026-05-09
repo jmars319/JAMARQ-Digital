@@ -1,4 +1,8 @@
-import { loginAdmin, logoutAdmin } from "@/app/admin/actions";
+import {
+  loginAdmin,
+  logoutAdmin,
+  updateContactSubmissionStatusAction,
+} from "@/app/admin/actions";
 import { ChangeAdminPasswordForm } from "@/components/admin-password-form";
 import { adminPasswordIsUsable, isAdminAuthenticated } from "@/lib/admin";
 import {
@@ -156,6 +160,29 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
                     {formatAdminDate(submission.createdAt)} / Source:{" "}
                     {submission.source || "Unknown"}
                   </p>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {submission.status !== "reviewed" ? (
+                      <ContactStatusButton
+                        submissionId={submission.id}
+                        status="reviewed"
+                        label="Mark reviewed"
+                      />
+                    ) : null}
+                    {submission.status !== "archived" ? (
+                      <ContactStatusButton
+                        submissionId={submission.id}
+                        status="archived"
+                        label="Archive"
+                      />
+                    ) : null}
+                    {submission.status !== "received" ? (
+                      <ContactStatusButton
+                        submissionId={submission.id}
+                        status="received"
+                        label="Reopen"
+                      />
+                    ) : null}
+                  </div>
                 </article>
               ))}
             </div>
@@ -163,6 +190,29 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
         </div>
       </section>
     </main>
+  );
+}
+
+function ContactStatusButton({
+  submissionId,
+  status,
+  label,
+}: {
+  submissionId: string;
+  status: "received" | "reviewed" | "archived";
+  label: string;
+}) {
+  return (
+    <form action={updateContactSubmissionStatusAction}>
+      <input type="hidden" name="submissionId" value={submissionId} />
+      <input type="hidden" name="status" value={status} />
+      <button
+        type="submit"
+        className="inline-flex min-h-9 items-center justify-center rounded-full border border-slate px-3 text-xs font-semibold text-mist transition hover:border-jamarq-cyan/70 hover:bg-jamarq-cyan/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jamarq-cyan/60"
+      >
+        {label}
+      </button>
+    </form>
   );
 }
 

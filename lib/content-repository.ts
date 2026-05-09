@@ -36,6 +36,8 @@ export type ContactSubmissionInput = {
   source: string;
 };
 
+export type ContactSubmissionStatus = "received" | "reviewed" | "archived";
+
 export type ContactSubmissionRecord = {
   id: string;
   name: string;
@@ -339,6 +341,30 @@ export async function updateContactSubmissionEmailStatus(
     });
   } catch (error) {
     console.error("Failed to update JAMARQ contact submission status.", error);
+  }
+}
+
+export async function updateContactSubmissionStatus(
+  id: string,
+  status: ContactSubmissionStatus,
+) {
+  if (!id) {
+    return;
+  }
+
+  try {
+    await ensureAdminDb();
+
+    await getAdminDb().execute({
+      sql: `
+        UPDATE contact_submissions
+        SET status = ?, updated_at = CURRENT_TIMESTAMP
+        WHERE id = ?;
+      `,
+      args: [status, id],
+    });
+  } catch (error) {
+    console.error("Failed to update JAMARQ contact submission review status.", error);
   }
 }
 

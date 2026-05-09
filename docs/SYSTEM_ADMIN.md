@@ -12,7 +12,7 @@ There is a lightweight protected admin surface at `/admin`.
 - Password login and logout
 - Admin password changes
 - DB content module visibility for seeded public content and contact intake
-- Read-only recent contact submission snapshot
+- Recent contact submission snapshot with review, archive, and reopen controls
 
 ## Database-Backed Modules
 - `admin_settings`: stores the in-app admin password hash.
@@ -24,7 +24,7 @@ There is a lightweight protected admin surface at `/admin`.
 ## Admin-Adjacent Touchpoints
 - Contact submissions are recorded by a server route before email delivery:
   - API route: `app/api/contact/route.ts`
-  - Recent protected snapshot: `app/admin/page.tsx`
+  - Recent protected triage snapshot: `app/admin/page.tsx`
   - Email delivery via SendGrid (see `docs/SYSTEM_OPS.md`)
 
 ## Guardrails

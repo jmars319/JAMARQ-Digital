@@ -4,6 +4,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 
+const navLinks = [
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: "Work", href: "/work" },
+  { label: "Pricing", href: "/services#pricing" },
+  { label: "Process", href: "/process" },
+  { label: "Principles", href: "/mission" },
+];
+
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -28,40 +37,19 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
-          <Link 
-            href="/services" 
-            className="text-sm font-medium text-jamarq-gray hover:text-jamarq-cyan transition-colors"
-          >
-            Services
-          </Link>
-          <Link
-            href="/work"
-            className="text-sm font-medium text-jamarq-gray hover:text-jamarq-cyan transition-colors"
-          >
-            Work
-          </Link>
-          <Link
-            href="/services#pricing"
-            className="text-sm font-medium text-jamarq-gray hover:text-jamarq-cyan transition-colors"
-          >
-            Pricing
-          </Link>
-          <Link
-            href="/process"
-            className="text-sm font-medium text-jamarq-gray hover:text-jamarq-cyan transition-colors"
-          >
-            Process
-          </Link>
-          <Link
-            href="/mission"
-            className="text-sm font-medium text-jamarq-gray hover:text-jamarq-cyan transition-colors"
-          >
-            Principles
-          </Link>
+        <div className="hidden md:flex items-center gap-5 lg:gap-7">
+          {navLinks.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="text-sm font-medium text-jamarq-gray hover:text-jamarq-cyan transition-colors"
+            >
+              {item.label}
+            </Link>
+          ))}
           <Link 
             href="/contact" 
-            className="text-sm bg-jamarq-cyan text-jamarq-black px-7 py-2.5 rounded font-semibold hover:bg-opacity-90 transition-all"
+            className="text-sm bg-jamarq-cyan text-jamarq-black px-5 lg:px-7 py-2.5 rounded font-semibold hover:bg-opacity-90 transition-all"
           >
             Start a Project
           </Link>
@@ -119,41 +107,16 @@ export default function Header() {
             aria-label="Mobile menu"
           >
             <div className="flex flex-col space-y-4 px-4 py-6">
-              <Link 
-                href="/services" 
-                className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Services
-              </Link>
-              <Link
-                href="/work"
-                className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Work
-              </Link>
-              <Link
-                href="/services#pricing"
-                className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Pricing
-              </Link>
-              <Link
-                href="/process"
-                className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Process
-              </Link>
-              <Link
-                href="/mission"
-                className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Principles
-              </Link>
+              {navLinks.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
               <Link 
                 href="/contact" 
                 className="text-sm bg-jamarq-cyan text-jamarq-black px-6 py-2 rounded font-semibold hover:bg-opacity-90 transition-all inline-block text-center"
@@ -170,36 +133,15 @@ export default function Header() {
       <noscript>
         <div id="mobile-nav" className="md:hidden border-t border-slate bg-jamarq-black">
           <nav className="flex flex-col space-y-4 px-4 py-6" aria-label="Mobile navigation">
-            <a 
-              href="/services" 
-              className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
-            >
-              Services
-            </a>
-            <a
-              href="/work"
-              className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
-            >
-              Work
-            </a>
-            <a
-              href="/services#pricing"
-              className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
-            >
-              Pricing
-            </a>
-            <a
-              href="/process"
-              className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
-            >
-              Process
-            </a>
-            <a
-              href="/mission"
-              className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
-            >
-              Principles
-            </a>
+            {navLinks.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-sm text-jamarq-gray hover:text-jamarq-cyan transition-colors"
+              >
+                {item.label}
+              </a>
+            ))}
             <a 
               href="/contact" 
               className="text-sm bg-jamarq-cyan text-jamarq-black px-6 py-2 rounded font-semibold hover:bg-opacity-90 transition-all inline-block text-center"

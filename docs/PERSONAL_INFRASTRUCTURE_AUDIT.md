@@ -109,7 +109,80 @@ VaexCore Relay:
 - Remote D1 query confirms migrated tables exist.
 - Current Worker secrets include Twitch/client relay base secrets, but Discord secrets remain unset.
 
-## Pass 1 Conclusion
+## Pass 2 Runtime, Database, And Storage Decisions
+
+### Runtime
+
+- Keep `jamarq.digital`, `tenra.dev`, and `vaexil.tv` on Vercel.
+- Keep `relay.vaexil.tv` on Cloudflare Workers.
+- Do not put Relay inside the `vaexil.tv` Vercel app. Relay owns public webhook/OAuth endpoints and Worker secrets, so it should stay as a separate runtime boundary.
+- Do not add Cloudflare Pages for these sites. There is no repo evidence that a Pages migration would reduce cost or complexity.
+
+### Database
+
+- Keep current website databases on hosted libSQL/Turso.
+- Use D1 only for Relay state: installations, OAuth grants, EventSub subscriptions, chat queues, Discord interaction queues, suggestions, and audit rows.
+- Do not migrate the Vercel-hosted websites to D1 now. D1 is Cloudflare-native, while the three websites run on Vercel. Moving site data to D1 would require a Worker/API bridge or a hosting move, neither of which is justified by the current apps.
+- If Turso becomes a budget issue later, review website data access patterns first. Do not replace Turso with D1 just because Relay uses D1.
+
+### Storage
+
+- R2 is not part of v1 for these sites or Relay.
+- Use R2 later only for real object storage needs: exported backups, media, generated assets, or log/archive files.
+- Do not use R2 for SQL state. D1/Turso store relational app state; R2 stores files/blobs.
+- Do not add KV, Queues, Durable Objects, Vectorize, Workers AI, Stream, Images, or Cloudflare Pages for v1 unless a concrete feature requires them.
+
+## Cost Model
+
+Current official pricing references checked on 2026-05-10:
+
+- Vercel pricing: <https://vercel.com/pricing>
+- Vercel Hobby plan: <https://vercel.com/docs/plans/hobby>
+- Vercel limits: <https://vercel.com/docs/limits>
+- Cloudflare Workers pricing, including D1/KV/R2 summaries: <https://developers.cloudflare.com/workers/platform/pricing/>
+- Cloudflare R2 pricing: <https://developers.cloudflare.com/r2/pricing/>
+- Cloudflare zone plan billing: <https://developers.cloudflare.com/billing/understand/how-billing-works/>
+- Cloudflare zone plan prices: <https://workers.cloudflare.com/plans>
+- Turso pricing: <https://turso.tech/pricing?frequency=monthly>
+
+| Scenario | Base monthly cost | Fit |
+| --- | ---: | --- |
+| Current/free path | `$0` platform base, excluding prepaid domains and any existing Turso/R2 usage | Fine while Vercel Hobby terms and usage are acceptable. |
+| Vercel Pro only | `$20/mo + usage` | Use if commercial/professional use, collaboration, build concurrency, spend controls, or Pro-only Vercel features become necessary. |
+| Workers Paid only | `$5/mo + usage` | Use when Relay traffic/logging/headroom justifies it. D1 itself is available on Workers Free, but Paid gives larger monthly Workers allowances. |
+| Vercel Pro + Workers Paid | `$25/mo + usage` | Best target paid setup if Vercel Pro is needed and Relay is live. Fits the `$25-30/mo` budget target before usage overages. |
+| Vercel Pro + Workers Paid + D1 | `$25/mo + D1 overages only` | D1 should be effectively included for expected Relay v1 usage unless row reads/writes/storage exceed included/free allowances. |
+| Vercel Pro + Workers Paid + Turso Developer | `$30.99/mo + usage` | Acceptable only if Turso Free is not enough and keeping websites on Vercel remains preferred. |
+| Cloudflare zone Pro for all three domains | `$75/mo` monthly, or `$60/mo equivalent` annual | Not justified. Zone plans bill per domain and no repo/dashboard evidence needs Pro-only zone features. |
+| R2 light usage | Usually `$0` within free tier | Keep enabled only if useful. Avoid serving high-request assets from R2 without estimating Class B operation volume. |
+
+Do not prepay for Cloudflare zone Pro, Vercel add-ons, R2-heavy asset serving, Workers AI, Vectorize, Images, Stream, or Turso paid tiers until a real feature or usage limit forces the spend.
+
+## Pass 2 Live Integration Status
+
+Relay base launch is complete, but live Twitch/Discord integration is intentionally not completed from this audit pass because those steps require account-side OAuth and Discord application values.
+
+Remaining Relay tasks belong in the VaexCore workspace:
+
+- Add Twitch callback URL: `https://relay.vaexil.tv/oauth/twitch/callback`.
+- Complete bot OAuth while logged into `vaexcorebot`.
+- Complete broadcaster OAuth while logged into the broadcaster account.
+- Switch Console to `relay-chatbot`, register EventSub, and test one chat send.
+- Set Discord Worker secrets: `DISCORD_BOT_TOKEN`, `DISCORD_PUBLIC_KEY`, `DISCORD_APPLICATION_ID`, `DISCORD_GUILD_ID`, and optionally `DISCORD_OPERATOR_ROLE_ID`.
+- Set Discord Interactions Endpoint URL: `https://relay.vaexil.tv/webhooks/discord/interactions`.
+- Register slash commands from Console and validate `/suggest`, `/live`, `/late`, `/cancelled`, `/scheduled`, and `/setup-status`.
+
+## Pass 2 Conclusion
+
+The practical service decision is stable:
+
+- Vercel remains the website runtime.
+- Turso/libSQL remains the website database path.
+- Cloudflare Workers + D1 remains the Relay runtime/database path.
+- R2 remains unused for v1.
+- The only near-term paid plan likely to fit the budget is Vercel Pro + Workers Paid at about `$25/mo` before usage overages, and even that should wait for the concrete trigger.
+
+## Overall Conclusion
 
 The current platform shape is correct:
 

@@ -114,6 +114,12 @@ export default async function Footer() {
               Privacy
             </Link>
             <Link
+              href="/terms"
+              className="inline-flex text-[0.72rem] text-jamarq-gray/85 hover:text-jamarq-cyan transition-colors"
+            >
+              Terms
+            </Link>
+            <Link
               href="/admin"
               className="inline-flex text-[0.72rem] text-jamarq-gray/70 hover:text-jamarq-cyan transition-colors"
             >

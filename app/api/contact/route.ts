@@ -34,10 +34,12 @@ function isValidEmail(value: string) {
 }
 
 function isSpamTrap(body: Record<string, unknown>) {
+  const jamarqHp = readText(body, "jamarq_hp", 200);
   const website = readText(body, "website", 200);
   const startedAt = Number(body.startedAt);
 
   return (
+    jamarqHp.length > 0 ||
     website.length > 0 ||
     (Number.isFinite(startedAt) && Date.now() - startedAt < MIN_SUBMIT_MS)
   );

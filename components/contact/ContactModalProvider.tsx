@@ -123,7 +123,7 @@ export function ContactModalProvider({ children }: { children: ReactNode }) {
 
       try {
         const submittedFormData = new FormData(event.currentTarget);
-        const website = String(submittedFormData.get("website") ?? "");
+        const jamarqHp = String(submittedFormData.get("jamarq_hp") ?? "");
 
         const response = await fetch("/api/contact", {
           method: "POST",
@@ -134,7 +134,7 @@ export function ContactModalProvider({ children }: { children: ReactNode }) {
             ...formValues,
             subject: options.subject,
             source: options.source,
-            website,
+            jamarq_hp: jamarqHp,
             startedAt: formOpenedAt
           })
         });

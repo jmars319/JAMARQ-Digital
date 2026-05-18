@@ -1,6 +1,19 @@
 import { expect, test } from "@playwright/test";
 
-const routes = ["/", "/work", "/services", "/contact", "/privacy", "/terms", "/admin", "/robots.txt", "/sitemap.xml"];
+const routes = [
+  "/",
+  "/work",
+  "/services",
+  "/contact",
+  "/privacy",
+  "/terms",
+  "/admin",
+  "/status/access-denied",
+  "/status/server-error",
+  "/status/maintenance",
+  "/robots.txt",
+  "/sitemap.xml",
+];
 
 for (const route of routes) {
   test(`renders ${route}`, async ({ page }) => {
@@ -20,4 +33,11 @@ test("contact API rejects invalid payload without leaking internals", async ({ r
   expect(response.status()).toBe(400);
   const body = await response.text();
   expect(body).not.toMatch(/SENDGRID_API_KEY|TURSO_AUTH_TOKEN|stack|trace/i);
+});
+
+test("unknown routes render branded 404", async ({ page }) => {
+  const response = await page.goto("/missing-page-check", { waitUntil: "domcontentloaded" });
+  expect(response?.status()).toBe(404);
+  await expect(page.locator("body")).toContainText(/JAMARQ Digital|page is not available/i);
+  await expect(page.locator("[data-nextjs-dialog-overlay]")).toHaveCount(0);
 });

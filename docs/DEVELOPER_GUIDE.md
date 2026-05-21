@@ -14,6 +14,12 @@ Open http://localhost:3000.
 - `npm run build`
 - `npm run start`
 
+## Local Tooling
+- Use `vercel` for Vercel environment, deployment, and log diagnostics.
+- Use `pa11y` and Lighthouse for public-page accessibility and performance checks when page behavior or layout changes.
+- Use `actionlint` after editing GitHub Actions workflows.
+- Use `osv-scanner` for advisory checks across dependency manifests and lockfiles.
+
 ## Repo Structure
 - `app/` routes, layouts, metadata, sitemap, robots, and API routes
 - `components/` shared UI

@@ -23,6 +23,7 @@ This is the production JAMARQ Digital site. It is a Next.js App Router project d
 
 ## Documentation
 Start here:
+- `docs/README.md`
 - `docs/SYSTEM_OVERVIEW.md`
 
 Key references:
@@ -31,7 +32,7 @@ Key references:
 - `docs/DEPLOYMENT_GUIDE.md`
 - `docs/DEVELOPER_GUIDE.md`
 - `docs/PAGESPEED_TRADEOFFS.md`
-- `docs/COPILOT_INSTRUCTIONS_SUMMARY.md`
+- `docs/MAINTAINER_GUIDE.md`
 
 ## Guardrails
 - Case study long-form copy remains content-locked.

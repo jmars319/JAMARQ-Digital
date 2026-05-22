@@ -42,4 +42,4 @@ See `docs/SYSTEM_PUBLIC.md` for the current case-study content model. In short:
 - MJR is intentionally page-local in `app/case-studies/mjr/page.tsx` because its source site is smaller and the content is service-site proof, not a full document set.
 
 ## Retired Guidance
-Older Copilot/rebuild docs referenced placeholder builds, `src/`, Sanity CMS, and Framer Motion. Those instructions are no longer active and must not be used for implementation decisions. `docs/COPILOT_INSTRUCTIONS_SUMMARY.md` is retained only as a short archival notice.
+Older rebuild docs referenced placeholder builds, `src/`, Sanity CMS, and Framer Motion. Those assumptions are no longer active and must not be used for implementation decisions. See `docs/MAINTAINER_GUIDE.md` for the current guardrails.

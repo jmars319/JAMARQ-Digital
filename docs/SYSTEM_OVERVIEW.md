@@ -53,7 +53,7 @@ This is the production JAMARQ Digital site. It is not a placeholder build and th
 - `docs/DEPLOYMENT_GUIDE.md`
 - `docs/DEVELOPER_GUIDE.md`
 - `docs/PAGESPEED_TRADEOFFS.md`
-- `docs/COPILOT_INSTRUCTIONS_SUMMARY.md`
+- `docs/MAINTAINER_GUIDE.md`
 
 ## Where To Start
 - Product map + public routes: `docs/SYSTEM_PUBLIC.md`

@@ -118,6 +118,7 @@ export default function ServicesPage() {
   const serviceLines = [
     {
       title: "Custom Websites",
+      href: "/services/website-systems",
       description:
         "Conversion-focused business websites, marketing pages, product pages, and content-driven sites built without templates or page builders.",
       items: [
@@ -130,6 +131,7 @@ export default function ServicesPage() {
     },
     {
       title: "Website Rebuilds",
+      href: "/services/website-systems",
       description:
         "Rebuilds for slow, outdated, confusing, hard-to-update, or vendor-locked websites that need a cleaner foundation.",
       items: [
@@ -142,6 +144,7 @@ export default function ServicesPage() {
     },
     {
       title: "Web Systems",
+      href: "/services/website-systems",
       description:
         "Quote workflows, dashboards, inventory systems, and admin tooling built around day-to-day operations, with integrations where they are actually needed.",
       items: [
@@ -154,6 +157,7 @@ export default function ServicesPage() {
     },
     {
       title: "Maintenance & Support",
+      href: "/services/maintenance",
       description:
         "Monitoring, updates, analytics checks, small improvements, and support after launch.",
       items: [
@@ -312,11 +316,9 @@ export default function ServicesPage() {
                       </li>
                     ))}
                   </ul>
-                  {service.title === "Maintenance & Support" && (
-                    <Link href="/contact" className="link-underline inline-flex text-sm font-semibold text-jamarq-cyan">
-                      Ask about support →
-                    </Link>
-                  )}
+                  <Link href={service.href} className="link-underline inline-flex text-sm font-semibold text-jamarq-cyan">
+                    Explore this path →
+                  </Link>
                 </div>
               </Reveal>
             ))}

@@ -1,8 +1,29 @@
 import { MetadataRoute } from 'next'
+import { notes, servicePages } from '@/lib/growthContent';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://jamarq.digital';
-  const coreLastModified = '2026-05-04';
+  const coreLastModified = '2026-05-28';
+  const serviceRoutes = servicePages.map((page) => ({
+    url: `${baseUrl}/services/${page.slug}`,
+    lastModified: coreLastModified,
+    changeFrequency: 'monthly' as const,
+    priority: 0.85,
+  }));
+  const noteRoutes = [
+    {
+      url: `${baseUrl}/notes`,
+      lastModified: coreLastModified,
+      changeFrequency: 'weekly' as const,
+      priority: 0.75,
+    },
+    ...notes.map((note) => ({
+      url: `${baseUrl}/notes/${note.slug}`,
+      lastModified: note.date,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    })),
+  ];
 
   return [
     {
@@ -17,6 +38,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
+    ...serviceRoutes,
+    ...noteRoutes,
     {
       url: `${baseUrl}/process`,
       lastModified: coreLastModified,

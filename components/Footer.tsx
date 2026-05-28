@@ -43,6 +43,12 @@ export default async function Footer() {
               <Link href="/services" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">
                 Services
               </Link>
+              <Link href="/services/website-systems" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">
+                Website Systems
+              </Link>
+              <Link href="/services/dns-hosting-cleanup" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">
+                DNS Cleanup
+              </Link>
               <Link href="/process" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">
                 Process
               </Link>
@@ -51,6 +57,9 @@ export default async function Footer() {
               </Link>
               <Link href="/work" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">
                 Work
+              </Link>
+              <Link href="/notes" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">
+                Notes
               </Link>
               <Link href="/contact" className="block text-jamarq-gray text-sm hover:text-jamarq-cyan transition-colors">
                 Contact

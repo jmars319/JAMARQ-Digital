@@ -21,24 +21,6 @@ export const metadata: Metadata = {
   },
   description:
     "JAMARQ Digital builds conversion-focused websites, website rebuilds, web systems, and admin workflows for businesses that need fast pages and clear leads.",
-  keywords: [
-    "web development Winston-Salem NC",
-    "custom website design Winston-Salem",
-    "conversion focused websites",
-    "website rebuilds",
-    "website performance optimization",
-    "business website development",
-    "web systems",
-    "admin tools for websites",
-    "web systems North Carolina",
-    "React development Winston-Salem",
-    "responsive web design NC",
-    "accessible web development",
-    "modern web design",
-    "web developer Winston-Salem",
-    "custom websites NC",
-    "Winston-Salem web developer"
-  ],
   authors: [{ name: "Jason Marshall", url: "https://jamarq.digital" }],
   creator: "Jason Marshall",
   publisher: "JAMARQ Digital",
@@ -67,10 +49,10 @@ export const metadata: Metadata = {
       "JAMARQ Digital builds conversion-focused websites, website rebuilds, web systems, and admin workflows for businesses that need fast pages and clear leads.",
     images: [
       {
-        url: "/og.jpg",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "JAMARQ Digital",
+        alt: "JAMARQ Digital practical web systems",
       },
     ],
   },
@@ -79,7 +61,7 @@ export const metadata: Metadata = {
     title: "JAMARQ Digital | Websites, Rebuilds & Web Systems | Winston-Salem",
     description:
       "JAMARQ Digital builds conversion-focused websites, website rebuilds, web systems, and admin workflows for businesses that need fast pages and clear leads.",
-    images: ["/og.jpg"],
+    images: ["/opengraph-image"],
     creator: "@jamarqdigital",
     site: "@jamarqdigital",
   },
@@ -114,7 +96,7 @@ export default function RootLayout({
     "@type": "Organization",
     name: "JAMARQ Digital",
     url: "https://jamarq.digital",
-    logo: "https://jamarq.digital/og.jpg",
+    logo: "https://jamarq.digital/assets/logos/icon-cyan.png",
     description:
       "Conversion-focused website development, website rebuilds, web systems, and support from Winston-Salem, NC.",
     contactPoint: [

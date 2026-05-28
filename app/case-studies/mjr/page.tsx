@@ -173,7 +173,7 @@ export default function MJRCaseStudyPage() {
       "name": "JAMARQ Digital",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://jamarq.digital/assets/logos/wordmark-dark.png"
+        "url": "https://jamarq.digital/assets/brand/jamarq-app-icon.png"
       }
     },
     "image": ogImageUrl,

@@ -23,7 +23,7 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-3" aria-label="JAMARQ Digital homepage">
           <div className="relative h-12 w-12">
             <Image
-              src="/assets/logos/icon-dark.png"
+              src="/assets/brand/jamarq-mark.svg"
               alt="JAMARQ Digital logo"
               fill
               sizes="48px"

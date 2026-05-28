@@ -67,7 +67,7 @@ export default function MMHCaseStudyPage() {
       "name": "JAMARQ Digital",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://jamarq.digital/assets/logos/wordmark-dark.png"
+        "url": "https://jamarq.digital/assets/brand/jamarq-app-icon.png"
       }
     },
     "image": "https://jamarq.digital/case-studies/mmh/og-midway-music-hall.jpg",

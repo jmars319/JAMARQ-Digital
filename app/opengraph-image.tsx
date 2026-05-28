@@ -26,6 +26,25 @@ export default function Image() {
         <div
           style={{
             position: "absolute",
+            inset: 0,
+            background:
+              "linear-gradient(115deg, rgba(9,166,214,0.16), transparent 34%), radial-gradient(circle at 76% 32%, rgba(9,166,214,0.2), transparent 30%)",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            left: 72,
+            bottom: 102,
+            right: 72,
+            height: 140,
+            borderTop: "2px solid rgba(9,166,214,0.3)",
+            borderBottom: "2px solid rgba(9,166,214,0.18)",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
             right: -90,
             top: 70,
             width: 360,
@@ -45,8 +64,25 @@ export default function Image() {
           }}
         />
         <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
-          <div style={{ fontSize: 28, color: "#09A6D6", letterSpacing: 8 }}>
-            JAMARQ DIGITAL
+          <div style={{ display: "flex", alignItems: "center", gap: 22 }}>
+            <div
+              style={{
+                width: 82,
+                height: 82,
+                border: "2px solid rgba(9,166,214,0.38)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "#66F3FF",
+                fontSize: 44,
+                fontWeight: 800,
+              }}
+            >
+              JQ
+            </div>
+            <div style={{ fontSize: 28, color: "#09A6D6", letterSpacing: 8 }}>
+              JAMARQ DIGITAL
+            </div>
           </div>
           <div style={{ maxWidth: 850, fontSize: 78, lineHeight: 0.96, fontWeight: 700 }}>
             Practical web systems for businesses.

@@ -96,7 +96,7 @@ export default function RootLayout({
     "@type": "Organization",
     name: "JAMARQ Digital",
     url: "https://jamarq.digital",
-    logo: "https://jamarq.digital/assets/logos/icon-cyan.png",
+    logo: "https://jamarq.digital/assets/brand/jamarq-app-icon.png",
     description:
       "Conversion-focused website development, website rebuilds, web systems, and support from Winston-Salem, NC.",
     contactPoint: [

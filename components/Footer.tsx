@@ -15,14 +15,22 @@ export default async function Footer() {
         <div className="grid grid-cols-1 gap-8 mb-8 text-center md:grid-cols-4 md:text-left">
           {/* Brand */}
           <Reveal>
-            <div className="relative mx-auto mb-2 h-12 w-[200px] md:mx-0 md:h-16 md:w-[260px]">
+            <div className="mb-4 flex items-center justify-center gap-3 md:justify-start">
               <Image
-                src="/assets/logos/wordmark-dark.png"
-                alt="JAMARQ Digital"
-                fill
-                sizes="(min-width: 768px) 260px, 200px"
-                className="object-contain"
+                src="/assets/brand/jamarq-mark.svg"
+                alt=""
+                width={48}
+                height={48}
+                className="size-12"
               />
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-jamarq-white">
+                  JAMARQ
+                </p>
+                <p className="text-[0.65rem] uppercase tracking-[0.28em] text-jamarq-gray">
+                  Digital
+                </p>
+              </div>
             </div>
             <p className="text-jamarq-gray text-sm">Websites, online presence, rebuilds, and web systems.</p>
             <p className="mt-2 text-jamarq-gray text-xs">

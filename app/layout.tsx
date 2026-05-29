@@ -49,7 +49,7 @@ export const metadata: Metadata = {
       "JAMARQ Digital builds conversion-focused websites, website rebuilds, web systems, and admin workflows for businesses that need fast pages and clear leads.",
     images: [
       {
-        url: "/opengraph-image",
+        url: "/assets/brand/jamarq-og-image.png",
         width: 1200,
         height: 630,
         alt: "JAMARQ Digital practical web systems",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     title: "JAMARQ Digital | Websites, Rebuilds & Web Systems | Winston-Salem",
     description:
       "JAMARQ Digital builds conversion-focused websites, website rebuilds, web systems, and admin workflows for businesses that need fast pages and clear leads.",
-    images: ["/opengraph-image"],
+    images: ["/assets/brand/jamarq-og-image.png"],
     creator: "@jamarqdigital",
     site: "@jamarqdigital",
   },

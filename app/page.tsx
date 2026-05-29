@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://jamarq.digital/opengraph-image",
+        url: "https://jamarq.digital/assets/brand/jamarq-og-image.png",
         width: 1200,
         height: 630,
         alt: "JAMARQ Digital practical web systems",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "JAMARQ Digital | Practical Web Systems",
     description,
-    images: ["https://jamarq.digital/opengraph-image"],
+    images: ["https://jamarq.digital/assets/brand/jamarq-og-image.png"],
     creator: "@jamarqdigital",
     site: "@jamarqdigital",
   },
@@ -92,7 +92,7 @@ const structuredData = [
     name: "JAMARQ Digital",
     alternateName: "JAMARQ",
     url: "https://jamarq.digital/",
-    image: "https://jamarq.digital/opengraph-image",
+    image: "https://jamarq.digital/assets/brand/jamarq-og-image.png",
     description,
     address: {
       "@type": "PostalAddress",
@@ -134,8 +134,8 @@ export default function Home() {
       />
       <section className="relative overflow-hidden border-b border-slate/70 pt-32">
         <div
-          className="absolute inset-0 opacity-55"
-          style={{ backgroundImage: "url('/assets/brand/jamarq-system-field.svg')" }}
+          className="absolute inset-0 bg-cover bg-center opacity-[0.45]"
+          style={{ backgroundImage: "url('/assets/brand/jamarq-hero-background.png')" }}
         />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(13,13,15,0.98)_0%,rgba(13,13,15,0.9)_48%,rgba(13,13,15,0.7)_100%)]" />
         <div className="absolute inset-0 opacity-70">
@@ -146,23 +146,15 @@ export default function Home() {
         </div>
         <div className="relative mx-auto grid min-h-[calc(100vh-5rem)] max-w-6xl gap-12 px-5 pb-20 md:grid-cols-[minmax(0,1fr)_380px] md:px-10">
           <Reveal className="flex flex-col justify-center space-y-7">
-            <div className="flex items-center gap-4">
+            <div className="flex items-center">
               <Image
-                src="/assets/brand/jamarq-mark.svg"
-                alt=""
-                width={74}
-                height={74}
+                src="/assets/brand/jamarq-display-logo.png"
+                alt="JAMARQ Digital"
+                width={320}
+                height={120}
                 priority
-                className="size-[74px]"
+                className="h-auto w-64 sm:w-80"
               />
-              <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.28em] text-jamarq-white">
-                  JAMARQ
-                </p>
-                <p className="mt-1 text-xs uppercase tracking-[0.34em] text-jamarq-cyan">
-                  Digital systems
-                </p>
-              </div>
             </div>
             <h1 className="max-w-4xl text-5xl font-semibold leading-[1.05] md:text-7xl">
               JAMARQ Digital

@@ -20,20 +20,17 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-jamarq-black border-b border-slate" role="banner">
       <nav className="max-w-6xl mx-auto px-5 md:px-10 py-5 flex items-center justify-between" aria-label="Main navigation">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3" aria-label="JAMARQ Digital homepage">
-          <div className="relative h-12 w-12">
+        <Link href="/" className="flex items-center" aria-label="JAMARQ Digital homepage">
+          <div className="relative h-10 w-[168px] sm:h-12 sm:w-[198px]">
             <Image
-              src="/assets/brand/jamarq-mark.svg"
-              alt="JAMARQ Digital logo"
+              src="/assets/brand/jamarq-header-logo.svg"
+              alt="JAMARQ Digital"
               fill
-              sizes="48px"
+              sizes="(min-width: 640px) 198px, 168px"
               priority
-              className="object-contain"
+              className="object-contain object-left"
             />
           </div>
-          <span className="hidden sm:block text-sm md:text-base font-semibold tracking-[0.2em] uppercase text-jamarq-white">
-            JAMARQ Digital
-          </span>
         </Link>
 
         {/* Desktop Navigation */}

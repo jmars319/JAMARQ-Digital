@@ -145,22 +145,22 @@ export default function Home() {
           <div className="absolute bottom-0 left-0 h-px w-full bg-gradient-to-r from-jamarq-cyan/70 via-slate to-transparent" />
         </div>
         <div className="relative mx-auto grid min-h-[calc(100vh-5rem)] max-w-6xl gap-12 px-5 pb-20 md:grid-cols-[minmax(0,1fr)_380px] md:px-10">
-          <Reveal className="flex flex-col justify-center space-y-7">
-            <div className="flex items-center">
+          <Reveal className="flex flex-col justify-center space-y-8">
+            <div className="relative h-36 w-36 sm:h-44 sm:w-44">
               <Image
-                src="/brand/jamarq/header-logo.svg"
+                src="/brand/jamarq/q-display-transparent.png"
                 alt="JAMARQ Digital"
-                width={396}
-                height={96}
+                fill
+                sizes="(min-width: 640px) 176px, 144px"
                 priority
-                className="h-auto w-72 drop-shadow-[0_0_26px_rgba(9,166,214,0.22)] sm:w-96"
+                className="object-contain drop-shadow-[0_0_34px_rgba(9,166,214,0.22)]"
               />
             </div>
             <h1 className="max-w-4xl text-5xl font-semibold leading-[1.05] md:text-7xl">
-              JAMARQ Digital
+              Web systems that stay understandable.
             </h1>
             <p className="max-w-3xl text-xl leading-8 text-mist md:text-2xl">
-              Web systems, rebuilds, DNS, hosting, integrations, and maintenance for businesses that need clearer ownership and fewer loose ends.
+              Rebuilds, domains, DNS, hosting, integrations, and maintenance for businesses that need clearer ownership and fewer loose ends.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
               <ContactModalTrigger

@@ -148,12 +148,12 @@ export default function Home() {
           <Reveal className="flex flex-col justify-center space-y-7">
             <div className="flex items-center">
               <Image
-                src="/assets/brand/jamarq-display-logo.png"
+                src="/assets/brand/jamarq-header-logo.svg"
                 alt="JAMARQ Digital"
-                width={320}
-                height={120}
+                width={396}
+                height={96}
                 priority
-                className="h-auto w-64 sm:w-80"
+                className="h-auto w-72 drop-shadow-[0_0_26px_rgba(9,166,214,0.22)] sm:w-96"
               />
             </div>
             <h1 className="max-w-4xl text-5xl font-semibold leading-[1.05] md:text-7xl">

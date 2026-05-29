@@ -150,7 +150,7 @@ export default function MMSCaseStudyPage() {
       "name": "JAMARQ Digital",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://jamarq.digital/assets/brand/jamarq-app-icon.png"
+        "url": "https://jamarq.digital/brand/jamarq/mark.svg"
       }
     },
     "image": "https://jamarq.digital/case-studies/mms/og-midway-mobile-storage.jpg",

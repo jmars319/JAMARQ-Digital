@@ -49,7 +49,7 @@ export const metadata: Metadata = {
       "JAMARQ Digital builds conversion-focused websites, website rebuilds, web systems, and admin workflows for businesses that need fast pages and clear leads.",
     images: [
       {
-        url: "/assets/brand/jamarq-og-image.png",
+        url: "/brand/jamarq/og-image.png",
         width: 1200,
         height: 630,
         alt: "JAMARQ Digital practical web systems",
@@ -61,27 +61,21 @@ export const metadata: Metadata = {
     title: "JAMARQ Digital | Websites, Rebuilds & Web Systems | Winston-Salem",
     description:
       "JAMARQ Digital builds conversion-focused websites, website rebuilds, web systems, and admin workflows for businesses that need fast pages and clear leads.",
-    images: ["/assets/brand/jamarq-og-image.png"],
+    images: ["/brand/jamarq/og-image.png"],
     creator: "@jamarqdigital",
     site: "@jamarqdigital",
   },
   icons: {
     icon: [
-      { url: "/images/favicons/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/images/favicons/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/images/favicons/favicon-48x48.png", sizes: "48x48", type: "image/png" },
-      { url: "/images/favicons/favicon-96x96.png", sizes: "96x96", type: "image/png" },
-      { url: "/images/favicons/favicon.ico" },
+      { url: "/brand/jamarq/favicon.ico", rel: "icon", type: "image/x-icon" },
+      { url: "/brand/jamarq/mark.svg", sizes: "any", type: "image/svg+xml" },
     ],
     apple: [
-      { url: "/images/favicons/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
-      { url: "/images/favicons/apple-touch-icon-120x120.png", sizes: "120x120", type: "image/png" },
-      { url: "/images/favicons/apple-touch-icon-152x152.png", sizes: "152x152", type: "image/png" },
-      { url: "/images/favicons/apple-touch-icon-167x167.png", sizes: "167x167", type: "image/png" },
+      { url: "/brand/jamarq/mark.svg", sizes: "180x180", type: "image/svg+xml" },
     ],
   },
   other: {
-    "msapplication-TileImage": "/images/favicons/msapplication-icon-144x144.png",
+    "msapplication-TileImage": "/brand/jamarq/mark.svg",
     "msapplication-TileColor": "#0a0a0c",
   },
 };
@@ -96,7 +90,7 @@ export default function RootLayout({
     "@type": "Organization",
     name: "JAMARQ Digital",
     url: "https://jamarq.digital",
-    logo: "https://jamarq.digital/assets/brand/jamarq-app-icon.png",
+    logo: "https://jamarq.digital/brand/jamarq/mark.svg",
     description:
       "Conversion-focused website development, website rebuilds, web systems, and support from Winston-Salem, NC.",
     contactPoint: [

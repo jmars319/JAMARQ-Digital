@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://jamarq.digital/assets/brand/jamarq-og-image.png",
+        url: "https://jamarq.digital/brand/jamarq/og-image.png",
         width: 1200,
         height: 630,
         alt: "JAMARQ Digital practical web systems",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "JAMARQ Digital | Practical Web Systems",
     description,
-    images: ["https://jamarq.digital/assets/brand/jamarq-og-image.png"],
+    images: ["https://jamarq.digital/brand/jamarq/og-image.png"],
     creator: "@jamarqdigital",
     site: "@jamarqdigital",
   },
@@ -92,7 +92,7 @@ const structuredData = [
     name: "JAMARQ Digital",
     alternateName: "JAMARQ",
     url: "https://jamarq.digital/",
-    image: "https://jamarq.digital/assets/brand/jamarq-og-image.png",
+    image: "https://jamarq.digital/brand/jamarq/og-image.png",
     description,
     address: {
       "@type": "PostalAddress",
@@ -135,7 +135,7 @@ export default function Home() {
       <section className="relative overflow-hidden border-b border-slate/70 pt-32">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-[0.45]"
-          style={{ backgroundImage: "url('/assets/brand/jamarq-hero-background.png')" }}
+          style={{ backgroundImage: "url('/brand/jamarq/hero-background.png')" }}
         />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(13,13,15,0.98)_0%,rgba(13,13,15,0.9)_48%,rgba(13,13,15,0.7)_100%)]" />
         <div className="absolute inset-0 opacity-70">
@@ -148,7 +148,7 @@ export default function Home() {
           <Reveal className="flex flex-col justify-center space-y-7">
             <div className="flex items-center">
               <Image
-                src="/assets/brand/jamarq-header-logo.svg"
+                src="/brand/jamarq/header-logo.svg"
                 alt="JAMARQ Digital"
                 width={396}
                 height={96}

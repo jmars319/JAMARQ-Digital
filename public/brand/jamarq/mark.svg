@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="JAMARQ utility mark">
+<defs>
+<linearGradient id="steel" x1="120" y1="70" x2="395" y2="420" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f1f5f8"/><stop offset=".26" stop-color="#7f8891"/><stop offset=".58" stop-color="#252b32"/><stop offset="1" stop-color="#d7dde2"/></linearGradient>
+<linearGradient id="cyan" x1="130" y1="410" x2="420" y2="260" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00eaff"/><stop offset="1" stop-color="#068eb8"/></linearGradient>
+<filter id="g" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="8" result="b"/><feColorMatrix in="b" type="matrix" values="0 0 0 0 0 0 0 0 0 .88 0 0 0 0 1 0 0 0 .55 0"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<circle cx="256" cy="234" r="137" fill="none" stroke="#020407" stroke-width="72" opacity=".7"/>
+<circle cx="256" cy="234" r="137" fill="none" stroke="url(#steel)" stroke-width="54" stroke-linecap="round"/>
+<path d="M354 331 L426 403" stroke="#020407" stroke-width="76" stroke-linecap="round" opacity=".85"/>
+<path d="M350 326 L420 396" stroke="url(#cyan)" stroke-width="44" stroke-linecap="round" filter="url(#g)"/>
+<path d="M130 398 H384" stroke="#00eaff" stroke-width="10" stroke-linecap="round" filter="url(#g)"/>
+<path d="M164 116 A130 130 0 0 1 312 99" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".35"/>
+</svg>

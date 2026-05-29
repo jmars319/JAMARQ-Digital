@@ -69,7 +69,7 @@ export default function TRBGCaseStudyPage() {
       "name": "JAMARQ Digital",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://jamarq.digital/assets/brand/jamarq-app-icon.png"
+        "url": "https://jamarq.digital/brand/jamarq/mark.svg"
       }
     },
     "image": "https://jamarq.digital/case-studies/trbg/og-thunder-road-bar-and-grill.jpg",

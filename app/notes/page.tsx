@@ -16,14 +16,14 @@ export const metadata: Metadata = {
       "Practical notes from JAMARQ Digital on websites, domains, DNS, hosting, integrations, analytics, and maintainable small business systems.",
     url: "https://jamarq.digital/notes",
     type: "website",
-    images: [{ url: "https://jamarq.digital/assets/brand/jamarq-og-image.png", width: 1200, height: 630, alt: "JAMARQ Digital" }],
+    images: [{ url: "https://jamarq.digital/brand/jamarq/og-image.png", width: 1200, height: 630, alt: "JAMARQ Digital" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Notes on Web Systems, Domains, and Small Business Tech",
     description:
       "Practical notes from JAMARQ Digital on websites, domains, DNS, hosting, integrations, analytics, and maintainable small business systems.",
-    images: ["https://jamarq.digital/assets/brand/jamarq-og-image.png"],
+    images: ["https://jamarq.digital/brand/jamarq/og-image.png"],
     creator: "@jamarqdigital",
     site: "@jamarqdigital",
   },

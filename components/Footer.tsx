@@ -17,7 +17,7 @@ export default async function Footer() {
           <Reveal>
             <div className="mb-4 flex items-center justify-center md:justify-start">
               <Image
-                src="/assets/brand/jamarq-header-logo.svg"
+                src="/brand/jamarq/header-logo.svg"
                 alt="JAMARQ Digital"
                 width={198}
                 height={48}

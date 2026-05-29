@@ -43,15 +43,15 @@ export const metadata: Metadata = {
 };
 
 const systemSignals = [
-  "Websites",
-  "Rebuilds",
   "Domains",
   "DNS",
   "Hosting",
   "Forms",
   "Analytics",
   "Admin tools",
+  "Rebuilds",
   "Maintenance",
+  "Ownership",
 ];
 
 const serviceTracks = [

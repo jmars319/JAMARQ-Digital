@@ -48,7 +48,7 @@ export default function Header() {
             href="/contact" 
             className="text-sm bg-jamarq-cyan text-jamarq-black px-5 lg:px-7 py-2.5 rounded font-semibold hover:bg-opacity-90 transition-all"
           >
-            Start a Project
+            Request help
           </Link>
         </div>
 
@@ -56,9 +56,9 @@ export default function Header() {
           <Link
             href="/contact"
             className="inline-flex items-center justify-center rounded px-4 py-2 text-[11px] font-semibold bg-jamarq-cyan text-jamarq-black hover:bg-opacity-90 transition-all"
-            aria-label="Start a project"
+            aria-label="Request help"
           >
-            Start a Project
+            Request help
           </Link>
           {/* Mobile Menu Button */}
           <button
@@ -119,7 +119,7 @@ export default function Header() {
                 className="text-sm bg-jamarq-cyan text-jamarq-black px-6 py-2 rounded font-semibold hover:bg-opacity-90 transition-all inline-block text-center"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Start a Project
+                Request help
               </Link>
             </div>
           </div>
@@ -143,7 +143,7 @@ export default function Header() {
               href="/contact" 
               className="text-sm bg-jamarq-cyan text-jamarq-black px-6 py-2 rounded font-semibold hover:bg-opacity-90 transition-all inline-block text-center"
             >
-              Start a Project
+              Request help
             </a>
           </nav>
         </div>

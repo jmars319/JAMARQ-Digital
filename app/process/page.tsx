@@ -358,7 +358,7 @@ export default function ProcessPage() {
               prefill={{ subject: "Process page inquiry", source: "process-cta" }}
               className="inline-block bg-jamarq-cyan text-jamarq-black px-8 py-3 rounded-md font-semibold text-lg hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-jamarq-cyan focus:ring-offset-2 focus:ring-offset-jamarq-black"
             >
-              Start a Project
+              Request help
             </ContactModalTrigger>
             
             <p className="text-sm text-jamarq-gray">

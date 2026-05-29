@@ -262,7 +262,7 @@ export default function ServicesPage() {
                 prefill={{ subject: "Service inquiry", source: "services-hero" }}
                 className="inline-flex items-center justify-center bg-jamarq-cyan text-jamarq-black px-8 py-3 rounded-md font-semibold text-base hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-jamarq-cyan focus:ring-offset-2 focus:ring-offset-jamarq-black"
               >
-                Start a Project
+                Request help
               </ContactModalTrigger>
               <Link
                 href="/work"
@@ -480,7 +480,7 @@ export default function ServicesPage() {
               prefill={{ subject: "Services inquiry", source: "services-cta" }}
               className="inline-block bg-jamarq-cyan text-jamarq-black px-8 py-3 rounded-md font-semibold text-lg hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-jamarq-cyan focus:ring-offset-2 focus:ring-offset-jamarq-black"
             >
-              Start a Project
+              Request help
             </ContactModalTrigger>
             <p className="text-sm text-jamarq-gray">
               Want to see how JAMARQ works? <Link href="/process" className="link-underline text-jamarq-cyan">View the process</Link>

@@ -106,7 +106,7 @@ export default async function WorkPage() {
                 prefill={{ subject: "Work inquiry", source: "work-hero" }}
                 className="inline-flex items-center justify-center bg-jamarq-cyan text-jamarq-black px-8 py-3 rounded-md font-semibold text-base hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-jamarq-cyan focus:ring-offset-2 focus:ring-offset-jamarq-black"
               >
-                Start a Project
+                Request help
               </ContactModalTrigger>
               <Link
                 href="/case-studies"
@@ -207,7 +207,7 @@ export default async function WorkPage() {
               prefill={{ subject: "Work page inquiry", source: "work-cta" }}
               className="inline-flex items-center justify-center bg-jamarq-cyan text-jamarq-black px-8 py-3 rounded-md font-semibold text-base hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-jamarq-cyan focus:ring-offset-2 focus:ring-offset-steel"
             >
-              Start a Project
+              Request help
             </ContactModalTrigger>
             <Link
               href="/process"

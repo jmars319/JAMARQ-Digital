@@ -115,7 +115,7 @@ export default async function Footer() {
         {/* Copyright */}
         <Reveal delay={360} className="flex flex-col gap-3 border-t border-slate pt-6 text-center text-jamarq-gray text-xs md:flex-row md:items-center md:justify-between md:text-left">
           <p>&copy; {currentYear} JAMARQ Digital. All rights reserved.</p>
-          <nav className="flex flex-wrap justify-center gap-4 md:justify-end" aria-label="JAMARQ legal and admin links">
+          <nav className="flex flex-wrap justify-center gap-4 md:justify-end" aria-label="JAMARQ legal links">
             <Link
               href="/privacy"
               className="inline-flex text-[0.72rem] text-jamarq-gray/85 hover:text-jamarq-cyan transition-colors"
@@ -127,12 +127,6 @@ export default async function Footer() {
               className="inline-flex text-[0.72rem] text-jamarq-gray/85 hover:text-jamarq-cyan transition-colors"
             >
               Terms
-            </Link>
-            <Link
-              href="/admin"
-              className="inline-flex text-[0.72rem] text-jamarq-gray/70 hover:text-jamarq-cyan transition-colors"
-            >
-              Admin
             </Link>
           </nav>
         </Reveal>

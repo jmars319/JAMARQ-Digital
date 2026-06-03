@@ -119,17 +119,10 @@ export default function TRBGCaseStudyPage() {
       items: screenshotGroups.public
     },
     {
-      id: "admin",
-      label: "Admin views",
-      description:
-        "Operational tooling the owners use weekly to manage menus, hero slots, media, and hiring without vendor lock-in.",
-      items: screenshotGroups.admin
-    },
-    {
       id: "mobile",
       label: "Mobile views",
       description:
-        "Mobile parity checks that mirror desktop behavior. Assets will appear here automatically as photography is staged.",
+        "Mobile parity checks that mirror desktop behavior without exposing private staff or submission records.",
       items: screenshotGroups.mobile
     }
   ];
@@ -243,7 +236,7 @@ export default function TRBGCaseStudyPage() {
               <h2 className="text-3xl md:text-4xl font-semibold">Operational Coverage</h2>
             </div>
             <p className="text-jamarq-gray max-w-2xl">
-              Screenshots covering PageSpeed, menu flows, admin tooling, and mobile layouts.
+              Screenshots covering PageSpeed, public menu/reservation/careers flows, and mobile layouts. Authenticated admin workflows are summarized without public screenshots.
             </p>
           </Reveal>
           <Reveal delay={150}>

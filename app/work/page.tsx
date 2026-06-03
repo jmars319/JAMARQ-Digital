@@ -60,7 +60,7 @@ export default async function WorkPage() {
   const orderedCaseStudies = await listCaseStudySummaries();
 
   const heroStats = [
-    { label: "Performance snapshot", value: "Avg 97/100 desktop, 89/100 mobile (MMH, TRBG, MMS)" },
+    { label: "Current performance range", value: "97–100 desktop, 65–100 mobile across public case-study sites" },
     { label: "Launch-to-first result", value: "Day 2 (MMH), Week 1 (TRBG), Day 16 (MMS)" },
     { label: "Scope", value: "Websites, rebuilds, web systems, mobile parity" },
     { label: "Stack", value: "Next.js, React, PHP APIs, Tailwind, SendGrid" }

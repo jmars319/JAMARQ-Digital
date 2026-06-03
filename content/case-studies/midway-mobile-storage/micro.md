@@ -4,7 +4,7 @@
 
 A complete rebuild of a storage company's digital platform with custom inventory system, automated quote workflow, and elite performance optimization (98/100 desktop score).
 
-Built November 2025. First online quote received within 16 days of launch. Clearer information, blazing-fast load times, and an owner-friendly admin panel for managing units and customer requests.
+Built November 2025. First online quote received within 16 days of launch. Clearer information, strong launch performance proof, and owner-friendly private tools for managing units and customer requests.
 
 **View Case Study →**
 
@@ -19,7 +19,7 @@ The full page will include:
 - The challenge and the objectives
 - The strategic approach
 - System architecture + UI decisions
-- Admin tools
+- Private owner tools
 - **Performance optimization results (77→98)**
 - **First quote received 16 days after launch**
 - Before/after screenshots

@@ -33,9 +33,17 @@ export const caseStudySummaries = {
     hoverUltraShort: "Local service site + phone-first intake + owner handoff.",
     slug: "mjr",
     category: "Web Development"
+  },
+  surplus: {
+    title: "Surplus Containers",
+    micro: "Public inventory and contact site backed by private campaign and inventory operations, documented with confidential records omitted.",
+    hoverShort: "Public container availability surface with contact intake, private operations behind authentication, and current Lighthouse proof.",
+    hoverUltraShort: "Public inventory surface + private ops + current performance proof.",
+    slug: "surplus",
+    category: "Web Development"
   }
 };
 
 export type CaseStudyKey = keyof typeof caseStudySummaries;
 
-export const caseStudyDisplayOrder: CaseStudyKey[] = ["mmh", "trbg", "mms", "mjr"];
+export const caseStudyDisplayOrder: CaseStudyKey[] = ["mmh", "trbg", "mms", "mjr", "surplus"];

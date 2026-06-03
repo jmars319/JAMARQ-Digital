@@ -62,7 +62,7 @@ export default async function CaseStudiesPage() {
   const proofPoints = [
     { label: "Screenshots", value: "Full galleries per project" },
     { label: "Performance", value: "PageSpeed + Lighthouse data" },
-    { label: "Admin flows", value: "Tooling and workflow coverage" },
+    { label: "Private ops", value: "Summarized without exposed records" },
     { label: "Launch notes", value: "Handoff + support details" }
   ];
 
@@ -79,7 +79,7 @@ export default async function CaseStudiesPage() {
             <p className="text-xs uppercase tracking-[0.35em] text-jamarq-gray">Case studies</p>
             <h1 className="text-4xl md:text-5xl font-semibold leading-tight">Documentation of real websites, rebuilds, and web systems.</h1>
             <p className="text-lg text-jamarq-gray leading-relaxed">
-              Each case study covers the challenge, the build, and the technical details: screenshots where available, PageSpeed checks, admin views when relevant, and handoff notes. No fluff, no missing steps.
+              Each case study covers the challenge, the build, and the technical details: public screenshots where available, PageSpeed checks, privacy-safe operational summaries, and handoff notes. No fluff, no missing steps.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">

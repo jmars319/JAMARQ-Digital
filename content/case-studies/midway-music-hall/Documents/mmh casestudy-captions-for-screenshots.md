@@ -12,6 +12,22 @@ mmh-public-homepagemobile-source
 
 Mobile-first homepage layout designed for fast loading and clear event discovery on small screens.
 
+mmh-public-current-homepage-source
+
+Current live homepage capture showing the event-forward layout, quick venue overview, and upcoming show structure after the latest content updates.
+
+mmh-public-current-gathering-place-source
+
+Current live view of The Gathering Place page, preserving the related-venue experience inside the same public system.
+
+mmh-public-current-archive-source
+
+Current live archive view showing how past events remain browseable without cluttering the main upcoming schedule.
+
+mmh-public-current-homepagemobile-source
+
+Current mobile homepage capture showing the same event discovery flow on a narrow viewport.
+
 mmh-pagespeed-desktopbefore-source
 
 Desktop PageSpeed results prior to optimization, reflecting uncompressed assets and legacy structure.
@@ -27,6 +43,10 @@ Mobile PageSpeed results before the rebuild, impacted by render-blocking assets 
 mmh-pagespeed-mobileafter-source
 
 Mobile PageSpeed results after optimization, showing substantial gains under real-world mobile constraints.
+
+mmh-pagespeed-current-source
+
+Current live Lighthouse/PageSpeed evidence captured June 3, 2026 for desktop and mobile, including performance, accessibility, best-practice, SEO, and core timing metrics.
 
 ⸻
 

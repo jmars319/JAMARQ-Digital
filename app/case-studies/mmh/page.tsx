@@ -115,12 +115,6 @@ export default function MMHCaseStudyPage() {
       items: screenshotGroups.public
     },
     {
-      id: "admin",
-      label: "Admin views",
-      description: "Operational tooling for staff—dashboards, audit logs, seating templates, and reservations.",
-      items: screenshotGroups.admin
-    },
-    {
       id: "mobile",
       label: "Mobile views",
       description: "Mobile layouts across PageSpeed, public, and admin workflows with the same component system.",
@@ -224,7 +218,7 @@ export default function MMHCaseStudyPage() {
               <h2 className="text-3xl md:text-4xl font-semibold">Operational Coverage</h2>
             </div>
             <p className="text-jamarq-gray max-w-2xl">
-              Documentation covering performance results, public pages, admin controls, and mobile parity.
+              Documentation covering performance results, public pages, and mobile parity. Authenticated admin workflows are summarized below but not pictured publicly so client records stay private.
             </p>
           </Reveal>
           <Reveal delay={150}>
@@ -362,8 +356,8 @@ export default function MMHCaseStudyPage() {
       <section className="py-16" aria-label="Navigation">
         <Reveal className="max-w-4xl mx-auto px-5 md:px-10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 border-t border-slate pt-8">
-            <Link href="/case-studies/mms" className="text-jamarq-cyan hover:text-jamarq-magenta transition-colors font-semibold">
-              ← Previous: Midway Mobile Storage
+            <Link href="/case-studies/surplus" className="text-jamarq-cyan hover:text-jamarq-magenta transition-colors font-semibold">
+              ← Previous: Surplus Containers
             </Link>
             <Link href="/work" className="text-jamarq-cyan hover:text-jamarq-magenta transition-colors font-semibold">
               Back to All Work →

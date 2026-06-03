@@ -23,6 +23,34 @@ Mobile layout uses the same component system as desktop, with responsive breakpo
 
 ⸻
 
+mmh-public-current-homepage-source
+
+Technical note:
+Current capture uses the live production homepage and preserves only public event, venue, and navigation information.
+
+⸻
+
+mmh-public-current-gathering-place-source
+
+Technical note:
+Current capture uses the live public related-venue route; private admin records and booking data are intentionally not included.
+
+⸻
+
+mmh-public-current-archive-source
+
+Technical note:
+Archive data is public event history. Administrative audit logs, reservation records, and user tables are excluded from the public case study.
+
+⸻
+
+mmh-public-current-homepagemobile-source
+
+Technical note:
+Mobile capture uses the public production homepage at a narrow viewport; no private records or admin screens are included.
+
+⸻
+
 mmh-pagespeed-desktopbefore-source
 
 Technical note:
@@ -48,6 +76,13 @@ mmh-pagespeed-mobileafter-source
 
 Technical note:
 Mobile improvements prioritize real-world constraints, balancing image fidelity with bandwidth while preserving accessibility and SEO signals.
+
+⸻
+
+mmh-pagespeed-current-source
+
+Technical note:
+Current scores were measured locally with Lighthouse against the live production URL on June 3, 2026. Scores can vary by network, runtime conditions, and third-party service timing.
 
 ⸻
 

@@ -13,6 +13,7 @@ Public-facing JAMARQ Digital site: authority, continuity, long-form thinking, an
 - `/case-studies/mmh`: `app/case-studies/mmh/page.tsx`
 - `/case-studies/mms`: `app/case-studies/mms/page.tsx`
 - `/case-studies/mjr`: `app/case-studies/mjr/page.tsx`
+- `/case-studies/surplus`: `app/case-studies/surplus/page.tsx`
 - `/contact`: `app/contact/page.tsx`
 - `/mission`: `app/mission/page.tsx`
 
@@ -35,11 +36,13 @@ Public-facing JAMARQ Digital site: authority, continuity, long-form thinking, an
 - TRBG long-form content: `content/case-studies/thunder-road-bar-and-grill/**`, loaded through `lib/trbgCaseStudyContent.ts` and `lib/trbgScreenshots.ts`
 - MMS page copy and screenshot tabs: `app/case-studies/mms/page.tsx`, with supporting summaries in `content/case-studies/midway-mobile-storage/*.md`
 - MJR page copy and screenshot tabs: `app/case-studies/mjr/page.tsx`
+- Surplus page copy and screenshot tabs: `app/case-studies/surplus/page.tsx`
 
 ## Case Study Conventions
 - Document-backed case studies should keep source copy and screenshot notes under `content/case-studies/<client>/` and expose typed data through `lib/*CaseStudyContent.ts` or `lib/*Screenshots.ts`.
 - Page-local case studies may keep the route copy, metadata, and screenshot tab data in the page component when the case study is small and does not have a matching full document set.
 - MJR intentionally follows the page-local convention because its case study is compact service-site proof and the source assets live directly under `public/case-studies/mjr/**`.
+- Public case studies must not expose private admin data, customer records, campaign recipients, contact lists, credentials, or row-level inventory data. Use public screenshots, broad masking, or private walkthrough language instead.
 - Add every public case study route to `app/sitemap.ts`, `lib/caseStudySummaries.ts`, `lib/content-repository.ts`, and this document.
 
 ## Copy Guardrails

@@ -16,6 +16,10 @@ trbg-pagespeed-mobileafter-source
 
 Mobile PageSpeed results after optimization, demonstrating improved real-world mobile performance.
 
+trbg-pagespeed-current-source
+
+Current live Lighthouse/PageSpeed evidence captured June 3, 2026 for desktop and mobile, including performance, accessibility, best-practice, SEO, and core timing metrics.
+
 ⸻
 
 PUBLIC SITE VIEWS
@@ -35,6 +39,26 @@ Reservation form allowing guests to submit booking requests with date, time, and
 trbg-public-jobs-source
 
 Public careers page displaying open positions and an application form for prospective staff.
+
+trbg-public-current-homepage-source
+
+Current live homepage capture showing the restaurant brand, hero calls to action, and menu-first browsing path.
+
+trbg-public-current-menu-source
+
+Current live menu capture showing category navigation and image-backed menu sections.
+
+trbg-public-current-reservations-source
+
+Current live reservation capture showing the public request form without exposing submitted guest records.
+
+trbg-public-current-careers-source
+
+Current live careers capture showing the public application flow without exposing applicant records.
+
+trbg-public-current-homepagemobile-source
+
+Current mobile homepage capture showing the same restaurant information hierarchy on a narrow viewport.
 
 ⸻
 

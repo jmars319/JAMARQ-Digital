@@ -56,6 +56,13 @@
     ]
   },
   {
+    "route": "/case-studies/surplus",
+    "kind": "page",
+    "methods": [
+      "PAGE"
+    ]
+  },
+  {
     "route": "/case-studies/trbg",
     "kind": "page",
     "methods": [

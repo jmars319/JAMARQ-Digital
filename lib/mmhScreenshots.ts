@@ -16,37 +16,27 @@ const PUBLIC_SCREENSHOT_BASE = "/case-studies/mmh";
 
 const ORDERING: Record<ScreenshotGroup, string[]> = {
   pagespeed: [
+    "mmh-pagespeed-current",
     "mmh-pagespeed-desktopbefore",
     "mmh-pagespeed-desktopafter",
     "mmh-pagespeed-mobilebefore",
     "mmh-pagespeed-mobileafter"
   ],
   public: [
+    "mmh-public-current-homepage",
+    "mmh-public-current-gathering-place",
+    "mmh-public-current-archive",
     "mmh-public-homepagebefore",
     "mmh-public-homepageafter",
     "mmh-public-schedule",
     "mmh-public-archive",
     "mmh-public-tgphomepage"
   ],
-  admin: [
-    "mmh-admin-dashboard",
-    "mmh-admin-eventdashboard",
-    "mmh-admin-eventeditor",
-    "mmh-admin-eventcategories",
-    "mmh-admin-seatinglayouts",
-    "mmh-admin-seatinglayouteditor",
-    "mmh-admin-seat-requests-queue",
-    "mmh-admin-manualreservation",
-    "mmh-admin-mediamanager",
-    "mmh-admin-sitecontent",
-    "mmh-admin-auditlog",
-    "mmh-admin-manageusers"
-  ],
+  admin: [],
   mobile: [
+    "mmh-public-current-homepagemobile",
     "mmh-public-homepagemobile",
-    "mmh-public-schedulemobile",
-    "mmh-admin-dashboardmobile",
-    "mmh-admin-seatinglayoutsmobile"
+    "mmh-public-schedulemobile"
   ]
 };
 

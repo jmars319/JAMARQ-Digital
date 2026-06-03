@@ -28,6 +28,13 @@ Mobile optimizations prioritize reduced payload size while preserving visual fid
 
 ⸻
 
+trbg-pagespeed-current-source
+
+Technical note:
+Current scores were measured locally with Lighthouse against the live production URL on June 3, 2026. Scores can vary by network, runtime conditions, media payload, and third-party service timing.
+
+⸻
+
 PUBLIC SITE VIEWS
 
 trbg-public-homepage-source
@@ -55,6 +62,41 @@ trbg-public-jobs-source
 
 Technical note:
 Careers page shares the same submission pipeline as other forms, ensuring consistent validation and handling.
+
+⸻
+
+trbg-public-current-homepage-source
+
+Technical note:
+Current capture uses the live public homepage and excludes authenticated admin tooling.
+
+⸻
+
+trbg-public-current-menu-source
+
+Technical note:
+Current capture uses the public menu section only. Menu management screens are intentionally omitted from the public case study.
+
+⸻
+
+trbg-public-current-reservations-source
+
+Technical note:
+Current capture shows the public reservation form before submission. Guest records and staff review screens are intentionally omitted.
+
+⸻
+
+trbg-public-current-careers-source
+
+Technical note:
+Current capture shows the public application form before submission. Applicant records and staff review screens are intentionally omitted.
+
+⸻
+
+trbg-public-current-homepagemobile-source
+
+Technical note:
+Mobile capture uses the public production homepage at a narrow viewport; no private records or admin screens are included.
 
 ⸻
 

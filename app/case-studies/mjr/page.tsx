@@ -3,6 +3,7 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 import { CaseStudyScreenshotTabs } from "@/components/CaseStudyScreenshotTabs";
 import type { ScreenshotTab } from "@/components/CaseStudyScreenshotTabs";
+import { webpScreenshot } from "@/lib/caseStudyImageAssets";
 import { ContactModalTrigger } from "@/components/contact/ContactModalTrigger";
 import { Reveal } from "@/components/Reveal";
 import { ScrollProgressBar } from "@/components/ScrollProgressBar";
@@ -61,7 +62,53 @@ const outcomeBullets = [
   "Future copy updates can happen in small content files instead of forcing layout changes."
 ];
 
-const mediaTabs: ScreenshotTab[] = [
+const screenshotTabs: ScreenshotTab[] = [
+  {
+    id: "pagespeed",
+    label: "PageSpeed results",
+    description:
+      "Current live Lighthouse/PageSpeed evidence for the production service site.",
+    items: [
+      webpScreenshot({
+        id: "mjr-pagespeed-current",
+        basePath: "/case-studies/mjr/PageSpeed/mjr-pagespeed-current",
+        caption:
+          "Current live Lighthouse/PageSpeed evidence captured June 3, 2026: 100 desktop performance, 100 mobile performance, 95 accessibility, and 100 best-practices/SEO scores.",
+        alt: "Current Lighthouse score card for Midway Junk Removal",
+        technicalNote:
+          "Measured locally with Lighthouse against the live production URL. Scores can vary by network and runtime conditions."
+      })
+    ]
+  },
+  {
+    id: "public",
+    label: "Public views",
+    description:
+      "Current public routes showing the homepage, service structure, and quote path without submitted customer data.",
+    items: [
+      webpScreenshot({
+        id: "mjr-public-current-homepage",
+        basePath: "/case-studies/mjr/Public%20Views/mjr-public-current-homepage",
+        caption:
+          "Current homepage with phone-first CTAs and a compact service-business message.",
+        alt: "Current Midway Junk Removal homepage"
+      }),
+      webpScreenshot({
+        id: "mjr-public-current-services",
+        basePath: "/case-studies/mjr/Public%20Views/mjr-public-current-services",
+        caption:
+          "Current services route showing the searchable service-line structure.",
+        alt: "Current Midway Junk Removal services route"
+      }),
+      webpScreenshot({
+        id: "mjr-public-current-contact",
+        basePath: "/case-studies/mjr/Public%20Views/mjr-public-current-contact",
+        caption:
+          "Current quote/contact route shown before submission; no customer records are displayed.",
+        alt: "Current Midway Junk Removal quote and contact route"
+      })
+    ]
+  },
   {
     id: "field",
     label: "Project media",
@@ -113,6 +160,19 @@ const mediaTabs: ScreenshotTab[] = [
         height: 723,
         alt: "Mattresses, appliances, and bed frames stacked on a dump trailer"
       }
+    ]
+  },
+  {
+    id: "mobile",
+    label: "Mobile views",
+    description: "Current mobile homepage capture showing the service flow on a narrow viewport.",
+    items: [
+      webpScreenshot({
+        id: "mjr-public-current-homepage-mobile",
+        basePath: "/case-studies/mjr/Mobile%20Views/mjr-public-current-homepage-mobile",
+        caption: "Current mobile homepage with phone-first service CTAs.",
+        alt: "Current Midway Junk Removal mobile homepage"
+      })
     ]
   }
 ];
@@ -318,15 +378,15 @@ export default function MJRCaseStudyPage() {
           <Reveal className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
             <div>
               <p className="text-sm uppercase tracking-wider text-jamarq-cyan mb-2">Project Proof</p>
-              <h2 className="text-3xl md:text-4xl font-semibold">Real Service Media</h2>
+              <h2 className="text-3xl md:text-4xl font-semibold">Current Public Proof</h2>
             </div>
             <p className="text-jamarq-gray max-w-2xl">
-              The MJR site uses actual field photography instead of generic stock visuals, which matters for a local
-              service brand where trust and job fit are decided quickly.
+              Current live screenshots, performance evidence, and actual field photography. Quote/contact views are
+              shown before submission so customer records stay private.
             </p>
           </Reveal>
           <Reveal delay={150}>
-            <CaseStudyScreenshotTabs tabs={mediaTabs} defaultTabId="field" />
+            <CaseStudyScreenshotTabs tabs={screenshotTabs} defaultTabId="pagespeed" />
           </Reveal>
         </div>
       </section>
@@ -469,10 +529,10 @@ export default function MJRCaseStudyPage() {
               Back to All Work
             </Link>
             <Link
-              href="/case-studies/mmh"
+              href="/case-studies/surplus"
               className="text-jamarq-cyan hover:text-jamarq-magenta transition-colors font-semibold"
             >
-              Next: Midway Music Hall →
+              Next: Surplus Containers →
             </Link>
           </div>
         </Reveal>

@@ -136,6 +136,14 @@ const caseStudyHomeCardSeeds: Record<
     outcome:
       "Visitors can quickly confirm fit and contact the owner, while the operator keeps control of the domain, hosting, inbox, and update path.",
   },
+  surplus: {
+    problem:
+      "The business needed a public inventory and contact surface without exposing private campaign, contact-list, or inventory-row operations.",
+    completed:
+      "Built a public React/PHP site with inventory preview controls, contact intake, crawler-safe SEO basics, and a separate authenticated admin workspace.",
+    outcome:
+      "The public site is fast and shareable, current Lighthouse checks are strong, and confidential operational records stay out of public case-study assets.",
+  },
 };
 
 function fallbackCaseStudies(): CaseStudySummaryRecord[] {

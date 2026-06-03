@@ -36,6 +36,7 @@ This is the production JAMARQ Digital site. It is not a placeholder build and th
 - `/case-studies/mmh`
 - `/case-studies/mms`
 - `/case-studies/mjr`
+- `/case-studies/surplus`
 - `/contact`
 - `/mission`
 - `/admin` (protected, linked only from the footer)

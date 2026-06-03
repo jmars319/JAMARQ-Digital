@@ -3,6 +3,7 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 import { CaseStudyScreenshotTabs } from "@/components/CaseStudyScreenshotTabs";
 import type { ScreenshotTab } from "@/components/CaseStudyScreenshotTabs";
+import { webpScreenshot } from "@/lib/caseStudyImageAssets";
 import { buildPageSpeedReportUrl } from "@/lib/pageSpeed";
 import { ContactModalTrigger } from "@/components/contact/ContactModalTrigger";
 import { Reveal } from "@/components/Reveal";
@@ -10,7 +11,7 @@ import { ScrollProgressBar } from "@/components/ScrollProgressBar";
 
 const heroSummary = [
   "Midway Mobile Storage needed a trustworthy web presence and quote workflow—the previous site was barebones, slow, and unable to collect leads without a phone call.",
-  "JAMARQ rebuilt the stack with custom inventory controls, an online quote workflow, streamlined admin tools, and performance work that landed 98/100 desktop and 89/100 mobile scores on shared hosting.",
+  "JAMARQ rebuilt the stack with custom inventory controls, an online quote workflow, streamlined owner tools, and performance work that reached 98/100 desktop and 89/100 mobile launch scores on shared hosting.",
   "The rebuilt site received its first online quote 16 days after launch."
 ];
 
@@ -22,11 +23,20 @@ const screenshotTabs: ScreenshotTab[] = [
   {
     id: "pagespeed",
     label: "PageSpeed results",
-    description: "Desktop and mobile Lighthouse results showing 98/100 desktop and 89/100 mobile scores on shared hosting.",
+    description: "Current live Lighthouse/PageSpeed evidence, alongside the original launch score captures for historical context.",
     items: [
+      webpScreenshot({
+        id: "mms-pagespeed-current",
+        basePath: "/case-studies/mms/PageSpeed/mms-pagespeed-current",
+        caption:
+          "Current live Lighthouse/PageSpeed evidence captured June 3, 2026: 98 desktop performance and 78 mobile performance, with 100 best-practices and SEO scores.",
+        alt: "Current Lighthouse score card for Midway Mobile Storage",
+        technicalNote:
+          "Measured locally with Lighthouse against the live production URL. Scores can vary by network, runtime conditions, and media payload."
+      }),
       {
         id: "mms-pagespeed-desktop",
-        caption: "Desktop PageSpeed score at 98/100 on shared hosting.",
+        caption: "Original desktop PageSpeed launch score at 98/100 on shared hosting.",
         fallbackSrc: "/case-studies/mms/PageSpeed/pagespeed-desktop.webp",
         webpSrcSet: "/case-studies/mms/PageSpeed/pagespeed-desktop.webp 1600w",
         width: 1600,
@@ -35,7 +45,7 @@ const screenshotTabs: ScreenshotTab[] = [
       },
       {
         id: "mms-pagespeed-mobile",
-        caption: "Mobile PageSpeed score boosted to 89/100 with code-level optimizations.",
+        caption: "Original mobile PageSpeed launch score at 89/100 with code-level optimizations.",
         fallbackSrc: "/case-studies/mms/PageSpeed/pagespeed-mobile.webp",
         webpSrcSet: "/case-studies/mms/PageSpeed/pagespeed-mobile.webp 1600w",
         width: 1600,
@@ -47,8 +57,29 @@ const screenshotTabs: ScreenshotTab[] = [
   {
     id: "public",
     label: "Public views",
-    description: "Customer-facing pages that helped the business start collecting online quotes within 16 days.",
+    description: "Current customer-facing pages that keep services, quote intake, products, and career paths discoverable.",
     items: [
+      webpScreenshot({
+        id: "mms-public-current-homepage",
+        basePath: "/case-studies/mms/Public%20Views/mms-public-current-homepage",
+        caption:
+          "Current live homepage with clear storage CTAs, service structure, and customer-facing trust signals.",
+        alt: "Current Midway Mobile Storage homepage"
+      }),
+      webpScreenshot({
+        id: "mms-public-current-quote",
+        basePath: "/case-studies/mms/Public%20Views/mms-public-current-quote",
+        caption:
+          "Current quote form view showing the public intake path before submission; no submitted customer records are shown.",
+        alt: "Current Midway Mobile Storage quote form"
+      }),
+      webpScreenshot({
+        id: "mms-public-current-careers",
+        basePath: "/case-studies/mms/Public%20Views/mms-public-current-careers",
+        caption:
+          "Current careers section and application flow shown before submission, keeping applicant records private.",
+        alt: "Current Midway Mobile Storage careers section"
+      }),
       {
         id: "mms-public-home",
         caption: "Home page redesign with clear CTAs, trust signals, and real inventory messaging.",
@@ -61,26 +92,17 @@ const screenshotTabs: ScreenshotTab[] = [
     ]
   },
   {
-    id: "admin",
-    label: "Admin views",
-    description: "Screens and tools used to manage units, quotes, and messaging without vendor lock-in.",
-    items: [
-      {
-        id: "mms-admin-inventory",
-        caption: "Custom unit inventory system with filters and owner-ready controls.",
-        fallbackSrc: "/case-studies/mms/Admin Views/admin-inventory-system.webp",
-        webpSrcSet: "/case-studies/mms/Admin Views/admin-inventory-system.webp 1600w",
-        width: 1600,
-        height: 1000,
-        alt: "Admin dashboard showing Midway Mobile Storage inventory controls"
-      }
-    ]
-  },
-  {
     id: "mobile",
     label: "Mobile views",
     description: "Mobile flows that keep quote requests moving after hours.",
     items: [
+      webpScreenshot({
+        id: "mms-public-current-quote-mobile",
+        basePath: "/case-studies/mms/Mobile%20Views/mms-public-current-quote-mobile",
+        caption:
+          "Current mobile quote workflow with no customer submission data displayed.",
+        alt: "Current Midway Mobile Storage mobile quote workflow"
+      }),
       {
         id: "mms-quote-mobile",
         caption: "Quote workflow on mobile lets customers submit requests 24/7 without calling.",
@@ -254,7 +276,7 @@ export default function MMSCaseStudyPage() {
         <Reveal className="max-w-4xl mx-auto px-5 md:px-10">
           <div className="space-y-6 text-lg text-jamarq-gray leading-relaxed">
             <p className="text-xl text-mist">
-              Midway Mobile Storage needed a website that actually worked. The old site was barebones, slow, and lacked the tools customers needed to request quotes or understand available inventory. JAMARQ rebuilt the platform with inventory controls, a custom quote form, streamlined admin workflows, and performance work that reached a <span className="text-jamarq-cyan font-semibold">98/100 desktop PageSpeed score</span> on shared hosting.
+              Midway Mobile Storage needed a website that actually worked. The old site was barebones, slow, and lacked the tools customers needed to request quotes or understand available inventory. JAMARQ rebuilt the platform with inventory controls, a custom quote form, streamlined owner workflows, and performance work that reached a <span className="text-jamarq-cyan font-semibold">98/100 desktop PageSpeed launch score</span> on shared hosting. The current live Lighthouse check still measures 98 desktop performance, with 78 mobile performance on June 3, 2026.
             </p>
             <p>
               The rebuild launched November 25, 2025 with a focus on clarity, speed, and owner-friendly controls. Customers could browse inventory, request quotes without calling, and get clearer information about the business and available units.
@@ -369,11 +391,11 @@ export default function MMSCaseStudyPage() {
               </li>
               <li className="flex gap-3">
                 <span className="text-jamarq-cyan">•</span>
-                <span>Admin tools for updating key information</span>
+                <span>Owner tools for updating key information</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-jamarq-cyan">•</span>
-                <span>Performance optimization (98/100 desktop, 89/100 mobile)</span>
+                <span>Performance optimization with 98/100 desktop launch and current live desktop scores</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-jamarq-cyan">•</span>
@@ -405,11 +427,11 @@ export default function MMSCaseStudyPage() {
               <ul className="space-y-4">
                 <li className="flex gap-3">
                   <span className="text-jamarq-cyan">•</span>
-                  <span><span className="font-semibold text-jamarq-white">Desktop: 98/100 PageSpeed score</span></span>
+                  <span><span className="font-semibold text-jamarq-white">Desktop: 98/100 current Lighthouse/PageSpeed performance</span></span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-jamarq-cyan">•</span>
-                  <span><span className="font-semibold text-jamarq-white">Mobile: 89/100</span>, up from 74</span>
+                  <span><span className="font-semibold text-jamarq-white">Mobile: 78/100 current Lighthouse/PageSpeed performance</span>, with the original launch capture preserved at 89/100</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-jamarq-cyan">•</span>
@@ -446,7 +468,7 @@ export default function MMSCaseStudyPage() {
                 </li>
                 <li className="flex gap-3">
                   <span className="text-jamarq-cyan">•</span>
-                  <span>Admin updates are simplified and owner-led</span>
+                  <span>Owner updates are simplified while private operational records stay out of the public case study</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-jamarq-cyan">•</span>
@@ -504,10 +526,10 @@ export default function MMSCaseStudyPage() {
               Back to All Work
             </Link>
             <Link
-              href="/case-studies/mmh"
+              href="/case-studies/mjr"
               className="text-jamarq-cyan hover:text-jamarq-magenta transition-colors font-semibold"
             >
-              Next: Midway Music Hall →
+              Next: Midway Junk Removal →
             </Link>
           </div>
         </Reveal>

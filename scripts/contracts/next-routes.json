@@ -1,0 +1,212 @@
+[
+  {
+    "route": "/",
+    "kind": "page",
+    "methods": [
+      "PAGE"
+    ]
+  },
+  {
+    "route": "/admin",
+    "kind": "page",
+    "methods": [
+      "PAGE"
+    ]
+  },
+  {
+    "route": "/api/analytics/page-view",
+    "kind": "route",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "route": "/api/contact",
+    "kind": "route",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "route": "/case-studies",
+    "kind": "page",
+    "methods": [
+      "PAGE"
+    ]
+  },
+  {
+    "route": "/case-studies/mjr",
+    "kind": "page",
+    "methods": [
+      "PAGE"
+    ]
+  },
+  {
+    "route": "/case-studies/mmh",
+    "kind": "page",
+    "methods": [
+      "PAGE"
+    ]
+  },
+  {
+    "route": "/case-studies/mms",
+    "kind": "page",
+    "methods": [
+      "PAGE"
+    ]
+  },
+  {
+    "route": "/case-studies/trbg",
+    "kind": "page",
+    "methods": [
+      "PAGE"
+    ]
+  },
+  {
+    "route": "/contact",
+    "kind": "page",
+    "methods": [
+      "PAGE"
+    ]
+  },
+  {
+    "route": "/favicon.ico",
+    "kind": "metadata",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "route": "/manifest.webmanifest",
+    "kind": "metadata",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "route": "/mission",
+    "kind": "page",
+    "methods": [
+      "PAGE"
+    ]
+  },
+  {
+    "route": "/notes",
+    "kind": "page",
+    "methods": [
+      "PAGE"
+    ]
+  },
+  {
+    "route": "/notes/how-to-tell-if-your-website-setup-is-fragile",
+    "kind": "page",
+    "methods": [
+      "PAGE"
+    ]
+  },
+  {
+    "route": "/notes/plain-language-guide-to-dns-records",
+    "kind": "page",
+    "methods": [
+      "PAGE"
+    ]
+  },
+  {
+    "route": "/notes/what-small-businesses-should-own-before-launching-a-website",
+    "kind": "page",
+    "methods": [
+      "PAGE"
+    ]
+  },
+  {
+    "route": "/privacy",
+    "kind": "page",
+    "methods": [
+      "PAGE"
+    ]
+  },
+  {
+    "route": "/process",
+    "kind": "page",
+    "methods": [
+      "PAGE"
+    ]
+  },
+  {
+    "route": "/robots.txt",
+    "kind": "metadata",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "route": "/services",
+    "kind": "page",
+    "methods": [
+      "PAGE"
+    ]
+  },
+  {
+    "route": "/services/dns-hosting-cleanup",
+    "kind": "page",
+    "methods": [
+      "PAGE"
+    ]
+  },
+  {
+    "route": "/services/maintenance",
+    "kind": "page",
+    "methods": [
+      "PAGE"
+    ]
+  },
+  {
+    "route": "/services/website-systems",
+    "kind": "page",
+    "methods": [
+      "PAGE"
+    ]
+  },
+  {
+    "route": "/sitemap.xml",
+    "kind": "metadata",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "route": "/status/access-denied",
+    "kind": "page",
+    "methods": [
+      "PAGE"
+    ]
+  },
+  {
+    "route": "/status/maintenance",
+    "kind": "page",
+    "methods": [
+      "PAGE"
+    ]
+  },
+  {
+    "route": "/status/server-error",
+    "kind": "page",
+    "methods": [
+      "PAGE"
+    ]
+  },
+  {
+    "route": "/terms",
+    "kind": "page",
+    "methods": [
+      "PAGE"
+    ]
+  },
+  {
+    "route": "/work",
+    "kind": "page",
+    "methods": [
+      "PAGE"
+    ]
+  }
+]

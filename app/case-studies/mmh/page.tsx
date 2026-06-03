@@ -117,7 +117,7 @@ export default function MMHCaseStudyPage() {
     {
       id: "mobile",
       label: "Mobile views",
-      description: "Mobile layouts across PageSpeed, public, and admin workflows with the same component system.",
+      description: "Mobile layouts for public customer-facing flows using the same responsive component system.",
       items: screenshotGroups.mobile
     }
   ];

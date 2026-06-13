@@ -10,7 +10,8 @@ export default defineConfig({
   timeout: 30_000,
   expect: { timeout: 5_000 },
   fullyParallel: true,
-  reporter: [["list"]],
+  retries: process.env.CI ? 1 : 0,
+  reporter: [["list"], ["json", { outputFile: "test-results/playwright-results.json" }]],
   webServer: {
     command: `PORT=${port} npm run dev`,
     url: baseURL,
@@ -20,6 +21,8 @@ export default defineConfig({
   use: {
     baseURL,
     trace: "retain-on-failure",
+    screenshot: "only-on-failure",
+    video: "retain-on-failure",
   },
   projects: [
     { name: "desktop", use: { ...devices["Desktop Chrome"] } },

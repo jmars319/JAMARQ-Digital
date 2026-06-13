@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "siteId": "jamarq-digital",
+  "productionBaseUrl": "https://jamarqdigital.com",
+  "deployModel": "portfolio website",
+  "hosting": "Vercel",
+  "commands": {
+    "verify": "npm run test:all",
+    "build": "npm run build",
+    "deployCheck": "npm run test:deploy"
+  },
+  "artifacts": [],
+  "sourceMapPolicy": "do-not-publish-unless-explicitly-enabled-in-hosting",
+  "environment": {
+    "local": ".env.local",
+    "productionSource": "Vercel project settings",
+    "packagedRuntime": "hosted variables",
+    "secretsInGit": false
+  },
+  "forbiddenDeployPatterns": [".git/", ".env", ".env.local", ".env.production", "node_modules/", "test-results/", "playwright-report/", "coverage/", "*.map"],
+  "routeMap": {
+    "publicRoutes": ["/", "/services", "/work", "/case-studies", "/process", "/mission", "/contact", "/privacy", "/terms"],
+    "adminRoutes": ["/admin"],
+    "apiHealth": "",
+    "driftChecks": ["next-app-routes", "public-nav", "footer-links", "sitemap"]
+  },
+  "adminContract": {
+    "adminRoutes": ["/admin"],
+    "blankScreenGuard": "Admin route must render a useful response or intentional auth/access state.",
+    "systemChecks": {
+      "page": "",
+      "endpoint": "",
+      "requiredFields": []
+    }
+  },
+  "mediaContract": {
+    "storage": "r2-ready-with-bundled-public-assets",
+    "publicCdn": "https://cdn.jamarqdigital.com",
+    "fallback": "bundled portfolio assets",
+    "deployUploadsPolicy": "no uploaded media should be committed or packaged"
+  },
+  "testSafety": {
+    "productionDatabaseNames": [],
+    "liveProviderEnvVars": ["R2_SECRET_ACCESS_KEY", "RESEND_API_KEY", "SMTP_PASS"],
+    "liveUploadBuckets": ["jamarqdigital-com-media-public", "jamarqdigital-com-media-private"]
+  }
+}

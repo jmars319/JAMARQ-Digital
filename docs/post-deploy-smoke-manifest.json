@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "siteId": "jamarq-digital",
+  "productionBaseUrl": "https://jamarqdigital.com",
+  "routes": {
+    "public": ["/", "/services", "/work", "/case-studies", "/process", "/mission", "/contact", "/privacy", "/terms"],
+    "admin": ["/admin"],
+    "api": ["/api/contact"]
+  },
+  "readOnlyDiagnostics": [
+    "Portfolio homepage, services, work/case studies, process, mission, contact, legal pages, and admin route load.",
+    "Contact API validation can reject invalid payloads without sending live messages."
+  ],
+  "formDryRun": "Do not submit live contact forms without explicit approval.",
+  "exposureProbes": [
+    { "path": "/site-deploy.zip", "expectedStatus": [403, 404] },
+    { "path": "/backend-deploy.zip", "expectedStatus": [403, 404] },
+    { "path": "/frontend-deploy.zip", "expectedStatus": [403, 404] },
+    { "path": "/deploy.tar.gz", "expectedStatus": [403, 404] },
+    { "path": "/.env", "expectedStatus": [403, 404] },
+    { "path": "/.git/config", "expectedStatus": [403, 404] }
+  ]
+}

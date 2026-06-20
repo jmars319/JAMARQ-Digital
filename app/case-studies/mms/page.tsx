@@ -216,7 +216,6 @@ export default function MMSCaseStudyPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
       />
-      {/* Hero Section */}
       <section
         className="min-h-[60vh] flex items-center justify-center px-5 md:px-10 pt-32 md:pt-40 pb-24"
         aria-label="Case study hero"
@@ -271,7 +270,6 @@ export default function MMSCaseStudyPage() {
         </Reveal>
       </section>
 
-      {/* Overview Section */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Project overview">
         <Reveal className="max-w-4xl mx-auto px-5 md:px-10">
           <div className="space-y-6 text-lg text-jamarq-gray leading-relaxed">
@@ -294,7 +292,6 @@ export default function MMSCaseStudyPage() {
         </Reveal>
       </section>
 
-      {/* Screenshots Section */}
       <section className="py-24 md:py-32" aria-label="Screenshots and technical proof">
         <div className="max-w-6xl mx-auto px-5 md:px-10">
           <Reveal className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
@@ -312,7 +309,6 @@ export default function MMSCaseStudyPage() {
         </div>
       </section>
 
-      {/* The Challenge Section */}
       <section className="py-24 md:py-32" aria-label="The challenge">
         <Reveal className="max-w-4xl mx-auto px-5 md:px-10">
           <h2 className="text-3xl md:text-4xl font-semibold mb-8">
@@ -359,7 +355,6 @@ export default function MMSCaseStudyPage() {
         </Reveal>
       </section>
 
-      {/* The Solution Section */}
       <section className="py-24 md:py-32 bg-steel" aria-label="The solution">
         <Reveal className="max-w-4xl mx-auto px-5 md:px-10">
           <h2 className="text-3xl md:text-4xl font-semibold mb-8">
@@ -413,7 +408,6 @@ export default function MMSCaseStudyPage() {
         </Reveal>
       </section>
 
-      {/* The Results Section */}
       <section className="py-24 md:py-32" aria-label="The results">
         <div className="max-w-5xl mx-auto px-5 md:px-10">
           <Reveal className="mb-10">
@@ -487,7 +481,6 @@ export default function MMSCaseStudyPage() {
         </div>
       </section>
 
-      {/* Full Case Study CTA */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Full case study">
         <Reveal className="max-w-4xl mx-auto text-center px-5 md:px-10">
           <h3 className="text-2xl md:text-3xl font-semibold mb-6">
@@ -509,7 +502,6 @@ export default function MMSCaseStudyPage() {
         </Reveal>
       </section>
 
-      {/* Navigation CTA */}
       <section className="py-16" aria-label="Navigation">
         <Reveal className="max-w-4xl mx-auto px-5 md:px-10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 border-t border-slate pt-8">

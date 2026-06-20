@@ -225,7 +225,6 @@ export default function ProcessPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
       />
-      {/* Hero Section */}
       <section 
         className="min-h-[60vh] flex items-center justify-center px-5 md:px-10"
         aria-label="Process hero"
@@ -246,7 +245,6 @@ export default function ProcessPage() {
         </div>
       </section>
 
-      {/* Process Steps Section */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Process steps">
         <div className="max-w-6xl mx-auto space-y-12 px-5 md:px-10">
           {processSteps.map((step, index) => {
@@ -299,7 +297,6 @@ export default function ProcessPage() {
         </div>
       </section>
 
-      {/* Timeline Context Section */}
       <section className="py-24 md:py-32" aria-label="Timeline">
         <div className="max-w-3xl mx-auto text-center px-5 md:px-10">
           <h2 className="text-3xl md:text-4xl font-semibold mb-8">
@@ -324,7 +321,6 @@ export default function ProcessPage() {
         </div>
       </section>
 
-      {/* What This Prevents Section */}
       <section className="py-24 md:py-32 bg-steel" aria-label="What this prevents">
         <div className="max-w-6xl mx-auto px-5 md:px-10">
           <div className="max-w-5xl mx-auto">
@@ -343,7 +339,6 @@ export default function ProcessPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Contact call-to-action">
         <div className="max-w-4xl mx-auto text-center px-5 md:px-10">
           <h2 className="text-3xl md:text-4xl font-semibold mb-6">

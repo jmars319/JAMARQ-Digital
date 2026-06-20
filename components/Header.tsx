@@ -19,7 +19,6 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-jamarq-black border-b border-slate" role="banner">
       <nav className="max-w-6xl mx-auto px-5 md:px-10 py-5 flex items-center justify-between" aria-label="Main navigation">
-        {/* Logo */}
         <Link href="/" className="flex items-center" aria-label="JAMARQ Digital homepage">
           <div className="relative h-10 w-[168px] sm:h-12 sm:w-[198px]">
             <Image
@@ -33,7 +32,6 @@ export default function Header() {
           </div>
         </Link>
 
-        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-5 lg:gap-7">
           {navLinks.map((item) => (
             <Link
@@ -60,7 +58,6 @@ export default function Header() {
           >
             Request help
           </Link>
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="text-jamarq-white p-2 focus:outline-none focus:ring-2 focus:ring-jamarq-cyan focus:ring-offset-2 focus:ring-offset-jamarq-black rounded"
@@ -80,7 +77,6 @@ export default function Header() {
           </button>
         </div>
 
-        {/* No-JS Mobile Navigation Fallback */}
         <noscript>
           <div className="md:hidden">
             <a 
@@ -94,7 +90,6 @@ export default function Header() {
         </noscript>
       </nav>
 
-      {/* Mobile Menu (JS) */}
       {mobileMenuOpen && (
         <div className="md:hidden">
           <div
@@ -126,7 +121,6 @@ export default function Header() {
         </div>
       )}
 
-      {/* No-JS Mobile Navigation (Always visible without JS) */}
       <noscript>
         <div id="mobile-nav" className="md:hidden border-t border-slate bg-jamarq-black">
           <nav className="flex flex-col space-y-4 px-4 py-6" aria-label="Mobile navigation">

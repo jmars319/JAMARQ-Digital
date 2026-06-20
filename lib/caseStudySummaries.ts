@@ -1,6 +1,3 @@
-// Case Study Micro Summaries
-// Used for preview cards and hover descriptions
-
 export const caseStudySummaries = {
   trbg: {
     title: "Thunder Road Bar & Grill",

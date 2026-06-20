@@ -13,7 +13,6 @@ export default async function Footer() {
     <footer className="py-12 px-4 border-t border-slate bg-jamarq-black" role="contentinfo">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 gap-8 mb-8 text-center md:grid-cols-4 md:text-left">
-          {/* Brand */}
           <Reveal>
             <div className="mb-4 flex items-center justify-center md:justify-start">
               <Image
@@ -33,7 +32,6 @@ export default async function Footer() {
             </p>
           </Reveal>
 
-          {/* Navigation */}
           <Reveal delay={120}>
             <p className="font-semibold mb-3 text-sm uppercase tracking-wide">Explore</p>
             <nav className="space-y-2" aria-label="JAMARQ footer navigation">
@@ -67,7 +65,6 @@ export default async function Footer() {
             </nav>
           </Reveal>
 
-          {/* Suite */}
           <Reveal delay={200}>
             <p className="font-semibold mb-3 text-sm uppercase tracking-wide">Suite</p>
             <nav className="space-y-3" aria-label="JAMARQ suite links">
@@ -88,7 +85,6 @@ export default async function Footer() {
             </nav>
           </Reveal>
 
-          {/* Contact */}
           <Reveal delay={280}>
             <p className="font-semibold mb-3 text-sm uppercase tracking-wide">Contact</p>
             <p className="text-jamarq-gray text-xs mb-2">Based in Winston-Salem, North Carolina</p>
@@ -112,7 +108,6 @@ export default async function Footer() {
           </Reveal>
         </div>
 
-        {/* Copyright */}
         <Reveal delay={360} className="flex flex-col gap-3 border-t border-slate pt-6 text-center text-jamarq-gray text-xs md:flex-row md:items-center md:justify-between md:text-left">
           <p>&copy; {currentYear} JAMARQ Digital. All rights reserved.</p>
           <nav className="flex flex-wrap justify-center gap-4 md:justify-end" aria-label="JAMARQ legal links">

@@ -139,7 +139,6 @@ export default function TRBGCaseStudyPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
       />
 
-      {/* Hero Section */}
       <section
         className="min-h-[60vh] flex items-center justify-center px-5 md:px-10 pt-32 md:pt-40 pb-24"
         aria-label="Case study hero"
@@ -199,7 +198,6 @@ export default function TRBGCaseStudyPage() {
         </Reveal>
       </section>
 
-      {/* Project Overview */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Project overview">
         <div className="max-w-5xl mx-auto px-5 md:px-10 space-y-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -227,7 +225,6 @@ export default function TRBGCaseStudyPage() {
         </div>
       </section>
 
-      {/* Screenshots Section */}
       <section className="py-24 md:py-32" aria-label="Screenshots and technical proof">
         <div className="max-w-6xl mx-auto px-5 md:px-10">
           <Reveal className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
@@ -245,7 +242,6 @@ export default function TRBGCaseStudyPage() {
         </div>
       </section>
 
-      {/* Challenges and Objectives */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Challenges and objectives">
         <div className="max-w-5xl mx-auto px-5 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-12">
           <Reveal>
@@ -277,7 +273,6 @@ export default function TRBGCaseStudyPage() {
         </div>
       </section>
 
-      {/* Approach */}
       <section className="py-24 md:py-32" aria-label="Approach">
         <Reveal className="max-w-4xl mx-auto px-5 md:px-10">
           <h2 className="text-3xl md:text-4xl font-semibold mb-8">{trbgCaseStudyContent.approach.heading}</h2>
@@ -289,7 +284,6 @@ export default function TRBGCaseStudyPage() {
         </Reveal>
       </section>
 
-      {/* Solution */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Solution details">
         <div className="max-w-6xl mx-auto px-5 md:px-10">
           <Reveal className="text-center mb-12">
@@ -317,7 +311,6 @@ export default function TRBGCaseStudyPage() {
         </div>
       </section>
 
-      {/* Results */}
       <section className="py-24 md:py-32" aria-label="Results">
         <div className="max-w-5xl mx-auto px-5 md:px-10">
           <Reveal className="mb-10">
@@ -345,7 +338,6 @@ export default function TRBGCaseStudyPage() {
         </div>
       </section>
 
-      {/* Key Takeaways */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Key takeaways">
         <Reveal className="max-w-4xl mx-auto px-5 md:px-10">
           <h2 className="text-3xl md:text-4xl font-semibold mb-8">{trbgCaseStudyContent.keyTakeaways.heading}</h2>
@@ -360,7 +352,6 @@ export default function TRBGCaseStudyPage() {
         </Reveal>
       </section>
 
-      {/* Full Case Study CTA */}
       <section className="py-24 md:py-32" aria-label="Full case study">
         <Reveal className="max-w-4xl mx-auto text-center px-5 md:px-10">
           <h3 className="text-2xl md:text-3xl font-semibold mb-6">Want the full technical breakdown?</h3>
@@ -380,7 +371,6 @@ export default function TRBGCaseStudyPage() {
         </Reveal>
       </section>
 
-      {/* Navigation CTA */}
       <section className="py-16" aria-label="Navigation">
         <Reveal className="max-w-4xl mx-auto px-5 md:px-10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 border-t border-slate pt-8">

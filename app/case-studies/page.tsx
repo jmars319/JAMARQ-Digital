@@ -72,7 +72,6 @@ export default async function CaseStudiesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
       />
-      {/* Hero */}
       <section className="pt-32 pb-24" aria-label="Case studies hero">
         <div className="max-w-6xl mx-auto px-5 md:px-10 space-y-8">
           <div className="space-y-4 max-w-4xl">
@@ -95,7 +94,6 @@ export default async function CaseStudiesPage() {
         </div>
       </section>
 
-      {/* Case study grid */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Case study grid">
         <div className="max-w-6xl mx-auto px-5 md:px-10 space-y-12">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
@@ -133,7 +131,6 @@ export default async function CaseStudiesPage() {
         </div>
       </section>
 
-      {/* Private previews + CTA */}
       <section className="py-24 md:py-32" aria-label="Additional docs">
         <Reveal className="max-w-5xl mx-auto px-5 md:px-10 rounded-3xl border border-slate/60 bg-jamarq-black/30 p-10 space-y-4">
           <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Private previews</p>

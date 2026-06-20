@@ -1,23 +1,19 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Primary Colors */
   --color-jamarq-black: #0D0D0F;
   --color-jamarq-cyan: #09A6D6;
   
-  /* Neutral Grays */
   --color-steel: #1E1E22;
   --color-slate: #2C2C30;
   --color-mist: #E6E6E8;
   --color-jamarq-gray: #A0A0A0;
   --color-gray-dark: #6B7280;
   
-  /* Legacy/accent colors */
   --color-jamarq-white: #f2f2f5;
   --color-jamarq-magenta: #ff3eb5;
   --color-jamarq-purple: #8b4df5;
   
-  /* Semantic Colors */
   --color-error: #DC2626;
   --color-success: #10B981;
   --color-warning: #F59E0B;
@@ -25,24 +21,20 @@
 }
 
 :root {
-  /* Typography */
   --font-primary: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-headings: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   
-  /* Font Weights */
   --weight-regular: 400;
   --weight-medium: 500;
   --weight-semibold: 600;
   --weight-bold: 700;
   
-  /* Line Heights */
   --leading-tight: 1.25;
   --leading-snug: 1.375;
   --leading-normal: 1.5;
   --leading-relaxed: 1.625;
   --leading-loose: 2;
   
-  /* Spacing System (4px base) */
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -57,28 +49,23 @@
   --space-24: 96px;
   --space-30: 120px;
   
-  /* Section Padding */
-  --section-padding-desktop: var(--space-30); /* 120px */
-  --section-padding-tablet: var(--space-20); /* 80px */
-  --section-padding-mobile: var(--space-16); /* 64px */
+  --section-padding-desktop: var(--space-30);
+  --section-padding-tablet: var(--space-20);
+  --section-padding-mobile: var(--space-16);
   
-  /* Border Radius */
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 12px;
   --radius-full: 9999px;
   
-  /* Transitions */
   --duration-fast: 150ms;
   --duration-base: 200ms;
   --duration-slow: 300ms;
   --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
   
-  /* Shadows */
   --glow-cyan: 0 0 20px rgba(9, 166, 214, 0.3);
   --glow-cyan-intense: 0 0 30px rgba(9, 166, 214, 0.5);
   
-  /* Focus Ring */
   --focus-ring: 0 0 0 3px rgba(9, 166, 214, 0.3);
   --focus-ring-offset: 2px;
 }
@@ -106,7 +93,6 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0;
 }
 
-/* Remove default list styling and ensure proper text alignment */
 ul {
   list-style: none;
   padding-left: 0;
@@ -236,7 +222,7 @@ li {
   animation: dropdownReveal 0.25s ease-out;
 }
 
-/* Screen reader only - hides content visually but keeps it accessible */
+/* Keep skip-link text available to assistive tech without showing it in normal layout. */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -249,7 +235,7 @@ li {
   border-width: 0;
 }
 
-/* Removes sr-only when focused for skip links */
+/* Keyboard users need the hidden skip link restored when focus reaches it. */
 .sr-only.focus\:not-sr-only:focus {
   position: static;
   width: auto;

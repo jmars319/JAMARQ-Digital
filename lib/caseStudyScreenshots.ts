@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 
+// Screenshot data contract
 export type ScreenshotGroup = "pagespeed" | "public" | "admin" | "mobile";
 
 type VariantFormat = "png" | "webp";
@@ -41,6 +42,7 @@ interface LoaderConfig {
   manualOrdering?: Partial<Record<ScreenshotGroup, string[]>>;
 }
 
+// Screenshot loader boundary
 export function createScreenshotLoader(config: LoaderConfig) {
   return function getScreenshotGroups() {
     const captionData = buildCaptionData(config.captionFile, config.idPrefix);
@@ -76,6 +78,7 @@ export function createScreenshotLoader(config: LoaderConfig) {
   };
 }
 
+// Caption metadata surface
 function buildCaptionData(filePath: string, prefix: string) {
   const content = fs.readFileSync(filePath, "utf-8");
   const lines = content.split(/\r?\n/);
@@ -111,6 +114,7 @@ function buildCaptionData(filePath: string, prefix: string) {
   return { map: entries, orderByGroup };
 }
 
+// Technical metadata surface
 function buildTechnicalMap(filePath: string, prefix: string) {
   const content = fs.readFileSync(filePath, "utf-8");
   const lines = content.split(/\r?\n/);
@@ -137,6 +141,7 @@ function buildTechnicalMap(filePath: string, prefix: string) {
   return entries;
 }
 
+// Markdown block boundary
 function collectBlock(
   lines: string[],
   startIndex: number,
@@ -171,6 +176,7 @@ function collectBlock(
   return { text: buffer.join(" ").trim(), nextIndex: i };
 }
 
+// Screenshot variant workflow
 function buildScreenshotEntries(
   config: LoaderConfig,
   captionMap: Map<string, string>,
@@ -221,6 +227,7 @@ function buildScreenshotEntries(
   return entries;
 }
 
+// Filesystem traversal boundary
 function readScreenshotFiles(dir: string) {
   const stack: string[] = [dir];
   const files: string[] = [];
@@ -245,6 +252,7 @@ function readScreenshotFiles(dir: string) {
   return files;
 }
 
+// Public asset contract
 function buildPublicSrc(base: string, relativePath: string) {
   const normalizedPath = relativePath
     .split("/")
@@ -254,6 +262,7 @@ function buildPublicSrc(base: string, relativePath: string) {
   return `${base}/${normalizedPath}`;
 }
 
+// Display ordering boundary
 function determineGroup(baseName: string): ScreenshotGroup {
   const lower = baseName.toLowerCase();
   if (lower.includes("pagespeed")) {
@@ -296,6 +305,7 @@ function getFallbackWidth(entry: IntermediateScreenshotEntry) {
   return preferred ? preferred.width : 0;
 }
 
+// Manual ordering boundary
 function sortByOrdering(items: ScreenshotAsset[], priorityList: string[]) {
   return [...items].sort((a, b) => {
     const indexA = priorityList.indexOf(a.id);

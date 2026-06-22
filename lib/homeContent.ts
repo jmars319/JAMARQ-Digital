@@ -14,6 +14,7 @@ type ProcessStep = {
   copy: string;
 };
 
+// Proof card surface
 export const recentProof: ProofCard[] = [
   {
     label: "Midway Music Hall",
@@ -32,6 +33,7 @@ export const recentProof: ProofCard[] = [
   }
 ];
 
+// Service track contract
 export const whatWeDo = [
   {
     title: "Custom websites",
@@ -47,6 +49,7 @@ export const whatWeDo = [
   }
 ];
 
+// Task routing surface
 export const taskRoutes = [
   {
     task: "I need a better business website",
@@ -71,6 +74,7 @@ export const taskRoutes = [
   }
 ];
 
+// Audience fit surface
 export const whoWeWorkWith = [
   {
     title: "Independent businesses",
@@ -90,6 +94,7 @@ export const whoWeWorkWith = [
   }
 ];
 
+// Positioning rationale surface
 export const whyJamarq: ReasonCard[] = [
   {
     title: "Built to stay manageable",
@@ -117,6 +122,7 @@ export const whyJamarq: ReasonCard[] = [
   }
 ];
 
+// Pricing signal surface
 export const pricingTiers = [
   {
     title: "Foundational Work",
@@ -140,6 +146,7 @@ export const pricingTiers = [
   }
 ];
 
+// Process phase contract
 export const processSteps: ProcessStep[] = [
   {
     title: "Understand the problem",
@@ -163,6 +170,7 @@ export const processSteps: ProcessStep[] = [
   }
 ];
 
+// Homepage metadata contract
 export const structuredData = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",

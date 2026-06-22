@@ -38,6 +38,7 @@ export const metadata: Metadata = {
 };
 
 export default async function WorkPage() {
+  // Work metadata contract
   const breadcrumbStructuredData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -59,6 +60,7 @@ export default async function WorkPage() {
 
   const orderedCaseStudies = await listCaseStudySummaries();
 
+  // Work page content contract
   const heroStats = [
     { label: "Current performance range", value: "97–100 desktop, 65–100 mobile across public case-study sites" },
     { label: "Launch-to-first result", value: "Day 2 (MMH), Week 1 (TRBG), Day 16 (MMS)" },
@@ -87,6 +89,7 @@ export default async function WorkPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
       />
+      {/* Work hero surface */}
       <section className="pt-32 pb-24" aria-label="Work hero">
         <div className="max-w-6xl mx-auto px-5 md:px-10 grid gap-12 md:grid-cols-[minmax(0,1fr)_320px] items-start">
           <div className="space-y-6">
@@ -131,6 +134,7 @@ export default async function WorkPage() {
         </div>
       </section>
 
+      {/* Case study grid surface */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Case study grid">
         <div className="max-w-6xl mx-auto px-5 md:px-10 space-y-12">
           <div className="space-y-3">
@@ -160,6 +164,7 @@ export default async function WorkPage() {
         </div>
       </section>
 
+      {/* Approach proof surface */}
       <section className="py-24 md:py-32" aria-label="Approach highlights">
         <div className="max-w-6xl mx-auto px-5 md:px-10 space-y-10">
           <div className="space-y-3">
@@ -191,6 +196,7 @@ export default async function WorkPage() {
         </div>
       </section>
 
+      {/* Contact conversion surface */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Work CTA">
         <div className="max-w-5xl mx-auto px-5 md:px-10 rounded-3xl border border-slate/60 bg-jamarq-black/30 p-10 space-y-4">
           <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Next build</p>

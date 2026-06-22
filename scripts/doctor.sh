@@ -13,6 +13,7 @@ COLOR_BOLD="\033[1m"
 fail_count=0
 warn_count=0
 
+# Diagnostic reporting surface
 section() {
   printf "\n%b==>%b %s\n" "$COLOR_BOLD" "$COLOR_RESET" "$*"
 }
@@ -35,6 +36,7 @@ fail() {
   printf "%b[ERROR]%b %s\n" "$COLOR_RED" "$COLOR_RESET" "$*" >&2
 }
 
+# Command availability checks
 has_cmd() {
   command -v "$1" >/dev/null 2>&1
 }
@@ -63,6 +65,7 @@ check_dir() {
   fi
 }
 
+# Project shape diagnostics
 package_files() {
   local candidates=(
     "package.json"
@@ -92,6 +95,7 @@ has_dev_runner() {
   [[ -f "$ROOT_DIR/scripts/dev-start.sh" || -f "$ROOT_DIR/scripts/dev-status.sh" ]]
 }
 
+# Package validation workflow
 json_valid() {
   local package_path="$1"
   if ! has_cmd node; then
@@ -157,6 +161,7 @@ NODE
   fi
 }
 
+# Required command surface
 section "Required Commands"
 require_cmd git
 if has_package_files; then
@@ -206,6 +211,7 @@ if [[ -f "$ROOT_DIR/.nvmrc" ]] && has_cmd node; then
   fi
 fi
 
+# Package surface diagnostics
 section "Package Files"
 if has_package_files; then
   while IFS= read -r package_path; do
@@ -227,6 +233,7 @@ if [[ -f "$ROOT_DIR/package.json" ]]; then
   [[ -f "$ROOT_DIR/scripts/check-deploy-zips.sh" ]] && check_package_script "package.json" "deploy:check"
 fi
 
+# Environment example boundary
 section "Environment Files"
 env_examples=()
 while IFS= read -r env_example; do

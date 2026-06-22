@@ -8,6 +8,7 @@ const strict = process.argv.includes("--strict");
 const updateSnapshots = process.argv.includes("--update-snapshots");
 const configPath = path.join(root, "scripts", "maintainability.config.json");
 
+// Audit config boundary
 function readJson(filePath) {
   return JSON.parse(readFileSync(filePath, "utf8"));
 }
@@ -16,6 +17,7 @@ const config = readJson(configPath);
 const failures = [];
 const warnings = [];
 
+// Reporting surface
 function reportFailure(message) {
   failures.push(message);
 }
@@ -28,6 +30,7 @@ function normalizePath(filePath) {
   return filePath.split(path.sep).join("/");
 }
 
+// Source path classification
 function gitLsFiles() {
   return execFileSync("git", ["ls-files"], {
     cwd: root,
@@ -60,6 +63,7 @@ function globToRegex(glob) {
 
 const generatedArtifactRegexes = config.generatedArtifactPatterns.map(globToRegex);
 
+// Generated artifact boundary
 for (const filePath of trackedFiles) {
   if (generatedArtifactRegexes.some((pattern) => pattern.test(filePath))) {
     reportFailure(`Generated/runtime artifact is tracked: ${filePath}`);
@@ -82,6 +86,7 @@ function lineBudgetFor(filePath) {
   return null;
 }
 
+// Source budget checks
 for (const filePath of trackedFiles) {
   if (!isUnderAnyRoot(filePath, config.sourceRoots)) {
     continue;
@@ -107,6 +112,7 @@ const bannedImportPatterns = [
   /require\(["'][^"']*(?:node_modules|\.next|dist|build|coverage)\//,
 ];
 
+// Dependency hygiene boundary
 for (const filePath of trackedFiles) {
   if (!isUnderAnyRoot(filePath, config.sourceRoots) || !/\.(ts|tsx|js|mjs|cjs)$/.test(filePath)) {
     continue;
@@ -149,6 +155,7 @@ function routeFromAppFile(appDir, filePath) {
   return route || "/";
 }
 
+// Route contract snapshots
 async function collectRoutes() {
   const appDir = path.join(root, config.appDir);
   const files = await walk(appDir);
@@ -199,6 +206,7 @@ async function collectRoutes() {
   return routes.sort((a, b) => `${a.route}:${a.kind}`.localeCompare(`${b.route}:${b.kind}`));
 }
 
+// Environment contract snapshot
 function collectEnvKeys() {
   const envExamplePath = path.join(root, ".env.example");
   if (!existsSync(envExamplePath)) {
@@ -242,6 +250,7 @@ async function checkSnapshots() {
   compareSnapshot("Environment key", collectEnvKeys(), path.join(contractsDir, "env-keys.json"));
 }
 
+// Workflow hygiene boundary
 function checkWorkflowHygiene() {
   const workflowFiles = trackedFiles.filter((filePath) => filePath.startsWith(".github/workflows/") && filePath.endsWith(".yml"));
   for (const filePath of workflowFiles) {
@@ -255,6 +264,7 @@ function checkWorkflowHygiene() {
   }
 }
 
+// Asset hygiene boundary
 async function checkAssets() {
   const assetRoots = config.assetRoots ?? [];
   const assetExtensions = new Set([".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg", ".ico", ".woff", ".woff2", ".ttf"]);

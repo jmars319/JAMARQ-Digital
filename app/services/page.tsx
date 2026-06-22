@@ -35,6 +35,7 @@ export const metadata: Metadata = {
 };
 
 export default function ServicesPage() {
+  // Service metadata contract
   const serviceStructuredData = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -115,6 +116,7 @@ export default function ServicesPage() {
     ]
   };
 
+  // Service content contract
   const serviceLines = [
     {
       title: "Custom Websites",
@@ -241,6 +243,7 @@ export default function ServicesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
       />
+      {/* Service hero surface */}
       <section className="pt-32 pb-24" aria-label="Services hero">
         <div className="max-w-6xl mx-auto px-5 md:px-10 grid gap-12 md:grid-cols-[minmax(0,1fr)_320px] items-start">
           <div className="space-y-6">
@@ -289,6 +292,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Service discovery surface */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Core services">
         <div className="max-w-6xl mx-auto px-5 md:px-10 space-y-10">
           <div>
@@ -324,6 +328,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Project fit surface */}
       <section className="py-24 md:py-32" aria-label="Project fit">
         <div className="max-w-6xl mx-auto px-5 md:px-10 space-y-10">
           <div className="max-w-3xl">
@@ -384,6 +389,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Pricing guidance boundary */}
       <section id="pricing" className="scroll-mt-28 py-24 md:py-32 bg-steel" aria-label="Pricing philosophy">
         <div className="max-w-6xl mx-auto px-5 md:px-10 grid gap-12 md:grid-cols-2">
           <Reveal className="space-y-4">
@@ -463,6 +469,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Contact conversion surface */}
       <section className="py-24 md:py-32" aria-label="Contact call-to-action">
         <div className="max-w-4xl mx-auto text-center px-5 md:px-10">
           <h2 className="text-3xl md:text-4xl font-semibold mb-6">Ready to make the site work harder?</h2>

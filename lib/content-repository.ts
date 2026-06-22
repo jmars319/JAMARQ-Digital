@@ -5,6 +5,7 @@ import {
   type CaseStudyKey,
 } from "@/lib/caseStudySummaries";
 
+// Public content contracts
 export type CaseStudySummaryRecord = {
   key: string;
   slug: string;
@@ -76,6 +77,7 @@ function logDbFallback(message: string, error: unknown) {
   }
 }
 
+// Suite link contract
 const suiteLinkSeeds: SuiteLink[] = [
   {
     id: "jamarq-digital",
@@ -100,6 +102,7 @@ const suiteLinkSeeds: SuiteLink[] = [
   },
 ];
 
+// Case study card contract
 const caseStudyHomeCardSeeds: Record<
   CaseStudyKey,
   { problem: string; completed: string; outcome: string }
@@ -154,6 +157,7 @@ function fallbackCaseStudies(): CaseStudySummaryRecord[] {
   }));
 }
 
+// Database seed boundary
 async function seedContentTables() {
   await ensureAdminDb();
 
@@ -231,6 +235,7 @@ async function seedContentTables() {
   ]);
 }
 
+// Public content reads
 export async function listCaseStudySummaries() {
   try {
     await seedContentTables();
@@ -307,6 +312,7 @@ export async function listSuiteLinks(currentSiteKey: string) {
   }
 }
 
+// Contact persistence boundary
 export async function recordContactSubmission(input: ContactSubmissionInput) {
   try {
     await ensureAdminDb();
@@ -438,6 +444,7 @@ export async function listRecentContactSubmissions(limit = 5) {
   }
 }
 
+// Analytics capture boundary
 export async function recordPageView(input: PageViewInput) {
   const path = input.path.trim().slice(0, 500);
 
@@ -538,6 +545,7 @@ export async function getAnalyticsSummary(): Promise<AnalyticsSummary> {
   }
 }
 
+// Admin summary surface
 export async function getContentModuleSummary() {
   try {
     await seedContentTables();

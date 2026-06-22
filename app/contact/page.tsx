@@ -35,6 +35,7 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
+  // Contact metadata contract
   const breadcrumbStructuredData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -54,6 +55,7 @@ export default function ContactPage() {
     ]
   };
 
+  // Contact intake contract
   const steps = [
     {
       number: "01",
@@ -87,6 +89,7 @@ export default function ContactPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
       />
+      {/* Contact hero surface */}
       <section className="pt-32 pb-24" aria-label="Contact hero">
         <div className="max-w-6xl mx-auto px-5 md:px-10 grid gap-12 md:grid-cols-[minmax(0,1fr)_360px] items-start">
           <Reveal className="space-y-6">
@@ -128,6 +131,7 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* Intake routing surface */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Contact options">
         <div className="max-w-6xl mx-auto px-5 md:px-10 grid gap-10 md:grid-cols-2">
           <Reveal className="space-y-6">
@@ -185,6 +189,7 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* Follow-up workflow surface */}
       <section className="py-24 md:py-32" aria-label="What happens next">
         <div className="max-w-5xl mx-auto px-5 md:px-10 space-y-10">
           <Reveal className="text-center">
@@ -202,6 +207,7 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* Contact conversion surface */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Contact CTA">
         <Reveal className="max-w-5xl mx-auto px-5 md:px-10 rounded-3xl border border-slate/60 bg-jamarq-black/30 p-10 space-y-4 text-center">
           <p className="text-xs uppercase tracking-[0.3em] text-jamarq-gray">Ready?</p>

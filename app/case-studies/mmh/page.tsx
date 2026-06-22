@@ -49,6 +49,7 @@ export const metadata: Metadata = {
 };
 
 export default function MMHCaseStudyPage() {
+  // Case study metadata contract
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -134,6 +135,7 @@ export default function MMHCaseStudyPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
       />
 
+      {/* Case study hero surface */}
       <section className="min-h-[60vh] flex items-center justify-center px-5 md:px-10 pt-32 md:pt-40 pb-24" aria-label="Case study hero">
         <Reveal className="w-full">
           <div className="text-center max-w-4xl mx-auto space-y-4">
@@ -184,6 +186,7 @@ export default function MMHCaseStudyPage() {
         </Reveal>
       </section>
 
+      {/* Project overview surface */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Project overview">
         <div className="max-w-5xl mx-auto px-5 md:px-10 space-y-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -207,6 +210,7 @@ export default function MMHCaseStudyPage() {
         </div>
       </section>
 
+      {/* Technical proof surface */}
       <section className="py-24 md:py-32" aria-label="Screenshots and technical proof">
         <div className="max-w-6xl mx-auto px-5 md:px-10">
           <Reveal className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
@@ -224,6 +228,7 @@ export default function MMHCaseStudyPage() {
         </div>
       </section>
 
+      {/* Challenge context surface */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Challenges and objectives">
         <div className="max-w-5xl mx-auto px-5 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-12">
           <Reveal>
@@ -264,6 +269,7 @@ export default function MMHCaseStudyPage() {
         </Reveal>
       </section>
 
+      {/* Solution delivery surface */}
       <section className="py-24 md:py-32 bg-steel" aria-label="Solution details">
         <div className="max-w-6xl mx-auto px-5 md:px-10">
           <Reveal className="text-center mb-12">
@@ -287,6 +293,7 @@ export default function MMHCaseStudyPage() {
         </div>
       </section>
 
+      {/* Results proof surface */}
       <section className="py-24 md:py-32" aria-label="Results">
         <div className="max-w-5xl mx-auto px-5 md:px-10">
           <Reveal className="mb-10">
@@ -324,6 +331,7 @@ export default function MMHCaseStudyPage() {
         </Reveal>
       </section>
 
+      {/* Full narrative surface */}
       <section className="py-24 md:py-32" aria-label="Full case study">
         <Reveal className="max-w-4xl mx-auto text-center px-5 md:px-10">
           <h3 className="text-2xl md:text-3xl font-semibold mb-6">Want the full technical breakdown?</h3>
@@ -343,6 +351,7 @@ export default function MMHCaseStudyPage() {
         </Reveal>
       </section>
 
+      {/* Case study navigation boundary */}
       <section className="py-16" aria-label="Navigation">
         <Reveal className="max-w-4xl mx-auto px-5 md:px-10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 border-t border-slate pt-8">

@@ -6,6 +6,8 @@ const CASE_STUDY_ROOT = path.join(
   "content/case-studies/thunder-road-bar-and-grill"
 );
 const DOCUMENTS_DIR = path.join(CASE_STUDY_ROOT, "Documents");
+
+// Markdown source boundary
 const SHORT_FILE = path.join(DOCUMENTS_DIR, "trbg-casestudy-short-public.md");
 const FULL_FILE = path.join(DOCUMENTS_DIR, "trbg-casestudy-full-public.md");
 
@@ -16,6 +18,7 @@ const fullSections = parseSections(fullMarkdown);
 const hero = buildHero(shortMarkdown);
 const heroLaunchValue = hero.launch.replace(/^Launch:\s*/, "") || "November 2025";
 
+// Case study content contract
 export const trbgCaseStudyContent = {
   hero,
   projectOverview: {
@@ -53,6 +56,7 @@ export const trbgCaseStudyContent = {
 
 export type TRBGCaseStudyContent = typeof trbgCaseStudyContent;
 
+// Hero parsing workflow
 function buildHero(markdown: string) {
   const lines = markdown.split(/\r?\n/);
   const titleLineIndex = lines.findIndex((line) => line.trim().startsWith("# "));
@@ -113,6 +117,7 @@ function extractHeroSummary(lines: string[], startIndex: number) {
   return paragraphs.filter(Boolean);
 }
 
+// Markdown section boundary
 function parseSections(markdown: string) {
   const lines = markdown.split(/\r?\n/);
   const sections: Record<string, string[]> = {};
@@ -174,12 +179,14 @@ function extractParagraphs(lines: string[] = []) {
   return paragraphs;
 }
 
+// Narrative extraction workflow
 function extractBullets(lines: string[] = []) {
   return cleanLines(lines)
     .filter((line) => line.startsWith("- "))
     .map((line) => line.replace(/^-+\s*/, "").trim());
 }
 
+// Challenge parsing boundary
 function buildChallenge(lines: string[] = []) {
   const cleaned = cleanLines(lines);
   const introParts: string[] = [];
@@ -213,6 +220,7 @@ function buildChallenge(lines: string[] = []) {
   };
 }
 
+// Solution parsing workflow
 function extractApproachParagraphs(lines: string[] = []) {
   const subsections = splitSubsections(lines);
   return subsections
@@ -272,6 +280,7 @@ function splitSubsections(lines: string[] = []) {
   return subsections;
 }
 
+// Results grouping surface
 function buildResultsCategories(resultsLines: string[] = [], beforeAfterLines: string[] = []) {
   const categories: { title: string; items: string[] }[] = [];
   const resultItems = extractBullets(resultsLines);

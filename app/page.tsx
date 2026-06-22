@@ -42,6 +42,7 @@ export const metadata: Metadata = {
   },
 };
 
+// Homepage content contract
 const systemSignals = [
   "Domains",
   "DNS",
@@ -84,6 +85,7 @@ const ownershipPoints = [
   "What should be checked after launch?",
 ];
 
+// Homepage metadata contract
 const structuredData = [
   {
     "@context": "https://schema.org",
@@ -132,6 +134,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
+      {/* Homepage hero surface */}
       <section className="relative overflow-hidden border-b border-slate/70 pt-32">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-[0.45]"
@@ -212,6 +215,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Service track surface */}
       <section className="bg-steel py-24 md:py-32" aria-labelledby="home-services-heading">
         <div className="mx-auto max-w-6xl px-5 md:px-10">
           <div className="max-w-3xl">
@@ -240,6 +244,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Ownership clarity surface */}
       <section className="py-24 md:py-32" aria-labelledby="ownership-heading">
         <div className="mx-auto grid max-w-6xl gap-10 px-5 md:grid-cols-[0.9fr_1.1fr] md:px-10">
           <Reveal>
@@ -260,6 +265,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Owner education surface */}
       <section className="bg-steel py-24 md:py-32" aria-labelledby="notes-heading">
         <div className="mx-auto max-w-6xl px-5 md:px-10">
           <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-end">
@@ -289,6 +295,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Contact conversion surface */}
       <section className="py-24 md:py-32" aria-label="JAMARQ call to action">
         <Reveal className="mx-auto max-w-5xl rounded-3xl border border-jamarq-cyan/30 bg-jamarq-cyan/5 px-5 py-10 text-center md:px-10">
           <h2 className="text-3xl font-semibold md:text-5xl">

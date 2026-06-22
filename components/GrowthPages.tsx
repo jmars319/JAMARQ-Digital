@@ -5,6 +5,7 @@ import { Reveal } from "@/components/Reveal";
 import type { NoteContent, ServicePageContent } from "@/lib/growthContent";
 
 export function ServiceDetailPage({ page }: { page: ServicePageContent }) {
+  // Service metadata contract
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -67,6 +68,7 @@ export function ServiceDetailPage({ page }: { page: ServicePageContent }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
       />
+      {/* Service detail surface */}
       <section className="pt-32 pb-24" aria-label={`${page.title} hero`}>
         <div className="mx-auto grid max-w-6xl gap-10 px-5 md:grid-cols-[minmax(0,1fr)_340px] md:px-10">
           <Reveal className="space-y-6">
@@ -108,6 +110,7 @@ export function ServiceDetailPage({ page }: { page: ServicePageContent }) {
         </div>
       </section>
 
+      {/* Service explanation surface */}
       <section className="bg-steel py-24 md:py-32" aria-label={`${page.title} details`}>
         <div className="mx-auto max-w-6xl px-5 md:px-10">
           <div className="grid gap-8 md:grid-cols-3">
@@ -133,6 +136,7 @@ export function ServiceDetailPage({ page }: { page: ServicePageContent }) {
         </div>
       </section>
 
+      {/* Contact conversion surface */}
       <section className="py-24 md:py-32" aria-label="Service call to action">
         <Reveal className="mx-auto max-w-5xl rounded-3xl border border-slate/60 bg-jamarq-black/30 px-5 py-10 text-center md:px-10">
           <h2 className="text-3xl font-semibold md:text-4xl">Have a setup that needs this kind of clarity?</h2>
@@ -153,6 +157,7 @@ export function ServiceDetailPage({ page }: { page: ServicePageContent }) {
 }
 
 export function NoteDetailPage({ note }: { note: NoteContent }) {
+  // Article metadata contract
   const articleStructuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -180,6 +185,7 @@ export function NoteDetailPage({ note }: { note: NoteContent }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleStructuredData) }}
       />
       <article>
+        {/* Article hero surface */}
         <section className="pt-32 pb-20" aria-label={`${note.title} article hero`}>
           <div className="mx-auto max-w-4xl px-5 md:px-10">
             <Link href="/notes" className="link-underline text-sm font-semibold text-jamarq-cyan">
@@ -194,6 +200,7 @@ export function NoteDetailPage({ note }: { note: NoteContent }) {
             })}</p>
           </div>
         </section>
+        {/* Article body surface */}
         <section className="bg-steel py-20" aria-label="Article body">
           <div className="mx-auto max-w-3xl space-y-12 px-5 md:px-10">
             {note.sections.map((section) => (
@@ -209,6 +216,7 @@ export function NoteDetailPage({ note }: { note: NoteContent }) {
           </div>
         </section>
       </article>
+      {/* Contact conversion surface */}
       <section className="py-20" aria-label="Notes call to action">
         <div className="mx-auto max-w-5xl px-5 text-center md:px-10">
           <h2 className="text-3xl font-semibold">Need help with this kind of setup?</h2>

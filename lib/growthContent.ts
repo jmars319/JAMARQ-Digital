@@ -28,6 +28,7 @@ export type NoteContent = {
   }[];
 };
 
+// Service content contract
 export const servicePages: ServicePageContent[] = [
   {
     slug: "website-systems",
@@ -190,6 +191,7 @@ export const servicePages: ServicePageContent[] = [
   },
 ];
 
+// Ownership note surface
 export const notes: NoteContent[] = [
   {
     slug: "what-small-businesses-should-own-before-launching-a-website",
@@ -232,6 +234,7 @@ export const notes: NoteContent[] = [
     ],
   },
   {
+    // DNS guidance surface
     slug: "plain-language-guide-to-dns-records",
     title: "A Plain-Language Guide to DNS Records",
     metaTitle: "A Plain-Language Guide to DNS Records",
@@ -272,6 +275,7 @@ export const notes: NoteContent[] = [
     ],
   },
   {
+    // Fragility guidance surface
     slug: "how-to-tell-if-your-website-setup-is-fragile",
     title: "How to Tell If Your Website Setup Is Fragile",
     metaTitle: "How to Tell If Your Website Setup Is Fragile",
@@ -313,6 +317,7 @@ export const notes: NoteContent[] = [
   },
 ];
 
+// Content lookup boundary
 export function getServicePage(slug: string) {
   return servicePages.find((page) => page.slug === slug);
 }

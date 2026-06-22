@@ -28,6 +28,7 @@ type AdminPageProps = {
 };
 
 export default async function AdminPage({ searchParams }: AdminPageProps) {
+  // Admin access boundary
   const authenticated = await isAdminAuthenticated();
   const params = await searchParams;
 
@@ -38,6 +39,7 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
     );
   }
 
+  // Admin data surface
   const [contentModules, recentSubmissions, analyticsSummary] = await Promise.all([
     getContentModuleSummary(),
     listRecentContactSubmissions(),
@@ -47,6 +49,7 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
   return (
     <main id="main-content" className="min-h-screen bg-jamarq-black text-jamarq-white">
       <section className="mx-auto max-w-6xl px-6 py-14 sm:py-20">
+        {/* Admin controls surface */}
         <div className="flex flex-col gap-6 border-b border-slate pb-8 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-jamarq-cyan">
@@ -87,6 +90,7 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
           <ChangeAdminPasswordForm />
         </div>
 
+        {/* Content module surface */}
         <div className="mt-5 rounded-lg border border-slate bg-steel/80 p-6">
           <p className="text-sm font-semibold uppercase tracking-[0.16em] text-jamarq-cyan">
             DB content modules
@@ -121,6 +125,7 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
 
         <AnalyticsPanel summary={analyticsSummary} />
 
+        {/* Contact intake workflow */}
         <div className="mt-5 rounded-lg border border-slate bg-steel/80 p-6">
           <p className="text-sm font-semibold uppercase tracking-[0.16em] text-jamarq-cyan">
             Recent contact submissions
@@ -202,6 +207,7 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
   );
 }
 
+// Analytics reporting surface
 function AnalyticsPanel({ summary }: { summary: AnalyticsSummary }) {
   return (
     <div className="mt-5 rounded-lg border border-slate bg-steel/80 p-6">
@@ -253,6 +259,7 @@ function AnalyticsPanel({ summary }: { summary: AnalyticsSummary }) {
   );
 }
 
+// Review action boundary
 function ContactStatusButton({
   submissionId,
   status,
@@ -289,6 +296,7 @@ function formatAdminDate(value: string) {
   }).format(date);
 }
 
+// Login fallback surface
 function AdminLogin({
   configured,
   hasError,

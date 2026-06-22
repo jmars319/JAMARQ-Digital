@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* Design token contract */
 @theme inline {
   --color-jamarq-black: #0D0D0F;
   --color-jamarq-cyan: #09A6D6;
@@ -20,6 +21,7 @@
   --color-info: #3B82F6;
 }
 
+/* Root palette contract */
 :root {
   --font-primary: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-headings: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -70,6 +72,7 @@
   --focus-ring-offset: 2px;
 }
 
+/* Base layout surface */
 html,
 body {
   width: 100%;
@@ -93,6 +96,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0;
 }
 
+/* List reset boundary */
 ul {
   list-style: none;
   padding-left: 0;
@@ -102,6 +106,7 @@ li {
   display: block;
 }
 
+/* Link affordance surface */
 .link-underline {
   position: relative;
   display: inline-flex;
@@ -128,6 +133,7 @@ li {
   transform: scaleX(1);
 }
 
+/* Motion system boundary */
 @keyframes modalOverlayIn {
   from {
     opacity: 0;
@@ -181,6 +187,7 @@ li {
   }
 }
 
+/* Case study tab surface */
 .case-study-tab {
   position: relative;
   overflow: hidden;
@@ -207,6 +214,7 @@ li {
   transform: translate(-50%, 0);
 }
 
+/* Dropdown motion boundary */
 @keyframes dropdownReveal {
   from {
     opacity: 0;
